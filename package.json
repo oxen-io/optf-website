@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-tailwind-starter",
+  "name": "nextjs-typescript-tailwind-starter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,13 +11,18 @@
   },
   "dependencies": {
     "next": "^10.2.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-svgr": "^0.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/react": "^17.0.13",
     "autoprefixer": "^10.2.5",
     "cssnano": "^4.1.11",
     "postcss": "^8.2.13",
-    "tailwindcss": "^2.1.2"
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.1.2",
+    "typescript": "^4.3.5"
   }
 }
