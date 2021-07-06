@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@*": ["./*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true /* allows javaScript files to be compiled */,
+    "skipLibCheck": true /* skip type checking of all declaration files */,
+    "strict": true /* enables all strict type checking options */,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true /* Not to compile code, only performs type checking */,
+    "esModuleInterop": true /* disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs") */,
+    "module": "esnext" /* specifies module code generation */,
+    "moduleResolution": "node" /* resolves modules using Node engine */,
+    "resolveJsonModule": true /* includes modules imported with .json extension */,
+    "isolatedModules": true /* unconditionally emits imports for unresolved files */,
+    "jsx": "preserve" /* Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files. */
+    // "noUnusedLocals": true, /* reports errors on unused locals (suggested for clean code writing) */
+    // "noUnusedParameters": true, /* report errors on unused parameters (again, suggested for clean code writing) */
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".next", "out"]
+}
