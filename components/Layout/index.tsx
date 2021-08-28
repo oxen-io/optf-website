@@ -1,10 +1,22 @@
-import { ReactElement, ReactNode } from "react";
+import { ReactElement, ReactNode } from 'react';
+import { IMetadata } from '@/constants/metadata';
+import CustomHead from '@/components/CustomHead';
 
 interface Props {
-  children: ReactNode,
-  props?: any
+  title?: string;
+  metadata?: IMetadata;
+  children: ReactNode;
 }
 
-export default function Layout({ children, ...props }: Props): ReactElement {
-  return <>{children}</>;
+export default function Layout({
+  title,
+  metadata,
+  children,
+}: Props): ReactElement {
+  return (
+    <>
+      <CustomHead title={title} metadata={metadata} />
+      <main>{children}</main>
+    </>
+  );
 }

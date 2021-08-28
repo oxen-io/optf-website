@@ -1,8 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEXTJS TYPESCRIPT TAILWIND STARTER TEMPLATE
+
+This project is built with [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) & [TypeScript](https://www.typescriptlang.org/).
+
+## Features
+
+- Responsive Javascript
+- Custom 404 page
+- Tailwind stylesheet minification and optimisation.
+- Template for optimal metadata (Lighthouse SEO score = 100)
+- Automatic sitemap
+- Staging environment support
+- Accessbility linting
+- First class Visual Studio Code integration
 
 ## Getting Started
 
-First, run the development server:
+First, install the required packages:
+
+```bash
+npm run install
+# or
+yarn install
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -12,23 +33,62 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Development
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Always** run `yarn run build && yarn run start` to see how the code works in a production environment before committing.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- For staging environments use `build:staging` and `start:staging`.
 
-## Learn More
+  - This updates the system environment variables and page metadata.
 
-To learn more about Next.js, take a look at the following resources:
+- The [axe-react](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md) plugin is used for accessbility testing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Uses [Headwind](https://github.com/heybourn/headwind) VSCode extension for sorting Tailwind classes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Uses [classnames](https://www.npmjs.com/package/classnames) to organise our classes into groups that combine at build time.
 
-## Deploy on Vercel
+### Tailwind Style Guide
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### React
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```jsx
+  <div className={classNames(
+    "general classes here - colors, fonts, padding, margin etc",
+    "each responsive class utility should have it's own string md: lg: etc."
+    "placeholder classes",
+    "animations, transforms, effect",
+    "pseudo classes i.e hover, focus, active, etc.",
+    "toggling classes i.e. NavMenu isExpanded"
+  )}></div>
+```
+
+#### CSS
+
+Any custom CSS classes should be written in [globals.css](styles/globals.css).
+
+```css
+.custom-class {
+  @apply general classes here - colors, fonts, padding, margin;
+  @apply each responsive class utility should have it's own string;
+  @apply placeholder classes;
+  @apply animations, transforms, effect;
+  @apply pseudo classes i.e hover, focus, active;
+}
+```
+
+### Notes
+
+- We can't use template literals with classes if we want to purge the CSS.
+  - https://github.com/tailwindlabs/tailwindcss/issues/2209#issuecomment-677855297
+  - https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html
+  - Avoid: `hover:bg-black hover:text-${bgColor}`
+  - Do: `const hoverClasses = [backgroundColor === 'black' && 'bg-black hover:text-black'];`
+
+## Deployment
+
+1. Once you have a domain replace all instances of `YOUR_DOMAIN_HERE` in this project.
+2. Edit [constants/metadata.ts](constants/metadata.ts) with your project info for accurate metadata and effective SEO.
+
+## TODO
+
+- [ ] Setup Headwind support for custom Tailwind style https://github.com/heybourn/headwind#customisation

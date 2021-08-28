@@ -20,6 +20,6 @@
     // "noUnusedLocals": true, /* reports errors on unused locals (suggested for clean code writing) */
     // "noUnusedParameters": true, /* report errors on unused parameters (again, suggested for clean code writing) */
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".next", "out"]
 }

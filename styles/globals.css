@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* colors go here */
+}
+
+body {
+  /* Fix for Safari */
+  /* https://stackoverflow.com/a/37365794 */
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap: YOUR_DOMAIN_HERE/sitemap.xml
