@@ -69,7 +69,7 @@ Any custom CSS classes should be written in [globals.css](styles/globals.css).
 ```css
 .custom-class {
   @apply general classes here - colors, fonts, padding, margin;
-  @apply each responsive class utility should have it's own string;
+  @apply group breakpointed classes into their own strings;
   @apply placeholder classes;
   @apply animations, transforms, effect;
   @apply pseudo classes i.e hover, focus, active;
@@ -88,7 +88,3 @@ Any custom CSS classes should be written in [globals.css](styles/globals.css).
 
 1. Once you have a domain replace all instances of `YOUR_DOMAIN_HERE` in this project.
 2. Edit [constants/metadata.ts](constants/metadata.ts) with your project info for accurate metadata and effective SEO.
-
-## TODO
-
-- [ ] Setup Headwind support for custom Tailwind style https://github.com/heybourn/headwind#customisation
