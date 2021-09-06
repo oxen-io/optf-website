@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import getConfig from 'next/config';
 import { readdirSync } from 'fs';
 import METADATA from '@/constants/metadata';
 
@@ -33,9 +34,19 @@ export default async function handler(
       return `${baseUrl}/${pagePath}`;
     });
 
+  const redirectPages = getConfig().serverRuntimeConfig.redirects.map(
+    (redirect: any) => {
+      if (redirect.source.includes(':slug')) {
+        return '';
+      } else {
+        return `${baseUrl}${redirect.source}`;
+      }
+    }
+  );
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${[...staticPages]
+      ${[...staticPages, ...redirectPages]
         .map((url) => {
           return `
           <url>

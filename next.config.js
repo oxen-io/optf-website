@@ -7,13 +7,20 @@ const config = {
   images: {
     domains: [],
   },
-  async rewrites() {
-    return [
+  serverRuntimeConfig: {
+    redirects: [],
+    rewrites: [
       {
         source: '/sitemap.xml',
         destination: '/api/sitemap',
       },
-    ];
+    ],
+  },
+  async redirects() {
+    return this.serverRuntimeConfig.redirects;
+  },
+  async rewrites() {
+    return this.serverRuntimeConfig.rewrites;
   },
   target: 'serverless',
 };
