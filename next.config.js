@@ -1,5 +1,5 @@
 const withPlugins = require('next-compose-plugins');
-const withSvgr = require('next-svgr');
+const withSvgr = require('@newhighsco/next-plugin-svgr');
 
 const ContentSecurityPolicy = `
   default-src 'self';
