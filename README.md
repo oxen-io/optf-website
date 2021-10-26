@@ -6,6 +6,7 @@ This project is built with [Next.js](https://nextjs.org/), [TailwindCSS](https:/
 
 - Responsive Javascript
 - Custom 404 page
+- Security Headers
 - Tailwind stylesheet minification and optimisation.
 - Template for optimal metadata (Lighthouse SEO score = 100)
 - Automatic sitemap
