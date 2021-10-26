@@ -1,7 +1,6 @@
-import classNames from 'classnames';
-
 import Layout from '@/components/Layout';
 import METADATA from '@/constants/metadata';
+import classNames from 'classnames';
 
 export default function Custom404() {
   return (

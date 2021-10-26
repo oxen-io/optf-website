@@ -6,6 +6,8 @@
   /* colors go here */
 }
 
+/* Dont forget to add static font files as a fallback for Safari */
+
 body {
   /* Fix for Safari */
   /* https://stackoverflow.com/a/37365794 */

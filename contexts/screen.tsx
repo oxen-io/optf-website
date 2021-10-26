@@ -1,5 +1,6 @@
-import { useScreenSize } from '@/hooks/screen';
 import { ReactElement, ReactNode, createContext, useContext } from 'react';
+
+import { useScreenSize } from '@/hooks/screen';
 
 interface IScreen {
   width: number;
@@ -26,6 +27,7 @@ export function useScreen() {
 interface Props {
   children: ReactNode;
 }
+
 export function ScreenProvider(props: Props): ReactElement {
   const { children } = props;
 

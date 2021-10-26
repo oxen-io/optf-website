@@ -1,6 +1,7 @@
 import { ReactElement, ReactNode } from 'react';
-import { IMetadata } from '@/constants/metadata';
+
 import CustomHead from '@/components/CustomHead';
+import { IMetadata } from '@/constants/metadata';
 
 interface Props {
   title?: string;
