@@ -1,4 +1,5 @@
-import { LegacyRef, ReactElement } from 'react';
+import { LegacyRef, ReactElement, ReactNode } from 'react';
+
 import classNames from 'classnames';
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
   type?: 'submit';
   reference?: LegacyRef<HTMLButtonElement>;
   classes?: string;
-  children?: string;
+  children?: string | ReactNode;
   onClick?(): any;
 }
 

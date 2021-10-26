@@ -38,6 +38,8 @@ const METADATA = {
   MASK_ICON: { PATH: '/safari-pinned-tab.svg', COLOR: 'COLOR' },
   MSAPPLICATION_TILECOLOR: 'COLOR',
   THEME_COLOR: 'COLOR',
+  TWITTER_ID: null,
+  ITUNES_APP_ID: null,
   404: {
     // TYPE: 'article', // can vary for SEO purposes
     DESCRIPTION: 'This page cannot be found.',
