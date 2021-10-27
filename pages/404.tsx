@@ -1,3 +1,4 @@
+import Container from '@/components/Container';
 import Layout from '@/components/Layout';
 import METADATA from '@/constants/metadata';
 import classNames from 'classnames';
@@ -5,7 +6,7 @@ import classNames from 'classnames';
 export default function Custom404() {
   return (
     <Layout title="Page not found" metadata={METADATA[404]}>
-      <section>
+      <Container>
         <div
           className={classNames(
             'py-16 px-2 mx-auto text-center',
@@ -19,7 +20,7 @@ export default function Custom404() {
             {METADATA[404].DESCRIPTION}
           </p>
         </div>
-      </section>
+      </Container>
     </Layout>
   );
 }

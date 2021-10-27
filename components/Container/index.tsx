@@ -16,11 +16,11 @@ export const containerStyles = {
   maxWidth: `${UI.CONTAINER_MAX_WIDTH}px`,
 };
 
-export function Contained(props: Props) {
+export default function Container(props: Props) {
   const { id, fullWidth = false, classes, children } = props;
 
   return (
-    <div className={classNames('w-full')}>
+    <section className={classNames('w-full')}>
       <div
         id={id}
         className={classNames('w-full my-0 mx-auto', classes)}
@@ -32,6 +32,6 @@ export function Contained(props: Props) {
       >
         {children}
       </div>
-    </div>
+    </section>
   );
 }
