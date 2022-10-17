@@ -16,9 +16,6 @@ module.exports = {
       mono: ['SpaceMono', 'monospace'],
       sans: ['PublicSans', 'sans-serif'],
     },
-    boxShadow: {
-      header: ' 0px 0px 10px 0px rgb(0 0 0 / 50%)',
-    },
     screens: {
       sm: '375px',
       md: '768px',
@@ -28,6 +25,9 @@ module.exports = {
       '3xl': '1920px',
     },
     extend: {
+      boxShadow: {
+        header: '0px 0px 10px 0px rgb(0 0 0 / 50%)',
+      },
       animation: {
         push: 'push 0.3s linear 1',
       },
@@ -49,6 +49,9 @@ module.exports = {
           light: 'var(--gray-light)',
           DEFAULT: 'var(--gray-DEFAULT)',
           dark: 'var(--gray-dark)',
+        },
+        green: {
+          150: '#d7f6f2',
         },
       },
       height: {

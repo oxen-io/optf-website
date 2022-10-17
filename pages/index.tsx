@@ -1,44 +1,43 @@
 import { About, Benefits, Features, Hero } from '@/components/sections';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
-
+import Image from 'next/image';
 import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
 import generateRSSFeed from '@/utils/rss';
+import { PostListNew } from '@/components/posts';
+import Banner from '@/components/Banner';
 
-export default function Home() {
-  return (
-    <Layout>
-      <Hero />
-    </Layout>
-  );
+interface Props {
+  posts: IPost[];
 }
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ) => {
-  if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
-    const posts: IPost[] = [];
-    let foundAllPosts = false;
-
-    // Contentful has limits built in
-    while (!foundAllPosts) {
-      const { entries, total } = await fetchBlogEntries();
-
-      if (posts.length === total) {
-        foundAllPosts = true;
-        continue;
-      }
-
-      posts.push(...entries);
-    }
-
-    generateRSSFeed(posts);
-  }
+  const { entries: posts, total: totalPosts } = await fetchBlogEntries();
 
   return {
-    props: {},
+    props: { posts },
     revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };
+
+export default function Home(props: Props) {
+  const { posts } = props;
+  const [featuredPost, ...otherPosts] = posts;
+
+  return (
+    <Layout>
+      <Hero />
+      <PostListNew posts={otherPosts} />
+      <Banner
+        subtitle="Everyone has a right to privacy — online and offline. But as we become more reliant on technology and digital platforms, our privacy and security is increasingly undermined and exploited.We’re putting the power back in your hands — we support the development of free and open-source software that keeps you secure online."
+        image={
+          <Image width={260} height={85} src="/assets/images/logo-optf.png" />
+        }
+      ></Banner>
+    </Layout>
+  );
+}

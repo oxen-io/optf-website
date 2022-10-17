@@ -41,7 +41,7 @@ export default function Layout({
       {showBanner && <Banner />}
       <Nav />
       {locked ? <LockedPage /> : <main>{children}</main>}
-      <EmailSignup />
+
       <Footer />
     </>
   );
