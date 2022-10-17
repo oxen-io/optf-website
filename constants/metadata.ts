@@ -1,6 +1,7 @@
 export interface IMetadata {
   DESCRIPTION: string;
   TYPE?: string;
+  CANONICAL_URL?: string;
   OG_IMAGE?: {
     URL: string;
     WIDTH: number;
@@ -15,18 +16,27 @@ export interface IMetadata {
 const METADATA = {
   HOST_URL:
     process.env.NEXT_PUBLIC_SITE_ENV === 'production'
-      ? 'YOUR_DOMAIN_HERE'
-      : 'localhost:3000',
-  SITE_NAME: 'SITE_NAME',
-  TITLE: 'TITLE',
-  DESCRIPTION: 'DESCRIPTION',
-  TAGS: [],
+      ? 'https://getsession.org'
+      : 'https://staging.getsession.org',
+  SITE_NAME: 'Session',
+  TITLE: 'Session | Send Messages, Not Metadata. | Private Messenger',
+  DESCRIPTION:
+    'Session is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network.',
+  TAGS: [
+    'Privacy',
+    'co-op',
+    'Community contribution',
+    'decentralisation',
+    'decentralised',
+    'messaging',
+    'Private messaging',
+  ],
   OG_TYPE: 'website',
   OG_IMAGE: {
-    URL: '/favicon.ico',
-    WIDTH: 48,
-    HEIGHT: 48,
-    ALT: 'Favicon',
+    URL: '/assets/images/logo-black.png',
+    WIDTH: 804,
+    HEIGHT: 665,
+    ALT: 'Session Logo Black Background',
   },
   LOCALE: 'en_US',
   FAVICON: {
@@ -35,20 +45,84 @@ const METADATA = {
     APPLE_TOUCH_ICON: '/apple-touch-icon.png',
   },
   MANIFEST: '/site.webmanifest',
-  MASK_ICON: { PATH: '/safari-pinned-tab.svg', COLOR: 'COLOR' },
-  MSAPPLICATION_TILECOLOR: 'COLOR',
-  THEME_COLOR: 'COLOR',
-  TWITTER_ID: null,
-  ITUNES_APP_ID: null,
+  MASK_ICON: { PATH: '/safari-pinned-tab.svg', COLOR: '#00f782' },
+  MSAPPLICATION_TILECOLOR: '#343132',
+  THEME_COLOR: '#ffffff',
+  TWITTER_CREATOR: 'session_app',
+  ITUNES_ID: 'app-id=1470168868',
   404: {
-    // TYPE: 'article', // can vary for SEO purposes
-    DESCRIPTION: 'This page cannot be found.',
-    // OG_IMAGE: {
-    //   URL: 'URL',
-    //   WIDTH: 48,
-    //   HEIGHT: 48,
-    //   ALT: 'ALY',
-    // },
+    DESCRIPTION: 'It looks like the link pointing here was faulty.',
+  },
+  BLOG_PAGE: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'View the Session Blogs. | Session is an end-to-end encrypted messenger that removes sensitive metadata collection.',
+    OG_IMAGE: {
+      URL: '/assets/images/send-messages-not-metadata.jpg',
+      WIDTH: 1024,
+      HEIGHT: 1024,
+      ALT: 'Mysterious man on the phone. Heading is Use Session.',
+    },
+  },
+  DOWNLOAD_PAGE: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Download Session Today | Session is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems.',
+    OG_IMAGE: {
+      URL: '/assets/images/send-messages-not-metadata.jpg',
+      WIDTH: 1024,
+      HEIGHT: 1024,
+      ALT: 'Mysterious man on the phone. Heading is Use Session.',
+    },
+  },
+  FAQ_PAGE: {
+    TYPE: 'FAQPage',
+    DESCRIPTION:
+      "Session's FAQ. Find answers to some of the most frequently asked questions about Session — info on the team, the tech, and the technicalities.",
+    OG_IMAGE: {
+      URL: '/assets/images/faq.png',
+      WIDTH: 800,
+      HEIGHT: 800,
+      ALT: 'Frequently Asked Questions heading with redacted text below',
+    },
+  },
+  HELP_PAGE: {
+    DESCRIPTION: 'How you can help. A Session Community Help Guide Document.',
+  },
+  LIGHTPAPER_PAGE: {
+    DESCRIPTION:
+      'Session is a decentralised messenger that supports completely private, secure, and anonymous communications.',
+    OG_IMAGE: {
+      URL: '/assets/images/lightpaper.jpg',
+      WIDTH: 1200,
+      HEIGHT: 627,
+      ALT: 'Black background with a neon white Session logo with Lightpaper written as a heading',
+    },
+    TAGS: [
+      'Session',
+      'lightpaper',
+      'metadata',
+      'messenger',
+      'encryption',
+      'encrypted',
+      'onion routing',
+      'decentralisation',
+      'Oxen',
+      'blockchain',
+      'messaging',
+      'private',
+      'privacy',
+    ],
+  },
+  OPEN_GROUP_PAGE: {
+    DESCRIPTION:
+      'Join the movement to keep the internet private! Chat with like-minded individuals in Session Open Group Channel. Join Now',
+    OG_IMAGE: {
+      URL: '/assets/images/faq.png',
+      WIDTH: 1024,
+      HEIGHT: 1024,
+      ALT: 'Frequently Asked Questions heading with redacted text below',
+    },
   },
 };
 

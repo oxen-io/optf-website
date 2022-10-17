@@ -1,37 +1,69 @@
-import React, { ReactNode } from 'react';
-
-import UI from '@/constants/ui';
+import { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
+import { useScreen } from '@/contexts/screen';
+
+export interface IContainerSizes {
+  small: string;
+  medium: string;
+  large: string;
+  huge?: string;
+  enormous?: string;
+}
 
 interface Props {
   id?: string;
+  hasMinHeight?: boolean;
+  heights?: IContainerSizes;
   fullWidth?: boolean;
   classes?: string;
   children: ReactNode;
 }
 
-export const containerStyles = {
-  paddingLeft: `${UI.CONTAINER_PADDING_X}vw`,
-  paddingRight: `${UI.CONTAINER_PADDING_X}vw`,
-  maxWidth: `${UI.CONTAINER_MAX_WIDTH}px`,
-};
-
-export default function Container(props: Props) {
-  const { id, fullWidth = false, classes, children } = props;
-
+export default function Container(props: Props): ReactElement {
+  const {
+    id,
+    hasMinHeight = false,
+    heights,
+    fullWidth = false,
+    classes,
+    children,
+  } = props;
+  const minHeights: IContainerSizes = {
+    small: '568px',
+    medium: '1024px',
+    large: '768px',
+    huge: '900px',
+    enormous: '968px',
+  };
+  const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
+  const getHeight = (sizes: IContainerSizes): string => {
+    if (isSmall) return sizes?.small;
+    if (isMedium) return sizes?.medium;
+    if (isLarge) return sizes?.large;
+    if (isHuge) return sizes?.huge ?? sizes?.large;
+    if (isEnormous) return sizes?.enormous ?? sizes?.large;
+    return '';
+  };
+  const height = heights && getHeight(heights);
   return (
-    <section className={classNames('w-full')}>
-      <div
-        id={id}
-        className={classNames('w-full my-0 mx-auto', classes)}
-        style={{
-          paddingLeft: !fullWidth ? containerStyles.paddingLeft : undefined,
-          paddingRight: !fullWidth ? containerStyles.paddingRight : undefined,
-          maxWidth: !fullWidth ? containerStyles.maxWidth : undefined,
-        }}
-      >
-        {children}
-      </div>
-    </section>
+    <div
+      id={id}
+      className={classNames(
+        'mx-auto',
+        !fullWidth && [
+          'container max-w-6xl p-6',
+          'md:p-12',
+          'lg:py-0 lg:px-10',
+        ],
+        classes
+      )}
+      // mobile safari needs style props to be explicitly undefined if not used
+      style={{
+        minHeight: hasMinHeight ? getHeight(minHeights) : undefined,
+        height: height ? `calc(${height})` : undefined,
+      }}
+    >
+      {children}
+    </div>
   );
 }

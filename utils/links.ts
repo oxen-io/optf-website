@@ -1,9 +1,12 @@
+import { Block, Inline } from '@contentful/rich-text-types';
+
 // utils for checking if hyperlinks are for the current site
-// e.g. are there any links to local headings via ID's?
+// are there any links to id's i.e. #mac, #linux, #windows
+// TODO links on site should be updated to follow NextJS convention on contentful?
 
 const protocols = ['https://', 'http://', 'ftp://', 'file://', 'mailto:'];
 
-export function isLocalLink(url: string) {
+export function isLocal(url: string) {
   let result = true;
   if (url[0] === '#' || url.indexOf('localhost:') > 0) {
     return result;
@@ -14,4 +17,14 @@ export function isLocalLink(url: string) {
     }
   });
   return result;
+}
+
+export function hasLocalID(node: Block | Inline) {
+  let id = '';
+  node.content.forEach((child) => {
+    if (child.nodeType === 'hyperlink' && isLocal(child.data.uri)) {
+      id = child.data.uri.split('#')[1];
+    }
+  });
+  return id;
 }

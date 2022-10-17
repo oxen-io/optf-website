@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://getsession.org/</id>
+    <title>Session Blog</title>
+    <updated>2022-10-11T05:59:58.371Z</updated>
+    <generator>Next.js using Feed for Node.js</generator>
+    <link rel="alternate" href="https://getsession.org"/>
+    <link rel="self" href="https://getsession.org/rss/atom.xml"/>
+    <subtitle>Send Messages, Not Metadata!</subtitle>
+    <logo>https://getsession.org/assets/images/logo-icon-black.png</logo>
+    <icon>https://getsession.org/favicon.ico</icon>
+    <rights>All rights reserved 2022, OPTF</rights>
+    <category term="Privacy"/>
+    <category term="co-op"/>
+    <category term="Community contribution"/>
+    <category term="decentralisation"/>
+    <category term="decentralised"/>
+    <category term="messaging"/>
+    <category term="Private messaging"/>
+    <entry>
+        <title type="html"><![CDATA[Update: Important Changes to Session]]></title>
+        <id>https://getsession.org/blog/important-changes</id>
+        <link href="https://getsession.org/blog/important-changes"/>
+        <updated>2022-10-04T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Some menus in Session will change in an update over the next few days. These changes are cosmetic. The underlying functionality of Session is not changing. ]]></summary>
+        <content type="html"><![CDATA[<p>Some menus in Session will change in an update over the next few days. These changes are cosmetic. The underlying functionality of Session is not changing. </p><p><a href="https://getsession.org/blog/important-changes">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Upgrading open groups: Bringing back DMs from open groups]]></title>
+        <id>https://getsession.org/blog/upgrading-open-groups</id>
+        <link href="https://getsession.org/blog/upgrading-open-groups"/>
+        <updated>2022-09-12T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[If you’re operating a Session Open Group Server (SOGS) — there are some changes coming your way!]]></summary>
+        <content type="html"><![CDATA[<p>If you’re operating a Session Open Group Server (SOGS) — there are some changes coming your way!</p><p><a href="https://getsession.org/blog/upgrading-open-groups">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Target acquired: The increasing threat of targeted cyber-attacks]]></title>
+        <id>https://getsession.org/blog/targeted-attacks</id>
+        <link href="https://getsession.org/blog/targeted-attacks"/>
+        <updated>2022-09-11T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Data gets leaks are giving malicious attackers more chances to perform highly sophisticated, targeted attacks. ]]></summary>
+        <content type="html"><![CDATA[<p>Data gets leaks are giving malicious attackers more chances to perform highly sophisticated, targeted attacks. </p><p><a href="https://getsession.org/blog/targeted-attacks">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #15: 👍😈🔥]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-15</id>
+        <link href="https://getsession.org/blog/session-release-roundup-15"/>
+        <updated>2022-09-05T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #15! This Release Roundup includes emoji reacts, the re-introduction of DMing people from open groups, and iOS performance upgrades.
+]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #15! This Release Roundup includes emoji reacts, the re-introduction of DMing people from open groups, and iOS performance upgrades.
+</p><p><a href="https://getsession.org/blog/session-release-roundup-15">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Sim Swapping attacks: How to protect yourself from this common phone scam]]></title>
+        <id>https://getsession.org/blog/sim-swapping-attacks</id>
+        <link href="https://getsession.org/blog/sim-swapping-attacks"/>
+        <updated>2022-09-05T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[SIM Swapping: it's a pretty scary form of hacking that even managed to catch the CEO of Twitter off guard. This article tackles the best way to avoid phishing attacks, the risk and reward of 2FA (two-factor-authentication) and tips on protecting your phone number. ]]></summary>
+        <content type="html"><![CDATA[<p>SIM Swapping: it's a pretty scary form of hacking that even managed to catch the CEO of Twitter off guard. This article tackles the best way to avoid phishing attacks, the risk and reward of 2FA (two-factor-authentication) and tips on protecting your phone number. </p><p><a href="https://getsession.org/blog/sim-swapping-attacks">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Avoiding malicious hackers: How to reduce your personal attack surface]]></title>
+        <id>https://getsession.org/blog/how-to-reduce-your-personal-attack-surface</id>
+        <link href="https://getsession.org/blog/how-to-reduce-your-personal-attack-surface"/>
+        <updated>2022-09-01T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Are you doing enough to protect yourself from hacks? There's one sure-fire way to figure that out: attack surface. ]]></summary>
+        <content type="html"><![CDATA[<p>Are you doing enough to protect yourself from hacks? There's one sure-fire way to figure that out: attack surface. </p><p><a href="https://getsession.org/blog/how-to-reduce-your-personal-attack-surface">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Creating multilateral privacy solutions: Is the GDPR actually helping?]]></title>
+        <id>https://getsession.org/blog/is-the-gdpr-helping</id>
+        <link href="https://getsession.org/blog/is-the-gdpr-helping"/>
+        <updated>2022-08-24T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Every tech company and their intern has tried to argue that they can (and will) 'solve' the privacy problem — but tech alone is not the answer.]]></summary>
+        <content type="html"><![CDATA[<p>Every tech company and their intern has tried to argue that they can (and will) 'solve' the privacy problem — but tech alone is not the answer.</p><p><a href="https://getsession.org/blog/is-the-gdpr-helping">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Physical privacy defenders: Learning from these awesome low-tech privacy tools]]></title>
+        <id>https://getsession.org/blog/low-tech-privacy</id>
+        <link href="https://getsession.org/blog/low-tech-privacy"/>
+        <updated>2022-08-18T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[While our privacy is often invaded in the digital world, but in the physical world privacy is something that we inherently recognise and respect.]]></summary>
+        <content type="html"><![CDATA[<p>While our privacy is often invaded in the digital world, but in the physical world privacy is something that we inherently recognise and respect.</p><p><a href="https://getsession.org/blog/low-tech-privacy">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Surveillance tech: How it stalked its way into our lives]]></title>
+        <id>https://getsession.org/blog/surveillance-state-tech</id>
+        <link href="https://getsession.org/blog/surveillance-state-tech"/>
+        <updated>2022-08-15T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In a world that strives for digital privacy, surveillance capitalism has ultimately tricked us into inviting spyware and data-mining tech into our daily lives.   ]]></summary>
+        <content type="html"><![CDATA[<p>In a world that strives for digital privacy, surveillance capitalism has ultimately tricked us into inviting spyware and data-mining tech into our daily lives.   </p><p><a href="https://getsession.org/blog/surveillance-state-tech">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interview with CoverDrop author Dan]]></title>
+        <id>https://getsession.org/blog/coverdrop-interview</id>
+        <link href="https://getsession.org/blog/coverdrop-interview"/>
+        <updated>2022-08-07T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[At PETS, Kee sat down with Dan, one of the authors of the CoverDrop paper which proposes a secure method for initial contact between journalists and sources or whistleblowers.]]></summary>
+        <content type="html"><![CDATA[<p>At PETS, Kee sat down with Dan, one of the authors of the CoverDrop paper which proposes a secure method for initial contact between journalists and sources or whistleblowers.</p><p><a href="https://getsession.org/blog/coverdrop-interview">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interview with researcher Mariano Di Martino]]></title>
+        <id>https://getsession.org/blog/GDPR-interview</id>
+        <link href="https://getsession.org/blog/GDPR-interview"/>
+        <updated>2022-08-03T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Kee sat down with Mariano at the Privacy Enhancing Technology Symposium to discuss his paper on the security practices of companies which hold personal data covered by the GDPR. ]]></summary>
+        <content type="html"><![CDATA[<p>Kee sat down with Mariano at the Privacy Enhancing Technology Symposium to discuss his paper on the security practices of companies which hold personal data covered by the GDPR. </p><p><a href="https://getsession.org/blog/GDPR-interview">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interview with Moby author Amogh Pradeep]]></title>
+        <id>https://getsession.org/blog/amogh-pradeep-interview</id>
+        <link href="https://getsession.org/blog/amogh-pradeep-interview"/>
+        <updated>2022-08-01T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Kee sat down with Amogh Pradeep at the Privacy Enhancing Technology Symposium to have a chat about Moby]]></summary>
+        <content type="html"><![CDATA[<p>Kee sat down with Amogh Pradeep at the Privacy Enhancing Technology Symposium to have a chat about Moby</p><p><a href="https://getsession.org/blog/amogh-pradeep-interview">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Once upon a time, in an encrypted messaging app...]]></title>
+        <id>https://getsession.org/blog/once-upon-a-time</id>
+        <link href="https://getsession.org/blog/once-upon-a-time"/>
+        <updated>2022-07-06T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Settle in for a real life Session love story. We asked you to share how you use Session to chat with your special someone — and this was our favourite story.]]></summary>
+        <content type="html"><![CDATA[<p>Settle in for a real life Session love story. We asked you to share how you use Session to chat with your special someone — and this was our favourite story.</p><p><a href="https://getsession.org/blog/once-upon-a-time">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to find true love on Session]]></title>
+        <id>https://getsession.org/blog/find-true-love-on-session</id>
+        <link href="https://getsession.org/blog/find-true-love-on-session"/>
+        <updated>2022-06-30T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Privacy matters to all relationships —  especially when we communicate digitally.  How you and your partner message, sext or chat is just be between you.  ]]></summary>
+        <content type="html"><![CDATA[<p>Privacy matters to all relationships —  especially when we communicate digitally.  How you and your partner message, sext or chat is just be between you.  </p><p><a href="https://getsession.org/blog/find-true-love-on-session">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anonymity and online dating]]></title>
+        <id>https://getsession.org/blog/anonymity-dating-online</id>
+        <link href="https://getsession.org/blog/anonymity-dating-online"/>
+        <updated>2022-06-26T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Anonymity and dating might not seem like a match made in heaven — you're probably gonna want to know who you're dating, after all. But it all comes down to safety.]]></summary>
+        <content type="html"><![CDATA[<p>Anonymity and dating might not seem like a match made in heaven — you're probably gonna want to know who you're dating, after all. But it all comes down to safety.</p><p><a href="https://getsession.org/blog/anonymity-dating-online">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Familiar faces: Has facial recognition tech gone too far? ]]></title>
+        <id>https://getsession.org/blog/facial-recognition-technology</id>
+        <link href="https://getsession.org/blog/facial-recognition-technology"/>
+        <updated>2022-06-14T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As essential services continue to adopt facial recognition tech, concerns are being raised over whether it will enable surveillance.    ]]></summary>
+        <content type="html"><![CDATA[<p>As essential services continue to adopt facial recognition tech, concerns are being raised over whether it will enable surveillance.    </p><p><a href="https://getsession.org/blog/facial-recognition-technology">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session ID vs phone numbers]]></title>
+        <id>https://getsession.org/blog/session-id-vs-phone-numbers</id>
+        <link href="https://getsession.org/blog/session-id-vs-phone-numbers"/>
+        <updated>2022-06-07T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session IDs are instant, secure, portable, and anonymous — making them the perfect alternative to phone numbers for a private messaging app.
+]]></summary>
+        <content type="html"><![CDATA[<p>Session IDs are instant, secure, portable, and anonymous — making them the perfect alternative to phone numbers for a private messaging app.
+</p><p><a href="https://getsession.org/blog/session-id-vs-phone-numbers">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Human rights in the digital age: Why you should join us at RightsCon]]></title>
+        <id>https://getsession.org/blog/rightscon-2022</id>
+        <link href="https://getsession.org/blog/rightscon-2022"/>
+        <updated>2022-06-01T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ever attended RightsCon before? It's free to register; register now and engage with some of the brightest minds in digital rights. ]]></summary>
+        <content type="html"><![CDATA[<p>Ever attended RightsCon before? It's free to register; register now and engage with some of the brightest minds in digital rights. </p><p><a href="https://getsession.org/blog/rightscon-2022">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The cost of Musk's war on spam]]></title>
+        <id>https://getsession.org/blog/the-cost-of-musks-war-on-spam</id>
+        <link href="https://getsession.org/blog/the-cost-of-musks-war-on-spam"/>
+        <updated>2022-05-26T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Will Musk's plans to rid twitter of spam ultimately lead to the death of the platform's pseudonymous identities?]]></summary>
+        <content type="html"><![CDATA[<p>Will Musk's plans to rid twitter of spam ultimately lead to the death of the platform's pseudonymous identities?</p><p><a href="https://getsession.org/blog/the-cost-of-musks-war-on-spam">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Behind the scenes: Session network and client update]]></title>
+        <id>https://getsession.org/blog/session-network-and-client-update</id>
+        <link href="https://getsession.org/blog/session-network-and-client-update"/>
+        <updated>2022-05-18T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It is important for all users to update to the newest Session client to make sure that you are ready for the upcoming network upgrades.]]></summary>
+        <content type="html"><![CDATA[<p>It is important for all users to update to the newest Session client to make sure that you are ready for the upcoming network upgrades.</p><p><a href="https://getsession.org/blog/session-network-and-client-update">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Holistic privacy: How to remove the target on encryption's back]]></title>
+        <id>https://getsession.org/blog/how-to-remove-the-target-on-encryptions-back</id>
+        <link href="https://getsession.org/blog/how-to-remove-the-target-on-encryptions-back"/>
+        <updated>2022-05-12T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Encryption! It's the best tool we have to protect people's security and privacy. But the focus on encryption also makes it a big target for regulators. ]]></summary>
+        <content type="html"><![CDATA[<p>Encryption! It's the best tool we have to protect people's security and privacy. But the focus on encryption also makes it a big target for regulators. </p><p><a href="https://getsession.org/blog/how-to-remove-the-target-on-encryptions-back">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What happens if Twitter gets encrypted DMs?]]></title>
+        <id>https://getsession.org/blog/twitter-encrypted-dms</id>
+        <link href="https://getsession.org/blog/twitter-encrypted-dms"/>
+        <updated>2022-05-05T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ah, encryption. The lifeblood of cybersecurity. Elon Musk recently suggested adding encryption to Twitter DMs. But would that really make Twitter DMs private?]]></summary>
+        <content type="html"><![CDATA[<p>Ah, encryption. The lifeblood of cybersecurity. Elon Musk recently suggested adding encryption to Twitter DMs. But would that really make Twitter DMs private?</p><p><a href="https://getsession.org/blog/twitter-encrypted-dms">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hey, I just met you, and this is crazy: Calls beta release]]></title>
+        <id>https://getsession.org/blog/calls-beta-release</id>
+        <link href="https://getsession.org/blog/calls-beta-release"/>
+        <updated>2022-04-25T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session voice and video calls are now in beta. Now, absolutely anyone can try out peer-to-peer calls in their favourite messaging app — Session!]]></summary>
+        <content type="html"><![CDATA[<p>Session voice and video calls are now in beta. Now, absolutely anyone can try out peer-to-peer calls in their favourite messaging app — Session!</p><p><a href="https://getsession.org/blog/calls-beta-release">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Does Musk buying Twitter open conversation for decentralised social media?]]></title>
+        <id>https://getsession.org/blog/Yet-another-reason-to-decentralise-social-media</id>
+        <link href="https://getsession.org/blog/Yet-another-reason-to-decentralise-social-media"/>
+        <updated>2022-04-21T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[With Elon Musk is trying to purchase Twitter, read our deep dive into why that might be a bad idea and why we should embrace decentralised models instead.]]></summary>
+        <content type="html"><![CDATA[<p>With Elon Musk is trying to purchase Twitter, read our deep dive into why that might be a bad idea and why we should embrace decentralised models instead.</p><p><a href="https://getsession.org/blog/Yet-another-reason-to-decentralise-social-media">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Just the two of us: Why you should care about private calls]]></title>
+        <id>https://getsession.org/blog/why-you-should-care-about-private-calls</id>
+        <link href="https://getsession.org/blog/why-you-should-care-about-private-calls"/>
+        <updated>2022-04-13T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Our calls beta will be arriving in just a few more sleeps. Whilst hotly anticipated, some of you might be wondering: why are private calls such a big deal?]]></summary>
+        <content type="html"><![CDATA[<p>Our calls beta will be arriving in just a few more sleeps. Whilst hotly anticipated, some of you might be wondering: why are private calls such a big deal?</p><p><a href="https://getsession.org/blog/why-you-should-care-about-private-calls">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bigger, better, stronger: Everything you need to know about our decentralised network]]></title>
+        <id>https://getsession.org/blog/session-decentralised-network</id>
+        <link href="https://getsession.org/blog/session-decentralised-network"/>
+        <updated>2022-04-04T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[One of the most unique and important parts of Session is that it is decentralised. Let's take a closer look at Session's network — how it works, how big it is, and what it means for you. ]]></summary>
+        <content type="html"><![CDATA[<p>One of the most unique and important parts of Session is that it is decentralised. Let's take a closer look at Session's network — how it works, how big it is, and what it means for you. </p><p><a href="https://getsession.org/blog/session-decentralised-network">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #14: Who gave you this Session ID?]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-14</id>
+        <link href="https://getsession.org/blog/session-release-roundup-14"/>
+        <updated>2022-03-30T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #14! This Release Roundup includes message requests, global search, and some bangin' performance improvements.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #14! This Release Roundup includes message requests, global search, and some bangin' performance improvements.</p><p><a href="https://getsession.org/blog/session-release-roundup-14">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Decentralised activism: Building tech infrastructure for action]]></title>
+        <id>https://getsession.org/blog/decentralised-activism</id>
+        <link href="https://getsession.org/blog/decentralised-activism"/>
+        <updated>2022-03-28T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Power to the people. Power to the people. Power to the people. Here's how decentralised technology can help empower activists around the world.]]></summary>
+        <content type="html"><![CDATA[<p>Power to the people. Power to the people. Power to the people. Here's how decentralised technology can help empower activists around the world.</p><p><a href="https://getsession.org/blog/decentralised-activism">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intentional communities in digital spaces: What side of TikTok are you on?]]></title>
+        <id>https://getsession.org/blog/intentional-communities-in-digital-spaces</id>
+        <link href="https://getsession.org/blog/intentional-communities-in-digital-spaces"/>
+        <updated>2022-03-21T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Algorithms are the great manipulators of the modern age. What makes you laugh, or cry? So what's it mean to be on a 'side of TikTok'? ]]></summary>
+        <content type="html"><![CDATA[<p>Algorithms are the great manipulators of the modern age. What makes you laugh, or cry? So what's it mean to be on a 'side of TikTok'? </p><p><a href="https://getsession.org/blog/intentional-communities-in-digital-spaces">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Message requests release: Knock, knock. Who’s there?]]></title>
+        <id>https://getsession.org/blog/message-requests-release</id>
+        <link href="https://getsession.org/blog/message-requests-release"/>
+        <updated>2022-02-22T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introducing: Message requests. From now on, messages you receive from unknown users or contacts will now be filtered into a message requests folder. ]]></summary>
+        <content type="html"><![CDATA[<p>Introducing: Message requests. From now on, messages you receive from unknown users or contacts will now be filtered into a message requests folder. </p><p><a href="https://getsession.org/blog/message-requests-release">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Opt-in market research program: Help us make Session the best it can be]]></title>
+        <id>https://getsession.org/blog/opt-in-market-research-program</id>
+        <link href="https://getsession.org/blog/opt-in-market-research-program"/>
+        <updated>2022-02-20T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Our ethos is that we want to treat Session users like people, not a stack of data to be used and abused — and we want to have some open conversations with real Session users. ]]></summary>
+        <content type="html"><![CDATA[<p>Our ethos is that we want to treat Session users like people, not a stack of data to be used and abused — and we want to have some open conversations with real Session users. </p><p><a href="https://getsession.org/blog/opt-in-market-research-program">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Global search release: Finding a needle in a message-stack]]></title>
+        <id>https://getsession.org/blog/global-search-release</id>
+        <link href="https://getsession.org/blog/global-search-release"/>
+        <updated>2022-02-06T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Global search is Session's newest feature! Search functionality is a big addition — especially if you have thousands of messages to sift through. 
+]]></summary>
+        <content type="html"><![CDATA[<p>Global search is Session's newest feature! Search functionality is a big addition — especially if you have thousands of messages to sift through. 
+</p><p><a href="https://getsession.org/blog/global-search-release">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I need a new identity: Social media and the identity ecosystem]]></title>
+        <id>https://getsession.org/blog/i-need-a-new-identity</id>
+        <link href="https://getsession.org/blog/i-need-a-new-identity"/>
+        <updated>2022-02-02T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[These days you can login or create an account on pretty much any website using your Facebook, Google, or Apple account — but this is a disaster for online anonymity.]]></summary>
+        <content type="html"><![CDATA[<p>These days you can login or create an account on pretty much any website using your Facebook, Google, or Apple account — but this is a disaster for online anonymity.</p><p><a href="https://getsession.org/blog/i-need-a-new-identity">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to strip metadata from your files]]></title>
+        <id>https://getsession.org/blog/how-to-strip-metadata-from-your-files</id>
+        <link href="https://getsession.org/blog/how-to-strip-metadata-from-your-files"/>
+        <updated>2022-01-06T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[To share a file without sharing the metadata as well—to preserve your privacy or anonymity— you’ll need to strip the file’s metadata.]]></summary>
+        <content type="html"><![CDATA[<p>To share a file without sharing the metadata as well—to preserve your privacy or anonymity— you’ll need to strip the file’s metadata.</p><p><a href="https://getsession.org/blog/how-to-strip-metadata-from-your-files">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Disposing of Big Tech: Building better algorithms (Part Two)]]></title>
+        <id>https://getsession.org/blog/disposing-of-big-tech-part-two</id>
+        <link href="https://getsession.org/blog/disposing-of-big-tech-part-two"/>
+        <updated>2022-01-04T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Why would we regulate algorithms? How would we do it? And, what will the effects actually be? These are some of the most important questions in tech right now.]]></summary>
+        <content type="html"><![CDATA[<p>Why would we regulate algorithms? How would we do it? And, what will the effects actually be? These are some of the most important questions in tech right now.</p><p><a href="https://getsession.org/blog/disposing-of-big-tech-part-two">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2021 retrospective: Messaging, calling, and communicating]]></title>
+        <id>https://getsession.org/blog/2021-retrospective</id>
+        <link href="https://getsession.org/blog/2021-retrospective"/>
+        <updated>2021-12-28T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As 2021 comes to a close, there is no better time to look back at what happened in the messaging space — it’s been a big year after all.]]></summary>
+        <content type="html"><![CDATA[<p>As 2021 comes to a close, there is no better time to look back at what happened in the messaging space — it’s been a big year after all.</p><p><a href="https://getsession.org/blog/2021-retrospective">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Disposing of Big Tech: Free speech is not disposable (Part One)]]></title>
+        <id>https://getsession.org/blog/disposing-of-big-tech-part-one</id>
+        <link href="https://getsession.org/blog/disposing-of-big-tech-part-one"/>
+        <updated>2021-12-22T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How do we stifle the spread of hate and misinformation on social media? Is the answer content moderation? Or are algorithms to blame? ]]></summary>
+        <content type="html"><![CDATA[<p>How do we stifle the spread of hate and misinformation on social media? Is the answer content moderation? Or are algorithms to blame? </p><p><a href="https://getsession.org/blog/disposing-of-big-tech-part-one">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Calls on Session: How to opt-in]]></title>
+        <id>https://getsession.org/blog/calls-on-session-how-to-opt-in</id>
+        <link href="https://getsession.org/blog/calls-on-session-how-to-opt-in"/>
+        <updated>2021-12-19T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We know there’s one important item on every Session user’s wishlist this holiday season, and that’s exactly what we’ve got — voice and video calls (sort of). ]]></summary>
+        <content type="html"><![CDATA[<p>We know there’s one important item on every Session user’s wishlist this holiday season, and that’s exactly what we’ve got — voice and video calls (sort of). </p><p><a href="https://getsession.org/blog/calls-on-session-how-to-opt-in">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[No caller ID: Calls on Session]]></title>
+        <id>https://getsession.org/blog/calls-on-session</id>
+        <link href="https://getsession.org/blog/calls-on-session"/>
+        <updated>2021-12-06T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Voice and video calls have been Session’s most requested feature ever since we launched. Here's what to expect now that voice calls are released on Session.]]></summary>
+        <content type="html"><![CDATA[<p>Voice and video calls have been Session’s most requested feature ever since we launched. Here's what to expect now that voice calls are released on Session.</p><p><a href="https://getsession.org/blog/calls-on-session">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Livin’ on the land of Big Tech: The gentrification of the internet]]></title>
+        <id>https://getsession.org/blog/the-gentrification-of-the-internet</id>
+        <link href="https://getsession.org/blog/the-gentrification-of-the-internet"/>
+        <updated>2021-11-28T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Do you believe in technology? In the world wide web of mega-corporations, rent goes up while innovation goes down. ]]></summary>
+        <content type="html"><![CDATA[<p>Do you believe in technology? In the world wide web of mega-corporations, rent goes up while innovation goes down. </p><p><a href="https://getsession.org/blog/the-gentrification-of-the-internet">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Matrix vs. The Metaverse]]></title>
+        <id>https://getsession.org/blog/the-matrix-vs-the-metaverse</id>
+        <link href="https://getsession.org/blog/the-matrix-vs-the-metaverse"/>
+        <updated>2021-11-08T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[When Mark Zuckerberg introduced Facebook’s new brand—Meta—in an hour-long Connect 2021 presentation, I (along with others no doubt) had a nagging thought throughout: is this what our matrix looks like?]]></summary>
+        <content type="html"><![CDATA[<p>When Mark Zuckerberg introduced Facebook’s new brand—Meta—in an hour-long Connect 2021 presentation, I (along with others no doubt) had a nagging thought throughout: is this what our matrix looks like?</p><p><a href="https://getsession.org/blog/the-matrix-vs-the-metaverse">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The anonymity argument: Debunking the real name fallacy]]></title>
+        <id>https://getsession.org/blog/the-anonymity-argument</id>
+        <link href="https://getsession.org/blog/the-anonymity-argument"/>
+        <updated>2021-11-02T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The internet gave us mass-scale pseudonymous connection and communication. But is this way of interacting was really healthy, productive or…human?
+]]></summary>
+        <content type="html"><![CDATA[<p>The internet gave us mass-scale pseudonymous connection and communication. But is this way of interacting was really healthy, productive or…human?
+</p><p><a href="https://getsession.org/blog/the-anonymity-argument">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flip the switch: Global Encryption Day 2021]]></title>
+        <id>https://getsession.org/blog/global-encryption-day-2021</id>
+        <link href="https://getsession.org/blog/global-encryption-day-2021"/>
+        <updated>2021-10-20T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This Global Encryption Day, the cybersecurity community is calling for people to #MakeTheSwitch to end-to-end encryption. The OPTF is proud to join the call and stand in support of encryption. ]]></summary>
+        <content type="html"><![CDATA[<p>This Global Encryption Day, the cybersecurity community is calling for people to #MakeTheSwitch to end-to-end encryption. The OPTF is proud to join the call and stand in support of encryption. </p><p><a href="https://getsession.org/blog/global-encryption-day-2021">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session stories: Why do you use Session? ]]></title>
+        <id>https://getsession.org/blog/session-stories</id>
+        <link href="https://getsession.org/blog/session-stories"/>
+        <updated>2021-10-05T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This year, ‘Send it to me on Session’ has become a part of my everyday language. If you’re in the same boat, we want to hear from you!]]></summary>
+        <content type="html"><![CDATA[<p>This year, ‘Send it to me on Session’ has become a part of my everyday language. If you’re in the same boat, we want to hear from you!</p><p><a href="https://getsession.org/blog/session-stories">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #13: It’s all about the UX]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-13</id>
+        <link href="https://getsession.org/blog/session-release-roundup-13"/>
+        <updated>2021-09-16T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #13! This Release Roundup includes closed group improvements, a new look Android conversation screen, ONS resolution and more!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #13! This Release Roundup includes closed group improvements, a new look Android conversation screen, ONS resolution and more!</p><p><a href="https://getsession.org/blog/session-release-roundup-13">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why are phone numbers a privacy problem?]]></title>
+        <id>https://getsession.org/blog/phone-number-privacy</id>
+        <link href="https://getsession.org/blog/phone-number-privacy"/>
+        <updated>2021-09-13T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Phone numbers are not private. Using your phone number can put your privacy at risk. If you’ve spent much time around the privacy movement, you’ve probably heard countless people lament the privacy shortcomings of phone numbers. ]]></summary>
+        <content type="html"><![CDATA[<p>Phone numbers are not private. Using your phone number can put your privacy at risk. If you’ve spent much time around the privacy movement, you’ve probably heard countless people lament the privacy shortcomings of phone numbers. </p><p><a href="https://getsession.org/blog/phone-number-privacy">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[On the recent Australian surveillance legislation]]></title>
+        <id>https://getsession.org/blog/on-the-recent-australian-surveillance-legislation</id>
+        <link href="https://getsession.org/blog/on-the-recent-australian-surveillance-legislation"/>
+        <updated>2021-09-08T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Regulators are increasingly acting with open hostility towards encryption, security, and privacy. The latest chapter in this sorry story took  place in our own backyard when Australia’s government passed a new bill granting increased surveillance capacities.]]></summary>
+        <content type="html"><![CDATA[<p>Regulators are increasingly acting with open hostility towards encryption, security, and privacy. The latest chapter in this sorry story took  place in our own backyard when Australia’s government passed a new bill granting increased surveillance capacities.</p><p><a href="https://getsession.org/blog/on-the-recent-australian-surveillance-legislation">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Deleting messages and time-to-live: This message will self-destruct in…]]></title>
+        <id>https://getsession.org/blog/self-deleting-messages</id>
+        <link href="https://getsession.org/blog/self-deleting-messages"/>
+        <updated>2021-09-05T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Digital conversations are fundamentally different to real-world conversations. When you have a conversation over text, you’re creating a record. The record you create will persist long into the future, and it can quickly paint a high fidelity picture about your life. ]]></summary>
+        <content type="html"><![CDATA[<p>Digital conversations are fundamentally different to real-world conversations. When you have a conversation over text, you’re creating a record. The record you create will persist long into the future, and it can quickly paint a high fidelity picture about your life. </p><p><a href="https://getsession.org/blog/self-deleting-messages">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Contact discovery: Finding friends without foes]]></title>
+        <id>https://getsession.org/blog/contact-discovery</id>
+        <link href="https://getsession.org/blog/contact-discovery"/>
+        <updated>2021-08-08T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Messaging platforms are useless if there’s nobody to read your message. But some apps sacrifice privacy to make it easier to find your friends.]]></summary>
+        <content type="html"><![CDATA[<p>Messaging platforms are useless if there’s nobody to read your message. But some apps sacrifice privacy to make it easier to find your friends.</p><p><a href="https://getsession.org/blog/contact-discovery">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Communication Cooperative: A messaging app that can't sell out]]></title>
+        <id>https://getsession.org/blog/a-messaging-app-that-cant-sell-out</id>
+        <link href="https://getsession.org/blog/a-messaging-app-that-cant-sell-out"/>
+        <updated>2021-07-25T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We designed Session from the ground up to be run by the people, for the people. Session is one of the world’s first messaging apps run like a co-op.]]></summary>
+        <content type="html"><![CDATA[<p>We designed Session from the ground up to be run by the people, for the people. Session is one of the world’s first messaging apps run like a co-op.</p><p><a href="https://getsession.org/blog/a-messaging-app-that-cant-sell-out">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Privacy propaganda: The war on encryption]]></title>
+        <id>https://getsession.org/blog/war-on-encryption</id>
+        <link href="https://getsession.org/blog/war-on-encryption"/>
+        <updated>2021-06-22T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Encryption is vital to defending digital privacy, but it’s being painted as the villain of the tech world. Push back against the anti-encryption agenda.]]></summary>
+        <content type="html"><![CDATA[<p>Encryption is vital to defending digital privacy, but it’s being painted as the villain of the tech world. Push back against the anti-encryption agenda.</p><p><a href="https://getsession.org/blog/war-on-encryption">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Privacy washing: Creating a clean image for dirty tech]]></title>
+        <id>https://getsession.org/blog/privacy-washing</id>
+        <link href="https://getsession.org/blog/privacy-washing"/>
+        <updated>2021-06-10T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Companies are using the push for privacy to market their tech whether it’s private or not.]]></summary>
+        <content type="html"><![CDATA[<p>Companies are using the push for privacy to market their tech whether it’s private or not.</p><p><a href="https://getsession.org/blog/privacy-washing">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session on scale: Open group extravaganza]]></title>
+        <id>https://getsession.org/blog/new-open-groups</id>
+        <link href="https://getsession.org/blog/new-open-groups"/>
+        <updated>2021-05-20T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introducing the superpowered open groups 2.0 — a complete overhaul of the way open groups work.]]></summary>
+        <content type="html"><![CDATA[<p>Introducing the superpowered open groups 2.0 — a complete overhaul of the way open groups work.</p><p><a href="https://getsession.org/blog/new-open-groups">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #12: Open Groups Overhaul]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-12</id>
+        <link href="https://getsession.org/blog/session-release-roundup-12"/>
+        <updated>2021-05-13T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #12! This Release Roundup includes brand new open groups, closed group improvements, and bug fixes!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #12! This Release Roundup includes brand new open groups, closed group improvements, and bug fixes!</p><p><a href="https://getsession.org/blog/session-release-roundup-12">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WhatsApp privacy policy teardown: This is where it ends]]></title>
+        <id>https://getsession.org/blog/whatsapp-privacy-policy</id>
+        <link href="https://getsession.org/blog/whatsapp-privacy-policy"/>
+        <updated>2021-05-06T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Accepting the new WhatsApp privacy policy by May 15 is mandatory. Here’s everything you need to know, and why you should leave WhatsApp now.]]></summary>
+        <content type="html"><![CDATA[<p>Accepting the new WhatsApp privacy policy by May 15 is mandatory. Here’s everything you need to know, and why you should leave WhatsApp now.</p><p><a href="https://getsession.org/blog/whatsapp-privacy-policy">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session code audit: Technical report published by Quarkslab]]></title>
+        <id>https://getsession.org/blog/session-code-audit</id>
+        <link href="https://getsession.org/blog/session-code-audit"/>
+        <updated>2021-04-29T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A Session code audit for the Android, iOS, and Desktop versions of Session been completed by the cybersecurity research company Quarkslab.]]></summary>
+        <content type="html"><![CDATA[<p>A Session code audit for the Android, iOS, and Desktop versions of Session been completed by the cybersecurity research company Quarkslab.</p><p><a href="https://getsession.org/blog/session-code-audit">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[End-to-end encryption: Secure messengers and messaging]]></title>
+        <id>https://getsession.org/blog/end-to-end-encryption-secure-messengers-and-messaging</id>
+        <link href="https://getsession.org/blog/end-to-end-encryption-secure-messengers-and-messaging"/>
+        <updated>2021-04-25T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[End-to-end encryption is the most private and secure way to communicate online. End-to-end encryption (E2EE) is offered in most modern messaging apps, but how does it work?]]></summary>
+        <content type="html"><![CDATA[<p>End-to-end encryption is the most private and secure way to communicate online. End-to-end encryption (E2EE) is offered in most modern messaging apps, but how does it work?</p><p><a href="https://getsession.org/blog/end-to-end-encryption-secure-messengers-and-messaging">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Your adversary: Who’s a hacker, anyway?]]></title>
+        <id>https://getsession.org/blog/your-adversary-whos-a-hacker-anyway</id>
+        <link href="https://getsession.org/blog/your-adversary-whos-a-hacker-anyway"/>
+        <updated>2021-04-19T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A fundamental concept underpinning the field of cybersecurity is adversaries. Adversaries are any two parties who have opposing interests.]]></summary>
+        <content type="html"><![CDATA[<p>A fundamental concept underpinning the field of cybersecurity is adversaries. Adversaries are any two parties who have opposing interests.</p><p><a href="https://getsession.org/blog/your-adversary-whos-a-hacker-anyway">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The crypto craze: Implementing cryptocurrency into a messenger]]></title>
+        <id>https://getsession.org/blog/crypto-craze</id>
+        <link href="https://getsession.org/blog/crypto-craze"/>
+        <updated>2021-04-07T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cryptocurrencies are in the headlines again lately. Everyone who’s anyone is talking about them, trading them, and…putting crypto into their messenger?]]></summary>
+        <content type="html"><![CDATA[<p>Cryptocurrencies are in the headlines again lately. Everyone who’s anyone is talking about them, trading them, and…putting crypto into their messenger?</p><p><a href="https://getsession.org/blog/crypto-craze">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trust on first use: The Achilles heel of centralised messengers]]></title>
+        <id>https://getsession.org/blog/trust-on-first-use-the-achilles-heel-of-centralised-messengers</id>
+        <link href="https://getsession.org/blog/trust-on-first-use-the-achilles-heel-of-centralised-messengers"/>
+        <updated>2021-04-06T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[When you first send a message on a new app, you’re trusting that service to send your message to the right person without compromising its integrity or privacy. How can we remove that trust?]]></summary>
+        <content type="html"><![CDATA[<p>When you first send a message on a new app, you’re trusting that service to send your message to the right person without compromising its integrity or privacy. How can we remove that trust?</p><p><a href="https://getsession.org/blog/trust-on-first-use-the-achilles-heel-of-centralised-messengers">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ground Safe: Putting secure tech in the hands of democracy’s defenders]]></title>
+        <id>https://getsession.org/blog/ground-safe</id>
+        <link href="https://getsession.org/blog/ground-safe"/>
+        <updated>2021-03-18T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A groundbreaking new report sheds light on ways for secure communications tech to evolve so it can better protect people working to defend our human rights.]]></summary>
+        <content type="html"><![CDATA[<p>A groundbreaking new report sheds light on ways for secure communications tech to evolve so it can better protect people working to defend our human rights.</p><p><a href="https://getsession.org/blog/ground-safe">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #11: Return of the Multi-Device]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-11</id>
+        <link href="https://getsession.org/blog/session-release-roundup-11"/>
+        <updated>2021-03-04T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #11! This Release Roundup includes multi-device, a brand new conversation screen for iOS, and some bug fixes!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #11! This Release Roundup includes multi-device, a brand new conversation screen for iOS, and some bug fixes!</p><p><a href="https://getsession.org/blog/session-release-roundup-11">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Multidevice beta: How you can use it — and help improve it]]></title>
+        <id>https://getsession.org/blog/multidevice-beta-release</id>
+        <link href="https://getsession.org/blog/multidevice-beta-release"/>
+        <updated>2021-02-15T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A while back, we pulled multidevice support back into the workshop with the aim of implementing a more effective version in future, promising it would return someday. Well, today is that day, and the future is now. Multidevice is rolling out in early beta right now to an App Store or Play Store near you! …]]></summary>
+        <content type="html"><![CDATA[<p>A while back, we pulled multidevice support back into the workshop with the aim of implementing a more effective version in future, promising it would return someday. Well, today is that day, and the future is now. Multidevice is rolling out in early beta right now to an App Store or Play Store near you! …</p><p><a href="https://getsession.org/blog/multidevice-beta-release">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Data, data, data: Session user analytics and anonymity]]></title>
+        <id>https://getsession.org/blog/session-user-analytics-and-anonymity</id>
+        <link href="https://getsession.org/blog/session-user-analytics-and-anonymity"/>
+        <updated>2021-02-09T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session has been seeing massive user growth recently, with tens of thousands of active users in dozens of countries around the world. But hold on a minute — Session is also completely anonymous, with no phone numbers or other identifiers. So how do we know how many users we have, or where they are? Mobile …]]></summary>
+        <content type="html"><![CDATA[<p>Session has been seeing massive user growth recently, with tens of thousands of active users in dozens of countries around the world. But hold on a minute — Session is also completely anonymous, with no phone numbers or other identifiers. So how do we know how many users we have, or where they are? Mobile …</p><p><a href="https://getsession.org/blog/session-user-analytics-and-anonymity">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #10: Mega edition]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-10</id>
+        <link href="https://getsession.org/blog/session-release-roundup-10"/>
+        <updated>2021-01-27T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Closed groups grow to 100! Plus: Protocol changes, performance improvements, and more Hello, it’s me, haven’t seen you in a while. It’s been a few months since we last piped up, but don’t worry — we’ve been hard at work tippy-tapping away, writing, wrangling, and working on brand new code to build a bright future …]]></summary>
+        <content type="html"><![CDATA[<p>Closed groups grow to 100! Plus: Protocol changes, performance improvements, and more Hello, it’s me, haven’t seen you in a while. It’s been a few months since we last piped up, but don’t worry — we’ve been hard at work tippy-tapping away, writing, wrangling, and working on brand new code to build a bright future …</p><p><a href="https://getsession.org/blog/session-release-roundup-10">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to help us translate Session into new languages quickly and easily]]></title>
+        <id>https://getsession.org/blog/session-translation-help</id>
+        <link href="https://getsession.org/blog/session-translation-help"/>
+        <updated>2020-12-27T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We want to make Session available in as many languages as possible. If you speak a language which Session isn’t yet available in, here’s how you can help!]]></summary>
+        <content type="html"><![CDATA[<p>We want to make Session available in as many languages as possible. If you speak a language which Session isn’t yet available in, here’s how you can help!</p><p><a href="https://getsession.org/blog/session-translation-help">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Session Protocol: What’s changing — and why]]></title>
+        <id>https://getsession.org/blog/session-protocol-explained</id>
+        <link href="https://getsession.org/blog/session-protocol-explained"/>
+        <updated>2020-12-15T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session is moving to a purpose-built new encryption protocol: the Session Protocol. Read all about why we’re making the move, and what it means for users.]]></summary>
+        <content type="html"><![CDATA[<p>Session is moving to a purpose-built new encryption protocol: the Session Protocol. Read all about why we’re making the move, and what it means for users.</p><p><a href="https://getsession.org/blog/session-protocol-explained">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Protocol: Technical implementation details]]></title>
+        <id>https://getsession.org/blog/session-protocol-technical-information</id>
+        <link href="https://getsession.org/blog/session-protocol-technical-information"/>
+        <updated>2020-12-14T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Read up on the technical information behind the new Session Protocol, and our plans for rolling it out.]]></summary>
+        <content type="html"><![CDATA[<p>Read up on the technical information behind the new Session Protocol, and our plans for rolling it out.</p><p><a href="https://getsession.org/blog/session-protocol-technical-information">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Session Protocol: A new standard for decentralised private messaging]]></title>
+        <id>https://getsession.org/blog/introducing-the-session-protocol</id>
+        <link href="https://getsession.org/blog/introducing-the-session-protocol"/>
+        <updated>2020-12-13T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It’s time for a new encryption protocol built from the ground up for decentralised secure messaging. Introducing the Session Protocol.]]></summary>
+        <content type="html"><![CDATA[<p>It’s time for a new encryption protocol built from the ground up for decentralised secure messaging. Introducing the Session Protocol.</p><p><a href="https://getsession.org/blog/introducing-the-session-protocol">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Privacy on trial: How encryption laws and backdoors threaten us all]]></title>
+        <id>https://getsession.org/blog/encryption-bans-backdoors</id>
+        <link href="https://getsession.org/blog/encryption-bans-backdoors"/>
+        <updated>2020-12-03T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Leaders around the world are advocating for anti-encryption and backdoor laws. Here's why it's never okay to compromise E2EE.]]></summary>
+        <content type="html"><![CDATA[<p>Leaders around the world are advocating for anti-encryption and backdoor laws. Here's why it's never okay to compromise E2EE.</p><p><a href="https://getsession.org/blog/encryption-bans-backdoors">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #9: Closed groups grow up! Plan a party, message your squad, or nail down that next office meeting]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-9</id>
+        <link href="https://getsession.org/blog/session-release-roundup-9"/>
+        <updated>2020-10-07T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #9! This Release Roundup includes a bigger closed groups, along with some major fixes to push notifications.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #9! This Release Roundup includes a bigger closed groups, along with some major fixes to push notifications.</p><p><a href="https://getsession.org/blog/session-release-roundup-9">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #8: Light mode arrives — and much, much more]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-8</id>
+        <link href="https://getsession.org/blog/session-release-roundup-8"/>
+        <updated>2020-09-03T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #8! This Release Roundup includes a bold new look for Session’s UI, along with some major fixes and improvements.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #8! This Release Roundup includes a bold new look for Session’s UI, along with some major fixes and improvements.</p><p><a href="https://getsession.org/blog/session-release-roundup-8">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #7: Translations, notifications, and more!]]></title>
+        <id>https://getsession.org/blog/release-roundup-7</id>
+        <link href="https://getsession.org/blog/release-roundup-7"/>
+        <updated>2020-08-02T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #7! This round of releases includes some pretty big changes and some exciting additions — read all the latest now!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #7! This round of releases includes some pretty big changes and some exciting additions — read all the latest now!</p><p><a href="https://getsession.org/blog/release-roundup-7">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The future of Session’s multi-device support]]></title>
+        <id>https://getsession.org/blog/future-of-multi-device</id>
+        <link href="https://getsession.org/blog/future-of-multi-device"/>
+        <updated>2020-08-02T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session’s multi-device support is being taken back into the shop for some love and attention. Read up on why, when, and what’s next for multi-device.]]></summary>
+        <content type="html"><![CDATA[<p>Session’s multi-device support is being taken back into the shop for some love and attention. Read up on why, when, and what’s next for multi-device.</p><p><a href="https://getsession.org/blog/future-of-multi-device">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #6: The moment you’ve all been waiting for… Desktop overhaul!]]></title>
+        <id>https://getsession.org/blog/release-roundup-6</id>
+        <link href="https://getsession.org/blog/release-roundup-6"/>
+        <updated>2020-07-16T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How many refactors does it take to overhaul the entire Session code base? Well, 3 — one for iOS, one for Android… and now, one for Desktop. That’s right — the Desktop client refactor is DONE! You can download it right now! Although this might seem like ‘just another refactor’, it will actually bring huge …]]></summary>
+        <content type="html"><![CDATA[<p>How many refactors does it take to overhaul the entire Session code base? Well, 3 — one for iOS, one for Android… and now, one for Desktop. That’s right — the Desktop client refactor is DONE! You can download it right now! Although this might seem like ‘just another refactor’, it will actually bring huge …</p><p><a href="https://getsession.org/blog/release-roundup-6">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #5: Staying mobile]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-5</id>
+        <link href="https://getsession.org/blog/session-release-roundup-5"/>
+        <updated>2020-06-25T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #5! Highlights include mobile updates to prepare for the desktop refactor, and some serious speed and reliability gains.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #5! Highlights include mobile updates to prepare for the desktop refactor, and some serious speed and reliability gains.</p><p><a href="https://getsession.org/blog/session-release-roundup-5">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session for beginners: Your Session starts here]]></title>
+        <id>https://getsession.org/blog/session-for-beginners</id>
+        <link href="https://getsession.org/blog/session-for-beginners"/>
+        <updated>2020-06-18T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[There have been a lot of reasons for people to suddenly take an interest in private messengers recently. Previously, encrypted messengers were mostly used by tech aficionados — and it shows in the way these apps are designed. But now private messengers are becoming more and more popular. Let’s go through some of the basics …]]></summary>
+        <content type="html"><![CDATA[<p>There have been a lot of reasons for people to suddenly take an interest in private messengers recently. Previously, encrypted messengers were mostly used by tech aficionados — and it shows in the way these apps are designed. But now private messengers are becoming more and more popular. Let’s go through some of the basics …</p><p><a href="https://getsession.org/blog/session-for-beginners">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Android trackers and permissions: Did I say you could do that?]]></title>
+        <id>https://getsession.org/blog/android-trackers-and-permissions</id>
+        <link href="https://getsession.org/blog/android-trackers-and-permissions"/>
+        <updated>2020-06-14T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As netizens have become more and more tech-literate over the years, lots of people have developed their own list of ‘scam app’ red flags to look out for. This might be things as simple as poor reviews, poorly written app descriptions, or things just looking plain dodgy. Most people have been around the internet rodeo …]]></summary>
+        <content type="html"><![CDATA[<p>As netizens have become more and more tech-literate over the years, lots of people have developed their own list of ‘scam app’ red flags to look out for. This might be things as simple as poor reviews, poorly written app descriptions, or things just looking plain dodgy. Most people have been around the internet rodeo …</p><p><a href="https://getsession.org/blog/android-trackers-and-permissions">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cost of admission: What info do you give away when signing up for a new private messenger?]]></title>
+        <id>https://getsession.org/blog/info-required-private-messenger-signup</id>
+        <link href="https://getsession.org/blog/info-required-private-messenger-signup"/>
+        <updated>2020-06-10T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Signing up is a critical moment whenever you start using a new service, and sometimes it can feel like signing a deal with the devil — how much are you sacrificing to start sending messages securely? And when you’re making an account on a (supposedly) private messenger, it can feel like this is all defeating …]]></summary>
+        <content type="html"><![CDATA[<p>Signing up is a critical moment whenever you start using a new service, and sometimes it can feel like signing a deal with the devil — how much are you sacrificing to start sending messages securely? And when you’re making an account on a (supposedly) private messenger, it can feel like this is all defeating …</p><p><a href="https://getsession.org/blog/info-required-private-messenger-signup">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #4: Spreading the love]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-4</id>
+        <link href="https://getsession.org/blog/session-release-roundup-4"/>
+        <updated>2020-06-04T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #4! Highlights include 3-hop onion requests on all platforms for improved anonymity, and Session en español for Android!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #4! Highlights include 3-hop onion requests on all platforms for improved anonymity, and Session en español for Android!</p><p><a href="https://getsession.org/blog/session-release-roundup-4">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #3: Filling the Android void]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-3</id>
+        <link href="https://getsession.org/blog/session-release-roundup-3"/>
+        <updated>2020-05-26T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #3! Highlights include some massive improvements to Session on Android as a result of a major code refactor.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #3! Highlights include some massive improvements to Session on Android as a result of a major code refactor.</p><p><a href="https://getsession.org/blog/session-release-roundup-3">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #2: Fresh apples!]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-2</id>
+        <link href="https://getsession.org/blog/session-release-roundup-2"/>
+        <updated>2020-05-10T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Session Release Roundup #2! Highlights include a huge round of bugfixes and improvements on iOS, and news about Spanish localisation!]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to Session Release Roundup #2! Highlights include a huge round of bugfixes and improvements on iOS, and news about Spanish localisation!</p><p><a href="https://getsession.org/blog/session-release-roundup-2">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session Release Roundup #1: You’ve got mail!]]></title>
+        <id>https://getsession.org/blog/session-release-roundup-1</id>
+        <link href="https://getsession.org/blog/session-release-roundup-1"/>
+        <updated>2020-04-22T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the first ever Session release roundup! In these posts, we’re going to talk about all of the newest fixes, features, and future plans for Session. Every time there’s a major Session release, we’ll put out one of these — and an accompanying email newsletter — so you can see what’s changed, and what …]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the first ever Session release roundup! In these posts, we’re going to talk about all of the newest fixes, features, and future plans for Session. Every time there’s a major Session release, we’ll put out one of these — and an accompanying email newsletter — so you can see what’s changed, and what …</p><p><a href="https://getsession.org/blog/session-release-roundup-1">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Verifying software downloads on Linux, Windows, and macOS]]></title>
+        <id>https://getsession.org/blog/verifying-software-downloads-on-linux-windows-and-macos</id>
+        <link href="https://getsession.org/blog/verifying-software-downloads-on-linux-windows-and-macos"/>
+        <updated>2020-04-08T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Don’t care what’s behind the scenes? Skip straight to software verification tutorials for macOS, Linux, and Windows. Back in the day, software used to arrive in the form of floppy discs, MiniDiscs, and CD-ROMs. But now, it’s all about the download. Everything is downloaded: the apps you use to keep in touch with your family, …]]></summary>
+        <content type="html"><![CDATA[<p>Don’t care what’s behind the scenes? Skip straight to software verification tutorials for macOS, Linux, and Windows. Back in the day, software used to arrive in the form of floppy discs, MiniDiscs, and CD-ROMs. But now, it’s all about the download. Everything is downloaded: the apps you use to keep in touch with your family, …</p><p><a href="https://getsession.org/blog/verifying-software-downloads-on-linux-windows-and-macos">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dev Diary: The rise and fall of the zombie swarm]]></title>
+        <id>https://getsession.org/blog/dev-diary-the-rise-and-fall-of-the-zombie-swarm</id>
+        <link href="https://getsession.org/blog/dev-diary-the-rise-and-fall-of-the-zombie-swarm"/>
+        <updated>2020-03-23T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Building a decentralised messenger can cause some headaches — read all about how our devs problem solved their way through message storage for Session.]]></summary>
+        <content type="html"><![CDATA[<p>Building a decentralised messenger can cause some headaches — read all about how our devs problem solved their way through message storage for Session.</p><p><a href="https://getsession.org/blog/dev-diary-the-rise-and-fall-of-the-zombie-swarm">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Sybil disobedience: How Session protects your anonymity using blockchain and crypto tech]]></title>
+        <id>https://getsession.org/blog/how-session-protects-your-anonymity-with-blockchain-and-crypto</id>
+        <link href="https://getsession.org/blog/how-session-protects-your-anonymity-with-blockchain-and-crypto"/>
+        <updated>2020-02-25T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session bucks the trend of blockchain vaporware with a real, usable product built on blockchain. Learn how blockchain and crypto power Session’s backend.]]></summary>
+        <content type="html"><![CDATA[<p>Session bucks the trend of blockchain vaporware with a real, usable product built on blockchain. Learn how blockchain and crypto power Session’s backend.</p><p><a href="https://getsession.org/blog/how-session-protects-your-anonymity-with-blockchain-and-crypto">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Community spirit: How to contribute to Session’s development]]></title>
+        <id>https://getsession.org/blog/community-spirit-how-to-contribute-to-session-development</id>
+        <link href="https://getsession.org/blog/community-spirit-how-to-contribute-to-session-development"/>
+        <updated>2020-02-16T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session is open-source, and open-source software means community collaboration. Read about all the ways you can contribute to Session’s development.]]></summary>
+        <content type="html"><![CDATA[<p>Session is open-source, and open-source software means community collaboration. Read about all the ways you can contribute to Session’s development.</p><p><a href="https://getsession.org/blog/community-spirit-how-to-contribute-to-session-development">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is metadata? Four syllables — zero privacy]]></title>
+        <id>https://getsession.org/blog/metadata-zero-privacy</id>
+        <link href="https://getsession.org/blog/metadata-zero-privacy"/>
+        <updated>2020-02-09T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Metadata is the biggest privacy risk you’ve never heard of. Learn what metadata is — and how to minimise your online footprint.]]></summary>
+        <content type="html"><![CDATA[<p>Metadata is the biggest privacy risk you’ve never heard of. Learn what metadata is — and how to minimise your online footprint.</p><p><a href="https://getsession.org/blog/metadata-zero-privacy">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Onion requests: Session’s new message routing solution]]></title>
+        <id>https://getsession.org/blog/onion-requests-session-new-message-routing-solution</id>
+        <link href="https://getsession.org/blog/onion-requests-session-new-message-routing-solution"/>
+        <updated>2020-01-29T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Shortly after launch, Session will be moving to a new onion routing system called onion requests. Read up on the tech, and the reasons behind the change.]]></summary>
+        <content type="html"><![CDATA[<p>Shortly after launch, Session will be moving to a new onion routing system called onion requests. Read up on the tech, and the reasons behind the change.</p><p><a href="https://getsession.org/blog/onion-requests-session-new-message-routing-solution">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anonymity 101: Day-to-day ways to stay anonymous online]]></title>
+        <id>https://getsession.org/blog/anonymity-101</id>
+        <link href="https://getsession.org/blog/anonymity-101"/>
+        <updated>2020-01-22T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The little things really do add up when it comes to online privacy. Check out 9 steps you can take to keep yourself, and your data, safe online.]]></summary>
+        <content type="html"><![CDATA[<p>The little things really do add up when it comes to online privacy. Check out 9 steps you can take to keep yourself, and your data, safe online.</p><p><a href="https://getsession.org/blog/anonymity-101">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dev Diary: Creating a decentralised friend request system]]></title>
+        <id>https://getsession.org/blog/dev-diary-creating-a-decentralised-friend-request-system</id>
+        <link href="https://getsession.org/blog/dev-diary-creating-a-decentralised-friend-request-system"/>
+        <updated>2020-01-16T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Session is designed to be privacy first — decentralised servers, no phone numbers, the whole lot — but that creates some problems. Here’s how we solved one of them — friend requests.]]></summary>
+        <content type="html"><![CDATA[<p>Session is designed to be privacy first — decentralised servers, no phone numbers, the whole lot — but that creates some problems. Here’s how we solved one of them — friend requests.</p><p><a href="https://getsession.org/blog/dev-diary-creating-a-decentralised-friend-request-system">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Confirming identities online]]></title>
+        <id>https://getsession.org/blog/confirming-identities-online</id>
+        <link href="https://getsession.org/blog/confirming-identities-online"/>
+        <updated>2020-01-09T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Staying private online is important for everyone — but for some, it can be crucial. Learn how to confirm who you’re talking to while staying anonymous.]]></summary>
+        <content type="html"><![CDATA[<p>Staying private online is important for everyone — but for some, it can be crucial. Learn how to confirm who you’re talking to while staying anonymous.</p><p><a href="https://getsession.org/blog/confirming-identities-online">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to make an anonymous tip — and stay safe]]></title>
+        <id>https://getsession.org/blog/how-to-make-an-anonymous-tip-and-stay-safe</id>
+        <link href="https://getsession.org/blog/how-to-make-an-anonymous-tip-and-stay-safe"/>
+        <updated>2020-01-06T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Staying safe is the number one priority if you’re a whistleblower. Learn how to tip off journalists while keeping yourself safe.]]></summary>
+        <content type="html"><![CDATA[<p>Staying safe is the number one priority if you’re a whistleblower. Learn how to tip off journalists while keeping yourself safe.</p><p><a href="https://getsession.org/blog/how-to-make-an-anonymous-tip-and-stay-safe">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Session and Australia’s Laws to Circumvent Secure Communications]]></title>
+        <id>https://getsession.org/blog/session-and-australias-laws-to-circumvent-secure-communications</id>
+        <link href="https://getsession.org/blog/session-and-australias-laws-to-circumvent-secure-communications"/>
+        <updated>2020-01-01T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Governments around the world are seeking backdoors to access encrypted communications. We have kept a close eye on the evolving laws that aim to do this.]]></summary>
+        <content type="html"><![CDATA[<p>Governments around the world are seeking backdoors to access encrypted communications. We have kept a close eye on the evolving laws that aim to do this.</p><p><a href="https://getsession.org/blog/session-and-australias-laws-to-circumvent-secure-communications">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Freelance and independent journalism: How do you stay safe? ]]></title>
+        <id>https://getsession.org/blog/freelance-journalism</id>
+        <link href="https://getsession.org/blog/freelance-journalism"/>
+        <updated>2019-12-31T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Independent journalists often search for and publish things someone wants kept quiet. That's what journalism is for — but it's important for journalists to stay safe and secure. ]]></summary>
+        <content type="html"><![CDATA[<p>Independent journalists often search for and publish things someone wants kept quiet. That's what journalism is for — but it's important for journalists to stay safe and secure. </p><p><a href="https://getsession.org/blog/freelance-journalism">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Onion routing: Private messaging’s missing link]]></title>
+        <id>https://getsession.org/blog/onion-routing-private-messagings-missing-link</id>
+        <link href="https://getsession.org/blog/onion-routing-private-messagings-missing-link"/>
+        <updated>2019-12-25T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[End-to-end encrypted messaging apps are popping up left and right, but finding the most private and the most secure can feel like a game of Whack-a-Mole.]]></summary>
+        <content type="html"><![CDATA[<p>End-to-end encrypted messaging apps are popping up left and right, but finding the most private and the most secure can feel like a game of Whack-a-Mole.</p><p><a href="https://getsession.org/blog/onion-routing-private-messagings-missing-link">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Centralisation vs decentralisation in private messaging]]></title>
+        <id>https://getsession.org/blog/centralisation-vs-decentralisation-in-private-messaging</id>
+        <link href="https://getsession.org/blog/centralisation-vs-decentralisation-in-private-messaging"/>
+        <updated>2019-12-22T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Many private messaging apps have a critical flaw: centralisation. Learn why decentralisation is the future of secure private messaging.]]></summary>
+        <content type="html"><![CDATA[<p>Many private messaging apps have a critical flaw: centralisation. Learn why decentralisation is the future of secure private messaging.</p><p><a href="https://getsession.org/blog/centralisation-vs-decentralisation-in-private-messaging">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What can someone do with your phone number?]]></title>
+        <id>https://getsession.org/blog/phone-number-dangers</id>
+        <link href="https://getsession.org/blog/phone-number-dangers"/>
+        <updated>2019-12-16T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Phone numbers are tied to our online identities: we use them as logins and to secure our accounts with SMS two-factor verification. But how secure are they?]]></summary>
+        <content type="html"><![CDATA[<p>Phone numbers are tied to our online identities: we use them as logins and to secure our accounts with SMS two-factor verification. But how secure are they?</p><p><a href="https://getsession.org/blog/phone-number-dangers">Read more</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Private messaging apps: Who needs a secure messenger — and why?]]></title>
+        <id>https://getsession.org/blog/who-needs-private-messaging</id>
+        <link href="https://getsession.org/blog/who-needs-private-messaging"/>
+        <updated>2019-12-14T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Private messaging is a great way to protect your right to privacy online. But for some, private messaging isn’t just nice to have — it’s a necessity.]]></summary>
+        <content type="html"><![CDATA[<p>Private messaging is a great way to protect your right to privacy online. But for some, private messaging isn’t just nice to have — it’s a necessity.</p><p><a href="https://getsession.org/blog/who-needs-private-messaging">Read more</a></p>]]></content>
+    </entry>
+</feed>

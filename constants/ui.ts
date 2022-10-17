@@ -12,8 +12,6 @@ const UI = {
   XLARGE_BREAKPOINT: makeNumber(tailwindConfig.theme.screens.xl),
   HUGE_BREAKPOINT: makeNumber(tailwindConfig.theme.screens['2xl']),
   ENORMOUS_BREAKPOINT: makeNumber(tailwindConfig.theme.screens['3xl']),
-  CONTAINER_MAX_WIDTH: 1200, //px
-  CONTAINER_PADDING_X: 5, // vw
 };
 
 export default UI;

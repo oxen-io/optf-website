@@ -2,7 +2,7 @@ import METADATA, { IMetadata } from '@/constants/metadata';
 
 import Head from 'next/head';
 import { ReactElement } from 'react';
-import { isLocalLink } from '@/utils/links';
+import { isLocal } from '@/utils/links';
 import { useRouter } from 'next/router';
 
 interface Props {
@@ -13,27 +13,30 @@ interface Props {
 export default function CustomHead(props: Props): ReactElement {
   const router = useRouter();
   const { title, metadata } = props;
-  const pageTitle = title && title.length > 0 ? title : METADATA.TITLE;
+  const pageTitle =
+    title && title.length > 0
+      ? `${title} - Session Private Messenger`
+      : METADATA.TITLE;
   const pageUrl = `${METADATA.HOST_URL}${router.asPath}`;
-
+  const canonicalUrl = metadata?.CANONICAL_URL ?? pageUrl;
   const imageALT = metadata?.OG_IMAGE?.ALT ?? METADATA.OG_IMAGE.ALT;
   let imageWidth = metadata?.OG_IMAGE?.WIDTH ?? METADATA.OG_IMAGE.WIDTH;
   let imageHeight = metadata?.OG_IMAGE?.HEIGHT ?? METADATA.OG_IMAGE.HEIGHT;
   let imageUrl = (() => {
     if (!metadata?.OG_IMAGE?.URL)
       return `${METADATA.HOST_URL}${METADATA.OG_IMAGE.URL}`;
-    if (metadata?.OG_IMAGE?.URL && isLocalLink(metadata.OG_IMAGE.URL)) {
+    if (metadata?.OG_IMAGE?.URL && isLocal(metadata.OG_IMAGE.URL)) {
       return `${METADATA.HOST_URL}${metadata.OG_IMAGE.URL}`;
     } else {
       return `${metadata?.OG_IMAGE?.URL}`;
     }
   })();
+
   // Decrease image dimensions so link previews work on Telegram
   if (imageWidth > 3000) {
     imageHeight = Math.floor(imageHeight / 2);
     imageWidth = Math.floor(imageWidth / 2);
-    // if you are using a cms with an image API
-    // imageUrl = `${imageUrl}?w=${imageWidth}`;
+    imageUrl = `${imageUrl}?w=${imageWidth}`;
   }
 
   const tags = metadata?.TAGS ? metadata?.TAGS : METADATA.TAGS;
@@ -186,20 +189,16 @@ export default function CustomHead(props: Props): ReactElement {
         name="twitter:site"
         content={METADATA.HOST_URL}
       />
-      {METADATA.TWITTER_ID && (
-        <meta
-          key="twitter:creator"
-          name="twitter:creator"
-          content={METADATA.TWITTER_ID}
-        />
-      )}
-      {METADATA.ITUNES_APP_ID && (
-        <meta
-          key="apple-itunes-app"
-          name="apple-itunes-app"
-          content={METADATA.ITUNES_APP_ID}
-        />
-      )}
+      <meta
+        key="twitter:creator"
+        name="twitter:creator"
+        content={METADATA.TWITTER_CREATOR}
+      />
+      <meta
+        key="apple-itunes-app"
+        name="apple-itunes-app"
+        content={METADATA.ITUNES_ID}
+      />
       <meta
         key="msapplication-TileColor"
         name="msapplication-TileColor"
@@ -211,7 +210,7 @@ export default function CustomHead(props: Props): ReactElement {
         content={METADATA.THEME_COLOR}
       />
       {renderTags}
-      <link key="canonical" rel="canonical" href={pageUrl} />
+      <link key="canonical" rel="canonical" href={canonicalUrl} />
       <link
         key="image/png32x32"
         rel="icon"
@@ -240,6 +239,24 @@ export default function CustomHead(props: Props): ReactElement {
         color={METADATA.MASK_ICON.COLOR}
       />
       <link key="shortlink" rel="shortlink" href={METADATA.HOST_URL} />
+      <link
+        key="/feed"
+        rel="alternative"
+        type="application/rss+xml"
+        href="/feed"
+      />
+      <link
+        key="/feed/atom"
+        rel="alternative"
+        type="application/atom+xml"
+        href="/feed/atom"
+      />
+      <link
+        key="/feed/json"
+        rel="alternative"
+        type="application/feed+json"
+        href="/feed/json"
+      />
       {metadata?.TYPE === 'article' && renderLdJSON}
     </Head>
   );

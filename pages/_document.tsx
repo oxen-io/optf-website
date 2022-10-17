@@ -14,9 +14,9 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html prefix="og: http://ogp.me/ns#" lang="en">
+      <Html lang="en">
         <Head />
-        <body className={'antialiased'}>
+        <body className="antialiased selection:bg-primary">
           <Main />
           <NextScript />
         </body>

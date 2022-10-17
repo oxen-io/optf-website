@@ -1,7 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { fetchBlogEntries, fetchPages } from '@/services/cms';
+
+import { IRedirection } from '@/services/redirect';
+import { METADATA } from '@/constants';
 import getConfig from 'next/config';
 import { readdirSync } from 'fs';
-import METADATA from '@/constants/metadata';
 
 export default async function handler(
   req: NextApiRequest,
@@ -21,8 +24,11 @@ export default async function handler(
         '_document.tsx',
         '_error.tsx',
         '404.tsx',
+        '[slug].tsx',
         'sitemap.xml.tsx',
         'api',
+        'tag',
+        'preview',
       ].includes(page);
     })
     .map((pagePath) => {
@@ -35,7 +41,7 @@ export default async function handler(
     });
 
   const redirectPages = getConfig().serverRuntimeConfig.redirects.map(
-    (redirect: any) => {
+    (redirect: IRedirection) => {
       if (redirect.source.includes(':slug')) {
         return '';
       } else {
@@ -44,9 +50,23 @@ export default async function handler(
     }
   );
 
+  const { entries: _dynamicPages, total: totalPages } = await fetchPages();
+  const dynamicPages = _dynamicPages.map((page) => {
+    return `${baseUrl}/${page.slug}`;
+  });
+
+  const { entries: _blogPages, total: totalBlogPages } =
+    await fetchBlogEntries();
+  const blogPages = _blogPages.map((page) => {
+    return {
+      url: `${baseUrl}/blog/${page.slug}`,
+      published: page.publishedDateISO,
+    };
+  });
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${[...staticPages, ...redirectPages]
+      ${[...staticPages, ...redirectPages, ...dynamicPages]
         .map((url) => {
           return `
           <url>
@@ -56,6 +76,18 @@ export default async function handler(
             <priority>1.0</priority>
           </url>
         `;
+        })
+        .join('')}
+      ${blogPages
+        .map((post) => {
+          return `
+            <url>
+              <loc>${post.url}</loc>
+              <lastmod>${post.published}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>1.0</priority>
+            </url>
+          `;
         })
         .join('')}
     </urlset>
