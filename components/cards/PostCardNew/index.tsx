@@ -34,7 +34,7 @@ export default function PostCard(props: Props): ReactElement {
       className={classNames(
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
-        'bg-green-150 rounded-3xl mr-0 lg:mx-2 shadow hover:shadow-inner',
+        'bg-green-150 rounded-3xl  mx-2 shadow hover:shadow-inner',
         classes
       )}
     >

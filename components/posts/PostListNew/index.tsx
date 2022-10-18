@@ -19,7 +19,7 @@ interface Props {
 
 export default function PostListNew(props: Props): ReactElement {
   const { posts, gridStyle = 'normal', hoverEffect, compact, classes } = props;
-  const cardClasses = classNames('md:w-1/2 mb-5', 'lg:w-1/3 lg:max-w-xs ');
+  const cardClasses = classNames('md:w-1/3 mb-5', 'lg:w-1/3 lg:max-w-xs ');
   const gridClasses = [
     gridStyle === 'normal' && 'lg:max-w-screen-xl',
     gridStyle === 'blog' && 'lg:max-w-screen-lg',

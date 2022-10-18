@@ -5,7 +5,6 @@ import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
-import generateRSSFeed from '@/utils/rss';
 import { PostListNew } from '@/components/posts';
 import Banner from '@/components/Banner';
 
@@ -37,7 +36,7 @@ export default function Home(props: Props) {
         image={
           <Image width={260} height={85} src="/assets/images/logo-optf.png" />
         }
-      ></Banner>
+      />
     </Layout>
   );
 }

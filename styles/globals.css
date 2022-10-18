@@ -418,3 +418,46 @@ button {
     background-image: linear-gradient(90deg, #aaffff 0%, #aef0ff 52%);
   }
 }
+
+/*banner animation*/
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.wave.-one {
+  animation: rotate 42000ms infinite linear;
+  opacity: 0.9;
+  background-color: #e47088;
+}
+.wave {
+  position: absolute;
+  opacity: 0.9;
+  width: 1500px;
+  height: 1200px;
+  margin-left: -800px;
+  margin-top: -1300px;
+  border-radius: 43%;
+}
+
+.-two {
+  animation: rotate 18000ms infinite linear;
+  opacity: 0.9;
+  background-color: #a4588c;
+}
+
+.-three {
+  animation: rotate 22000ms infinite linear;
+  background-color: #634290;
+}
+
+.box {
+  top: 0;
+  transform: rotate(80deg);
+  left: 0;
+}
