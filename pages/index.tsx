@@ -30,7 +30,7 @@ export default function Home(props: Props) {
   return (
     <Layout>
       <Hero />
-      <PostListNew posts={otherPosts} />
+      <PostListNew blogSection={false} posts={otherPosts} />
       <Banner
         subtitle="Everyone has a right to privacy — online and offline. But as we become more reliant on technology and digital platforms, our privacy and security is increasingly undermined and exploited.We’re putting the power back in your hands — we support the development of free and open-source software that keeps you secure online."
         image={

@@ -10,6 +10,7 @@ interface Props extends IPost {
   hoverEffect?: boolean;
   compact?: boolean;
   classes?: string;
+  blogSection?: boolean;
 }
 
 export default function PostCard(props: Props): ReactElement {
@@ -26,6 +27,7 @@ export default function PostCard(props: Props): ReactElement {
     hoverEffect = !featured,
     compact = false,
     classes,
+    blogSection = false,
   } = props;
   const headingClasses = 'cursor-pointer text-2xl font-bold mb-3 px-3';
   // parent container must have 'flex' class
@@ -34,7 +36,8 @@ export default function PostCard(props: Props): ReactElement {
       className={classNames(
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
-        'bg-green-150 rounded-3xl  mx-2 shadow hover:shadow-inner',
+        'bg-green-150  rounded-3xl  mx-2 shadow hover:shadow-inner',
+        blogSection && 'rounded-t-3xl rounded-b-none bg-gray-100',
         classes
       )}
     >
@@ -44,10 +47,10 @@ export default function PostCard(props: Props): ReactElement {
             className={classNames(
               'relative overflow-hidden w-full mb-4',
               'md:px-16',
-              'lg:px-20',
+              'lg:px-20 rounded-t-3xl ',
               compact ? 'h-48 md:h-60 lg:h-44' : 'h-60 lg:h-56',
               featured && 'md:w-1/2 md:mr-4 lg:mr-3 lg:w-3/5 lg:h-96',
-              hoverEffect && 'rounded-t-3xl'
+              blogSection && 'rounded-t-2xl rounded-b-2xl '
             )}
           >
             <Image
@@ -80,7 +83,16 @@ export default function PostCard(props: Props): ReactElement {
             )}
           </a>
         </Link>
-
+        {blogSection && (
+          <p
+            className={classNames(
+              'text-gray-lightest text-xs font-helvetica ml-3 mb-4'
+            )}
+          >
+            {publishedDate}
+            {/*   {author && author.name && <span> / {author.name}</span>} */}
+          </p>
+        )}
         {!compact && (
           <p
             className={classNames(

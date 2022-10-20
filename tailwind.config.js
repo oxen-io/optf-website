@@ -49,6 +49,7 @@ module.exports = {
           light: 'var(--gray-light)',
           DEFAULT: 'var(--gray-DEFAULT)',
           dark: 'var(--gray-dark)',
+          250: '#F5F5F5',
         },
         green: {
           150: '#d7f6f2',

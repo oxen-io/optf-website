@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 
@@ -22,6 +21,7 @@ export default function GroupNotice(props: Props): ReactElement {
       <p className={classNames('leading-none')}>
         Sign up to the mailing list and start taking action!
       </p>
+      <div id="custom-substack-embed"></div>
     </div>
   );
 }

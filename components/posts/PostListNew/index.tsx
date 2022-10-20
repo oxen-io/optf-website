@@ -1,12 +1,13 @@
 import { ReactElement } from 'react';
 import classNames from 'classnames';
-
 import { IPost } from '@/types/cms';
 import { generateRoute } from '@/services/cms';
 import Container from '@/components/Container';
 import { Headline } from '@/components/ui';
 import { PostCardNew } from '@/components/cards';
 import { UI } from '@/constants';
+import { useState, useMemo } from 'react';
+import Pagination from '../../../components/Pagination/Pagination';
 
 interface Props {
   posts: IPost[];
@@ -15,15 +16,34 @@ interface Props {
   hoverEffect?: boolean;
   compact?: boolean;
   classes?: string;
+  blogSection?: boolean;
 }
 
 export default function PostListNew(props: Props): ReactElement {
-  const { posts, gridStyle = 'normal', hoverEffect, compact, classes } = props;
+  const {
+    posts,
+    gridStyle = 'normal',
+    hoverEffect,
+    compact,
+    classes,
+    blogSection = false,
+  } = props;
   const cardClasses = classNames('md:w-1/3 mb-5', 'lg:w-1/3 lg:max-w-xs ');
   const gridClasses = [
     gridStyle === 'normal' && 'lg:max-w-screen-xl',
     gridStyle === 'blog' && 'lg:max-w-screen-lg',
   ];
+
+  let PageSize = 6;
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    return posts.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage]);
+
   return (
     <div className={classNames('mt-8', 'lg:mt-0', classes)}>
       <Container
@@ -34,9 +54,10 @@ export default function PostListNew(props: Props): ReactElement {
           gridClasses
         )}
       >
-        {posts?.map((post) => {
+        {currentTableData?.map((post) => {
           return (
             <PostCardNew
+              blogSection={blogSection}
               route={generateRoute(post.slug)}
               hoverEffect={hoverEffect}
               compact={compact}
@@ -46,6 +67,15 @@ export default function PostListNew(props: Props): ReactElement {
             />
           );
         })}
+        {blogSection && (
+          <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={posts.length}
+            pageSize={PageSize}
+            onPageChange={(page: any) => setCurrentPage(page)}
+          />
+        )}
       </Container>
     </div>
   );
