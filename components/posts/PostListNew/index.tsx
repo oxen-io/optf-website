@@ -69,7 +69,6 @@ export default function PostListNew(props: Props): ReactElement {
         })}
         {blogSection && (
           <Pagination
-            className="pagination-bar"
             currentPage={currentPage}
             totalCount={posts.length}
             pageSize={PageSize}

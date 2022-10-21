@@ -15,7 +15,9 @@ export default function Research() {
           subtitle={
             "Digital threats and attacks continue to impact the work of human rights defenders and members of at-risk communities in South and Southeast Asia. Simultaneously, internet freedom is being undermined by cyber laws that limit or prohibit secure, safe, and private communications, and has been further eroded through practices and policies of telecommunications companies that fail to protect their customers’ freedom of expression and privacy rights.'Through the Looking Glass' synthesises the findings from the six country reports (Cambodia, Indonesia, Maldives, Nepal, The Philippines and Sri Lanka) and presents a summary of trends and offers recommendations."
           }
-          ctaLink={'/'}
+          ctaLink={
+            '/assets/pdfs/Through-the-lookling-glass-Report_06082022.pdf'
+          }
           ctaText={'Read the full report​'}
         />
         <Report
@@ -68,7 +70,7 @@ export default function Research() {
               interest lawyers contribute to our research. If you are
               interested, please contact us.
             </p>
-            <Link href="/">
+            <Link href="/contact-us">
               <a className=" bg-gray-250 py-3 px-4 rounded-lg border border-gray-500 mb-3">
                 Contact us
               </a>

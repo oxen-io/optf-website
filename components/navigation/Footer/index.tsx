@@ -1,6 +1,6 @@
 import { ReactComponent as FacebookSVG } from '@/assets/svgs/facebook.svg';
 import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
-import { ReactComponent as InstagramSVG } from '@/assets/svgs/instagram.svg';
+import { ReactComponent as YoutubeSVG } from '@/assets/svgs/yt.svg';
 import { GroupNotice } from '@/components/sections';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,15 +22,10 @@ export default function Footer(): ReactElement {
     'hover:text-white'
   );
   const socialLinkClasses = classNames(
-    'text-primary',
     'transition duration-300',
-    'hover:text-white'
+    'hover:text-red-300'
   );
-  const svgClasses = classNames(
-    'fill-current w-7 h-7 m-1',
-    'lg:my-0 lg:ml-0',
-    'hover:animate-push'
-  );
+  const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
   return (
     <div id="email-sign-up" className={classNames('gradient-footer-gray')}>
@@ -64,7 +59,7 @@ export default function Footer(): ReactElement {
               <h3 className={headingClasses}>Socials</h3>
               <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
                 <div className={classNames('flex flex-wrap -ml-1')}>
-                  <Link href="https://twitter.com/session_app">
+                  <Link href="https://twitter.com/TheOPTF">
                     <a
                       className={socialLinkClasses}
                       target="_blank"
@@ -73,13 +68,13 @@ export default function Footer(): ReactElement {
                       <TwitterSVG className={svgClasses} />
                     </a>
                   </Link>
-                  <Link href="https://www.instagram.com/getsession">
+                  <Link href="https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw">
                     <a
                       className={socialLinkClasses}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <InstagramSVG className={svgClasses} />
+                      <YoutubeSVG className={svgClasses} />
                     </a>
                   </Link>
                 </div>
@@ -92,7 +87,7 @@ export default function Footer(): ReactElement {
                 'lg:w-1/3'
               )}
             >
-              <Link href="https://optf.ngo/">
+              <Link href="https://getsession.org/">
                 <a
                   className={linkClasses}
                   target="_blank"
@@ -134,7 +129,7 @@ export default function Footer(): ReactElement {
                   'lg:w-2/3'
                 )}
               >
-                <Link href="https://optf.ngo/">
+                <Link href="/contact-us">
                   <a
                     className={linkClasses}
                     target="_blank"
@@ -143,7 +138,7 @@ export default function Footer(): ReactElement {
                     Contact us
                   </a>
                 </Link>
-                <Link href="https://oxen.io/">
+                <Link href="/feedback-and-ideas">
                   <a
                     className={linkClasses}
                     target="_blank"
@@ -152,7 +147,7 @@ export default function Footer(): ReactElement {
                     Get involved
                   </a>
                 </Link>
-                <Link href="https://lokinet.org/">
+                <Link href="/donations">
                   <a
                     className={linkClasses}
                     target="_blank"
@@ -161,12 +156,8 @@ export default function Footer(): ReactElement {
                     Donate now
                   </a>
                 </Link>
-                <Link href="https://lokinet.org/">
-                  <a
-                    className={linkClasses}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Link href="/privacy-policy/">
+                  <a className={linkClasses} rel="noopener noreferrer">
                     Private policy
                   </a>
                 </Link>

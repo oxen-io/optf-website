@@ -46,13 +46,6 @@ export default function NavItem(props: NavItemProps): ReactElement {
   const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
   const [IsDropdownExpanded, setIsDropdownExpanded] = useState(false);
 
-  const isActiveNavLink = (url: string) => {
-    return (
-      router.asPath.includes(url) !== false &&
-      'lg:border-primary lg:text-primary'
-    );
-  };
-
   const onBgColor = (type: number) => {
     switch (type) {
       case 0:
@@ -84,7 +77,6 @@ export default function NavItem(props: NavItemProps): ReactElement {
             className={classNames(
               !isSVG && navLinkClasses,
               onBgColor(bgColor),
-              isActiveNavLink(navItem.href),
               hoverEffect && navLinkHoverClasses
             )}
           >
@@ -105,8 +97,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
               !isSVG && navLinkClasses,
               'lg:border-transparent lg:border-b-3',
               'lg:transform lg:transition-colors duration-500',
-              'lg:group-hover:border-primary',
-              isActiveNavLink(`${navItem.href}/`)
+              'lg:group-hover:border-primary'
             )}
             onClick={() => {
               if (isSmall || isMedium) {

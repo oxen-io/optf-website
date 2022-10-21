@@ -19,9 +19,8 @@ const METADATA = {
       ? 'https://getsession.org'
       : 'https://staging.getsession.org',
   SITE_NAME: 'Session',
-  TITLE: 'Session | Send Messages, Not Metadata. | Private Messenger',
-  DESCRIPTION:
-    'Session is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network.',
+  TITLE: 'OPTF | Blog  | Private is a fundamental right',
+  DESCRIPTION: ' Private is a fundamental right',
   TAGS: [
     'Privacy',
     'co-op',

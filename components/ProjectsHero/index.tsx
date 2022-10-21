@@ -32,9 +32,11 @@ export default function ProjectsHero(props: Props): ReactElement {
       >
         {icon}
         <h4 className="text-3xl my-5"> {title}</h4>
-        <p className="text-lg mb-8">{subtitle} </p>
+        <p className="text-lg mb-8 font-thin">{subtitle} </p>
         <Link href={ctaLink}>
-          <a className="bg-blue-200 rounded-2xl p-3">{ctaText}</a>
+          <a className="bg-blue-250 rounded-2xl p-3 font-bold text-lg hover:text-white">
+            {ctaText}
+          </a>
         </Link>
       </div>
       <div

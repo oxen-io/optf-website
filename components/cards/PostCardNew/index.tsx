@@ -36,8 +36,9 @@ export default function PostCard(props: Props): ReactElement {
       className={classNames(
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
-        'bg-green-150  rounded-3xl  mx-2 shadow hover:shadow-inner',
-        blogSection && 'rounded-t-3xl rounded-b-none bg-gray-100',
+        'bg-green-150  rounded-3xl  mx-2 shadow hover:shadow-xl transition ease-in-out group',
+        blogSection &&
+          'rounded-t-2xl rounded-b-none bg-gray-100 hover:shadow-posts ',
         classes
       )}
     >
@@ -47,10 +48,11 @@ export default function PostCard(props: Props): ReactElement {
             className={classNames(
               'relative overflow-hidden w-full mb-4',
               'md:px-16',
-              'lg:px-20 rounded-t-3xl ',
+              'lg:px-20 rounded-t-3xl  transition ease-in-out',
               compact ? 'h-48 md:h-60 lg:h-44' : 'h-60 lg:h-56',
               featured && 'md:w-1/2 md:mr-4 lg:mr-3 lg:w-3/5 lg:h-96',
-              blogSection && 'rounded-t-2xl rounded-b-2xl '
+              !blogSection && 'group-hover:brightness-110',
+              blogSection && 'rounded-t-xl rounded-b-xl'
             )}
           >
             <Image
@@ -59,7 +61,7 @@ export default function PostCard(props: Props): ReactElement {
               layout="fill"
               priority={featured}
               loading={featured ? 'eager' : 'lazy'}
-              className={classNames('object-cover cursor-pointer')}
+              className={classNames('object-cover cursor-pointer ')}
             />
           </div>
         </Link>

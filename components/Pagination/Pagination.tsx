@@ -8,7 +8,7 @@ export interface Props {
   siblingCount?: number;
   currentPage: number;
   pageSize: number;
-  className: string;
+  className?: string;
 }
 
 const Pagination = (props: Props) => {
@@ -43,11 +43,15 @@ const Pagination = (props: Props) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul className={classnames('flex  list-none ', { [className]: className })}>
+    <ul
+      className={classnames('flex  h-5  list-none  text-xl font-semibold', {
+        [className]: className,
+      })}
+    >
       {/* Left navigation arrow */}
       <li
         className={classnames(
-          'cursor-pointer text-gray-800 px-4 h-32 text-center m-2 flex items-center rounded-lg',
+          'cursor-pointer text-gray-800 px-2 text-center m-1 flex items-center rounded-lg',
           currentPage === 1 && 'hidden'
         )}
         onClick={onPrevious}
@@ -59,7 +63,7 @@ const Pagination = (props: Props) => {
         // If the pageItem is a DOT, render the DOTS unicode character
         if (pageNumber === DOTS) {
           return (
-            <li className="px-4 h-32 text-center m-2 flex items-center rounded-lg dots">
+            <li className=" text-center flex items-center rounded-lg">
               &#8230;
             </li>
           );
@@ -69,7 +73,7 @@ const Pagination = (props: Props) => {
         return (
           <li
             className={classnames(
-              'px-4 h-32 text-center m-2 flex items-center rounded-lg',
+              'px-1  text-center  flex items-center rounded-lg',
               {
                 selected: pageNumber === currentPage,
               }
@@ -83,13 +87,12 @@ const Pagination = (props: Props) => {
       {/*  Right Navigation arrow */}
       <li
         className={classnames(
-          ' cursor-pointer px-4 h-32 text-center m-2 flex items-center rounded-lg',
-
+          ' cursor-pointer px-4 text-center m-2 flex items-center ',
           currentPage === lastPage && 'hidden'
         )}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        <div />
         Next &gt; &gt;
       </li>
     </ul>

@@ -6,7 +6,7 @@ import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
 import { fetchBlogEntries, generateRoute } from '@/services/cms';
 import METADATA from '@/constants/metadata';
-
+import Link from 'next/link';
 import { Layout } from '@/components/ui';
 import Container from '@/components/Container';
 import { PostListNew } from '@/components/posts';
@@ -44,6 +44,14 @@ export default function Blog(props: Props): ReactElement {
           subtitle="Privacy is always in play. From our smartphones to our classrooms, from our laptops to our lounge rooms: the ways we watch, shop, read, and relax are balancing on a tightrope between privacy and convenience. Read all our latest opinion pieces, current affairs reports, and press releases."
         />
         <PostListNew blogSection={true} posts={otherPosts} />
+        <div className="flex bg-gray-200 lg:px-52 px-10 pt-2 pb-6 mt-10 lg:mt-0 text-gray-500 ">
+          <p>
+            If you’d like to contribute to our blog, get in touch with us{' '}
+            <Link href="/contact-us">
+              <a>here!</a>
+            </Link>
+          </p>
+        </div>
       </section>
     </Layout>
   );

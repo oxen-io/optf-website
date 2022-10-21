@@ -27,6 +27,7 @@ module.exports = {
     extend: {
       boxShadow: {
         header: '0px 0px 10px 0px rgb(0 0 0 / 50%)',
+        posts: '0px 0px 10px',
       },
       animation: {
         push: 'push 0.3s linear 1',
@@ -51,8 +52,12 @@ module.exports = {
           dark: 'var(--gray-dark)',
           250: '#F5F5F5',
         },
+        blue: {
+          250: '#B8C8FF',
+        },
         green: {
           150: '#d7f6f2',
+          250: '#6EC1E3',
         },
       },
       height: {

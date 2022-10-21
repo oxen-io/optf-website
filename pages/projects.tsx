@@ -25,7 +25,7 @@ export default function Projects() {
             src="/assets/images/projects-hero1-image.png"
           />
         }
-        ctaLink={'/'}
+        ctaLink={'https://oxen.io/'}
         ctaText={'Trade'}
         reverse={false}
       />
@@ -48,7 +48,7 @@ export default function Projects() {
             src="/assets/images/projects-hero2-image.png"
           />
         }
-        ctaLink={'/'}
+        ctaLink={'https://getsession.org/'}
         ctaText={'Message'}
         reverse={true}
       />
@@ -71,7 +71,7 @@ export default function Projects() {
             src="/assets/images/projects-hero3-image.png"
           />
         }
-        ctaLink={'/'}
+        ctaLink={'https://lokinet.org/'}
         ctaText={'Browse'}
         reverse={false}
       />
