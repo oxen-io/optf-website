@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  html {
+    font-family: Assistant, system-ui, sans-serif;
+  }
+}
 
 :root {
   --primary-DEFAULT: #00f782;
@@ -105,6 +110,10 @@
   font-weight: 900;
 }
 
+@font-face {
+  font-family: 'Assistant';
+  src: url('@/public/assets/fonts/Assistant/Assistant-VariableFont_wght.ttf');
+}
 @font-face {
   font-family: PublicSans;
   font-display: swap;

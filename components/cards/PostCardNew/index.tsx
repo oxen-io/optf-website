@@ -10,7 +10,7 @@ interface Props extends IPost {
   hoverEffect?: boolean;
   compact?: boolean;
   classes?: string;
-  blogSection?: boolean;
+  section?: string;
 }
 
 export default function PostCard(props: Props): ReactElement {
@@ -27,7 +27,7 @@ export default function PostCard(props: Props): ReactElement {
     hoverEffect = !featured,
     compact = false,
     classes,
-    blogSection = false,
+    section = 'blog',
   } = props;
   const headingClasses = 'cursor-pointer text-2xl font-bold mb-3 px-3';
   // parent container must have 'flex' class
@@ -37,8 +37,10 @@ export default function PostCard(props: Props): ReactElement {
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
         'bg-green-150  rounded-3xl  mx-2 shadow hover:shadow-xl transition ease-in-out group',
-        blogSection &&
+        section === 'blog' &&
           'rounded-t-2xl rounded-b-none bg-gray-100 hover:shadow-posts ',
+        section === 'post' &&
+          'rounded-2xl bg-gray-100  hover:shadow-none shadow-none border  relative',
         classes
       )}
     >
@@ -51,8 +53,8 @@ export default function PostCard(props: Props): ReactElement {
               'lg:px-20 rounded-t-3xl  transition ease-in-out',
               compact ? 'h-48 md:h-60 lg:h-44' : 'h-60 lg:h-56',
               featured && 'md:w-1/2 md:mr-4 lg:mr-3 lg:w-3/5 lg:h-96',
-              !blogSection && 'group-hover:brightness-110',
-              blogSection && 'rounded-t-xl rounded-b-xl'
+              section === 'index' && 'group-hover:brightness-110',
+              section === 'blog' && 'rounded-t-xl rounded-b-xl'
             )}
           >
             <Image
@@ -67,7 +69,9 @@ export default function PostCard(props: Props): ReactElement {
         </Link>
       )}
       <div
-        className={classNames(featured && 'md:w-1/2 md:ml-4 lg:ml-3 lg:w-2/5')}
+        className={classNames(
+          featured && 'md:w-1/2 md:ml-4 lg:ml-3 lg:w-2/5 relative'
+        )}
       >
         <Link href={route} passHref>
           <a>
@@ -85,7 +89,7 @@ export default function PostCard(props: Props): ReactElement {
             )}
           </a>
         </Link>
-        {blogSection && (
+        {section === 'blog' && (
           <p
             className={classNames(
               'text-gray-lightest text-xs font-helvetica ml-3 mb-4'
@@ -105,14 +109,26 @@ export default function PostCard(props: Props): ReactElement {
             {description}
           </p>
         )}
-        {featured && (
-          <Link href={route}>
-            <a className={classNames('block text-primary-dark text-xs mt-4')}>
-              Read More »
-            </a>
-          </Link>
+        {section === 'post' && (
+          <div className="mb-10">
+            <Link href={route}>
+              <a className="text-red-400 text-sm px-3">READ MORE &gt;&gt;</a>
+            </Link>
+          </div>
         )}
       </div>
+
+      {section === 'post' && (
+        <div className="border-t  inset-x-0 bottom-0 h-8  absolute ">
+          <p
+            className={classNames(
+              'text-gray-lightest text-xs font-helvetica ml-3 my-2 '
+            )}
+          >
+            {publishedDate}
+          </p>
+        </div>
+      )}
     </div>
   );
 }

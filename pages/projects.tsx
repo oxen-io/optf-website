@@ -12,7 +12,12 @@ export default function Projects() {
       />
       <ProjectsHero
         icon={
-          <Image src="/assets/images/oxen-icon.png" width={170} height={35} />
+          <Image
+            alt="oxen icon"
+            src="/assets/images/oxen-icon.png"
+            width={170}
+            height={35}
+          />
         }
         title={'Trade with absolute freedom.'}
         subtitle={
@@ -20,6 +25,7 @@ export default function Projects() {
         }
         image={
           <Image
+            alt="hero image"
             width={2048}
             height={1270}
             src="/assets/images/projects-hero1-image.png"
@@ -32,6 +38,7 @@ export default function Projects() {
       <ProjectsHero
         icon={
           <Image
+            alt="session logo"
             src="/assets/images/session-logo-black.png"
             width={170}
             height={35}
@@ -43,6 +50,7 @@ export default function Projects() {
         }
         image={
           <Image
+            alt="projects hero image 2"
             width={2048}
             height={1270}
             src="/assets/images/projects-hero2-image.png"
@@ -55,6 +63,7 @@ export default function Projects() {
       <ProjectsHero
         icon={
           <Image
+            alt="lokinet icon"
             src="/assets/images/lokinet-icon.png"
             width={170}
             height={35}

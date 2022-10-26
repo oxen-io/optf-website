@@ -5,7 +5,7 @@ import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
 
 import Container from '@/components/Container';
 import { Layout } from '@/components/ui';
-import { PostList } from '@/components/posts';
+import { PostListNew } from '@/components/posts';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 
@@ -36,7 +36,7 @@ export default function Tag(props: Props): ReactElement {
             {tag}
           </h1>
         </Container>
-        <PostList posts={posts} showHeading={false} />
+        <PostListNew posts={posts} showHeading={false} />
       </section>
     </Layout>
   );

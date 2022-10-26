@@ -117,6 +117,7 @@ export default function CustomHead(props: Props): ReactElement {
     <Head>
       <title key={pageTitle}>{pageTitle}</title>
       <meta key="utf-8" charSet="utf-8" />
+
       <meta
         key="viewport"
         name="viewport"

@@ -2,7 +2,6 @@ import { FormEventHandler, ReactElement, useRef, useState } from 'react';
 
 import { Button } from '@/components/ui';
 import Container from '@/components/Container';
-import { GroupNotice } from '@/components/sections';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 
@@ -48,7 +47,6 @@ export default function EmailSignup(): ReactElement {
   };
   return (
     <section className="bg-primary text-gray-dark">
-      {isSmall && <GroupNotice />}
       <Container
         id="signup"
         classes={classNames('px-8', 'md:px-10', 'lg:py-24')}

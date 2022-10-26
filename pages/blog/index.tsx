@@ -32,18 +32,11 @@ export default function Blog(props: Props): ReactElement {
   return (
     <Layout title={'Blog'} metadata={METADATA.BLOG_PAGE}>
       <section>
-        <Container
-          classes={classNames(
-            'p-12 pb-1 pl-0 pr-0',
-            'md:pt-24 md:pb-1 md:pl-0 md:pr-0',
-            'lg:mt-16 lg:pl-24 lg:pr-24 lg:max-w-screen-xl'
-          )}
-        ></Container>
         <Banner
           title="Behind the headlines.​​"
           subtitle="Privacy is always in play. From our smartphones to our classrooms, from our laptops to our lounge rooms: the ways we watch, shop, read, and relax are balancing on a tightrope between privacy and convenience. Read all our latest opinion pieces, current affairs reports, and press releases."
         />
-        <PostListNew blogSection={true} posts={otherPosts} />
+        <PostListNew section="blog" posts={otherPosts} />
         <div className="flex bg-gray-200 lg:px-52 px-10 pt-2 pb-6 mt-10 lg:mt-0 text-gray-500 ">
           <p>
             If you’d like to contribute to our blog, get in touch with us{' '}

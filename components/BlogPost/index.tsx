@@ -31,7 +31,9 @@ export default function BlogPost(props: Props): ReactElement {
           PUBLISHED_TIME: post.publishedDateISO,
         }}
       >
-        <Post {...props} />
+        <div className="bg-gray-250 pt-10">
+          <Post {...props} />
+        </div>
       </Layout>
     </>
   );

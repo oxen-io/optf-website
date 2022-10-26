@@ -25,6 +25,9 @@ module.exports = {
       '3xl': '1920px',
     },
     extend: {
+      fontFamily: {
+        assistant: ['Assistant', 'regular'],
+      },
       boxShadow: {
         header: '0px 0px 10px 0px rgb(0 0 0 / 50%)',
         posts: '0px 0px 10px',
@@ -58,6 +61,7 @@ module.exports = {
         green: {
           150: '#d7f6f2',
           250: '#6EC1E3',
+          350: '#47C6BA',
         },
       },
       height: {
@@ -78,6 +82,9 @@ module.exports = {
   },
   variants: {
     extend: {
+      fontFamily: {
+        assistant: ['Assistant', 'sans-serif'],
+      },
       animation: ['hover'],
       backgroundColor: ['selection'],
       blur: ['hover'],

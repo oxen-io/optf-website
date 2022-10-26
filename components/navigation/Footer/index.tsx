@@ -1,16 +1,16 @@
-import { ReactComponent as FacebookSVG } from '@/assets/svgs/facebook.svg';
-import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
 import { ReactComponent as YoutubeSVG } from '@/assets/svgs/yt.svg';
-import { GroupNotice } from '@/components/sections';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
-import { ReactComponent as RssSVG } from '@/assets/svgs/rss.svg';
 import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
+import Script from 'next/script';
+import { useEffect, useRef } from 'react';
 
 export default function Footer(): ReactElement {
+  const substackDesktop = useRef(null);
+  const substackMobile = useRef(null);
   const { isSmall } = useScreen();
   const headingClasses = classNames(
     'text-white uppercase text-xl font-bold mb-2'
@@ -27,20 +27,85 @@ export default function Footer(): ReactElement {
   );
   const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
+  const newsLetterText = {
+    title: 'Join the movement and help defend privacy in the digital world.',
+    subtitle: 'Sign up to the mailing list and start taking action!',
+  };
+
+  useEffect(() => {
+    let substackStyles;
+    if (isSmall) {
+      substackStyles = {
+        primary: '#FFFFFF',
+        input: '#46C7BA',
+        email: '#9EE3DD',
+        text: '#000000',
+      };
+    } else {
+      substackStyles = {
+        primary: '#FFFFFF',
+        input: '#252643',
+        email: '#FFFFFF',
+        text: '#000000',
+      };
+    }
+    window.CustomSubstackWidget = {
+      substackUrl: 'optf.substack.com',
+      placeholder: 'Your email',
+      buttonText: 'Subscribe',
+      theme: 'custom',
+      colors: substackStyles,
+    };
+  }, [isSmall]);
+
   return (
     <div id="email-sign-up" className={classNames('gradient-footer-gray')}>
+      <Script src="https://substackapi.com/widget.js" async></Script>
+      <div className="block md:hidden bg-green-350 p-5 text-white">
+        <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
+          {newsLetterText.title}
+        </h4>
+        <p className={classNames('leading-none')}>{newsLetterText.subtitle}</p>
+        {isSmall && <div className="mt-5" id="custom-substack-embed"></div>}
+      </div>
       <div
         className={classNames(
           'lg:flex lg:justify-end lg:max-w-screen-xl lg:mx-auto py-7'
         )}
       >
-        {!isSmall && (
-          <GroupNotice
-            classes={classNames(
-              'lg:flex lg:flex-col lg:justify-center lg:w-full lg:max-w-xl lg:px-0 lg:border-b-0 lg:border-r  border-white lg:my-2'
+        <div
+          className={classNames(
+            ' text-white font-helvetica px-10 py-16 lg:border-r border-dashed',
+            'md:py-12'
+          )}
+        >
+          <div className="hidden md:block">
+            <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
+              {newsLetterText.title}
+            </h4>
+            <p className={classNames('leading-none')}>
+              {newsLetterText.subtitle}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            {!isSmall && (
+              <div className="mt-10" id="custom-substack-embed"></div>
             )}
-          />
-        )}
+            <Link href="https://www.acnc.gov.au/charity/charities/26214f82-a2cd-e811-a962-000d3ad24182/profile">
+              <a className="cursor-pointer lg:ml-10">
+                <Image
+                  alt="acnc"
+                  width={180}
+                  height={180}
+                  src={
+                    '/assets/images/ACNC-Registered-Charity-Logo_reverse.png'
+                  }
+                />
+              </a>
+            </Link>
+          </div>
+        </div>
+
         <footer className={classNames('text-white ', 'lg:w-1/2 lg:mt-2')}>
           <div
             className={classNames(

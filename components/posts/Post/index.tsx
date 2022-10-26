@@ -4,7 +4,7 @@ import Link from 'next/link';
 import classNames from 'classnames';
 
 import { IPost } from '@/types/cms';
-import { PostList } from '@/components/posts';
+import { PostListNew } from '@/components/posts';
 import RichBody from '@/components/RichBody';
 import { useScreen } from '@/contexts/screen';
 import Container from '@/components/Container';
@@ -43,11 +43,11 @@ export default function Post(props: Props): ReactElement {
     });
   })();
   return (
-    <section>
+    <section className="lg:mt-10 mx-4 lg:mx-0">
       <Container
         fullWidth={fullHeader}
         classes={classNames(
-          'pt-16 pb-8',
+          'pt-16 pb-8 bg-white',
           fullHeader
             ? ['lg:pt-8']
             : ['md:pt-20 md:pb-8 md:px-28', 'lg:py-8 lg:px-40']
@@ -89,7 +89,7 @@ export default function Post(props: Props): ReactElement {
         classes={classNames(
           'text-gray break-words pt-0',
           'md:pt-0 md:pb-8 md:px-28',
-          'lg:pb-8 lg:px-40'
+          'lg:pb-8 lg:px-40 bg-white'
         )}
       >
         <h1 className={classNames('text-4xl font-bold leading-normal mb-1')}>
@@ -110,13 +110,17 @@ export default function Post(props: Props): ReactElement {
           classes={classNames('text-sm text-gray', 'lg:text-base')}
         />
       </Container>
+      <div className="border-b border-t  border-gray-300 border-dashed text-3xl text-center my-10 py-10">
+        <h3>Latest blog posts</h3>
+      </div>
+
       {otherPosts && (
-        <PostList
+        <PostListNew
+          section="post"
           posts={otherPosts}
-          gridStyle={'blog'}
+          gridStyle={'normal'}
           hoverEffect={false}
-          compact={true}
-          classes={classNames('my-16', 'lg:mb-24')}
+          compact={false}
         />
       )}
     </section>

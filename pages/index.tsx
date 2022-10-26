@@ -1,4 +1,4 @@
-import { About, Benefits, Features, Hero } from '@/components/sections';
+import { Hero } from '@/components/sections';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Image from 'next/image';
 import { CMS } from '@/constants';
@@ -30,11 +30,16 @@ export default function Home(props: Props) {
   return (
     <Layout>
       <Hero />
-      <PostListNew blogSection={false} posts={otherPosts} />
+      <PostListNew section="index" posts={otherPosts} />
       <Banner
         subtitle="Everyone has a right to privacy — online and offline. But as we become more reliant on technology and digital platforms, our privacy and security is increasingly undermined and exploited.We’re putting the power back in your hands — we support the development of free and open-source software that keeps you secure online."
         image={
-          <Image width={260} height={85} src="/assets/images/logo-optf.png" />
+          <Image
+            alt="logo"
+            width={260}
+            height={85}
+            src="/assets/images/logo-optf.png"
+          />
         }
       />
     </Layout>

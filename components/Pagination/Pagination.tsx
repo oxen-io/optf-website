@@ -8,7 +8,6 @@ export interface Props {
   siblingCount?: number;
   currentPage: number;
   pageSize: number;
-  className?: string;
 }
 
 const Pagination = (props: Props) => {
@@ -18,7 +17,6 @@ const Pagination = (props: Props) => {
     siblingCount = 1,
     currentPage,
     pageSize,
-    className,
   } = props;
 
   const paginationRange: any = usePagination({
@@ -43,11 +41,7 @@ const Pagination = (props: Props) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
-      className={classnames('flex  h-5  list-none  text-xl font-semibold', {
-        [className]: className,
-      })}
-    >
+    <ul className={classnames('flex  h-5  list-none  text-xl font-semibold')}>
       {/* Left navigation arrow */}
       <li
         className={classnames(
@@ -59,11 +53,14 @@ const Pagination = (props: Props) => {
         <div className="text-gray-800" />
         &lt; &lt; Previous
       </li>
-      {paginationRange.map((pageNumber: number | string) => {
+      {paginationRange.map((pageNumber: number | string, index: number) => {
         // If the pageItem is a DOT, render the DOTS unicode character
         if (pageNumber === DOTS) {
           return (
-            <li className=" text-center flex items-center rounded-lg">
+            <li
+              key={`${pageNumber}${index}`}
+              className=" text-center flex items-center rounded-lg"
+            >
               &#8230;
             </li>
           );
@@ -72,6 +69,7 @@ const Pagination = (props: Props) => {
         // Render our Page Pills
         return (
           <li
+            key={`${pageNumber}${index}`}
             className={classnames(
               'px-1  text-center  flex items-center rounded-lg',
               {

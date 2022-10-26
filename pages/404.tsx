@@ -22,7 +22,9 @@ export default function Custom404() {
           )}
         >
           <h1
-            className={classNames('text-primary-dark text-5xl font-bold mb-8')}
+            className={classNames(
+              'font-assistant text-green-250 text-5xl font-bold mb-8'
+            )}
           >
             This page doesn&apos;t seem to exist.
           </h1>

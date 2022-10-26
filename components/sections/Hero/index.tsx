@@ -22,10 +22,16 @@ export default function Hero(): ReactElement {
         </div>
         <div className=" flex lg:flex-row flex-col border-b border-dashed border-b-white lg:pb-7 pb-3">
           <div className="lg:px-10  lg:pl-16 lg:my-0 my-5">
-            <Image src="/assets/images/oxen-icon.png" width={380} height={76} />
+            <Image
+              alt="oxen icon"
+              src="/assets/images/oxen-icon.png"
+              width={380}
+              height={76}
+            />
           </div>
           <div className="lg:px-10  lg:my-0 my-5">
             <Image
+              alt="session icon"
               src="/assets/images/session-logo-black.png"
               width={380}
               height={76}
@@ -33,6 +39,7 @@ export default function Hero(): ReactElement {
           </div>
           <div className="lg:px-10 lg:pr-16  lg:my-0 my-5">
             <Image
+              alt="lokinet icon"
               src="/assets/images/lokinet-icon.png"
               width={380}
               height={76}

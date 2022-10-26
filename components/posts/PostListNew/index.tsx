@@ -16,7 +16,7 @@ interface Props {
   hoverEffect?: boolean;
   compact?: boolean;
   classes?: string;
-  blogSection?: boolean;
+  section?: string;
 }
 
 export default function PostListNew(props: Props): ReactElement {
@@ -26,7 +26,7 @@ export default function PostListNew(props: Props): ReactElement {
     hoverEffect,
     compact,
     classes,
-    blogSection = false,
+    section = 'blog',
   } = props;
   const cardClasses = classNames('md:w-1/3 mb-5', 'lg:w-1/3 lg:max-w-xs ');
   const gridClasses = [
@@ -34,7 +34,7 @@ export default function PostListNew(props: Props): ReactElement {
     gridStyle === 'blog' && 'lg:max-w-screen-lg',
   ];
 
-  let PageSize = 6;
+  let PageSize = section === 'post' ? 3 : 6;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -42,7 +42,7 @@ export default function PostListNew(props: Props): ReactElement {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return posts.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
+  }, [currentPage, PageSize, posts]);
 
   return (
     <div className={classNames('mt-8', 'lg:mt-0', classes)}>
@@ -57,7 +57,7 @@ export default function PostListNew(props: Props): ReactElement {
         {currentTableData?.map((post) => {
           return (
             <PostCardNew
-              blogSection={blogSection}
+              section={section}
               route={generateRoute(post.slug)}
               hoverEffect={hoverEffect}
               compact={compact}
@@ -67,7 +67,7 @@ export default function PostListNew(props: Props): ReactElement {
             />
           );
         })}
-        {blogSection && (
+        {section === 'blog' && (
           <Pagination
             currentPage={currentPage}
             totalCount={posts.length}
