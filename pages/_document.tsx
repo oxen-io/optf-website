@@ -17,7 +17,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
 
-        <body className="antialiased selection:bg-primary">
+        <body className="antialiased selection:bg-blue-600">
           <Main />
           <NextScript />
         </body>

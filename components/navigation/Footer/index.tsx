@@ -6,11 +6,9 @@ import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 import Script from 'next/script';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 export default function Footer(): ReactElement {
-  const substackDesktop = useRef(null);
-  const substackMobile = useRef(null);
   const { isSmall } = useScreen();
   const headingClasses = classNames(
     'text-white uppercase text-xl font-bold mb-2'
@@ -56,6 +54,7 @@ export default function Footer(): ReactElement {
       theme: 'custom',
       colors: substackStyles,
     };
+    console.log('usefect activated');
   }, [isSmall]);
 
   return (

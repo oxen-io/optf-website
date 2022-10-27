@@ -1,6 +1,5 @@
 import { ReactElement } from 'react';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
-import classNames from 'classnames';
 import Banner from '@/components/Banner';
 import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
@@ -8,7 +7,6 @@ import { fetchBlogEntries, generateRoute } from '@/services/cms';
 import METADATA from '@/constants/metadata';
 import Link from 'next/link';
 import { Layout } from '@/components/ui';
-import Container from '@/components/Container';
 import { PostListNew } from '@/components/posts';
 
 interface Props {

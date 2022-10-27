@@ -40,7 +40,7 @@ const NAV_ITEMS: INavList = {
     rel: 'noopener noreferrer',
     bgColor: 0,
   },
-  Signup: {
+  Newsletter: {
     href: '/#email-sign-up',
     alt: 'go to signup',
     target: '_self',

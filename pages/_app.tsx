@@ -1,7 +1,6 @@
 import '@/styles/globals.css';
 import { AppProps } from 'next/app';
 import { ScreenProvider } from '@/contexts/screen';
-import Script from 'next/script';
 
 if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
   const React = require('react');

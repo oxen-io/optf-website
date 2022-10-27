@@ -72,9 +72,6 @@ module.exports = {
           '50%': { transform: 'scale(0.8)' },
         },
       },
-      outline: {
-        primary: '2px dotted var(--primary-DEFAULT)',
-      },
       transitionProperty: {
         height: 'height',
       },
@@ -86,7 +83,7 @@ module.exports = {
         assistant: ['Assistant', 'sans-serif'],
       },
       animation: ['hover'],
-      backgroundColor: ['selection'],
+
       blur: ['hover'],
       borderWidth: ['first'],
       borderRadius: ['last'],
