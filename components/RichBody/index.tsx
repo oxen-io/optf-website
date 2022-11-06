@@ -94,7 +94,9 @@ export default function RichBody(props: Props): ReactElement {
               <a
                 dir={getDirection(children)}
                 aria-label={'Read more about this link'}
-                className={classNames('text-primary-dark')}
+                className={classNames(
+                  'text-violet-250 hover:text-blue-500 transition ease-in-out'
+                )}
                 target={
                   isLocal(node.data.uri) || url !== node.data.uri
                     ? '_self'

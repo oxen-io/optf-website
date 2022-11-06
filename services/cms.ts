@@ -166,11 +166,11 @@ function convertPost(rawData: any, taglist: ITagList): IPost {
 
 function convertImage(rawImage: any): IFigureImage {
   return {
-    imageUrl: rawImage.file.url.replace('//', 'https://'), // may need to put null check as well here
-    description: rawImage.description ?? null,
-    title: rawImage.title ?? null,
-    width: rawImage.file.details.image.width,
-    height: rawImage.file.details.image.height,
+    imageUrl: rawImage?.file.url.replace('//', 'https://') ?? null, // may need to put null check as well here
+    description: rawImage?.description ?? null,
+    title: rawImage?.title ?? null,
+    width: rawImage?.file.details.image.width,
+    height: rawImage?.file.details.image.height,
   };
 }
 

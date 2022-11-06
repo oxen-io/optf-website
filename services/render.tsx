@@ -118,9 +118,7 @@ function EmbeddedMedia(
                     <Link href={node.sourceUrl}>
                       <a
                         aria-label={node.caption}
-                        className={classNames(
-                          'text-primary-dark font-extralight'
-                        )}
+                        className={classNames('font-extralight')}
                         target="_blank"
                         rel="noreferrer"
                       >

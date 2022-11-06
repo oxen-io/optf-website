@@ -95,15 +95,10 @@ export default function Post(props: Props): ReactElement {
         <h1 className={classNames('text-4xl font-bold leading-normal mb-1')}>
           {title}
         </h1>
-        <p
-          className={classNames(
-            'font-mono font-medium text-sm mb-3',
-            'lg:mb-8'
-          )}
-        >
+        <p className={classNames('font-medium mb-3', 'lg:mb-8')}>
           <span>{publishedDate}</span>
-          {author && author.name && <span> / {author.name}</span>}
-          <span className={classNames('block mt-1')}>{renderTags}</span>
+          {author && author.name && <span> / By {author.name}</span>}
+          <span className={classNames(' mt-1')}>{renderTags}</span>
         </p>
         <RichBody
           body={body}

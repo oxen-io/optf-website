@@ -20,7 +20,6 @@ export default function PostCard(props: Props): ReactElement {
     subtitle,
     featureImage,
     publishedDate,
-    author,
     slug,
     route,
     featured,

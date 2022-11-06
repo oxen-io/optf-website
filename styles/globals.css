@@ -276,7 +276,7 @@ body {
 }
 
 .embed-content blockquote > a {
-  @apply text-primary-dark font-extralight;
+  @apply font-extralight;
 }
 
 .embed-content iframe {

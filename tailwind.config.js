@@ -63,6 +63,9 @@ module.exports = {
           250: '#6EC1E3',
           350: '#47C6BA',
         },
+        violet: {
+          250: '#6E4C98',
+        },
       },
       height: {
         120: '30rem', // for larger images
