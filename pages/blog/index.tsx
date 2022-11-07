@@ -3,7 +3,7 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Banner from '@/components/Banner';
 import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
-import { fetchBlogEntries, generateRoute } from '@/services/cms';
+import { fetchBlogEntries } from '@/services/cms';
 import METADATA from '@/constants/metadata';
 import Link from 'next/link';
 import { Layout } from '@/components/ui';

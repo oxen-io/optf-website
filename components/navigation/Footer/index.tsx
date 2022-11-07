@@ -5,7 +5,6 @@ import { ReactElement } from 'react';
 import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
-import Script from 'next/script';
 import { useEffect } from 'react';
 
 export default function Footer(): ReactElement {
@@ -54,12 +53,10 @@ export default function Footer(): ReactElement {
       theme: 'custom',
       colors: substackStyles,
     };
-    console.log('usefect activated');
   }, [isSmall]);
 
   return (
     <div id="email-sign-up" className={classNames('gradient-footer-gray')}>
-      <Script src="https://substackapi.com/widget.js" async></Script>
       <div className="block md:hidden bg-green-350 p-5 text-white">
         <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
           {newsLetterText.title}

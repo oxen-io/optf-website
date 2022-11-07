@@ -1,5 +1,4 @@
 import { ReactElement, ReactNode, useEffect, useState } from 'react';
-
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import { INavItem } from '@/constants/navigation';
 import Link from 'next/link';
@@ -65,11 +64,17 @@ export default function NavItem(props: NavItemProps): ReactElement {
   useEffect(() => {
     setIsDropdownExpanded(false);
   }, [isExpanded]);
-
+  console.log(router.pathname);
   return (
     <>
       {!navItem.items ? (
-        <Link href={navItem.href}>
+        <Link
+          href={
+            navItem.href.startsWith('/#')
+              ? router.pathname + navItem.href
+              : navItem.href
+          }
+        >
           <a
             aria-label={navItem.alt}
             target={navItem.target}
