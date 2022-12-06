@@ -40,7 +40,7 @@ const AboutOPTF = () => {
         our mission. These projects include:
       </p>
       <div className=" flex lg:flex-row flex-col  lg:pb-7 pb-3 my-5">
-        <div className="lg:px-10 lg:pr-16  lg:my-0 my-5">
+        <div className="lg:px-10 lg:pr-16  lg:my-0 my-5 border-r border-dashed">
           <Image
             alt="session icon"
             src="/assets/images/session-logo-black.png"
@@ -48,7 +48,7 @@ const AboutOPTF = () => {
             height={76}
           />
         </div>
-        <div className="lg:px-10 lg:pr-16  lg:my-0 my-5">
+        <div className="lg:px-10 lg:pr-16  lg:my-0 my-5 border-r border-dashed">
           <Image
             alt="oxen icon"
             src="/assets/images/oxen-icon.png"
