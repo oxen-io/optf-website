@@ -395,3 +395,38 @@ body {
   transform: rotate(80deg);
   left: 0;
 }
+
+
+.wave1 {
+  position: absolute;
+  opacity: .4;
+  width: 2000px;
+  height: 1500px;
+  margin-left: -800px;
+  margin-top: -2000px;
+  border-radius: 43%;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+.wave1.-one {
+  animation: rotate 42000ms infinite linear;
+  opacity: .9;
+  background-color: #E47088;
+
+}
+
+.wave1.-two {
+  animation: rotate 18000ms infinite linear;
+  opacity: .9;
+  background-color: #A4588C;
+
+}
+
+.wave1.-three {
+  animation: rotate 22000ms infinite linear;
+  background-color: #634290;
+
+}
