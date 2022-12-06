@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import classNames from 'classnames';
+import Link from 'next/link';
 
 const PartnersAndAlies = () => {
   const [infoTexts, setInfoTexts] = useState({
@@ -18,6 +19,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-blueprint.png',
       width: 254,
       height: 168,
+      link: 'https://www.blueprintforfreespeech.net/',
       text: 'A non-profit promoting the right to freedom of expression and  defending Article 19 of the Universal Declaration of Human Rights.',
       border: false,
     },
@@ -25,6 +27,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-mojolab.png',
       width: 228,
       height: 136,
+      link: 'https://mojolab.org/',
       text: 'Making the latest innovations in culture, knowledge, skill, and technology available to communities at low cost, preferably in self-implementable and self-reliant formats.',
       border: true,
     },
@@ -32,6 +35,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-hackergram.png',
       width: 269,
       height: 171,
+      link: 'https://hackergram.org/',
       text: 'Building real and virtual community spaces where people can work together to create innovative and sustainable solutions to global problems.',
       border: false,
     },
@@ -39,6 +43,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-engagemedia.png',
       width: 316,
       height: 190,
+      link: 'https://www.engagemedia.org/',
       text: 'A non-profit media, technology, and culture organisation using video, the internet, and open technologies to create social and environmental change.',
       border: false,
     },
@@ -46,6 +51,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-equalitie.png',
       width: 300,
       height: 180,
+      link: 'https://equalit.ie/',
       text: 'Developing open and reusable systems with a focus on privacy, resilience, and self-determination.',
       border: true,
     },
@@ -53,6 +59,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-coinstop.png',
       width: 300,
       height: 180,
+      link: 'https://coinstop.io/',
       text: 'A business working to protect and secure digital assets, Coinstop is Australia’s largest and longest-serving provider of blockchain and cryptocurrency hardware.',
       border: false,
     },
@@ -60,6 +67,7 @@ const PartnersAndAlies = () => {
       image: '/assets/images/partners-GCA.png',
       width: 225,
       height: 75,
+      link: 'https://www.globalcyberalliance.org/',
       text: 'The Global Cyber Alliance is an international, cross-sector effort dedicated to reducing cyber risk and improving our connected world.',
       border: false,
     },
@@ -100,29 +108,39 @@ const PartnersAndAlies = () => {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           {partnersData.map((partner, index: number) => {
             return (
-              <div
-                onMouseEnter={() => onHoverInfoTexts(index, true)}
-                onMouseLeave={() => onHoverInfoTexts(index, false)}
-                className={classNames(
-                  'relative flex items-center justify-center lg:flex-row flex-col',
-                  partner.border && partnerBorderClass,
-                  index === partnersData.length - 1 && 'lg:col-span-3'
-                )}
-              >
-                {infoTexts[index] && (
-                  <div className="absolute z-10 bg-white border border-1 border-gray-800 border-w-3 p-5  mx-5 rounded-lg   max-w-xs">
-                    {partner.text}
+              <Link href={partner.link}>
+                <a
+                  target="_blank"
+                  className={classNames(
+                    index === partnersData.length - 1 && 'lg:col-span-3'
+                  )}
+                >
+                  <div
+                    onMouseEnter={() => onHoverInfoTexts(index, true)}
+                    onMouseLeave={() => onHoverInfoTexts(index, false)}
+                    className={classNames(
+                      'relative flex items-center justify-center lg:flex-row flex-col',
+                      partner.border && partnerBorderClass,
+                      index === partnersData.length - 1 && 'lg:col-span-3'
+                    )}
+                  >
+                    {infoTexts[index] && (
+                      <div className=" cursor-pointer absolute z-10 bg-white border border-1 border-gray-800 border-w-3 p-5  mx-5 rounded-lg   max-w-xs">
+                        {partner.text}
+                      </div>
+                    )}
+                    <Image
+                      width={partner.width}
+                      height={partner.height}
+                      src={partner.image}
+                    />
+
+                    <div className="block lg:hidden text-sm my-8">
+                      {partner.text}
+                    </div>
                   </div>
-                )}
-                <Image
-                  width={partner.width}
-                  height={partner.height}
-                  src={partner.image}
-                />
-                <div className="block lg:hidden text-sm my-8">
-                  {partner.text}
-                </div>
-              </div>
+                </a>
+              </Link>
             );
           })}
         </div>
