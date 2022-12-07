@@ -3,9 +3,11 @@ import { useState } from 'react';
 
 const Donations = () => {
   const [modal, setModal] = useState(false);
-  const copyClipboard = (text: string) => {
+
+  const copyClipboard = (e: React.MouseEvent<HTMLButtonElement>) => {
     setModal(true);
-    navigator.clipboard.writeText(text);
+    let target: any = e.target as HTMLElement;
+    navigator.clipboard.writeText(target.previousElementSibling.innerHTML);
     setTimeout(() => {
       setModal(false);
     }, 2000);
@@ -53,9 +55,7 @@ const Donations = () => {
             LB724uBKKwRaAXSaWSt6Uo9r82S6CqQXqELyiMyDdDHw2jiCBvyViTzRUNyNDDTpAxQu3PpbpPLdbes5FHX45XskHsVNgFE
           </span>
           <button
-            onClick={(e) => {
-              copyClipboard(e.target.previousElementSibling.innerHTML);
-            }}
+            onClick={copyClipboard}
             className="py-1 px-3 ml-3  bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
@@ -65,9 +65,7 @@ const Donations = () => {
           <b>Bitcoin Address: </b>{' '}
           <span>37VhHEzXHDDfM37DmuhU8iyzu1nxZ8Spht</span>
           <button
-            onClick={(e) => {
-              copyClipboard(e.target.previousElementSibling.innerHTML);
-            }}
+            onClick={copyClipboard}
             className="py-1 px-3 ml-3  bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
@@ -78,9 +76,7 @@ const Donations = () => {
           <b>Ethereum Address: </b>{' '}
           <span>0x663930c996DeC843885B32ae5B5489B10f6F472e</span>
           <button
-            onClick={(e) => {
-              copyClipboard(e.target.previousElementSibling.innerHTML);
-            }}
+            onClick={copyClipboard}
             className="py-1 px-3 ml-3  bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy

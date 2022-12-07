@@ -75,6 +75,7 @@ export default function Projects() {
         }
         image={
           <Image
+            alt="projects hero image 3"
             width={2048}
             height={1270}
             src="/assets/images/projects-hero3-image.png"

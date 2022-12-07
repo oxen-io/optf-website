@@ -108,7 +108,7 @@ const PartnersAndAlies = () => {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           {partnersData.map((partner, index: number) => {
             return (
-              <Link href={partner.link}>
+              <Link key={partner.link} href={partner.link}>
                 <a
                   target="_blank"
                   className={classNames(
@@ -124,12 +124,13 @@ const PartnersAndAlies = () => {
                       index === partnersData.length - 1 && 'lg:col-span-3'
                     )}
                   >
-                    {infoTexts[index] && (
+                    {infoTexts[index as keyof typeof infoTexts] && (
                       <div className=" cursor-pointer absolute z-10 bg-white border border-1 border-gray-800 border-w-3 p-5  mx-5 rounded-lg   max-w-xs">
                         {partner.text}
                       </div>
                     )}
                     <Image
+                      alt={'partner N' + index}
                       width={partner.width}
                       height={partner.height}
                       src={partner.image}

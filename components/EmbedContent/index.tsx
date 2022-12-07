@@ -4,7 +4,6 @@ import { ReactElement, useEffect, useRef, useState } from 'react';
 import { Button } from '../ui';
 import Image from 'next/image';
 import Link from 'next/link';
-import { TOS } from '@/constants';
 import classNames from 'classnames';
 
 interface Props {
@@ -52,20 +51,8 @@ export default function EmbedContent(props: Props): ReactElement {
               'text-sm text-gray-500 font-normal leading-relaxed mb-4'
             )}
           >
-            By showing the external content you accept their{' '}
-            {TOS[content.site_name] && TOS[content.site_name].length > 0 ? (
-              <a
-                href={TOS[content.site_name]}
-                target="_blank"
-                rel="noreferrer"
-                className={classNames('text-primary-dark')}
-              >
-                Terms and Conditions
-              </a>
-            ) : (
-              'Terms and Conditions'
-            )}
-            .
+            By showing the external content you accept their &apos;Terms and
+            Conditions &apos;.
           </p>
           <Button
             fontWeight="bold"

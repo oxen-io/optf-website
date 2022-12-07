@@ -56,6 +56,7 @@ export default function GoToOptf() {
           {tabNames.map((tab, index) => {
             return (
               <h3
+                key={index + tab}
                 className="mr-3 cursor-pointer lg:my-0 my-2"
                 onClick={() => {
                   setTab(index);
