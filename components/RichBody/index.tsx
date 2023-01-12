@@ -12,7 +12,6 @@ import SHORTCODES from '@/constants/shortcodes';
 import classNames from 'classnames';
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { renderEmbeddedEntry } from '@/services/render';
-import { renderShortcode } from '@/utils/shortcodes';
 
 interface Props {
   body: Document;
@@ -138,7 +137,7 @@ export default function RichBody(props: Props): ReactElement {
         const plaintext = documentToPlainTextString(node);
         const isShortcode = SHORTCODES.REGEX.test(plaintext);
         if (isShortcode) {
-          return renderShortcode(plaintext);
+          return 
         } else {
           return (
             <p

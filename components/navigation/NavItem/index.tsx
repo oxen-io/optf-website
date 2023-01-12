@@ -64,7 +64,6 @@ export default function NavItem(props: NavItemProps): ReactElement {
   useEffect(() => {
     setIsDropdownExpanded(false);
   }, [isExpanded]);
-  console.log(router.pathname);
   return (
     <>
       {!navItem.items ? (
