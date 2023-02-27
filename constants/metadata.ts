@@ -16,11 +16,11 @@ export interface IMetadata {
 const METADATA = {
   HOST_URL:
     process.env.NEXT_PUBLIC_SITE_ENV === 'production'
-      ? 'https://getsession.org'
-      : 'https://staging.getsession.org',
+      ? 'https://optf.org'
+      : 'https://staging.optf.org',
   SITE_NAME: 'Session',
-  TITLE: 'OPTF | Blog  | Private is a fundamental right',
-  DESCRIPTION: ' Private is a fundamental right',
+  TITLE: 'OPTF',
+  DESCRIPTION: 'A global privacy tech not-for-profit based in Australia',
   TAGS: [
     'Privacy',
     'co-op',

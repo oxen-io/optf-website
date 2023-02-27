@@ -3,9 +3,7 @@ import classNames from 'classnames';
 import { IPost } from '@/types/cms';
 import { generateRoute } from '@/services/cms';
 import Container from '@/components/Container';
-import { Headline } from '@/components/ui';
 import { PostCardNew } from '@/components/cards';
-import { UI } from '@/constants';
 import { useState, useMemo } from 'react';
 import Pagination from '../../../components/Pagination/Pagination';
 

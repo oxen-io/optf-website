@@ -82,37 +82,6 @@ const config = {
   images: {
     domains: ['downloads.ctfassets.net', 'images.ctfassets.net'],
   },
-  serverRuntimeConfig: {
-    redirects: [
-      {
-        source: '/android',
-        destination:
-          'https://play.google.com/store/apps/details?id=network.loki.messenger',
-        permanent: true,
-      },
-      {
-        source: '/apk',
-        destination: 'https://github.com/oxen-io/session-android/releases',
-        permanent: true,
-      },
-      {
-        source: '/iphone',
-        destination:
-          'https://apps.apple.com/app/session-private-messenger/id1470168868?ls=1',
-        permanent: true,
-      },
-      {
-        source: '/f-droid',
-        destination: 'https://fdroid.getsession.org/',
-        permanent: true,
-      },
-      {
-        source: '/whitepaper',
-        destination: 'https://arxiv.org/pdf/2002.04609.pdf',
-        permanent: true,
-      },
-    ],
-  },
   async redirects() {
     return this.serverRuntimeConfig.redirects;
   },
@@ -129,30 +98,6 @@ const config = {
       {
         source: '/sitemap.xml',
         destination: '/api/sitemap',
-      },
-      {
-        source: '/linux',
-        destination: '/api/download/linux',
-      },
-      {
-        source: '/lightpaper/pdf',
-        destination: '/api/lightpaper',
-      },
-      {
-        source: '/login',
-        destination: '/api/login',
-      },
-      {
-        source: '/logout',
-        destination: '/api/logout',
-      },
-      {
-        source: '/mac',
-        destination: '/api/download/mac',
-      },
-      {
-        source: '/windows',
-        destination: '/api/download/windows',
       },
       {
         source: '/blog/:slug',

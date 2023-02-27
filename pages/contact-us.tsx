@@ -18,7 +18,7 @@ export default function ContactUs() {
   const [buttonText, setButtonText] = useState('Submit button');
 
   return (
-    <Layout>
+    <Layout title="Contact - OPTF">
       <Banner
         title="Get in touch​"
         subtitle="Your feedback and support helps us fulfill our mission of making digital privacy accessible to all."
