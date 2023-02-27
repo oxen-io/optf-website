@@ -15,15 +15,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = 'https://substackapi.com/widget.js';
-    script.async = true;
-
-    document.body.appendChild(script);
-
+    const substackScript = document.createElement('script');
+    substackScript.src = 'https://substackapi.com/widget.js';
+    substackScript.async = true;
+    document.body.appendChild(substackScript);
     return () => {
-      document.body.removeChild(script);
+      document.body.removeChild(substackScript);
     };
   }, [router]);
 

@@ -9,14 +9,14 @@ interface Props {
 export default function Banner(props: Props): ReactElement {
   const { title, subtitle, image } = props;
   return (
-    <div className="rounded-3xl my-10 lg:mx-32 mx-2  px-10 py-16 shadow shadow-header gradient-home-hero overflow-hidden text-white	">
-      <div className="z-10 relative">
+    <div className="px-10 py-16 mx-2 my-10 overflow-hidden text-white shadow rounded-3xl lg:mx-32 shadow-header gradient-home-hero ">
+      <div className="relative z-10">
         {image!! && <div>{image}</div>}
-        <h3 className="text-5xl mb-10">{title}</h3>
-        <p className="font-thin  lg:text-xl text-lg lg:w-1/2">{subtitle}</p>
+        <h3 className="mb-10 text-5xl">{title}</h3>
+        <p className="text-lg font-thin lg:text-xl lg:w-1/2">{subtitle}</p>
       </div>
 
-      <div className="box z-0">
+      <div className="z-0 box">
         <div className="wave -one"></div>
         <div className="wave -two"></div>
         <div className="wave -three"></div>

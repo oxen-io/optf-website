@@ -57,7 +57,7 @@ export default function Footer(): ReactElement {
 
   return (
     <div id="email-sign-up" className={classNames('gradient-footer-gray')}>
-      <div className="block md:hidden bg-green-350 p-5 text-white">
+      <div className="block p-5 text-white md:hidden bg-green-350">
         <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
           {newsLetterText.title}
         </h4>
