@@ -8,8 +8,6 @@
 }
 
 :root {
-  --primary-DEFAULT: #00f782;
-  --primary-dark: #00b35f;
   --gray-lightest: #adadad;
   --gray-lighter: #7a7a7a;
   --gray-light: #55595c;
@@ -396,10 +394,9 @@ body {
   left: 0;
 }
 
-
 .wave1 {
   position: absolute;
-  opacity: .4;
+  opacity: 0.4;
   width: 2000px;
   height: 1500px;
   margin-left: -800px;
@@ -408,25 +405,26 @@ body {
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
 .wave1.-one {
   animation: rotate 42000ms infinite linear;
-  opacity: .9;
-  background-color: #E47088;
-
+  opacity: 0.9;
+  background-color: #e47088;
 }
 
 .wave1.-two {
   animation: rotate 18000ms infinite linear;
-  opacity: .9;
-  background-color: #A4588C;
-
+  opacity: 0.9;
+  background-color: #a4588c;
 }
 
 .wave1.-three {
   animation: rotate 22000ms infinite linear;
   background-color: #634290;
-
 }

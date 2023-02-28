@@ -1,61 +1,105 @@
-# NEXTJS TYPESCRIPT TAILWIND STARTER TEMPLATE
+<img src="public/assets/images/logo-optf.png" width="300px">
+<br>
 
-This project is built with [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/) & [TypeScript](https://www.typescriptlang.org/).
-
-## Features
-
-- Responsive Javascript
-- Custom 404 page
-- Security Headers
-- Tailwind stylesheet minification and optimisation.
-- Template for optimal metadata (Lighthouse SEO score = 100)
-- Automatic sitemap
-- Staging environment support
-- Accessbility linting
-- First class Visual Studio Code integration
+> Send Messages, Not Metadata.
 
 ## Getting Started
 
-First, install the required packages:
+This project is built with [Contentful](https://www.contentful.com), [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [Typescript](https://www.typescriptlang.org/).
 
-```bash
-npm run install
-# or
-yarn install
+### System Requirements
+
+- [Node.js 16.13.0](https://nodejs.org/) or later
+
+### Setup
+
+1. Install `nvm`
+
+Follow nvm setup instructions [here](https://github.com/nvm-sh/nvm/blob/master/README.md).
+
+2. Install Node.js locally
+
+```
+nvm install 16.13.0
+nvm use 16.13.0
 ```
 
-Second, run the development server:
+3. Install `yarn`
+
+```
+npm install yarn -g
+```
+
+4. Install dependencies
+
+Using `--frozen-lockfile` makes sure that the environment is consistent on any machine by installing the exact package versions listed in the [yarn.lock](yarn.lock).
+
+```
+yarn install --frozen-lockfile
+```
+
+5. Signup for a free [Contentful](https://www.contentful.com/) account and create an organisation and within that create a space.
+
+   We called our organization **OPTF** and the space **Website**.
+
+   - For the site to build correctly you need to import our Content models and assets into your Contentful space. We have created some example content so you can get comfortable with our Contentful setup.
+
+   - Add your `space ID` and `content management token` inside of [contentful/config.json](contentful/config.json)
+   - Run this command inside the root of this project
+
+   ```
+     npx contentful space import --config contentful/config.json
+   ```
+
+   - For more information about importing/exporting in Contentful see [here](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/).
+
+6. Setup your environment file. See our [.env.example](.env.example) as a guide. Make sure to call the file `.env.local`.
+   - You can leave the [Campaign Monitor](https://www.campaignmonitor.com/) keys empty unless you are interested in how we handle mailing list subscriptions.
+
+## Developing
+
+- For accessbility testing we use the [axe-react](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md) plugin.
+- We use the [Headwind](https://github.com/heybourn/headwind) VSCode extension for sorting TailwindCSS classes.
+- We use [classnames](https://www.npmjs.com/package/classnames) to organise our classes into groups that combine at build time.
+
+If you are new to Next.js, this is a helpful introduction: https://nextjs.org/docs
+
+Now you can run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the Session homepage.
 
-## Development
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-- **Always** run `yarn run build && yarn run start` to see how the code works in a production environment before committing.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-- For staging environments use `build:staging` and `start:staging`.
+### Contentful
 
-  - This updates the system environment variables and page metadata.
+- Use the `Link Preview` and `Media` content models for embedding content into blog posts.
+- If linking content that is on the site itself try to omit omit https://optf.org.
+  e.g. `https://optf.org/blog/onion-requests-session-new-message-routing-solution/` => `/blog/onion-requests-session-new-message-routing-solution/`.
+- To use <sup>superscript</sup>, <sub>subscript</sub>, ~~strikethroughs~~ or <span style="background-color: #3a3a3a; color: white;">style</span> <span style="color: #00f782;">text</span> use the `Markup` content model.
 
-- The [axe-react](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md) plugin is used for accessbility testing.
+### Next.js
 
-- Uses [Headwind](https://github.com/heybourn/headwind) VSCode extension for sorting Tailwind classes.
+- Try to use the [next/image](https://nextjs.org/docs/api-reference/next/image) component in place of `img` tags where possible.
+- If you want to make a link to a location on the website use the [next/link](https://nextjs.org/docs/api-reference/next/link) component with a relative path. i.e. `https://getsession.org/blog -> /blog`
 
-- Uses [classnames](https://www.npmjs.com/package/classnames) to organise our classes into groups that combine at build time.
+### TailwindCSS
 
-### Tailwind Style Guide
+#### Class organisation
 
-#### React
+This helps with readability and is encouraged. Consider it to be a guideline and not a set of rules.
 
-```jsx
+##### React Component
+
+```
   <div className={classNames(
     "general classes here - colors, fonts, padding, margin etc",
-    "each responsive class utility should have it's own string md: lg: etc."
+    "responsive class changes should have it's own string md: lg: etc."
     "placeholder classes",
     "animations, transforms, effect",
     "pseudo classes i.e hover, focus, active, etc.",
@@ -63,29 +107,60 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   )}></div>
 ```
 
-#### CSS
+##### Custom CSS Class
 
-Any custom CSS classes should be written in [globals.css](styles/globals.css).
-
-```css
+```
 .custom-class {
-  @apply general classes here - colors, fonts, padding, margin;
-  @apply group breakpointed classes into their own strings;
+  @apply general classes here - colors, fonts, padding, margin etc;
+  @apply responsive class changes should have it's own string md: lg: etc.;
   @apply placeholder classes;
   @apply animations, transforms, effect;
-  @apply pseudo classes i.e hover, focus, active;
+  @apply pseudo classes i.e hover, focus, active, etc.;
+  @apply toggling classes i.e. NavMenu isExpanded;
 }
 ```
 
-### Notes
+#### Issues with Tailwind
 
-- We can't use template literals with classes if we want to purge the CSS.
-  - https://github.com/tailwindlabs/tailwindcss/issues/2209#issuecomment-677855297
-  - https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html
-  - Avoid: `hover:bg-black hover:text-${bgColor}`
-  - Do: `const hoverClasses = [backgroundColor === 'black' && 'bg-black hover:text-black'];`
+We can't use template literals with classes if we want to purge (shrink) the CSS files at build time.
 
-## Deployment
+```
+<div className="hover:bg-black hover:text-${bgColor}"></div> // Won't work in production
+```
 
-1. Once you have a domain replace all instances of `YOUR_DOMAIN_HERE` in this project.
-2. Edit [constants/metadata.ts](constants/metadata.ts) with your project info for accurate metadata and effective SEO.
+- https://github.com/tailwindlabs/tailwindcss/issues/2209#issuecomment-677855297
+- https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html
+
+## Deploying to Production
+
+You can run the project in a production environment by running:
+
+```
+yarn run build && yarn run start
+```
+
+**Make sure to do this locally and check for errors before pushing any code changes to your hosted repository**
+
+Any changes made on Contentful will be reflected on the production server **hourly**.
+
+If you want to see your Contentful changes faster while using a production server you can use the Staging Environement.
+
+### Staging Environment
+
+You can test the project in a staging environment by running:
+
+```
+yarn run build:staging && yarn run start:staging
+```
+
+Staging environments are password protected using the password you assign to `STAGING_SECRET` in `.env.local`.
+
+To unlock the staging environment go to [http://localhost:3000/login?secret=YOUR_PASSWORD_HERE](http://localhost:3000/login?secret=YOUR_PASSWORD_HERE)
+
+System environment variables and page metadata will also be updated to show it's a staging website.
+
+Any changes made on Contentful will be reflected on the staging server **every 30 seconds**.
+
+## License
+
+Distributed under the GNU GPLv3 License. See [LICENSE](LICENSE) for more information.

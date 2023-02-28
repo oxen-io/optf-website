@@ -9,7 +9,7 @@ interface Props {
 export default function Banner(props: Props): ReactElement {
   const { title, subtitle, image } = props;
   return (
-    <div className="px-10 py-16 mx-2 my-10 overflow-hidden text-white shadow rounded-3xl lg:mx-32 shadow-header gradient-home-hero ">
+    <div className="max-w-6xl px-10 py-16 mx-2 mx-auto my-10 overflow-hidden text-white shadow rounded-3xl lg:mx-5 xl:mx-auto shadow-header gradient-home-hero ">
       <div className="relative z-10">
         {image!! && <div>{image}</div>}
         <h3 className="mb-10 text-5xl">{title}</h3>

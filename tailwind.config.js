@@ -32,9 +32,6 @@ module.exports = {
         header: '0px 0px 10px 0px rgb(0 0 0 / 50%)',
         posts: '0px 0px 10px',
       },
-      animation: {
-        push: 'push 0.3s linear 1',
-      },
       blur: {
         xs: '2px',
       },
@@ -44,7 +41,6 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: 'var(--primary-DEFAULT)',
           dark: 'var(--primary-dark)',
         },
         gray: {
@@ -69,11 +65,6 @@ module.exports = {
       },
       height: {
         120: '30rem', // for larger images
-      },
-      keyframes: {
-        push: {
-          '50%': { transform: 'scale(0.8)' },
-        },
       },
       transitionProperty: {
         height: 'height',

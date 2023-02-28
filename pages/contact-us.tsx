@@ -23,7 +23,7 @@ export default function ContactUs() {
         title="Get in touch​"
         subtitle="Your feedback and support helps us fulfill our mission of making digital privacy accessible to all."
       />
-      <div className="container w-full mx-auto md:mx-40 md:w-1/3">
+      <div className="flex flex-col mx-10 lg:mx-40 2xl:mx-auto md:w-1/3">
         <h1 className="text-4xl font-semibold ">
           Help us build the tools you need
         </h1>

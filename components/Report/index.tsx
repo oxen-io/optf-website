@@ -12,10 +12,10 @@ export default function Report(props: Props): ReactElement {
   const { title, subtitle, ctaLink, ctaText } = props;
   return (
     <section className="border-b border-gray-200">
-      <div className=" lg:mx-32 mx-2  px-10 py-20 	">
-        <div className="z-10 relative">
-          <h3 className="text-4xl mb-10 font-bold">{title}</h3>
-          <p className="font-thin mb-5">{subtitle}</p>
+      <div className="px-10 py-20 mx-2 lg:mx-32 ">
+        <div className="relative z-10">
+          <h3 className="mb-10 text-4xl font-bold">{title}</h3>
+          <p className="mb-5 font-thin">{subtitle}</p>
           {ctaLink ? (
             <Link href={ctaLink}>
               <a className="text-blue-400">{ctaText}</a>
