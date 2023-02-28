@@ -18,17 +18,18 @@ const METADATA = {
     process.env.NEXT_PUBLIC_SITE_ENV === 'production'
       ? 'https://optf.org'
       : 'https://staging.optf.org',
-  SITE_NAME: 'Session',
+  SITE_NAME: 'OPTF',
   TITLE: 'OPTF',
   DESCRIPTION: 'A global privacy tech not-for-profit based in Australia',
   TAGS: [
     'Privacy',
-    'co-op',
-    'Community contribution',
-    'decentralisation',
-    'decentralised',
-    'messaging',
-    'Private messaging',
+    'Decentralisation',
+    'FOSS',
+    'Open Source',
+    'Digital rights',
+    'Foundation',
+    'Security',
+    'Australia',
   ],
   OG_TYPE: 'website',
   OG_IMAGE: {
@@ -55,7 +56,7 @@ const METADATA = {
   BLOG_PAGE: {
     TYPE: 'article',
     DESCRIPTION:
-      'View the Session Blogs. | Session is an end-to-end encrypted messenger that removes sensitive metadata collection.',
+      'View the OPTF blog | We discuss digital rights including privacy and online speech, and advocate for technologies which preserve people’s rights',
     OG_IMAGE: {
       URL: '/assets/images/send-messages-not-metadata.jpg',
       WIDTH: 1024,
@@ -74,44 +75,8 @@ const METADATA = {
       ALT: 'Mysterious man on the phone. Heading is Use Session.',
     },
   },
-  FAQ_PAGE: {
-    TYPE: 'FAQPage',
-    DESCRIPTION:
-      "Session's FAQ. Find answers to some of the most frequently asked questions about Session — info on the team, the tech, and the technicalities.",
-    OG_IMAGE: {
-      URL: '/assets/images/faq.png',
-      WIDTH: 800,
-      HEIGHT: 800,
-      ALT: 'Frequently Asked Questions heading with redacted text below',
-    },
-  },
   HELP_PAGE: {
-    DESCRIPTION: 'How you can help. A Session Community Help Guide Document.',
-  },
-  LIGHTPAPER_PAGE: {
-    DESCRIPTION:
-      'Session is a decentralised messenger that supports completely private, secure, and anonymous communications.',
-    OG_IMAGE: {
-      URL: '/assets/images/lightpaper.jpg',
-      WIDTH: 1200,
-      HEIGHT: 627,
-      ALT: 'Black background with a neon white Session logo with Lightpaper written as a heading',
-    },
-    TAGS: [
-      'Session',
-      'lightpaper',
-      'metadata',
-      'messenger',
-      'encryption',
-      'encrypted',
-      'onion routing',
-      'decentralisation',
-      'Oxen',
-      'blockchain',
-      'messaging',
-      'private',
-      'privacy',
-    ],
+    DESCRIPTION: 'How you can help',
   },
   OPEN_GROUP_PAGE: {
     DESCRIPTION:
