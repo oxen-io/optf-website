@@ -67,7 +67,7 @@ export default function PostListNew(props: Props): ReactElement {
         })}
       </Container>
       <Container
-        classes={classNames(' flex justify-center lg:pl-20 lg:pr-20 lg:pb-10')}
+        classes={classNames('flex justify-center lg:pl-20 lg:pr-20 lg:pb-10')}
       >
         {section === 'blog' && (
           <Pagination

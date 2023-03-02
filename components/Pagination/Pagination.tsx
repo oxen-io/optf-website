@@ -59,7 +59,7 @@ const Pagination = (props: Props) => {
           return (
             <li
               key={`${pageNumber}${index}`}
-              className=" text-center flex items-center rounded-lg"
+              className="flex items-center text-center rounded-lg"
             >
               &#8230;
             </li>

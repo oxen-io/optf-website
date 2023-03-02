@@ -77,7 +77,6 @@ module.exports = {
         assistant: ['Assistant', 'sans-serif'],
       },
       animation: ['hover'],
-
       blur: ['hover'],
       borderWidth: ['first'],
       borderRadius: ['last'],

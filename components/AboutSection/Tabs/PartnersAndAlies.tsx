@@ -86,7 +86,7 @@ const PartnersAndAlies = () => {
 
   return (
     <div className="text-gray-500">
-      <h3 className="lg:text-4xl text-2xl font-semibold mb-5">
+      <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
         Partners and alies
       </h3>
       <p>
@@ -105,7 +105,7 @@ const PartnersAndAlies = () => {
         private, more secure place.
       </p>
       <div className="my-20">
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           {partnersData.map((partner, index: number) => {
             return (
               <Link key={partner.link} href={partner.link}>
@@ -125,7 +125,7 @@ const PartnersAndAlies = () => {
                     )}
                   >
                     {infoTexts[index as keyof typeof infoTexts] && (
-                      <div className=" cursor-pointer absolute z-10 bg-white border border-1 border-gray-800 border-w-3 p-5  mx-5 rounded-lg   max-w-xs">
+                      <div className="absolute z-10 max-w-xs p-5 mx-5 bg-white border border-gray-800 rounded-lg cursor-pointer border-1 border-w-3">
                         {partner.text}
                       </div>
                     )}
@@ -136,7 +136,7 @@ const PartnersAndAlies = () => {
                       src={partner.image}
                     />
 
-                    <div className="block lg:hidden text-sm my-8">
+                    <div className="block my-8 text-sm lg:hidden">
                       {partner.text}
                     </div>
                   </div>

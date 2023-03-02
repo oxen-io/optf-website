@@ -13,7 +13,7 @@ export default function Hero(): ReactElement {
         hasMinHeight={true}
         heights={{ small: '100%', medium: '100%', large: '80%' }}
         classes={classNames(
-          ' lg:flex lg:flex-col flex-col lg:justify-start lg:items-between'
+          'lg:flex lg:flex-col flex-col lg:justify-start lg:items-between'
         )}
       >
         <div className="flex flex-col justify-center my-8 lg:flex-row lg:items-center">
