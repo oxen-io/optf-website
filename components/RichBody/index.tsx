@@ -137,7 +137,7 @@ export default function RichBody(props: Props): ReactElement {
         const plaintext = documentToPlainTextString(node);
         const isShortcode = SHORTCODES.REGEX.test(plaintext);
         if (isShortcode) {
-          return 
+          return;
         } else {
           return (
             <p

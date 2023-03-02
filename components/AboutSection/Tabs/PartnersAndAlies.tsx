@@ -82,7 +82,7 @@ const PartnersAndAlies = () => {
   };
 
   let partnerBorderClass =
-    'lg:border-l lg:border-r  border-dashed border-gray-300';
+    'lg:border-l lg:border-r border-dashed border-gray-300';
 
   return (
     <div className="text-gray-500">

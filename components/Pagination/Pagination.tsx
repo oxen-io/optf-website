@@ -41,7 +41,7 @@ const Pagination = (props: Props) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul className={classnames('flex  h-5  list-none  text-xl font-semibold')}>
+    <ul className={classnames('flex h-5 list-none text-xl font-semibold')}>
       {/* Left navigation arrow */}
       <li
         className={classnames(

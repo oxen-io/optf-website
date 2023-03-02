@@ -111,14 +111,14 @@ export default function PostCard(props: Props): ReactElement {
         {section === 'post' && (
           <div className="mb-10">
             <Link href={route}>
-              <a className="text-red-400 text-sm px-3">READ MORE &gt;&gt;</a>
+              <a className="px-3 text-sm text-red-400">READ MORE &gt;&gt;</a>
             </Link>
           </div>
         )}
       </div>
 
       {section === 'post' && (
-        <div className="border-t  inset-x-0 bottom-0 h-8  absolute ">
+        <div className="absolute inset-x-0 bottom-0 h-8 border-t ">
           <p
             className={classNames(
               'text-gray-lightest text-xs font-helvetica ml-3 my-2 '

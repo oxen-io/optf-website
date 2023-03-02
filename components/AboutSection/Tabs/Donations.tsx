@@ -14,7 +14,7 @@ const Donations = () => {
   };
 
   return (
-    <div className="text-gray-500 relative ">
+    <div className="relative text-gray-500 ">
       <p>
         Our work benefits hundreds of thousands of people around the world. Your
         donation will help fund research projects, education initiatives, and
@@ -48,7 +48,7 @@ const Donations = () => {
       </ul>
       <p>Donate using the following cryptocurrency wallet addresses:</p>
       <br />
-      <ul className="list-disc break-words">
+      <ul className="break-words list-disc">
         <li>
           <b> Oxen Address:</b>
           <span>
@@ -56,7 +56,7 @@ const Donations = () => {
           </span>
           <button
             onClick={copyClipboard}
-            className="py-1 px-3 ml-3  bg-gray-200 hover:text-white hover:bg-blue-500"
+            className="px-3 py-1 ml-3 bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
           </button>
@@ -66,7 +66,7 @@ const Donations = () => {
           <span>37VhHEzXHDDfM37DmuhU8iyzu1nxZ8Spht</span>
           <button
             onClick={copyClipboard}
-            className="py-1 px-3 ml-3  bg-gray-200 hover:text-white hover:bg-blue-500"
+            className="px-3 py-1 ml-3 bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
           </button>
@@ -77,7 +77,7 @@ const Donations = () => {
           <span>0x663930c996DeC843885B32ae5B5489B10f6F472e</span>
           <button
             onClick={copyClipboard}
-            className="py-1 px-3 ml-3  bg-gray-200 hover:text-white hover:bg-blue-500"
+            className="px-3 py-1 ml-3 bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
           </button>
@@ -85,7 +85,7 @@ const Donations = () => {
       </ul>
       {/* modal */}
       {modal && (
-        <div className="absolute bottom-0 right-0 h-8 w-16 bg-white bg-gray-100 ">
+        <div className="absolute bottom-0 right-0 w-16 h-8 bg-white bg-gray-100 ">
           <p className="ml-2"> Copied!</p>
         </div>
       )}
