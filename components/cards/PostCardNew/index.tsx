@@ -35,7 +35,7 @@ export default function PostCard(props: Props): ReactElement {
       className={classNames(
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
-        'bg-green-150  rounded-3xl  mx-2 shadow hover:shadow-xl transition ease-in-out group',
+        'bg-green-150 rounded-3xl mx-2 shadow hover:shadow-xl transition ease-in-out group',
         section === 'blog' &&
           'rounded-t-2xl rounded-b-none bg-gray-100 hover:shadow-posts ',
         section === 'post' &&
@@ -118,7 +118,7 @@ export default function PostCard(props: Props): ReactElement {
       </div>
 
       {section === 'post' && (
-        <div className="absolute inset-x-0 bottom-0 h-8 border-t ">
+        <div className="absolute inset-x-0 bottom-0 h-8 border-t">
           <p
             className={classNames(
               'text-gray-lightest text-xs font-helvetica ml-3 my-2 '

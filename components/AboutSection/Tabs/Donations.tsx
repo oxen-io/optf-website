@@ -14,7 +14,7 @@ const Donations = () => {
   };
 
   return (
-    <div className="relative text-gray-500 ">
+    <div className="relative text-gray-500">
       <p>
         Our work benefits hundreds of thousands of people around the world. Your
         donation will help fund research projects, education initiatives, and
@@ -85,7 +85,7 @@ const Donations = () => {
       </ul>
       {/* modal */}
       {modal && (
-        <div className="absolute bottom-0 right-0 w-16 h-8 bg-white bg-gray-100 ">
+        <div className="absolute bottom-0 right-0 w-16 h-8 bg-white bg-gray-100">
           <p className="ml-2"> Copied!</p>
         </div>
       )}

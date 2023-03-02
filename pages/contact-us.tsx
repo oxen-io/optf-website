@@ -24,7 +24,7 @@ export default function ContactUs() {
         subtitle="Your feedback and support helps us fulfill our mission of making digital privacy accessible to all."
       />
       <div className="flex flex-col mx-10 lg:mx-40 2xl:mx-auto md:w-1/3">
-        <h1 className="text-4xl font-semibold ">
+        <h1 className="text-4xl font-semibold">
           Help us build the tools you need
         </h1>
         <h4 className="my-10">
@@ -86,7 +86,7 @@ export default function ContactUs() {
           {({ isSubmitting, errors }) => (
             <Form>
               <div className="flex flex-col justify-between y-10 md:flex-row">
-                <div className="flex flex-col w-full mr-5 ">
+                <div className="flex flex-col w-full mr-5">
                   <label className={classNames(labelClasses)} htmlFor="name">
                     Name
                   </label>
@@ -105,7 +105,7 @@ export default function ContactUs() {
                     component="span"
                   />
                 </div>
-                <div className="flex flex-col w-full ">
+                <div className="flex flex-col w-full">
                   <label htmlFor="email" className={classNames(labelClasses)}>
                     Email
                   </label>

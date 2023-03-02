@@ -39,7 +39,7 @@ const AboutOPTF = () => {
         We are actively implementing technology projects that help us achieve
         our mission. These projects include:
       </p>
-      <div className="flex flex-col pb-3 my-5  lg:flex-row lg:pb-7">
+      <div className="flex flex-col pb-3 my-5 lg:flex-row lg:pb-7">
         <div className="my-5 border-r border-dashed lg:px-10 lg:pr-16 lg:my-0">
           <Image
             alt="session icon"
@@ -68,7 +68,7 @@ const AboutOPTF = () => {
       <h1 className="mb-5 text-2xl lg:text-4xl">
         Our guiding principles are to:
       </h1>
-      <div className="relative z-10 overflow-hidden text-lg text-gray-900 bg-gray-100 lg:mx-2 lg:text-xl ">
+      <div className="relative z-10 overflow-hidden text-lg text-gray-900 bg-gray-100 lg:mx-2 lg:text-xl">
         <h4 className="my-5 ml-3 lg:ml-10 lg:w-3/6">
           Build open-source, secure communications tools that are free and
           accessible.
@@ -100,11 +100,11 @@ const AboutOPTF = () => {
         </div>
       </div>
       <div className="my-20">
-        <h3 className="my-10 text-2xl lg:text-3xl ">Board of Directors</h3>
+        <h3 className="my-10 text-2xl lg:text-3xl">Board of Directors</h3>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="border-gray-300 border-dashed lg:border-r lg:pr-10">
-            <h4 className="text-xl font-semibold ">Simon Harman</h4>
+            <h4 className="text-xl font-semibold">Simon Harman</h4>
             <h5>Public Officer</h5>
             <p>
               Simon is a co-founder and the CEO of Oxen — the OPTF’s first major
@@ -114,7 +114,7 @@ const AboutOPTF = () => {
             </p>
           </div>
           <div className="pt-5 border-gray-300 border-dashed lg:border-r lg:px-10 lg:pt-0">
-            <h4 className="text-xl font-semibold ">Chris McCabe</h4>
+            <h4 className="text-xl font-semibold">Chris McCabe</h4>
             <h5>CEO</h5>
             <p>
               Chris is a co-founder and the COO of Oxen. He is responsible for
@@ -124,7 +124,7 @@ const AboutOPTF = () => {
             </p>
           </div>
           <div className="pt-5 lg:px-10 lg:pt-0">
-            <h4 className="text-xl font-semibold "> Lucy Lovegrove</h4>
+            <h4 className="text-xl font-semibold"> Lucy Lovegrove</h4>
             <h5>Secretary</h5>
             <p>
               Chris is a co-founder and the COO of Oxen. He is responsible for
@@ -134,7 +134,7 @@ const AboutOPTF = () => {
             </p>
           </div>
           <div className="mt-5 border-gray-300 border-dashed lg:border-r lg:pr-10 lg:mt-10">
-            <h4 className="text-xl font-semibold ">John Pacific</h4>
+            <h4 className="text-xl font-semibold">John Pacific</h4>
             <h5>CEO</h5>
             <p>
               John is an entrepreneur, cypherpunk, and cryptography engineer
@@ -144,7 +144,7 @@ const AboutOPTF = () => {
             </p>
           </div>
           <div className="mt-5 border-gray-300 border-dashed lg:border-r lg:px-10 lg:mt-10">
-            <h4 className="text-xl font-semibold ">Jason Rhinelander</h4>
+            <h4 className="text-xl font-semibold">Jason Rhinelander</h4>
             <h5>Public Officer</h5>
             <p>
               Jason has an extensive background in economics and computer

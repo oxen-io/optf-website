@@ -17,7 +17,7 @@ export default function Hero(): ReactElement {
         )}
       >
         <div className="flex flex-col justify-center my-8 lg:flex-row lg:items-center">
-          <h1 className="mb-20 mr-10 text-5xl font-extrabold text-white lg:text-8xl lg:mb-0 ">
+          <h1 className="mb-20 mr-10 text-5xl font-extrabold text-white lg:text-8xl lg:mb-0">
             Welcome <br /> to privacy.
           </h1>
 
@@ -49,7 +49,7 @@ export default function Hero(): ReactElement {
             />
           </div>
         </div>
-        <h4 className="text-xl text-center text-white lg:my-7 mt-7 lg:text-2xl ">
+        <h4 className="text-xl text-center text-white lg:my-7 mt-7 lg:text-2xl">
           We build tools that protect your privacy and security in the digital
           world.
         </h4>
