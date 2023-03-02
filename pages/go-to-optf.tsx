@@ -52,12 +52,12 @@ export default function GoToOptf() {
           title="Meet the Oxen Privacy Tech Foundation"
           subtitle="We’re a passionate team of advocates, creatives, and engineers building a world where the internet is open, software is free and accessible, and your privacy is protected."
         />
-        <div className="flex justify-center items-center lg:flex-row  flex-wrap sticky top-0 bg-white z-20 py-5 font-semibold">
+        <div className="sticky top-0 z-20 flex flex-wrap items-center justify-center py-5 font-semibold bg-white lg:flex-row">
           {tabNames.map((tab, index) => {
             return (
               <h3
                 key={index + tab}
-                className="mr-3 cursor-pointer lg:my-0 my-2"
+                className="my-2 mr-3 cursor-pointer lg:my-0"
                 onClick={() => {
                   setTab(index);
                 }}

@@ -20,7 +20,7 @@ export default function Nav(): ReactElement {
     >
       <div
         className={classNames(
-          ' container relative flex flex-wrap items-center justify-between w-full px-4 pb-2 mx-auto z-10',
+          'container relative flex flex-wrap items-center justify-between w-full px-4 pb-2 mx-auto z-10',
           'lg:pb-0 lg:h-20 lg:px-10'
         )}
       >
@@ -31,7 +31,7 @@ export default function Nav(): ReactElement {
           )}
         >
           <Link href="/">
-            <a className="lg:hidden block">
+            <a className="block lg:hidden">
               <Image
                 src="/assets/images/logo-optf.png"
                 alt="optf logo"
@@ -41,7 +41,7 @@ export default function Nav(): ReactElement {
             </a>
           </Link>
           <Link href="/">
-            <a className="lg:block hidden">
+            <a className="hidden lg:block">
               <Image
                 src="/assets/images/logo-optf.png"
                 alt="optf logo"
@@ -78,7 +78,7 @@ export default function Nav(): ReactElement {
         >
           <div
             className={classNames(
-              'flex flex-col items-start justify-center text-sm ',
+              'flex flex-col items-start justify-center text-sm',
               'lg:text-base lg:flex-row lg:items-center lg:justify-end lg:font-bold lg:text-gray',
               'transform transition-all duration-300 bg-white lg:bg-transparent',
               isExpanded

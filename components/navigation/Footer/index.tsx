@@ -13,7 +13,7 @@ export default function Footer(): ReactElement {
     'text-white uppercase text-xl font-bold mb-2'
   );
   const linkClasses = classNames(
-    'text-sm py-2 mr-2 ',
+    'text-sm py-2 mr-2',
     'lg:py-0 lg:my-0',
     'transition-colors duration-300',
     'hover:text-white'
@@ -102,7 +102,7 @@ export default function Footer(): ReactElement {
           </div>
         </div>
 
-        <footer className={classNames('text-white ', 'lg:w-1/2 lg:mt-2')}>
+        <footer className={classNames('text-white', 'lg:w-1/2 lg:mt-2')}>
           <div
             className={classNames(
               'flex flex-wrap pt-6 pb-4 px-8 border-b border-white border-dashed',

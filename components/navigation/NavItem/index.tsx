@@ -22,8 +22,8 @@ export interface NavItemProps extends DropdownProps {
 }
 
 export const navLinkClasses = classNames(
-  'lg:text-xl  w-full px-5 py-2  border-transparent  cursor-pointer',
-  'lg:px-3 lg:w-auto  lg:mx-2 rounded-xl'
+  'lg:text-xl w-full px-5 py-2 border-transparent cursor-pointer',
+  'lg:px-3 lg:w-auto lg:mx-2 rounded-xl'
 );
 
 const navLinkHoverClasses = classNames(

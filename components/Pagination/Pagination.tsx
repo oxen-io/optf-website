@@ -71,7 +71,7 @@ const Pagination = (props: Props) => {
           <li
             key={`${pageNumber}${index}`}
             className={classnames(
-              'px-1  text-center  flex items-center rounded-lg',
+              'px-1 text-center flex items-center rounded-lg',
               {
                 selected: pageNumber === currentPage,
               }
@@ -85,7 +85,7 @@ const Pagination = (props: Props) => {
       {/*  Right Navigation arrow */}
       <li
         className={classnames(
-          ' cursor-pointer px-4 text-center m-2 flex items-center ',
+          'cursor-pointer px-4 text-center m-2 flex items-center',
           currentPage === lastPage && 'hidden'
         )}
         onClick={onNext}

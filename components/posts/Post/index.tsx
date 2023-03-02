@@ -43,7 +43,7 @@ export default function Post(props: Props): ReactElement {
     });
   })();
   return (
-    <section className="lg:mt-10 mx-4 lg:mx-0">
+    <section className="mx-4 lg:mt-10 lg:mx-0">
       <Container
         fullWidth={fullHeader}
         classes={classNames(
@@ -105,7 +105,7 @@ export default function Post(props: Props): ReactElement {
           classes={classNames('text-sm text-gray', 'lg:text-base')}
         />
       </Container>
-      <div className="border-b border-t  border-gray-300 border-dashed text-3xl text-center my-10 py-10">
+      <div className="py-10 my-10 text-3xl text-center border-t border-b border-gray-300 border-dashed">
         <h3>Latest blog posts</h3>
       </div>
 
