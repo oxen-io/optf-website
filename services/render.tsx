@@ -82,7 +82,7 @@ function EmbeddedMedia(
       const imageWidth = node.width ?? media.file.details.image.width;
       const imageHeight = node.height ?? media.file.details.image.height;
       const figureClasses = [
-        isInline && node.position && ' text-center mx-auto mt-4 mb-8 md:mx-4',
+        isInline && node.position && 'text-center mx-auto mt-4 mb-8 md:mx-4',
         isInline && !node.position && 'inline-block align-middle mx-1',
         isInline && node.position === 'left' && 'md:float-left',
         isInline && node.position === 'right' && 'md:float-right',

@@ -6,8 +6,7 @@ export default function Feedback() {
     <Layout>
       <Banner
         title="Get in touch​"
-        subtitle="Your feedback and support helps us fulfill our mission.​
-"
+        subtitle="Your feedback and support helps us fulfill our mission.​"
       />
     </Layout>
   );
