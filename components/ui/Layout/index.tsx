@@ -36,7 +36,6 @@ export default function Layout({
       <CustomHead title={title} metadata={metadata} />
       <Nav />
       {locked ? <LockedPage /> : <main>{children}</main>}
-
       <Footer />
     </>
   );

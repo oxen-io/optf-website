@@ -15,7 +15,7 @@ export default function Nav(): ReactElement {
   };
   return (
     <nav
-      className={classNames('gradient-header-green shadow-header ')}
+      className={classNames('gradient-header-green shadow-header')}
       role="navigation"
     >
       <div

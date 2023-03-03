@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const substackScript = document.createElement('script');
-    substackScript.src = 'https://substackapi.com/widget.js';
     substackScript.async = true;
+    substackScript.src = 'https://substackapi.com/widget.js';
     document.body.appendChild(substackScript);
     return () => {
       document.body.removeChild(substackScript);
