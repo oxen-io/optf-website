@@ -1,98 +1,100 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 
-const AboutOPTF = () => {
+export default function AboutOPTF() {
+  const logoClass = 'my-5 lg:border-r border-dashed lg:px-10 lg:pr-16 lg:my-10';
   return (
     <div>
-      <h1 className="mb-5 text-2xl lg:text-4xl">
-        You have a right to privacy.
-      </h1>
-      <p>
-        Privacy is a human right. Everyone knows what privacy feels like — it
-        feels comfortable, safe, and secure. When we are in private, we have the
-        freedom to share ideas and be ourselves. In the physical world, we all
-        take steps to protect our privacy every day. But privacy has fallen by
-        the wayside in the digital world. If we want the internet to be a free,
-        fair, and equal place for everyone, we must design, create, and share
-        technology which preserves people’s privacy and enables them to
-        experience the internet in a safe and secure way.{' '}
-      </p>
-      <br />
-      <p>
-        {' '}
-        OPTF’s mission is to equip every digital citizen with technology which
-        upholds their right to privacy. Whether you’re buying a coffee,
-        messaging a friend, or simply browsing the internet, your privacy should
-        always be protected. It shouldn’t have any strings attached — it should
-        be provided by default, and it should be free.
-      </p>
-      <br />
-      <p>
-        One of the OPTF’s main development achievements is the private
-        messenger, Session. Session is a free and open-source application which
-        allows people to have completely private, secure, and anonymous
-        conversations online. Session is a tool for protecting free speech
-        including for journalists, activists, and other people working in civil
-        society.
-      </p>
-      <br />
-      <p>
-        We are actively implementing technology projects that help us achieve
-        our mission. These projects include:
-      </p>
-      <div className="flex flex-col pb-3 my-5 lg:flex-row lg:pb-7">
-        <div className="my-5 border-r border-dashed lg:px-10 lg:pr-16 lg:my-0">
-          <Image
-            alt="session icon"
-            src="/assets/images/session-logo-black.png"
-            width={380}
-            height={76}
-          />
-        </div>
-        <div className="my-5 border-r border-dashed lg:px-10 lg:pr-16 lg:my-0">
-          <Image
-            alt="oxen icon"
-            src="/assets/images/oxen-icon.png"
-            width={380}
-            height={76}
-          />
-        </div>
-        <div className="my-5 lg:px-10 lg:pr-16 lg:my-0">
-          <Image
-            alt="lokinet icon"
-            src="/assets/images/lokinet-icon.png"
-            width={380}
-            height={76}
-          />
+      <div className="px-3 lg:px-0">
+        <h1 className="mb-5 text-2xl font-semibold lg:text-4xl">
+          You have a right to privacy.
+        </h1>
+        <p>
+          Privacy is a human right. Everyone knows what privacy feels like — it
+          feels comfortable, safe, and secure. When we are in private, we have
+          the freedom to share ideas and be ourselves. In the physical world, we
+          all take steps to protect our privacy every day. But privacy has
+          fallen by the wayside in the digital world. If we want the internet to
+          be a free, fair, and equal place for everyone, we must design, create,
+          and share technology which preserves people’s privacy and enables them
+          to experience the internet in a safe and secure way.
+        </p>
+        <br />
+        <p>
+          OPTF’s mission is to equip every digital citizen with technology which
+          upholds their right to privacy. Whether you’re buying a coffee,
+          messaging a friend, or simply browsing the internet, your privacy
+          should always be protected. It shouldn’t have any strings attached —
+          it should be provided by default, and it should be free.
+        </p>
+        <br />
+        <p>
+          One of the OPTF’s main development achievements is the private
+          messenger, Session. Session is a free and open-source application
+          which allows people to have completely private, secure, and anonymous
+          conversations online. Session is a tool for protecting free speech
+          including for journalists, activists, and other people working in
+          civil society.
+        </p>
+        <br />
+        <p>
+          We are actively implementing technology projects that help us achieve
+          our mission. These projects include:
+        </p>
+        <div className="flex flex-col pb-3 my-5 lg:flex-row lg:pb-7">
+          <div className={classNames(logoClass)}>
+            <Image
+              alt="session icon"
+              src="/assets/images/session-logo-black.png"
+              width={380}
+              height={76}
+            />
+          </div>
+          <div className={classNames(logoClass)}>
+            <Image
+              alt="oxen icon"
+              src="/assets/images/oxen-icon.png"
+              width={380}
+              height={76}
+            />
+          </div>
+          <div className="my-5 lg:px-10 lg:pr-16 lg:my-10">
+            <Image
+              alt="lokinet icon"
+              src="/assets/images/lokinet-icon.png"
+              width={380}
+              height={76}
+            />
+          </div>
         </div>
       </div>
-      <h1 className="mb-5 text-2xl lg:text-4xl">
+      <h1 className="mb-10 text-2xl font-semibold lg:text-4xl">
         Our guiding principles are to:
       </h1>
-      <div className="relative z-10 overflow-hidden text-lg text-gray-900 bg-gray-100 lg:mx-2 lg:text-xl">
-        <h4 className="my-5 ml-3 lg:ml-10 lg:w-3/6">
+      <div className="relative z-10 overflow-hidden text-2xl text-gray-900 bg-gray-100 lg:text-xl">
+        <h4 className="px-6 my-5 ml-3 lg:px-0 lg:ml-10 lg:w-3/6">
           Build open-source, secure communications tools that are free and
           accessible.
         </h4>
         <div className="relative z-10 h-8 bg-white"></div>
-        <h4 className="my-5 ml-3 lg:ml-10 lg:w-3/6">
+        <h4 className="px-6 my-5 ml-3 lg:px-0 lg:ml-10 lg:w-3/6">
           Produce educational resources to support people and organisations to
           better understand, use, and implement privacy technologies.
         </h4>
         <div className="relative z-10 h-8 bg-white"></div>
-        <h4 className="my-5 ml-3 lg:ml-10 lg:w-3/6">
+        <h4 className="px-6 my-5 ml-3 lg:px-0 lg:ml-10 lg:w-3/6">
           Complete work which serves the interests of the public. Our work helps
           foster an open, accountable, and unified digital community.
         </h4>
         <div className="relative z-10 h-8 bg-white"></div>
-        <h4 className="my-5 ml-3 lg:ml-10 lg:w-3/6">
+        <h4 className="px-6 my-5 ml-3 lg:px-0 lg:ml-10 lg:w-3/6">
           Collaborate with other organisations on work which upholds digital
           rights.
         </h4>
         <div className="relative z-10 h-8 bg-white"></div>
-        <h4 className="my-5 ml-3 lg:ml-10 lg:w-3/6">
+        <h4 className="px-6 my-5 ml-3 lg:px-0 lg:ml-10 lg:w-3/6">
           Support, fund, and assist projects that align with our principles.
         </h4>
-
         <div className="z-10 box">
           <div className="wave1 -one"></div>
           <div className="wave1 -two"></div>
@@ -100,7 +102,12 @@ const AboutOPTF = () => {
         </div>
       </div>
       <div className="my-20">
-        <h3 className="my-10 text-2xl lg:text-3xl">Board of Directors</h3>
+        <div className="flex items-center">
+          <h3 className="my-10 text-2xl font-semibold lg:text-3xl">
+            Board of Directors
+          </h3>
+          <hr className="w-4/6 mx-auto my-0" />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="border-gray-300 border-dashed lg:border-r lg:pr-10">
@@ -157,6 +164,4 @@ const AboutOPTF = () => {
       </div>
     </div>
   );
-};
-
-export default AboutOPTF;
+}

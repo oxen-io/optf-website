@@ -29,17 +29,22 @@ export default function PostCard(props: Props): ReactElement {
     section = 'blog',
   } = props;
   const headingClasses = 'cursor-pointer text-2xl font-bold mb-3 px-3';
+
+  const classForSection =
+    section === 'home'
+      ? 'bg-green-150'
+      : section === 'blog'
+      ? 'rounded-2xl rounded-b-lg bg-gray-100 hover:shadow-posts'
+      : 'rounded-2xl bg-gray-100 hover:shadow-none shadow-none border  relative';
+
   // parent container must have 'flex' class
   return (
     <div
       className={classNames(
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
-        'bg-green-150 rounded-3xl mx-2 shadow hover:shadow-xl transition ease-in-out group',
-        section === 'blog' &&
-          'rounded-t-2xl rounded-b-none bg-gray-100 hover:shadow-posts',
-        section === 'post' &&
-          'rounded-2xl bg-gray-100 hover:shadow-none shadow-none border  relative',
+        'rounded-3xl mx-2 shadow hover:shadow-xl transition ease-in-out group',
+        classForSection,
         classes
       )}
     >
@@ -52,7 +57,8 @@ export default function PostCard(props: Props): ReactElement {
               'lg:px-20 rounded-t-3xl transition ease-in-out',
               compact ? 'h-48 md:h-60 lg:h-44' : 'h-60 lg:h-56',
               featured && 'md:w-1/2 md:mr-4 lg:mr-3 lg:w-3/5 lg:h-96',
-              section === 'index' && 'group-hover:brightness-110',
+              (section === 'home' || section === 'post') &&
+                'group-hover:brightness-110',
               section === 'blog' && 'rounded-t-xl rounded-b-xl'
             )}
           >

@@ -8,7 +8,7 @@ import { useScreen } from '@/contexts/screen';
 export default function Hero(): ReactElement {
   const { isSmall } = useScreen();
   return (
-    <section className="gradient-home-hero">
+    <section className="gradient-home-hero shadow-header">
       <Container
         hasMinHeight={true}
         heights={{ small: '100%', medium: '100%', large: '80%' }}
@@ -49,7 +49,7 @@ export default function Hero(): ReactElement {
             />
           </div>
         </div>
-        <h4 className="text-xl text-center text-white lg:my-7 mt-7 lg:text-2xl">
+        <h4 className="text-xl font-semibold text-center text-white font-sem lg:my-7 mt-7 lg:text-2xl">
           We build tools that protect your privacy and security in the digital
           world.
         </h4>

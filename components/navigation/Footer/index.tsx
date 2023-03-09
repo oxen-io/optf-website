@@ -219,7 +219,7 @@ export default function Footer(): ReactElement {
                 </Link>
                 <Link href="/privacy-policy/">
                   <a className={linkClasses} rel="noopener noreferrer">
-                    Private policy
+                    Privacy policy
                   </a>
                 </Link>
               </div>

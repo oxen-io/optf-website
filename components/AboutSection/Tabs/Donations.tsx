@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const Donations = () => {
+export default function Donations() {
   const [modal, setModal] = useState(false);
 
   const copyClipboard = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -14,7 +14,7 @@ const Donations = () => {
   };
 
   return (
-    <div className="relative text-gray-500">
+    <div className="relative text-gray-500 mb-14">
       <p>
         Our work benefits hundreds of thousands of people around the world. Your
         donation will help fund research projects, education initiatives, and
@@ -28,18 +28,19 @@ const Donations = () => {
       </p>
       <br />
       <p>
-        Note that although we are a registered charity, donations to the OPTF
-        are not tax deductible.
+        <i>
+          Note that although we are a registered charity, donations to the OPTF
+          are not tax deductible.
+        </i>
       </p>
       <br />
       <p>Donate using your local currency: </p>
       <br />
-      <ul className="list-disc">
+      <ul className="pb-5 ml-10 list-disc">
         <li>
-          <b>Donate on Donorbox.org: </b>{' '}
-          <Link href="">
+          <b>Donate on Donorbox.org: </b>
+          <Link href="https://donorbox.org/optf-donation">
             <a className="cursor-pointer text-violet-250 hover:text-blue-400">
-              {' '}
               https://donorbox.org/optf-donation
             </a>
           </Link>
@@ -48,15 +49,15 @@ const Donations = () => {
       </ul>
       <p>Donate using the following cryptocurrency wallet addresses:</p>
       <br />
-      <ul className="break-words list-disc">
+      <ul className="pb-5 ml-10 break-words list-disc">
         <li>
-          <b> Oxen Address:</b>
+          <b className="whitespace-nowrap"> Oxen Address:</b>
           <span>
             LB724uBKKwRaAXSaWSt6Uo9r82S6CqQXqELyiMyDdDHw2jiCBvyViTzRUNyNDDTpAxQu3PpbpPLdbes5FHX45XskHsVNgFE
           </span>
           <button
             onClick={copyClipboard}
-            className="px-3 py-1 ml-3 bg-gray-200 hover:text-white hover:bg-blue-500"
+            className="px-3 py-1 ml-3 font-bold bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
           </button>
@@ -66,7 +67,7 @@ const Donations = () => {
           <span>37VhHEzXHDDfM37DmuhU8iyzu1nxZ8Spht</span>
           <button
             onClick={copyClipboard}
-            className="px-3 py-1 ml-3 bg-gray-200 hover:text-white hover:bg-blue-500"
+            className="px-3 py-1 ml-3 font-bold bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
           </button>
@@ -77,7 +78,7 @@ const Donations = () => {
           <span>0x663930c996DeC843885B32ae5B5489B10f6F472e</span>
           <button
             onClick={copyClipboard}
-            className="px-3 py-1 ml-3 bg-gray-200 hover:text-white hover:bg-blue-500"
+            className="px-3 py-1 ml-3 font-bold bg-gray-200 hover:text-white hover:bg-blue-500"
           >
             Copy
           </button>
@@ -85,12 +86,10 @@ const Donations = () => {
       </ul>
       {/* modal */}
       {modal && (
-        <div className="absolute bottom-0 right-0 w-16 h-8 bg-white bg-gray-100">
+        <div className="absolute bottom-0 right-0 w-16 h-8 bg-gray-100">
           <p className="ml-2"> Copied!</p>
         </div>
       )}
     </div>
   );
-};
-
-export default Donations;
+}

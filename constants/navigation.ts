@@ -34,7 +34,7 @@ const NAV_ITEMS: INavList = {
     bgColor: 2,
   },
   About: {
-    href: '/go-to-optf',
+    href: '/about-optf',
     alt: 'go to about',
     target: '_self',
     rel: 'noopener noreferrer',

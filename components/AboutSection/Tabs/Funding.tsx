@@ -1,6 +1,6 @@
-import Image from 'next/image';
+import Link from 'next/link';
 
-const Funding = () => {
+export default function Funding() {
   return (
     <div className="text-gray-500">
       <p>
@@ -9,14 +9,15 @@ const Funding = () => {
         dollars. The level of funding granted is dependent on the scope of your
         proposal and the level of resources available at the time. If you would
         like to discuss an initiative prior to submitting a formal proposal,
-        please contact the OPTF Secretary via team@optf.ngo.
+        please contact the OPTF Secretary via
+        <a href="mailto:team@optf.ngo"> team@optf.ngo</a>.
       </p>
       <br />
-      <h4 className="text-xl">Funding criteria</h4>
+      <h4 className="text-xl font-bold">Funding criteria</h4>
       <br />
       <p> Currently, we focus on funding initiatives which:</p>
       <br />
-      <ul className="list-disc">
+      <ul className="pb-5 ml-10 list-disc">
         <li>
           Contribute directly to our projects by helping us develop privacy
           technologies, participating in education initiatives, or providing
@@ -30,14 +31,20 @@ const Funding = () => {
       <br />
       <p>However, other initiatives may also be considered.</p>
       <br />
-      <h4 className="text-xl">Proposal submission and review process</h4>
+      <h4 className="text-xl font-bold">
+        Proposal submission and review process
+      </h4>
       <br />
       <p>
-        Funding proposals should follow the template outlined in this PDF
-        document. Please ensure you respond to all sections. Attach the
-        completed proposal form, along with any other relevant materials, to an
-        email addressed to secretary@optf.ngp. The subject of the email should
-        be ‘Proposal for Funding’.
+        Funding proposals should follow the template outlined in
+        <Link href="/assets/pdfs/LF_FundingProposal.pdf">
+          <a className="text-violet-250"> this PDF document</a>
+        </Link>
+        . Please ensure you respond to all sections. Attach the completed
+        proposal form, along with any other relevant materials, to an email
+        addressed to
+        <a href="mailto:secretary@optf.ngp"> secretary@optf.ngp</a>. The subject
+        of the email should be ‘Proposal for Funding’.
       </p>
       <br />
       <p>
@@ -68,6 +75,4 @@ const Funding = () => {
       <br />
     </div>
   );
-};
-
-export default Funding;
+}

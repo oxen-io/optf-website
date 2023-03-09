@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import ProjectsPrivacyPolicy from '../../ProjectsPrivacyPolicy';
 
-const Legals = () => {
+export default function Legals() {
   return (
     <div className="text-gray-500">
-      <h3 className="lg:text-4xl text-2xl font-semibold mb-5">
+      <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
         Policies and legals
       </h3>
       <p>
@@ -40,12 +41,20 @@ const Legals = () => {
         religion, or sexual orientation.
       </p>
       <br />
-      <p>
+      <p className="pb-20">
         We also have three main development projects are Session, Oxen, and
-        Lokinet — each of their privacy policies are outlined below.{' '}
+        Lokinet — each of their privacy policies are outlined below.
       </p>
+
+      <ProjectsPrivacyPolicy
+        src="https://google.com"
+        name="Session privacy policy"
+      />
+      <ProjectsPrivacyPolicy
+        src="https://google.com"
+        name="Lokinet privacy policy"
+      />
+      <ProjectsPrivacyPolicy src="https://google.com" name="Oxen Legals" />
     </div>
   );
-};
-
-export default Legals;
+}

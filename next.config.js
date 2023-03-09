@@ -8,7 +8,9 @@ const ContentSecurityPolicy = `
       ? "'unsafe-eval' 'unsafe-inline' "
       : ''
   }*.ctfassets.net *.youtube.com *.twitter.com;
-  child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com;
+  child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
+  frame-src  'self' *.google.com *.getsession.org *;
+  frame-ancestors 'self' *.google.com *.getsession.org;
   script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
@@ -34,7 +36,7 @@ const securityHeaders = () => {
     },
     {
       key: 'X-Frame-Options',
-      value: 'SAMEORIGIN',
+      value: 'allow-from *',
     },
     {
       key: 'Permissions-Policy',
@@ -70,6 +72,35 @@ const config = {
     CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID:
       process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID,
     STAGING_SECRET: process.env.STAGING_SECRET,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/partners-and-allies',
+        destination: '/about-optf#1',
+        permanent: true,
+      },
+      {
+        source: '/legals',
+        destination: '/about-optf#2',
+        permanent: true,
+      },
+      {
+        source: '/annual-reports',
+        destination: '/about-optf#3',
+        permanent: true,
+      },
+      {
+        source: '/funding-and-support',
+        destination: '/about-optf#4',
+        permanent: true,
+      },
+      {
+        source: '/donations',
+        destination: '/about-optf#5',
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [
