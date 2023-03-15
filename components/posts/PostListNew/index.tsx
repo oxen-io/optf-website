@@ -26,7 +26,14 @@ export default function PostListNew(props: Props): ReactElement {
     classes,
     section = 'blog',
   } = props;
-  const cardClasses = classNames('md:w-1/3 mb-5', 'lg:w-1/3 lg:max-w-xs ');
+  const cardClasses = classNames(
+    ' mb-5 ',
+    section === 'home' && 'md:w-85',
+    section === 'blog' &&
+      'lg:w-full md:w-full xl:w-[23rem]  xl:max-w-sm lg:mx-2  xl:mr-5 ',
+    section === 'post' &&
+      'lg:w-1/3 xl:w-1/3 md:w-56 md:max-w-xxs lg:max-w-xxs  xl:max-w-sm'
+  );
   const gridClasses = [
     gridStyle === 'normal' && 'lg:max-w-screen-xl',
     gridStyle === 'blog' && 'lg:max-w-screen-lg',
@@ -46,9 +53,10 @@ export default function PostListNew(props: Props): ReactElement {
     <div className={classNames('mt-8', 'lg:mt-0', classes)}>
       <Container
         classes={classNames(
-          'px-0 pb-0 flex flex-wrap justify-center max-w-screen-md',
-          'md:px-0 md:pb-0 md:justify-center',
-          'lg:pl-20 lg:pr-20 lg:py-10',
+          'px-0 pb-0 flex flex-wrap justify-center md:justify-evenly md:w-full max-w-screen-md',
+          section === 'blog' && 'lg:px-2 xl:justify-center',
+          'md:px-0 md:pb-0',
+          'lg:py-10',
           gridClasses
         )}
       >

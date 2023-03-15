@@ -43,14 +43,17 @@ export default function Post(props: Props): ReactElement {
     });
   })();
   return (
-    <section className="mx-4 lg:mt-10 lg:mx-0">
+    <section className="mx-4 lg:mt-6 lg:mx-0">
       <Container
         fullWidth={fullHeader}
         classes={classNames(
-          'pt-16 pb-8 bg-white',
+          'pt-16 pb-8 bg-white max-w-5xl',
           fullHeader
             ? ['lg:pt-8']
-            : ['md:pt-20 md:pb-8 md:px-28', 'lg:py-8 lg:px-40']
+            : [
+                'md:pt-6 md:pb-8 md:px-7',
+                'lg:pt-12 lg:pb-8 lg:px-10 lg:w-11/12 xl:pt-24 xl:px-28',
+              ]
         )}
       >
         {featureImage?.imageUrl && (
@@ -87,9 +90,9 @@ export default function Post(props: Props): ReactElement {
       </Container>
       <Container
         classes={classNames(
-          'text-gray break-words pt-0',
-          'md:pt-0 md:pb-8 md:px-28',
-          'lg:pb-8 lg:px-40 bg-white'
+          'text-gray break-words pt-0 max-w-5xl',
+          'pb-0 md:pt-0 md:pb-0  md:px-7',
+          'lg:pb-8 lg:w-11/12 lg:px-10 xl:px-24 bg-white'
         )}
       >
         <h1 className={classNames('text-4xl font-bold leading-normal mb-1')}>

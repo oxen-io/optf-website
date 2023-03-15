@@ -25,6 +25,13 @@ module.exports = {
       '3xl': '1920px',
     },
     extend: {
+      maxWidth: {
+        xxs: '18rem',
+      },
+      width: {
+        85: '22.5rem',
+        99: '28.5rem',
+      },
       fontFamily: {
         assistant: ['Assistant', 'regular'],
       },
