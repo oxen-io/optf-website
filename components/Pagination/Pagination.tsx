@@ -41,17 +41,20 @@ const Pagination = (props: Props) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul className={classnames('flex h-5 list-none text-xl font-semibold')}>
+    <ul
+      className={classnames(
+        'flex h-5 list-none text-2xl text-violet-250 font-semibold'
+      )}
+    >
       {/* Left navigation arrow */}
       <li
         className={classnames(
-          'cursor-pointer text-gray-800 px-2 text-center m-1 flex items-center rounded-lg',
+          'cursor-pointer px-2 text-center m-1 flex items-center rounded-lg',
           currentPage === 1 && 'hidden'
         )}
         onClick={onPrevious}
       >
-        <div className="text-gray-800" />
-        &lt; &lt; Previous
+        <div />«<span className="hidden md:inline-block"> Previous</span>
       </li>
       {paginationRange.map((pageNumber: number | string, index: number) => {
         // If the pageItem is a DOT, render the DOTS unicode character
@@ -66,15 +69,12 @@ const Pagination = (props: Props) => {
           );
         }
 
-        // Render our Page Pills
         return (
           <li
             key={`${pageNumber}${index}`}
             className={classnames(
-              'px-1 text-center flex items-center rounded-lg',
-              {
-                selected: pageNumber === currentPage,
-              }
+              'px-1 text-center flex items-center rounded-lg cursor-pointer',
+              pageNumber === currentPage && 'text-gray-800'
             )}
             onClick={() => onPageChange(pageNumber)}
           >
@@ -91,7 +91,7 @@ const Pagination = (props: Props) => {
         onClick={onNext}
       >
         <div />
-        Next &gt; &gt;
+        <span className="hidden md:block">Next</span> »
       </li>
     </ul>
   );
