@@ -7,6 +7,7 @@ import { ReactElement } from 'react';
 interface Props {
   post: IPost;
   otherPosts?: IPost[];
+  allPosts?: IPost[];
 }
 
 export default function BlogPost(props: Props): ReactElement {
@@ -31,7 +32,7 @@ export default function BlogPost(props: Props): ReactElement {
           PUBLISHED_TIME: post.publishedDateISO,
         }}
       >
-        <div className="pt-10 bg-gray-250 md:pt-5">
+        <div className="pt-10 bg-gray-250 md:pt-10">
           <Post {...props} />
         </div>
       </Layout>

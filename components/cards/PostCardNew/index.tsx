@@ -43,7 +43,8 @@ export default function PostCard(props: Props): ReactElement {
       className={classNames(
         'text-gray-dark leading-none pb-3',
         'lg:text-3xl',
-        'rounded-3xl mx-2 shadow hover:shadow-xl transition ease-in-out group',
+        'rounded-3xl mx-2 transition ease-in-out group',
+        section === 'home' && 'shadow hover:shadow-xl',
         classForSection,
         classes
       )}

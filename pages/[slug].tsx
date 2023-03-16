@@ -16,12 +16,19 @@ import { hasRedirection } from '@/services/redirect';
 interface Props {
   content: IPage | IPost;
   otherPosts?: IPost[];
+  allPosts?: IPost[];
 }
 
 export default function Page(props: Props): ReactElement {
   const { content } = props;
   if (isPost(content)) {
-    return <BlogPost post={content} otherPosts={props.otherPosts} />;
+    return (
+      <BlogPost
+        post={content}
+        allPosts={props.allPosts}
+        otherPosts={props.otherPosts}
+      />
+    );
   } else {
     return <RichPage page={content} />;
   }
@@ -46,13 +53,14 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
     if (isPost(content)) {
       // we want 6 posts excluding the current one if it's found
-      const { entries: posts, total: totalPosts } = await fetchBlogEntries(7);
+      const { entries: posts, total: totalPosts } = await fetchBlogEntries();
       const otherPosts = posts
         .filter((post) => {
           return content.slug !== post.slug;
         })
         .slice(0, 6);
       props.otherPosts = otherPosts;
+      props.allPosts = posts;
     }
 
     return {

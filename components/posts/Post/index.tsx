@@ -12,12 +12,14 @@ import Container from '@/components/Container';
 interface Props {
   post: IPost;
   otherPosts?: IPost[];
+  allPosts?: IPost[];
 }
 
 export default function Post(props: Props): ReactElement {
   const { isSmall, isMedium } = useScreen();
-  const { post, otherPosts } = props;
+  const { post, otherPosts, allPosts } = props;
   const {
+    id,
     title,
     subtitle,
     author,
@@ -27,7 +29,17 @@ export default function Post(props: Props): ReactElement {
     fullHeader,
     description,
     body,
+    publishedDateISO,
   } = post;
+
+  let renderPrevAndNextLinks;
+
+  for (let i = 0; i < allPosts!?.length; i++) {
+    if (allPosts![i].id === id) {
+      renderPrevAndNextLinks = [allPosts![i - 1]?.slug, allPosts![i + 1]?.slug];
+    }
+  }
+
   const renderTags = (() => {
     return tags.map((tag, index) => {
       return (
@@ -108,6 +120,22 @@ export default function Post(props: Props): ReactElement {
           classes={classNames('text-sm text-gray', 'lg:text-base')}
         />
       </Container>
+      <div className="flex flex-col items-center justify-around mx-10 my-10 text-lg font-semibold md:flex-row md:justify-between lg:mx-20 lg:justify-between 2xl:mx-36 xl:justify-around 2xl:justify-evenly text-violet-250">
+        {renderPrevAndNextLinks?.[1] && (
+          <Link href={'blog/' + renderPrevAndNextLinks[1]}>
+            <a>
+              <span className="hidden md:inline">←</span> Previous Post
+            </a>
+          </Link>
+        )}
+        {renderPrevAndNextLinks?.[0] && (
+          <Link href={'blog/' + renderPrevAndNextLinks[0]}>
+            <a>
+              Next Post <span className="hidden md:inline">→</span>
+            </a>
+          </Link>
+        )}
+      </div>
       <div className="py-10 my-10 text-3xl text-center border-t border-b border-gray-300 border-dashed">
         <h3>Latest blog posts</h3>
       </div>
