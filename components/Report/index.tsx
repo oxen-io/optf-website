@@ -13,7 +13,7 @@ export default function Report(props: Props): ReactElement {
   return (
     <section className="border-b border-gray-200">
       <div className="px-10 py-20 mx-2 lg:mx-32">
-        <div className="relative z-10">
+        <div className="relative">
           <h3 className="mb-10 text-4xl font-bold">{title}</h3>
           <p className="mb-5 font-thin">{subtitle}</p>
           {ctaLink ? (

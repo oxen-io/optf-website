@@ -53,7 +53,7 @@ export default function GoToOptf() {
         title="Meet the Oxen Privacy Tech Foundation"
         subtitle="We’re a passionate team of advocates, creatives, and engineers building a world where the internet is open, software is free and accessible, and your privacy is protected."
       />
-      <div className="sticky top-0 z-30 pt-5 font-semibold bg-white border-b-2 border-dashed lg:flex-row">
+      <div className="sticky top-0 z-20 pt-5 font-semibold bg-white border-b-2 border-dashed lg:flex-row">
         <Container classes="container flex flex-wrap items-center justify-start lg:text-lg  bg-white">
           {tabNames.map((tabName, index) => {
             return (

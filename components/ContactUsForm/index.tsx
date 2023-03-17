@@ -61,7 +61,6 @@ export default function ContactUsForm() {
               body: JSON.stringify(values),
             });
             const result = await response.json();
-            console.log(result);
             switch (response.status) {
               case 201:
                 setButtonText('Sent successfully ✓');
