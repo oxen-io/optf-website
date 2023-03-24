@@ -2,6 +2,7 @@ import { Layout } from '@/components/ui';
 import Report from '../components/Report';
 import Link from 'next/link';
 import { useScreen } from '@/contexts/screen';
+import { ContactUsResearch } from '@/components/Research';
 
 export default function Research() {
   const { isSmall } = useScreen();
@@ -34,6 +35,7 @@ export default function Research() {
             <div className="flex flex-col text-base font-bold text-center lg:text-xl lg:flex-row">
               <Link href="/assets/pdfs/Ground_Safe_Summary_2021.pdf">
                 <a
+                  title="Ground_Safe_Summary_2021"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
@@ -44,6 +46,7 @@ export default function Research() {
               </Link>
               <Link href="/assets/pdfs/Ground_Safe_2021.pdf">
                 <a
+                  title="Ground_Safe_2021"
                   download
                   className="p-2 px-4 bg-indigo-300 rounded-xl hover:text-white"
                   target="_blank"
@@ -56,28 +59,12 @@ export default function Research() {
             <iframe
               className="my-10 w-100 h-100"
               id="iframepdf"
-              width={isSmall ? 250 : 600}
-              height={isSmall ? 250 : 780}
+              width={isSmall ? 290 : 600}
+              height={isSmall ? 500 : 780}
               src="/assets/pdfs/Ground_Safe_2021.pdf"
             ></iframe>
           </section>
-          <section className="flex flex-col items-start mx-5 lg:mx-32">
-            <h4 className="mb-10 text-4xl font-semibold">
-              Participate and share your experiences
-            </h4>
-            <div className="flex flex-col items-center p-5 mb-10 bg-white">
-              <p className="mx-4 mb-10 font-thin">
-                We are very interested in having journalists, activists and
-                public interest lawyers contribute to our research. If you are
-                interested, please contact us.
-              </p>
-              <Link href="/contact-us">
-                <a className="px-4 py-3 mb-3 border border-gray-500 rounded-lg bg-gray-250">
-                  Contact us
-                </a>
-              </Link>
-            </div>
-          </section>
+          <ContactUsResearch />
         </div>
       </Layout>
     </div>

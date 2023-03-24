@@ -5,7 +5,7 @@ import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
-import { PostListNew } from '@/components/posts';
+import { PostList } from '@/components/posts';
 import Banner from '@/components/Banner';
 
 interface Props {
@@ -19,7 +19,7 @@ export default function Home(props: Props) {
   return (
     <Layout>
       <Hero />
-      <PostListNew section="home" posts={otherPosts} />
+      <PostList section="home" posts={otherPosts} />
       <Banner
         subtitle="Everyone has a right to privacy — online and offline. But as we become more reliant on technology and digital platforms, our privacy and security is increasingly undermined and exploited."
         subtitleTwo="We’re putting the power back in your hands — we support the development of free and open-source software that keeps you secure online"

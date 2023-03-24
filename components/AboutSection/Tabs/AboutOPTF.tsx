@@ -68,7 +68,7 @@ export default function AboutOPTF() {
           </div>
         </div>
       </div>
-      <h1 className="mb-10 text-2xl font-semibold lg:text-4xl">
+      <h1 className="mb-16 text-2xl font-semibold lg:text-4xl">
         Our guiding principles are to:
       </h1>
       <div className="relative z-10 overflow-hidden text-2xl text-gray-900 bg-gray-100 lg:text-xl">

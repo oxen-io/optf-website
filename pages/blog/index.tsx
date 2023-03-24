@@ -7,7 +7,7 @@ import { fetchBlogEntries } from '@/services/cms';
 import METADATA from '@/constants/metadata';
 import Link from 'next/link';
 import { Layout } from '@/components/ui';
-import { PostListNew } from '@/components/posts';
+import { PostList } from '@/components/posts';
 import Container from '@/components/Container';
 import classNames from 'classnames';
 
@@ -37,7 +37,7 @@ export default function Blog(props: Props): ReactElement {
           subtitle="Privacy is always in play. From our smartphones to our classrooms, from our laptops to our lounge rooms: the ways we watch, shop, read, and relax are balancing on a tightrope between privacy and convenience."
           subtitleTwo="Read all our latest opinion pieces, current affairs reports, and press releases."
         />
-        <PostListNew section="blog" posts={otherPosts} />
+        <PostList section="blog" posts={otherPosts} />
         <div className="pt-2 pb-6 mt-10 text-gray-500 bg-gray-100">
           <Container classes={classNames('flex  justify-left')}>
             <p>

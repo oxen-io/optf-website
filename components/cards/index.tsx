@@ -1,3 +1,3 @@
-import PostCardNew from './PostCardNew';
+import PostCard from './PostCard';
 
-export { PostCardNew };
+export { PostCard };

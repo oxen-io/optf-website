@@ -4,7 +4,7 @@ import Link from 'next/link';
 import classNames from 'classnames';
 
 import { IPost } from '@/types/cms';
-import { PostListNew } from '@/components/posts';
+import { PostList } from '@/components/posts';
 import RichBody from '@/components/RichBody';
 import { useScreen } from '@/contexts/screen';
 import Container from '@/components/Container';
@@ -141,7 +141,7 @@ export default function Post(props: Props): ReactElement {
       </div>
 
       {otherPosts && (
-        <PostListNew
+        <PostList
           section="post"
           posts={otherPosts}
           gridStyle={'normal'}

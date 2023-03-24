@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import { IPost } from '@/types/cms';
 import { generateRoute } from '@/services/cms';
 import Container from '@/components/Container';
-import { PostCardNew } from '@/components/cards';
+import { PostCard } from '@/components/cards';
 import { useState, useMemo } from 'react';
-import Pagination from '../../../components/Pagination/Pagination';
+import Pagination from '../../Pagination/Pagination';
 
 interface Props {
   posts: IPost[];
@@ -17,7 +17,7 @@ interface Props {
   section?: string;
 }
 
-export default function PostListNew(props: Props): ReactElement {
+export default function PostList(props: Props): ReactElement {
   const {
     posts,
     gridStyle = 'normal',
@@ -62,7 +62,7 @@ export default function PostListNew(props: Props): ReactElement {
       >
         {currentTableData?.map((post) => {
           return (
-            <PostCardNew
+            <PostCard
               section={section}
               route={generateRoute(post.slug)}
               hoverEffect={hoverEffect}
