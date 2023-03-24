@@ -29,8 +29,6 @@ export const getStaticProps: GetStaticProps = async (
 export default function Blog(props: Props): ReactElement {
   const { posts } = props;
   const [featuredPost, ...otherPosts] = posts;
-
-  console.log(otherPosts);
   return (
     <Layout title={'Blog'} metadata={METADATA.BLOG_PAGE}>
       <section>

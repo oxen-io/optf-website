@@ -8,6 +8,9 @@
 }
 
 :root {
+  --input-substack-small: #46c7ba;
+  --input-substack: #252643;
+  --email-substack-small: #9ee3dd;
   --gray-lightest: #adadad;
   --gray-lighter: #7a7a7a;
   --gray-light: #55595c;

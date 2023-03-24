@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
-import { useEffect } from 'react';
+import { useSubstack } from '@/hooks/useSubstack ';
 
 export default function Footer(): ReactElement {
   const { isSmall } = useScreen();
@@ -28,32 +28,7 @@ export default function Footer(): ReactElement {
     title: 'Join the movement and help defend privacy in the digital world.',
     subtitle: 'Sign up to the mailing list and start taking action!',
   };
-
-  useEffect(() => {
-    let substackStyles;
-    if (isSmall) {
-      substackStyles = {
-        primary: '#FFFFFF',
-        input: '#46C7BA',
-        email: '#9EE3DD',
-        text: '#000000',
-      };
-    } else {
-      substackStyles = {
-        primary: '#FFFFFF',
-        input: '#252643',
-        email: '#FFFFFF',
-        text: '#000000',
-      };
-    }
-    window.CustomSubstackWidget = {
-      substackUrl: 'optf.substack.com',
-      placeholder: 'Your email',
-      buttonText: 'Subscribe',
-      theme: 'custom',
-      colors: substackStyles,
-    };
-  }, [isSmall]);
+  useSubstack();
 
   return (
     <div id="email-sign-up" className={classNames('gradient-footer-gray')}>
@@ -88,7 +63,7 @@ export default function Footer(): ReactElement {
               <div className="mt-10" id="custom-substack-embed"></div>
             )}
             <Link href="https://www.acnc.gov.au/charity/charities/26214f82-a2cd-e811-a962-000d3ad24182/profile">
-              <a className="cursor-pointer lg:ml-10">
+              <a className="cursor-pointer md:ml-10 ">
                 <Image
                   alt="acnc"
                   width={180}

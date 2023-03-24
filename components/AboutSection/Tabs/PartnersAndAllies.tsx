@@ -46,6 +46,7 @@ export default function PartnersAndAllies() {
           {partnersData.map((partner, index: number) => {
             return (
               <Partner
+                key={index}
                 infoTexts={infoTexts}
                 onHover={onHoverInfoTexts}
                 totalPartners={partnersData.length - 1}
