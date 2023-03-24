@@ -23,26 +23,29 @@ export default function ProjectsHero(props: Props): ReactElement {
     reverse = false,
   } = props;
   return (
-    <section className="container mx-auto lg:grid grid-cols-12 my-10 flex flex-col">
+    <section className="container flex flex-col grid-cols-12 mx-auto my-10 lg:grid">
       <div
         className={classNames(
-          'bg-gray-50  col-start-2 col-span-4 p-10',
-          reverse && 'order-last  col-start-8'
+          'bg-gray-50   col-span-4 p-10 order-last  col-start-8',
+          reverse
+            ? 'md:order-last  md:col-start-8'
+            : 'md:order-none md:col-start-2 '
         )}
       >
         {icon}
-        <h4 className="text-3xl my-5"> {title}</h4>
-        <p className="text-lg mb-8 font-thin">{subtitle} </p>
-        <Link href={ctaLink}>
-          <a className="bg-blue-250 rounded-2xl p-3 font-bold text-lg hover:text-white">
-            {ctaText}
-          </a>
-        </Link>
+        <h4 className="my-5 text-3xl font-semibold"> {title}</h4>
+        <p className="mb-8 text-lg text-gray-lighter">{subtitle} </p>
+        <a
+          href={ctaLink}
+          className="p-3 text-lg font-bold gradient-button-project rounded-2xl hover:text-white"
+        >
+          {ctaText}
+        </a>
       </div>
       <div
         className={classNames(
           'col-span-6 flex justify-center items-center',
-          reverse && 'col-start-2 col-span-6'
+          reverse && 'col-start-2'
         )}
       >
         {image}

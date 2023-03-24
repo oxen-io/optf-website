@@ -39,21 +39,9 @@ export function isPost(object: unknown): object is IPost {
   return Object.prototype.hasOwnProperty.call(object, 'publishedDate');
 }
 
-export interface IFAQItem {
-  id: number;
-  question: string;
-  answer: Document;
-  tag: string;
-  slug: string;
-}
-
 export interface IFetchEntriesReturn {
   entries: Array<any>;
   total: number;
-}
-
-export interface IFAQList {
-  [key: string]: IFAQItem[];
 }
 
 export type ITagList = {
@@ -62,10 +50,6 @@ export type ITagList = {
 
 export interface IFetchBlogEntriesReturn extends IFetchEntriesReturn {
   entries: Array<IPost>;
-}
-
-export interface IFetchFAQItemsReturn extends IFetchEntriesReturn {
-  entries: Array<IFAQItem>;
 }
 
 export interface IPage {

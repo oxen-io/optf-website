@@ -117,7 +117,7 @@ export default function Post(props: Props): ReactElement {
         </p>
         <RichBody
           body={body}
-          classes={classNames('text-sm text-gray', 'lg:text-base')}
+          classes={classNames('text-sm text-gray', 'md:text-base')}
         />
       </Container>
       <div className="flex flex-col items-center justify-around mx-10 my-10 text-lg font-semibold md:flex-row md:justify-between lg:mx-20 lg:justify-between 2xl:mx-36 xl:justify-around 2xl:justify-evenly text-violet-250">

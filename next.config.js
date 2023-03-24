@@ -119,6 +119,18 @@ const config = {
   async rewrites() {
     return [
       {
+        source: '/feed',
+        destination: '/api/feed/rss',
+      },
+      {
+        source: '/feed/:slug',
+        destination: '/api/feed/:slug',
+      },
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      {
         source: '/blog/:slug',
         destination: '/:slug',
       },

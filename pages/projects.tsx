@@ -51,8 +51,8 @@ export default function Projects() {
         image={
           <Image
             alt="projects hero image 2"
-            width={2048}
-            height={1270}
+            width={500}
+            height={450}
             src="/assets/images/projects-hero2-image.png"
           />
         }

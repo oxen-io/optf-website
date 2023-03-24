@@ -7,10 +7,8 @@ import {
 } from 'contentful';
 import {
   IAuthor,
-  IFAQItem,
   IFetchBlogEntriesReturn,
   IFetchEntriesReturn,
-  IFetchFAQItemsReturn,
   IFetchPagesReturn,
   IFigureImage,
   IPage,
@@ -196,7 +194,7 @@ function convertTags(rawTags: any, taglist: ITagList): string[] {
 
 async function generateEntries(
   entries: EntryCollection<unknown>,
-  entryType: 'post' | 'faq' | 'page'
+  entryType: 'post' | 'page'
 ): Promise<IFetchEntriesReturn> {
   let _entries: any = [];
   if (entries && entries.items && entries.items.length > 0) {
@@ -204,9 +202,6 @@ async function generateEntries(
       case 'post':
         const taglist = await fetchTagList();
         _entries = entries.items.map((entry) => convertPost(entry, taglist));
-        break;
-      case 'faq':
-        _entries = entries.items.map((entry) => convertFAQ(entry));
         break;
       case 'page':
         _entries = entries.items.map((entry) => convertPage(entry));
@@ -258,29 +253,6 @@ export async function generateLinkMeta(doc: Document): Promise<Document> {
   });
   await Promise.all(promises);
   return doc;
-}
-
-export async function fetchFAQItems(): Promise<IFetchFAQItemsReturn> {
-  const _entries = await client.getEntries({
-    content_type: 'faq_item', // only fetch faq items
-    order: 'fields.id',
-  });
-
-  const results = await generateEntries(_entries, 'faq');
-  return { entries: results.entries as Array<IFAQItem>, total: results.total };
-}
-
-function convertFAQ(rawData: any): IFAQItem {
-  const rawFAQ = rawData.fields;
-  const { question, answer, id, tag, slug } = rawFAQ;
-
-  return {
-    id: id ?? null,
-    question: question ?? null,
-    answer: answer ?? null,
-    tag: tag ?? null,
-    slug: slug ?? null,
-  };
 }
 
 export async function fetchPages(quantity = 100): Promise<IFetchPagesReturn> {

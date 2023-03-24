@@ -110,8 +110,10 @@ export default function PostCard(props: Props): ReactElement {
         {!compact && (
           <p
             className={classNames(
-              'text-sm px-3',
-              featured && 'md:text-base md:leading-normal'
+              'px-3',
+              featured && 'md:text-base md:leading-normal',
+              section === 'home' && 'font-semibold',
+              section === 'home' || section === 'blog' ? 'text-base' : 'text-sm'
             )}
           >
             {description}

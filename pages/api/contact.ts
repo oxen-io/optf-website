@@ -1,12 +1,20 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+export interface Body {
+  request: {
+    requester: { name: string; email: string };
+    subject: string;
+    comment: { body: object };
+  };
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   const { name, email, subject, message } = req.body;
 
-  const body: any = {
+  const body: Body = {
     request: {
       requester: { name, email },
       subject,

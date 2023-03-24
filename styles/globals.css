@@ -354,6 +354,11 @@ body {
   }
 }
 
+/*gradient button projects*/
+.gradient-button-project {
+  background: linear-gradient(90deg, #b4d8ff 0%, #b8c8ff 52%);
+}
+
 /*banner animation*/
 
 @keyframes rotate {
