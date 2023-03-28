@@ -14,12 +14,11 @@ interface Props {
 
 export default function Home(props: Props) {
   const { posts } = props;
-  const [featuredPost, ...otherPosts] = posts;
 
   return (
     <Layout>
       <Hero />
-      <PostList section="home" posts={otherPosts} />
+      <PostList section="home" posts={posts} />
       <Banner
         subtitle="Everyone has a right to privacy — online and offline. But as we become more reliant on technology and digital platforms, our privacy and security is increasingly undermined and exploited."
         subtitleTwo="We’re putting the power back in your hands — we support the development of free and open-source software that keeps you secure online"
