@@ -15,7 +15,6 @@ export default function ProjectsPrivacyPolicy(props: Props) {
   const { title, src, description } = props;
   const { isSmall } = useScreen();
   const [show, setShow] = useState(false);
-  console.log(description);
 
   return (
     <div className="py-5 border-b border-gray-200">
