@@ -51,9 +51,10 @@ export default function Legals(props: Props) {
         We also have three main development projects are Session, Oxen, and
         Lokinet — each of their privacy policies are outlined below.
       </p>
-      {items.map((item: ILegals) => {
+      {items.map((item: ILegals, index) => {
         return (
           <ProjectsPrivacyPolicy
+            key={index}
             src={item.source}
             title={item.title}
             description={item.description}
