@@ -11,6 +11,7 @@ import {
   IFetchEntriesReturn,
   IFetchPagesReturn,
   IFigureImage,
+  ILegals,
   IPage,
   IPost,
   ITagList,
@@ -232,6 +233,20 @@ async function loadMetaData(node: Block | Inline) {
     );
   }
   return node;
+}
+
+export async function fetchLegals(quantity = 100) {
+  const _entries = await client.getEntries({
+    content_type: 'legals',
+    limit: quantity,
+  });
+
+  const items: ILegals[] = [];
+  _entries.items.forEach((item: any) => {
+    items.push(item.fields);
+  });
+
+  return items;
 }
 
 export async function generateLinkMeta(doc: Document): Promise<Document> {

@@ -9,8 +9,8 @@ const ContentSecurityPolicy = `
       : ''
   }*.ctfassets.net *.youtube.com *.twitter.com;
   child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
-  frame-src  'self' *.google.com *.getsession.org *;
-  frame-ancestors 'self' *.google.com *.getsession.org;
+  frame-src 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io;
+  frame-ancestors 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io;
   script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
@@ -36,7 +36,7 @@ const securityHeaders = () => {
     },
     {
       key: 'X-Frame-Options',
-      value: 'allow-from *',
+      value: 'SAMEORIGIN',
     },
     {
       key: 'Permissions-Policy',

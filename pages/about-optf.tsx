@@ -10,13 +10,21 @@ import Donations from '../components/AboutSection/Tabs/Donations';
 import Funding from '../components/AboutSection/Tabs/Funding';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { CMS } from '@/constants';
+import { fetchLegals } from '@/services/cms';
+import { ILegals } from '@/types/cms';
 
-const renderSwitchTab = (tab: number) => {
+export interface Props {
+  legals: ILegals[];
+}
+
+const renderSwitchTab = (tab: number, legals: ILegals[]) => {
   switch (tab) {
     case 1:
       return <PartnersAndAllies />;
     case 2:
-      return <Legals />;
+      return <Legals items={legals} />;
     case 3:
       return <AnnualReports />;
     case 4:
@@ -29,7 +37,8 @@ const renderSwitchTab = (tab: number) => {
   }
 };
 
-export default function GoToOptf() {
+export default function GoToOptf(props: Props) {
+  const { legals } = props;
   const router = useRouter();
   const [tab, setTab] = useState(0);
 
@@ -73,7 +82,18 @@ export default function GoToOptf() {
           })}
         </Container>
       </div>
-      <Container classes="my-8 p-3">{renderSwitchTab(tab)}</Container>
+      <Container classes="my-8 p-3">{renderSwitchTab(tab, legals)}</Container>
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  const legals = await fetchLegals();
+
+  return {
+    props: { legals },
+    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+  };
+};

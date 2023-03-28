@@ -1,7 +1,13 @@
+import { ILegals } from '@/types/cms';
 import Link from 'next/link';
 import ProjectsPrivacyPolicy from '../../ProjectsPrivacyPolicy';
 
-export default function Legals() {
+export interface Props {
+  items: ILegals[];
+}
+
+export default function Legals(props: Props) {
+  const { items } = props;
   return (
     <div className="text-gray-500">
       <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
@@ -45,16 +51,15 @@ export default function Legals() {
         We also have three main development projects are Session, Oxen, and
         Lokinet — each of their privacy policies are outlined below.
       </p>
-
-      <ProjectsPrivacyPolicy
-        src="https://google.com"
-        name="Session privacy policy"
-      />
-      <ProjectsPrivacyPolicy
-        src="https://google.com"
-        name="Lokinet privacy policy"
-      />
-      <ProjectsPrivacyPolicy src="https://google.com" name="Oxen Legals" />
+      {items.map((item: ILegals) => {
+        return (
+          <ProjectsPrivacyPolicy
+            src={item.source}
+            title={item.title}
+            description={item.description}
+          />
+        );
+      })}
     </div>
   );
 }

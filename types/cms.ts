@@ -35,6 +35,13 @@ export interface IPost {
   slug: string;
 }
 
+export interface ILegals {
+  order: number;
+  title: string;
+  description?: Document;
+  source?: string;
+}
+
 export function isPost(object: unknown): object is IPost {
   return Object.prototype.hasOwnProperty.call(object, 'publishedDate');
 }

@@ -14,7 +14,7 @@ import { documentToPlainTextString } from '@contentful/rich-text-plain-text-rend
 import { renderEmbeddedEntry } from '@/services/render';
 
 interface Props {
-  body: Document;
+  body?: Document;
   headingClasses?: string; // custom h1-h4 styles
   classes?: string; // custom styles for regular text (color, font weight, etc.)
 }
@@ -281,6 +281,6 @@ export default function RichBody(props: Props): ReactElement {
     },
   };
 
-  const richBody = documentToReactComponents(body, options);
+  const richBody = body && documentToReactComponents(body, options);
   return <div className={classNames('rich-content', classes)}>{richBody}</div>;
 }
