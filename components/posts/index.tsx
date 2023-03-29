@@ -1,3 +1,5 @@
 import Post from './Post';
 import PostList from './PostList';
-export { Post, PostList };
+import TagPost from './TagPost';
+
+export { Post, PostList, TagPost };

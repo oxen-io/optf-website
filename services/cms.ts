@@ -58,8 +58,10 @@ export async function fetchBlogEntriesByTag(
   quantity = 100
 ): Promise<IFetchBlogEntriesReturn> {
   const taglist = await fetchTagList();
+
   const id = Object.entries(taglist).filter(([_, value]) => {
-    return tag === value;
+    const link = value.toLowerCase().replace(/\s+/g, '-');
+    return tag === link;
   })[0][0];
 
   const _entries = await client.getEntries({

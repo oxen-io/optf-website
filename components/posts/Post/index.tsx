@@ -42,10 +42,11 @@ export default function Post(props: Props): ReactElement {
 
   const renderTags = (() => {
     return tags.map((tag, index) => {
+      const link = tag.toLowerCase().replace(/\s/g, '-');
       return (
         <span key={index}>
-          <Link href={`/tag/${tag}`}>
-            <a className="transition-colors duration-300 hover:text-primary">
+          <Link href={`/category/${link}`}>
+            <a className="transition-colors duration-300 hover:text-blue-500">
               {tag}
             </a>
           </Link>
@@ -54,6 +55,7 @@ export default function Post(props: Props): ReactElement {
       );
     });
   })();
+
   return (
     <section className="mx-4 lg:mt-6 lg:mx-0">
       <Container
@@ -110,10 +112,12 @@ export default function Post(props: Props): ReactElement {
         <h1 className={classNames('text-4xl font-bold leading-normal mb-1')}>
           {title}
         </h1>
-        <p className={classNames('font-medium mb-3', 'lg:mb-8')}>
+        <p className={classNames('mb-3 text-violet-350', 'lg:mb-8')}>
           <span>{publishedDate}</span>
+          {renderTags.length > 0 && (
+            <span className={classNames(' mt-1')}> / {renderTags}</span>
+          )}
           {author && author.name && <span> / By {author.name}</span>}
-          <span className={classNames(' mt-1')}>{renderTags}</span>
         </p>
         <RichBody
           body={body}

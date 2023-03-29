@@ -57,6 +57,7 @@ module.exports = {
           DEFAULT: 'var(--gray-DEFAULT)',
           dark: 'var(--gray-dark)',
           250: '#F5F5F5',
+          150: '#EEEEEE',
         },
         blue: {
           250: '#B8C8FF',
