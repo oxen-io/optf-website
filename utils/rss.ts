@@ -10,7 +10,7 @@ const baseUrl = METADATA.HOST_URL;
 export default function generateRSSFeed(posts: IPost[]) {
   const date = new Date();
   const feed = new Feed({
-    title: 'Session Blog',
+    title: 'OPTF Blog',
     description: 'Send Messages, Not Metadata!',
     id: `${baseUrl}/`,
     link: baseUrl,

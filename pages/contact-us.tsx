@@ -2,10 +2,11 @@ import { Layout } from '@/components/ui';
 import Banner from '@/components/Banner';
 import Container from '../components/Container';
 import ContactUsForm from '../components/ContactUsForm';
+import METADATA from '@/constants/metadata';
 
 export default function ContactUs() {
   return (
-    <Layout title="Contact - OPTF">
+    <Layout title="Contact - OPTF" metadata={METADATA.CONTACT}>
       <Container>
         <Banner
           title="Get in touch​"

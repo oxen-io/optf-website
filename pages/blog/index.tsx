@@ -29,7 +29,10 @@ export const getStaticProps: GetStaticProps = async (
 export default function Blog(props: Props): ReactElement {
   const { posts } = props;
   return (
-    <Layout title={'Blog'} metadata={METADATA.BLOG_PAGE}>
+    <Layout
+      title={'OPTF | Blog | Privacy is a fundamental right.'}
+      metadata={METADATA.BLOG_PAGE}
+    >
       <section>
         <Banner
           title="Behind the headlines.​​"

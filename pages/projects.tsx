@@ -2,10 +2,14 @@ import { Layout } from '@/components/ui';
 import Banner from '@/components/Banner';
 import ProjectsHero from '@/components/ProjectsHero';
 import Image from 'next/image';
+import { METADATA } from '@/constants';
 
 export default function Projects() {
   return (
-    <Layout>
+    <Layout
+      title="OPTF | Projects | Privacy is a fundamental right."
+      metadata={METADATA.PROJECTS}
+    >
       <Banner
         title="Join the privacy revolution.​"
         subtitle="Keep yourself secure with our suite of free and open-source privacy tools.​"

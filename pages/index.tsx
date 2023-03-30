@@ -7,6 +7,7 @@ import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
 import { PostList } from '@/components/posts';
 import Banner from '@/components/Banner';
+import { METADATA } from '@/constants';
 
 interface Props {
   posts: IPost[];
@@ -16,7 +17,10 @@ export default function Home(props: Props) {
   const { posts } = props;
 
   return (
-    <Layout>
+    <Layout
+      metadata={METADATA.HOME}
+      title="OPTF | A global privacy tech non-for-profit based in Australia"
+    >
       <Hero />
       <PostList section="home" posts={posts} />
       <Banner

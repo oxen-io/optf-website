@@ -20,7 +20,8 @@ const METADATA = {
       : 'https://staging.optf.org',
   SITE_NAME: 'OPTF',
   TITLE: 'OPTF',
-  DESCRIPTION: 'A global privacy tech not-for-profit based in Australia',
+  DESCRIPTION:
+    'OPTF | Building a world where the internet is open, software is free, and privacy is protected. Join us in the fight for a free, fair, and equal internet.',
   TAGS: [
     'Privacy',
     'Decentralisation',
@@ -33,10 +34,10 @@ const METADATA = {
   ],
   OG_TYPE: 'website',
   OG_IMAGE: {
-    URL: '/assets/images/logo-black.png',
-    WIDTH: 804,
-    HEIGHT: 665,
-    ALT: 'Session Logo Black Background',
+    URL: '/assets/images/logo-optf.png',
+    WIDTH: 260,
+    HEIGHT: 85,
+    ALT: 'OPTF logo',
   },
   LOCALE: 'en_US',
   FAVICON: {
@@ -53,39 +54,92 @@ const METADATA = {
   404: {
     DESCRIPTION: 'It looks like the link pointing here was faulty.',
   },
+  HOME: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'OPTF | Building a world where the internet is open, software is free, and privacy is protected. Join us in the fight for a free, fair, and equal internet.',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
   BLOG_PAGE: {
     TYPE: 'article',
     DESCRIPTION:
-      'View the OPTF blog | We discuss digital rights including privacy and online speech, and advocate for technologies which preserve people’s rights',
+      'Blog | Latest news, articles, and updates on privacy, free software, and open internet. Join the conversation on building a safer digital world.',
     OG_IMAGE: {
-      URL: '/assets/images/send-messages-not-metadata.jpg',
-      WIDTH: 1024,
-      HEIGHT: 1024,
-      ALT: 'Mysterious man on the phone. Heading is Use Session.',
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
     },
   },
-  DOWNLOAD_PAGE: {
+  PROJECTS: {
     TYPE: 'article',
     DESCRIPTION:
-      'Download Session Today | Session is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems.',
+      'OPTF | We believe that digital technologies must give people privacy by default.',
     OG_IMAGE: {
-      URL: '/assets/images/send-messages-not-metadata.jpg',
-      WIDTH: 1024,
-      HEIGHT: 1024,
-      ALT: 'Mysterious man on the phone. Heading is Use Session.',
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
     },
   },
-  HELP_PAGE: {
-    DESCRIPTION: 'How you can help',
-  },
-  OPEN_GROUP_PAGE: {
+  RESEARCH: {
+    TYPE: 'article',
     DESCRIPTION:
-      'Join the movement to keep the internet private! Chat with like-minded individuals in Session Open Group Channel. Join Now',
+      'Research | Learn about our efforts to promote privacy, free software, and open internet through innovative research.',
     OG_IMAGE: {
-      URL: '/assets/images/faq.png',
-      WIDTH: 1024,
-      HEIGHT: 1024,
-      ALT: 'Frequently Asked Questions heading with redacted text below',
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  CONTACT: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Contact Us | Connect with us to learn more about our mission and services. Share your thoughts, feedback, or inquiries.',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  PRIVACY_POLICY: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Privacy Policy | Learn about OPTFs commitment to protecting your privacy with our Privacy Policy.',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  FEEDBACK: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Feedback | Have feedback or suggestions on how we can improve our mission and services? Share your thoughts with us! ',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  ABOUT: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'About the OPTF | Learn about our mission, meet our team, and explore technology projects to build a safer and more secure digital world.',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
     },
   },
 };

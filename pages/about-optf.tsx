@@ -14,6 +14,7 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { CMS } from '@/constants';
 import { fetchLegals } from '@/services/cms';
 import { ILegals } from '@/types/cms';
+import METADATA from '@/constants/metadata';
 
 export interface Props {
   legals: ILegals[];
@@ -57,7 +58,10 @@ export default function GoToOptf(props: Props) {
   ];
 
   return (
-    <Layout>
+    <Layout
+      title="OPTF | About Us | Privacy is a fundamental right."
+      metadata={METADATA.ABOUT}
+    >
       <Banner
         title="Meet the Oxen Privacy Tech Foundation"
         subtitle="We’re a passionate team of advocates, creatives, and engineers building a world where the internet is open, software is free and accessible, and your privacy is protected."

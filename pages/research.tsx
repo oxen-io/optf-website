@@ -3,12 +3,13 @@ import Report from '../components/Report';
 import Link from 'next/link';
 import { useScreen } from '@/contexts/screen';
 import { ContactUsResearch } from '@/components/Research';
+import { METADATA } from '@/constants';
 
 export default function Research() {
   const { isSmall } = useScreen();
   return (
     <div className="bg-gray-250">
-      <Layout>
+      <Layout title="Research | OPTF" metadata={METADATA.RESEARCH}>
         <div className="container max-w-6xl mx-auto">
           <Report
             title={

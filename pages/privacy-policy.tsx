@@ -1,6 +1,6 @@
 import { Layout } from '@/components/ui';
-import Container from '../components/Container';
 import PrivacyPolicyComponent from '@/components/PrivacyPolicyComponent';
+import { METADATA } from '@/constants';
 
 export default function PrivacyPolicy() {
   const data = [
@@ -35,7 +35,10 @@ export default function PrivacyPolicy() {
   ];
 
   return (
-    <Layout title="OPTF | Privacy Policy">
+    <Layout
+      metadata={METADATA.PRIVACY_POLICY}
+      title="OPTF | Privacy Policy | Privacy is a fundamental right."
+    >
       {data.map((info, index) => {
         return (
           <PrivacyPolicyComponent
