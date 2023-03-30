@@ -1,10 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { fetchBlogEntries, fetchPages } from '@/services/cms';
-
-import { IRedirection } from '@/services/redirect';
 import { METADATA } from '@/constants';
 import getConfig from 'next/config';
 import { readdirSync } from 'fs';
+
+export interface IRedirection {
+  source: string;
+  destination: string;
+  permanent: boolean;
+}
 
 export default async function handler(
   req: NextApiRequest,

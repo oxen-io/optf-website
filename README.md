@@ -52,7 +52,6 @@ yarn install --frozen-lockfile
    - For more information about importing/exporting in Contentful see [here](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/).
 
 6. Setup your environment file. See our [.env.example](.env.example) as a guide. Make sure to call the file `.env.local`.
-   - You can leave the [Campaign Monitor](https://www.campaignmonitor.com/) keys empty unless you are interested in how we handle mailing list subscriptions.
 
 ## Developing
 
@@ -68,7 +67,7 @@ Now you can run the development server:
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the Session homepage.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the OPTF homepage.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
@@ -84,7 +83,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ### Next.js
 
 - Try to use the [next/image](https://nextjs.org/docs/api-reference/next/image) component in place of `img` tags where possible.
-- If you want to make a link to a location on the website use the [next/link](https://nextjs.org/docs/api-reference/next/link) component with a relative path. i.e. `https://getsession.org/blog -> /blog`
+- If you want to make a link to a location on the website use the [next/link](https://nextjs.org/docs/api-reference/next/link) component with a relative path. i.e. `https://optf.ngo/blog -> /blog`
 
 ### TailwindCSS
 

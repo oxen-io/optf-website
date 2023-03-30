@@ -84,8 +84,8 @@ export default function RichBody(props: Props): ReactElement {
     renderNode: {
       [INLINES.HYPERLINK]: (node, children: any) => {
         const url =
-          node.data.uri.indexOf('://getsession.org') >= 0
-            ? node.data.uri.split('://getsession.org')[1]
+          node.data.uri.indexOf('://optf.ngo') >= 0
+            ? node.data.uri.split('://optf.ngo')[1]
             : node.data.uri;
         return (
           <span dir={getDirection(children)}>
