@@ -180,7 +180,7 @@ export default function RichBody(props: Props): ReactElement {
           dir={getDirection(children)}
           id={hasLocalID(node)}
           className={classNames(
-            'text-xl leading-snug mb-2',
+            'text-xl leading-snug mb-2 font-semibold',
             'lg:text-2xl',
             headingClasses
           )}
