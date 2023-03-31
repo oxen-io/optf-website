@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useScreen } from '@/contexts/screen';
 import { useRouter } from 'next/router';
 
-const handleSubstackStyles = (isSmall: boolean) => {
-  return isSmall
+const handleSubstackStyles = (isSmall: boolean, isMedium: boolean) => {
+  return isSmall || isMedium
     ? {
         primary: 'white',
         input: 'var(--input-substack-small)',
@@ -19,7 +19,7 @@ const handleSubstackStyles = (isSmall: boolean) => {
 };
 
 export function useSubstack() {
-  const { isSmall } = useScreen();
+  const { isSmall, isMedium } = useScreen();
   const router = useRouter();
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export function useSubstack() {
       placeholder: 'Your email',
       buttonText: 'Subscribe',
       theme: 'custom',
-      colors: handleSubstackStyles(isSmall),
+      colors: handleSubstackStyles(isSmall, isMedium),
     };
-  }, [isSmall]);
+  }, [isSmall, isMedium]);
 }
