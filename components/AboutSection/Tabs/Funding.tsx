@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import List from '@/components/List';
 
 export default function Funding() {
   return (
@@ -17,17 +18,12 @@ export default function Funding() {
       <br />
       <p> Currently, we focus on funding initiatives which:</p>
       <br />
-      <ul className="pb-5 ml-10 list-disc">
-        <li>
-          Contribute directly to our projects by helping us develop privacy
-          technologies, participating in education initiatives, or providing
-          other services
-        </li>
-        <li>
-          Make relevant contributions to projects we rely on, such as Monero,
-          Signal, or other open-source projects
-        </li>
-      </ul>
+      <List
+        list={[
+          'Contribute directly to our projects by helping us develop privacy technologies, participating in education initiatives, or providing other services',
+          ' Make relevant contributions to projects we rely on, such as Monero, Signal, or other open-source projects',
+        ]}
+      />
       <br />
       <p>However, other initiatives may also be considered.</p>
       <br />
