@@ -16,8 +16,8 @@ export interface IMetadata {
 const METADATA = {
   HOST_URL:
     process.env.NEXT_PUBLIC_SITE_ENV === 'production'
-      ? 'https://optf.org'
-      : 'https://staging.optf.org',
+      ? 'https://optf.ngo'
+      : 'https://staging.optf.ngo',
   SITE_NAME: 'OPTF',
   TITLE: 'OPTF',
   DESCRIPTION:

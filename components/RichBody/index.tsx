@@ -154,7 +154,7 @@ export default function RichBody(props: Props): ReactElement {
           dir={getDirection(children)}
           id={hasLocalID(node)}
           className={classNames(
-            'text-3xl leading-snug mb-5',
+            'text-3xl leading-snug mb-5 font-semibold',
             'lg:text-5xl',
             headingClasses
           )}
@@ -167,7 +167,7 @@ export default function RichBody(props: Props): ReactElement {
           dir={getDirection(children)}
           id={hasLocalID(node)}
           className={classNames(
-            'text-2xl leading-snug mb-5',
+            'text-2xl leading-snug mb-5 font-semibold',
             'lg:text-3xl',
             headingClasses
           )}
@@ -193,7 +193,7 @@ export default function RichBody(props: Props): ReactElement {
           dir={getDirection(children)}
           id={hasLocalID(node)}
           className={classNames(
-            'text-md leading-snug mb-2',
+            'text-md leading-snug mb-2 font-semibold',
             'lg:text-xl',
             headingClasses
           )}
