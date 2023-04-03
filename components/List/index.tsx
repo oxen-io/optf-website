@@ -8,8 +8,8 @@ export default function List(props: Props): ReactElement {
   const { list } = props;
   return (
     <ul className="pb-5 ml-10 list-disc">
-      {list.map((item) => {
-        return <li dangerouslySetInnerHTML={{ __html: item }}></li>;
+      {list.map((item, index) => {
+        return <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>;
       })}
     </ul>
   );

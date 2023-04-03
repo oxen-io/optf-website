@@ -36,7 +36,7 @@ export default function Nav(): ReactElement {
             'lg:w-1/3 lg:p-0'
           )}
         >
-          <Link href="/">
+          <Link passHref href="/">
             <Image
               src="/assets/images/logo-optf.png"
               alt="optf logo"
