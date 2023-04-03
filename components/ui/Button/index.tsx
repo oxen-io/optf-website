@@ -2,8 +2,8 @@ import { LegacyRef, ReactElement } from 'react';
 import classNames from 'classnames';
 
 interface Props {
-  bgColor?: 'primary' | 'black' | 'none';
-  textColor?: 'primary' | 'black';
+  bgColor?: 'green-250' | 'green-350' | 'none';
+  textColor?: 'white' | 'black';
   size?: 'small' | 'medium' | 'large';
   shape?: 'round' | 'semiround' | 'square';
   fontWeight?: 'normal' | 'semibold' | 'bold';
@@ -18,7 +18,7 @@ interface Props {
 
 export default function Button(props: Props): ReactElement {
   const {
-    bgColor = 'primary',
+    bgColor = 'green-350',
     textColor = 'black',
     fontWeight = 'normal',
     size = 'medium',
@@ -33,19 +33,15 @@ export default function Button(props: Props): ReactElement {
   } = props;
   // See Gotchas in README
   const bgClasses = [
-    bgColor === 'primary' && 'bg-primary',
-    bgColor === 'black' && 'bg-black',
+    bgColor === 'green-250' && 'bg-green-250',
+    bgColor === 'green-350' && 'bg-green-350',
     bgColor === 'none' && 'bg-transparent',
   ];
   const textClasses = [
-    textColor === 'primary' && 'text-primary',
+    textColor === 'white' && 'text-white',
     textColor === 'black' && 'text-black',
   ];
-  const hoverClasses = [
-    bgColor === 'primary' && 'hover:bg-black hover:text-primary',
-    bgColor === 'black' && 'hover:bg-primary hover:text-black',
-    (hoverEffect || animate) && 'transition-colors duration-300',
-  ];
+
   const sizeClasses = [
     size === 'small' && 'text-sm py-1 px-7',
     size === 'medium' && 'py-2 px-7',
@@ -67,7 +63,7 @@ export default function Button(props: Props): ReactElement {
       className={classNames(
         bgClasses,
         textClasses,
-        hoverEffect && hoverClasses,
+        hoverEffect,
         sizeClasses,
         shapeClasses,
         fontClasses,

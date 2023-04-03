@@ -120,6 +120,16 @@ const METADATA = {
       ALT: 'OPTF logo',
     },
   },
+  TRANSPARENCY: {
+    TYPE: 'article',
+    DESCRIPTION: 'Transparency Report | OPTF',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
   FEEDBACK: {
     TYPE: 'article',
     DESCRIPTION:

@@ -78,7 +78,7 @@ const NAV_ITEMS: INavList = {
   },
   TransparencyReport: {
     name: 'Transparency report',
-    href: '/transparency-report',
+    href: '/transparency',
     alt: 'go to transparency report',
     target: '_self',
     rel: 'noopener noreferrer',

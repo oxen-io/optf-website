@@ -63,7 +63,9 @@ const navLinkHoverClasses = classNames(
 );
 
 const isActiveNavLink = (router: NextRouter, url: string) => {
-  return router.asPath === url && 'sm:bg-gray-light sm:text-white';
+  return (
+    router.asPath === url && 'sm:bg-gray-light sm:text-white lg:text-black'
+  );
 };
 
 export default function NavItem(props: NavItemProps): ReactElement {

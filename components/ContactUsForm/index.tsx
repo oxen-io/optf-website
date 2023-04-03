@@ -1,12 +1,14 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import classNames from 'classnames';
 import { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export interface Values {
   name?: string;
   email?: string;
   subject?: string;
   message?: string;
+  recaptcha?: boolean | string;
 }
 
 export default function ContactUsForm() {
@@ -30,6 +32,7 @@ export default function ContactUsForm() {
           email: '',
           subject: '',
           message: '',
+          recaptcha: false,
         }}
         validate={(values: Values) => {
           const errors: Values = {};
@@ -45,6 +48,8 @@ export default function ContactUsForm() {
             errors.subject = 'This field is required';
           } else if (!values.message) {
             errors.message = 'This field is required';
+          } else if (!values.recaptcha) {
+            errors.recaptcha = 'reCAPTCHA is required.';
           }
           return errors;
         }}
@@ -75,7 +80,7 @@ export default function ContactUsForm() {
           }
         }}
       >
-        {({ isSubmitting, errors }) => (
+        {({ isSubmitting, errors, setFieldValue }) => (
           <Form>
             <div className="flex flex-col justify-between my-10 md:flex-row ">
               <div className="flex flex-col w-full mr-5">
@@ -154,6 +159,20 @@ export default function ContactUsForm() {
               <ErrorMessage
                 className={classNames(errorClasses)}
                 name="message"
+                component="span"
+              />
+            </div>
+            <div className="flex flex-col">
+              <ReCAPTCHA
+                sitekey={process.env.GOOGLE_RECAPTCHA_FORM_SITE_KEY!}
+                onChange={(value) => {
+                  console.log('onchange funciton');
+                  setFieldValue('recaptcha', value);
+                }}
+              />
+              <ErrorMessage
+                className={classNames(errorClasses)}
+                name="recaptcha"
                 component="span"
               />
             </div>

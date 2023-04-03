@@ -53,6 +53,8 @@ yarn install --frozen-lockfile
 
 6. Setup your environment file. See our [.env.example](.env.example) as a guide. Make sure to call the file `.env.local`.
 
+   When setting up the google recaptcha variable in the environment file , used for the /contact-us form, you can use the google recaptcha testing site key that is in [.env.example](.env.example). To see more about google recaptcha click [here](https://developers.google.com/recaptcha/docs/faq?hl=es-419).
+
 ## Developing
 
 - For accessbility testing we use the [axe-react](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md) plugin.

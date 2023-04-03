@@ -111,53 +111,58 @@ export default function AboutOPTF() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="border-gray-300 border-dashed lg:border-r lg:pr-10">
-            <h4 className="text-xl font-semibold">Simon Harman</h4>
-            <h5>Public Officer</h5>
+            <h4 className="text-xl font-semibold">Chris McCabe</h4>
+            <h5>Public Officer, Chair</h5>
             <p>
-              Simon is a co-founder and the CEO of Oxen — the OPTF’s first major
-              project. Since 2017, he has successfully driven the strategic
-              direction of Oxen using his broad range of technical and project
-              management expertise.
+              Chris is a co-founder and the CEO of Oxen. He is responsible for
+              leading the future vision of the project, devising and executing
+              Oxen’s strategic direction, and managing day-to-day operation of
+              the company.
             </p>
           </div>
           <div className="pt-5 border-gray-300 border-dashed lg:border-r lg:px-10 lg:pt-0">
-            <h4 className="text-xl font-semibold">Chris McCabe</h4>
-            <h5>CEO</h5>
+            <h4 className="text-xl font-semibold">Lucinda Lovegrove</h4>
+            <h5>Secretary</h5>
             <p>
-              Chris is a co-founder and the COO of Oxen. He is responsible for
-              managing Oxen’s daily operations, and has been integral in
-              orchestrating Oxen’s scale-up from a startup of 4 to a bustling
-              team of over 20.
+              Lucinda has been working full-time on the Oxen Project since 2018.
+              She currently works as a Product Manager for OPTF products—such as
+              Session—and makes invaluable contributions to the project through
+              her first-class analytical and collaborative problem solving
+              skills.
             </p>
           </div>
           <div className="pt-5 lg:px-10 lg:pt-0">
-            <h4 className="text-xl font-semibold"> Lucy Lovegrove</h4>
-            <h5>Secretary</h5>
+            <h4 className="text-xl font-semibold">Simon Harman</h4>
             <p>
-              Chris is a co-founder and the COO of Oxen. He is responsible for
-              managing Oxen’s daily operations, and has been integral in
-              orchestrating Oxen’s scale-up from a startup of 4 to a bustling
-              team of over 20.
+              Simon is a co-founder and the former CEO of Oxen — the OPTF’s
+              first major project. Simon is a longstanding member of Australia’s
+              blockchain community, and has a long history of blockchain
+              innovation both with Oxen and his current project focus,
+              Chainflip.
             </p>
           </div>
           <div className="mt-5 border-gray-300 border-dashed lg:border-r lg:pr-10 lg:mt-10">
-            <h4 className="text-xl font-semibold">John Pacific</h4>
-            <h5>CEO</h5>
-            <p>
-              John is an entrepreneur, cypherpunk, and cryptography engineer
-              specialising in privacy-preserving technology. He was a founding
-              engineer at the NuCypher project, working on Proxy Re-encryption
-              and Fully Homomorphic Encryption research.
-            </p>
-          </div>
-          <div className="mt-5 border-gray-300 border-dashed lg:border-r lg:px-10 lg:mt-10">
             <h4 className="text-xl font-semibold">Jason Rhinelander</h4>
-            <h5>Public Officer</h5>
             <p>
               Jason has an extensive background in economics and computer
               science. He has merged these fields to conduct postgraduate level
               research focusing on the computational modelling of economic
               activity.
+            </p>
+            <p>
+              His first involvement with Oxen came through his contributions as
+              an open-source developer, and joined the Oxen development team
+              full-time in mid-2019.
+            </p>
+          </div>
+          <div className="mt-5 border-gray-300 border-dashed lg:border-r lg:px-10 lg:mt-10">
+            <h4 className="text-xl font-semibold">Alexander Linton</h4>
+            <p>
+              Alexander first gained an appreciation and respect for digital
+              privacy and decentralisation through his work as a journalist. For
+              the last four years, he has been working full-time on OPTF
+              projects across a range of research, communication, and advocacy
+              roles.
             </p>
           </div>
         </div>

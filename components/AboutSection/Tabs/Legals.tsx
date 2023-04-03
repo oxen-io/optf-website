@@ -32,6 +32,7 @@ export default function Legals(props: Props) {
         of humanity and our work is underpinned by the principles enshrined in
         <Link href="https://www.un.org/en/about-us/universal-declaration-of-human-rights">
           <a className="hover:text-blue-400 text-violet-250">
+            {' '}
             the Universal Declaration of Human Rights{' '}
           </a>
         </Link>

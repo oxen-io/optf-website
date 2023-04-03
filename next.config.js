@@ -9,9 +9,9 @@ const ContentSecurityPolicy = `
       : ''
   }*.ctfassets.net *.youtube.com *.twitter.com;
   child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
-  frame-src 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io;
+  frame-src 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io *.youtube.com player.vimeo.com *.twitter.com *.google.com;
   frame-ancestors 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io;
-  script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com;
+  script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com *.google.com *.gstatic.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
   media-src 'self' *.youtube.com;
@@ -66,6 +66,7 @@ const config = {
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     CONTENTFUL_PREVIEW_TOKEN: process.env.CONTENTFUL_PREVIEW_TOKEN,
     STAGING_SECRET: process.env.STAGING_SECRET,
+    GOOGLE_RECAPTCHA_FORM_SITE_KEY: process.env.GOOGLE_RECAPTCHA_FORM_SITE_KEY,
   },
   async redirects() {
     return [
