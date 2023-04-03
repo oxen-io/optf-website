@@ -77,7 +77,7 @@ export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ) => {
   console.log(
-    `Building: Results for tag "%c${context.params?.tagLink}"`,
+    `Building: Results for tag "%c${context.params?.tag}"`,
     'color: purple;'
   );
   const tagLink = String(context.params?.tag);
