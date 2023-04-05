@@ -9,7 +9,7 @@ export interface Props {
 export default function Legals(props: Props) {
   const { items } = props;
   return (
-    <div className="text-gray-500">
+    <>
       <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
         Policies and legals
       </h3>
@@ -52,16 +52,16 @@ export default function Legals(props: Props) {
         We also have three main development projects are Session, Oxen, and
         Lokinet — each of their privacy policies are outlined below.
       </p>
-      {items.map((item: ILegals, index) => {
+      {items.map((item: ILegals) => {
         return (
           <ProjectsPrivacyPolicy
-            key={index}
+            key={item.title}
             src={item.source}
             title={item.title}
             description={item.description}
           />
         );
       })}
-    </div>
+    </>
   );
 }

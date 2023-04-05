@@ -3,7 +3,7 @@ import List from '@/components/List';
 
 export default function Funding() {
   return (
-    <div className="text-gray-500">
+    <>
       <p>
         We consider a wide range of proposals. In the past, we have granted
         funding ranging from a few hundred dollars to hundreds of thousands of
@@ -69,6 +69,6 @@ export default function Funding() {
         agreements, and establishing payment schedules.
       </p>
       <br />
-    </div>
+    </>
   );
 }

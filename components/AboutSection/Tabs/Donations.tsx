@@ -14,7 +14,7 @@ export default function Donations() {
   };
 
   return (
-    <div className="relative text-gray-500 mb-14">
+    <div className="relative mb-14">
       <p>
         Our work benefits hundreds of thousands of people around the world. Your
         donation will help fund research projects, education initiatives, and

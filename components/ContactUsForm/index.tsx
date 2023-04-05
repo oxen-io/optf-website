@@ -12,7 +12,7 @@ export interface Values {
 }
 
 export default function ContactUsForm() {
-  const [buttonText, setButtonText] = useState('Submit Button');
+  const [buttonText, setButtonText] = useState('Submit');
   const labelClasses = 'font-bold mb-2';
   const inputClasses = 'bg-gray-50 border-2 border-gray-100';
   const errorClasses = 'text-red-600 border-red-600';

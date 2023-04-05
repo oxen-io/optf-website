@@ -53,7 +53,7 @@ export default function Tag(props: Props): ReactElement {
         </div>
 
         {currentTableData?.map((post, index) => {
-          return <TagPost key={index} post={post} />;
+          return <TagPost key={`${post.id}${index}`} post={post} />;
         })}
 
         <Container

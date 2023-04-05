@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function AnnualReports() {
   return (
-    <div className="text-gray-500">
+    <>
       <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
         Annual Reports
       </h3>
@@ -38,6 +38,6 @@ export default function AnnualReports() {
           </Link>
         </li>
       </ul>
-    </div>
+    </>
   );
 }

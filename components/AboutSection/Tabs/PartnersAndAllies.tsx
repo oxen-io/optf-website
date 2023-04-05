@@ -43,15 +43,15 @@ export default function PartnersAndAllies() {
       </p>
       <div className="my-20">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
-          {partnersData.map((partner, index: number) => {
+          {partnersData.map((partner) => {
             return (
               <Partner
-                key={index}
+                key={partner.name}
                 infoTexts={infoTexts}
                 onHover={onHoverInfoTexts}
                 totalPartners={partnersData.length - 1}
                 partner={partner}
-                index={index}
+                index={partner.name}
               />
             );
           })}
