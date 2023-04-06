@@ -39,8 +39,8 @@ const partnersData = [
   {
     name: 'Engagemedia',
     image: '/assets/images/partners-engagemedia.png',
-    width: 316,
-    height: 190,
+    width: 500,
+    height: 300,
     link: 'https://www.engagemedia.org/',
     text: 'A non-profit media, technology, and culture organisation using video, the internet, and open technologies to create social and environmental change.',
     border: false,
