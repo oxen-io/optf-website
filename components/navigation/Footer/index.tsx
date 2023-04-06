@@ -187,7 +187,7 @@ export default function Footer(): ReactElement {
             {!isSmall && !isMedium ? (
               <div className="mt-10" id="custom-substack-embed"></div>
             ) : (
-              <div className="sm:order-last">
+              <div className="xs:order-last">
                 {(isSmall || isMedium) && renderFooter()}
               </div>
             )}
