@@ -16,7 +16,7 @@ export default function Footer(): ReactElement {
     'text-sm xl:text-base  mr-2',
     'lg:py-0 lg:my-0',
     'transition-colors duration-300',
-    'hover:text-white text-violet-350 xl:text-white'
+    'text-white'
   );
   const socialLinkClasses = classNames(
     'transition duration-300',
@@ -40,7 +40,7 @@ export default function Footer(): ReactElement {
       >
         <h3 className={headingClasses}>Socials</h3>
         <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
-          <div className={classNames('flex -ml-1')}>
+          <div className={classNames('flex')}>
             <Link href="https://twitter.com/TheOPTF">
               <a
                 className={socialLinkClasses}
@@ -119,18 +119,13 @@ export default function Footer(): ReactElement {
             )}
           >
             <Link href="/contact-us">
-              <a
-                className={linkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className={linkClasses} rel="noopener noreferrer">
                 Contact us
               </a>
             </Link>
             <Link href="/feedback-and-ideas">
               <a
                 className={classNames(linkClasses, 'sm:hidden xl:block ')}
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Get involved
@@ -139,7 +134,6 @@ export default function Footer(): ReactElement {
             <Link href="/donations">
               <a
                 className={classNames(linkClasses, 'sm:hidden xl:block')}
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Donate now
