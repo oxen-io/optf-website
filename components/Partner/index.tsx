@@ -5,7 +5,7 @@ import { IPartner } from '../../constants/partners';
 
 export interface Props {
   partner: IPartner;
-  index: string;
+  index: number;
   totalPartners: number;
   onHover: (index: number, boolean: boolean) => void;
   infoTexts: object;

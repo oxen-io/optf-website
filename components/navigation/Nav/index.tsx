@@ -37,12 +37,14 @@ export default function Nav(): ReactElement {
           )}
         >
           <Link passHref href="/">
-            <Image
-              src="/assets/images/logo-optf.png"
-              alt="optf logo"
-              width={isSmall || isMedium ? '100px' : '150px'}
-              height={isSmall || isMedium ? '40px' : '60px'}
-            />
+            <div>
+              <Image
+                src="/assets/images/logo-optf.png"
+                alt="optf logo"
+                width={isSmall || isMedium ? '100px' : '150px'}
+                height={isSmall || isMedium ? '40px' : '60px'}
+              />
+            </div>
           </Link>
           <div className={classNames('block ml-4', 'lg:hidden')}>
             <button
