@@ -41,7 +41,11 @@ export default function Blog(props: Props): ReactElement {
         />
         <PostList section="blog" posts={posts} />
         <div className="pt-2 pb-6 mt-10 text-gray-500 bg-gray-100">
-          <Container classes={classNames('flex  justify-left')}>
+          <Container
+            classes={classNames(
+              'flex  justify-left  px-6 py-0 md:py-0 md:px-2 lg:px-2'
+            )}
+          >
             <p>
               <i>
                 If you’d like to contribute to our blog, get in touch with us{' '}
