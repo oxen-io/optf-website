@@ -56,7 +56,7 @@ const Pagination = (props: Props) => {
         )}
         onClick={onPrevious}
       >
-        <div />«<span className="hidden md:inline-block"> Previous</span>
+        « <span className="hidden md:inline-block"> Previous</span>
       </li>
       {paginationRange.map((pageNumber: number | string, index: number) => {
         // If the pageItem is a DOT, render the DOTS unicode character
@@ -92,7 +92,6 @@ const Pagination = (props: Props) => {
         )}
         onClick={onNext}
       >
-        <div />
         <span className="hidden md:block">Next</span> »
       </li>
     </ul>
