@@ -18,7 +18,7 @@ const linkClasses = classNames(
 );
 const socialLinkClasses = classNames(
   'transition duration-300',
-  'hover:text-red-300'
+  'hover:text-red-350'
 );
 const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
