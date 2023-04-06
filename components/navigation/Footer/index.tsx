@@ -7,150 +7,139 @@ import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 import { useSubstack } from '@/hooks/useSubstack ';
 
-export default function Footer(): ReactElement {
-  const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
-  const headingClasses = classNames(
-    'text-white uppercase text-xl font-bold mb-2'
-  );
-  const linkClasses = classNames(
-    'text-sm xl:text-base  mr-2',
-    'lg:py-0 lg:my-0',
-    'transition-colors duration-300',
-    'text-white'
-  );
-  const socialLinkClasses = classNames(
-    'transition duration-300',
-    'hover:text-red-300'
-  );
-  const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
+const headingClasses = classNames(
+  'text-white uppercase text-xl font-bold mb-2'
+);
+const linkClasses = classNames(
+  'text-sm xl:text-base  mr-2',
+  'lg:py-0 lg:my-0',
+  'transition-colors duration-300',
+  'text-white'
+);
+const socialLinkClasses = classNames(
+  'transition duration-300',
+  'hover:text-red-300'
+);
+const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
-  const newsLetterText = {
-    title: 'Join the movement and help defend privacy in the digital world.',
-    subtitle: 'Sign up to the mailing list and start taking action!',
-  };
+const renderFooter = (
+  isSmall: boolean,
+  isMedium: boolean,
+  isLarge: boolean,
+  isHuge: boolean,
+  isEnormous: boolean
+) => {
+  const socials = (
+    <div
+      className={classNames('flex flex-col w-1/2 mb-4', 'md:w-1/4', 'lg:w-1/3')}
+    >
+      <h3 className={headingClasses}>Socials</h3>
+      <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
+        <div className={classNames('flex')}>
+          <Link href="https://twitter.com/TheOPTF">
+            <a
+              className={socialLinkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterSVG className={svgClasses} />
+            </a>
+          </Link>
+          <Link href="https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw">
+            <a
+              className={socialLinkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <YoutubeSVG className={svgClasses} />
+            </a>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 
-  const renderFooter = () => {
-    const socials = (
+  return (
+    <div
+      className={classNames(
+        'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-6 pb-4 xl:px-8 px-4 lg:border-b border-l border-white border-dashed',
+        'md:pb-8',
+        'lg:pt-2'
+      )}
+    >
+      {(isLarge || isHuge || isEnormous) && socials}
       <div
         className={classNames(
-          'flex flex-col w-1/2 mb-4',
+          'flex flex-col w-1/2 xl:mb-4',
           'md:w-1/4',
           'lg:w-1/3'
         )}
       >
-        <h3 className={headingClasses}>Socials</h3>
-        <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
-          <div className={classNames('flex')}>
-            <Link href="https://twitter.com/TheOPTF">
-              <a
-                className={socialLinkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <TwitterSVG className={svgClasses} />
-              </a>
-            </Link>
-            <Link href="https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw">
-              <a
-                className={socialLinkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <YoutubeSVG className={svgClasses} />
-              </a>
-            </Link>
-          </div>
-        </div>
+        <Link href="https://getsession.org/">
+          <a className={linkClasses} target="_blank" rel="noopener noreferrer">
+            Session
+          </a>
+        </Link>
+        <Link href="https://oxen.io/">
+          <a className={linkClasses} target="_blank" rel="noopener noreferrer">
+            Oxen
+          </a>
+        </Link>
+        <Link href="https://lokinet.org/">
+          <a className={linkClasses} target="_blank" rel="noopener noreferrer">
+            Lokinet
+          </a>
+        </Link>
       </div>
-    );
-
-    return (
       <div
-        className={classNames(
-          'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-6 pb-4 xl:px-8 px-4 lg:border-b border-l border-white border-dashed',
-          'md:pb-8',
-          'lg:pt-2'
-        )}
+        className={classNames('flex w-full', 'md:w-1/2', 'lg:block lg:w-1/3')}
       >
-        {(isLarge || isHuge || isEnormous) && socials}
         <div
           className={classNames(
-            'flex flex-col w-1/2 xl:mb-4',
+            'flex flex-col w-1/2 mb-4',
             'md:w-1/4',
-            'lg:w-1/3'
+            'lg:w-2/3'
           )}
         >
-          <Link href="https://getsession.org/">
-            <a
-              className={linkClasses}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Session
+          <Link href="/contact-us">
+            <a className={linkClasses} rel="noopener noreferrer">
+              Contact us
             </a>
           </Link>
-          <Link href="https://oxen.io/">
+          <Link href="/feedback-and-ideas">
             <a
-              className={linkClasses}
-              target="_blank"
+              className={classNames(linkClasses, 'sm:hidden xl:block ')}
               rel="noopener noreferrer"
             >
-              Oxen
+              Get involved
             </a>
           </Link>
-          <Link href="https://lokinet.org/">
+          <Link href="/donations">
             <a
-              className={linkClasses}
-              target="_blank"
+              className={classNames(linkClasses, 'sm:hidden xl:block')}
               rel="noopener noreferrer"
             >
-              Lokinet
+              Donate now
+            </a>
+          </Link>
+          <Link href="/privacy-policy/">
+            <a className={linkClasses} rel="noopener noreferrer">
+              Privacy policy
             </a>
           </Link>
         </div>
-        <div
-          className={classNames('flex w-full', 'md:w-1/2', 'lg:block lg:w-1/3')}
-        >
-          <div
-            className={classNames(
-              'flex flex-col w-1/2 mb-4',
-              'md:w-1/4',
-              'lg:w-2/3'
-            )}
-          >
-            <Link href="/contact-us">
-              <a className={linkClasses} rel="noopener noreferrer">
-                Contact us
-              </a>
-            </Link>
-            <Link href="/feedback-and-ideas">
-              <a
-                className={classNames(linkClasses, 'sm:hidden xl:block ')}
-                rel="noopener noreferrer"
-              >
-                Get involved
-              </a>
-            </Link>
-            <Link href="/donations">
-              <a
-                className={classNames(linkClasses, 'sm:hidden xl:block')}
-                rel="noopener noreferrer"
-              >
-                Donate now
-              </a>
-            </Link>
-            <Link href="/privacy-policy/">
-              <a className={linkClasses} rel="noopener noreferrer">
-                Privacy policy
-              </a>
-            </Link>
-          </div>
-        </div>
-        {(isSmall || isMedium) && socials}
       </div>
-    );
-  };
+      {(isSmall || isMedium) && socials}
+    </div>
+  );
+};
 
+export default function Footer(): ReactElement {
+  const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
+  const newsLetterText = {
+    title: 'Join the movement and help defend privacy in the digital world.',
+    subtitle: 'Sign up to the mailing list and start taking action!',
+  };
   useSubstack();
 
   return (
@@ -188,7 +177,8 @@ export default function Footer(): ReactElement {
               <div className="mt-10" id="custom-substack-embed"></div>
             ) : (
               <div className="xs:order-last">
-                {(isSmall || isMedium) && renderFooter()}
+                {(isSmall || isMedium) &&
+                  renderFooter(isSmall, isMedium, isLarge, isHuge, isEnormous)}
               </div>
             )}
             <Link href="https://www.acnc.gov.au/charity/charities/26214f82-a2cd-e811-a962-000d3ad24182/profile">
@@ -207,7 +197,9 @@ export default function Footer(): ReactElement {
         </div>
 
         <footer className={classNames('text-white', 'lg:w-1/2 lg:mt-2')}>
-          {!isSmall && !isMedium && renderFooter()}
+          {!isSmall &&
+            !isMedium &&
+            renderFooter(isSmall, isMedium, isLarge, isHuge, isEnormous)}
           <div
             className={classNames(
               'py-6 px-8',
