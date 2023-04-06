@@ -73,7 +73,7 @@ export default function GoToOptf(props: Props) {
               <h3
                 key={index + tab}
                 className={classNames(
-                  'mr-7  pb-2 cursor-pointer lg:my-0 hover:border-b-3 hover:border-b-violet-250 hover:pt-0.5',
+                  'mr-7  pb-2 cursor-pointer lg:my-0 lg:hover:border-b-3 lg:hover:border-b-violet-250 lg:hover:pt-0.5',
                   tab === index && 'border-b-3 border-b-violet-250 pt-0.5'
                 )}
                 onClick={() => {
