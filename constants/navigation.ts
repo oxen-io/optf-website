@@ -39,14 +39,6 @@ const NAV_ITEMS: INavList = {
         target: '_self',
         bgColor: 0,
       },
-      MediaReleases: {
-        name: 'Media releases',
-        href: '/media-releases',
-        alt: 'Link to Media releases',
-        target: '_blank',
-        rel: 'noopener noreferrer',
-        bgColor: 0,
-      },
     },
   },
   Research: {
