@@ -9,7 +9,7 @@ export default function List(props: Props): ReactElement {
   return (
     <ul className="pb-5 ml-10 list-disc">
       {list.map((item, index) => {
-        return <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>;
+        return <li key={index}> {item}</li>;
       })}
     </ul>
   );
