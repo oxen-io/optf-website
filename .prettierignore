@@ -1,5 +1,10 @@
-# Ignore artifacts:
+# testing
 coverage
-build
+
+# next.js
 out
 .next
+
+# production
+build
+/public/rss
