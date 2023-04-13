@@ -21,6 +21,7 @@ export default function Partner(props: Props) {
   return (
     <Link key={partner.link} href={partner.link}>
       <a
+        aria-label={`Link to ${partner.name}'s website`}
         target="_blank"
         className={classNames(lastPartner && 'md:col-span-3 lg:col-span-3')}
       >
