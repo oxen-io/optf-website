@@ -8,9 +8,9 @@
     "build:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next build",
     "start": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next start --hostname 127.0.0.1",
     "start:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next start --hostname 127.0.0.1",
-    "format": "prettier --write .",
-    "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --ignore-unknown --write .",
+    "lint": "next lint"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.3.5",
