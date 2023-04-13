@@ -15,7 +15,7 @@ export default function Partner(props: Props) {
   const { partner, index, totalPartners, onHover, infoTexts } = props;
   const lastPartner = index === totalPartners;
 
-  let partnerBorderClass =
+  const partnerBorderClass =
     'lg:border-l lg:border-r border-dashed border-gray-300';
 
   return (

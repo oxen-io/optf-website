@@ -43,7 +43,8 @@ function NavDropdown(props: DropdownProps): ReactElement {
         className={classNames(
           navItemClasses,
           navItemHoverClasses,
-          isActiveNavLink(router, navItem.href)
+          isActiveNavLink(router, navItem.href),
+          classes
         )}
       >
         {title}

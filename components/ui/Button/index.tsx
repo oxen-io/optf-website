@@ -7,13 +7,12 @@ interface Props {
   size?: 'small' | 'medium' | 'large';
   shape?: 'round' | 'semiround' | 'square';
   fontWeight?: 'normal' | 'semibold' | 'bold';
-  animate?: boolean;
   hoverEffect?: boolean;
   type?: 'submit';
   reference?: LegacyRef<HTMLButtonElement>;
   classes?: string;
   children?: string;
-  onClick?(): any;
+  onClick?(): void;
 }
 
 export default function Button(props: Props): ReactElement {
@@ -25,7 +24,6 @@ export default function Button(props: Props): ReactElement {
     shape = 'round',
     type,
     reference,
-    animate = false,
     hoverEffect = true,
     classes,
     children,

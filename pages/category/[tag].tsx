@@ -18,8 +18,8 @@ interface Props {
 export default function Tag(props: Props): ReactElement {
   const { tagLink, posts } = props;
   const [currentPage, setCurrentPage] = useState(1);
-  let PageSize = 10;
-  let tagName = tagLink
+  const PageSize = 10;
+  const tagName = tagLink
     .replace(/-/g, ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase());
 
@@ -65,7 +65,7 @@ export default function Tag(props: Props): ReactElement {
             currentPage={currentPage}
             totalCount={posts.length}
             pageSize={PageSize}
-            onPageChange={(page: any) => setCurrentPage(page)}
+            onPageChange={(page: number) => setCurrentPage(page)}
           />
         </Container>
       </section>
@@ -83,9 +83,7 @@ export const getStaticProps: GetStaticProps = async (
   const tagLink = String(context.params?.tag);
 
   try {
-    const { entries: posts, total: totalPosts } = await fetchBlogEntriesByTag(
-      tagLink
-    );
+    const { entries: posts } = await fetchBlogEntriesByTag(tagLink);
 
     return {
       props: { posts, tagLink },

@@ -1,16 +1,18 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 
 export default function Donations() {
   const [modal, setModal] = useState(false);
 
-  const copyClipboard = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const copyClipboard = (e: MouseEvent<HTMLButtonElement>) => {
     setModal(true);
-    let target: any = e.target as HTMLElement;
-    navigator.clipboard.writeText(target.previousElementSibling.innerHTML);
-    setTimeout(() => {
-      setModal(false);
-    }, 2000);
+    const target = e.target as HTMLElement;
+    if (target.previousElementSibling) {
+      navigator.clipboard.writeText(target.previousElementSibling.innerHTML);
+      setTimeout(() => {
+        setModal(false);
+      }, 2000);
+    }
   };
 
   return (

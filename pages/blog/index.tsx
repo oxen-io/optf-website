@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { GetStaticProps } from 'next';
 import Banner from '@/components/Banner';
 import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
@@ -15,10 +15,8 @@ interface Props {
   posts: IPost[];
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
-  const { entries: posts, total: totalPosts } = await fetchBlogEntries();
+export const getStaticProps: GetStaticProps = async () => {
+  const { entries: posts } = await fetchBlogEntries();
 
   return {
     props: { posts },

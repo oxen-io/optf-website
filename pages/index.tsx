@@ -1,5 +1,5 @@
 import { Hero } from '@/components/sections';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
@@ -39,10 +39,8 @@ export default function Home(props: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
-  const { entries: posts, total: totalPosts } = await fetchBlogEntries();
+export const getStaticProps: GetStaticProps = async () => {
+  const { entries: posts } = await fetchBlogEntries();
 
   return {
     props: { posts },

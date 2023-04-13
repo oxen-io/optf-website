@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BLOCKS, Document, INLINES, MARKS } from '@contentful/rich-text-types';
 /* eslint-disable react/display-name */
 import { Children, ReactElement, cloneElement } from 'react';
@@ -109,7 +110,7 @@ export default function RichBody(props: Props): ReactElement {
           </span>
         );
       },
-      [INLINES.EMBEDDED_ENTRY]: (node, children) => {
+      [INLINES.EMBEDDED_ENTRY]: (node) => {
         return renderEmbeddedEntry(
           { node, isInline: true },
           getDirection(node.data.target.fields.caption)
@@ -201,10 +202,10 @@ export default function RichBody(props: Props): ReactElement {
           {children}
         </h4>
       ),
-      [BLOCKS.HR]: (node, children) => (
+      [BLOCKS.HR]: () => (
         <hr className={classNames('border-gray-300 w-24 mx-auto pb-6')} />
       ),
-      [BLOCKS.OL_LIST]: (node, children: any) => {
+      [BLOCKS.OL_LIST]: (_, children: any) => {
         return (
           <ol
             dir={
@@ -266,13 +267,13 @@ export default function RichBody(props: Props): ReactElement {
           </blockquote>
         </div>
       ),
-      [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
         return renderEmbeddedEntry(
           { node },
           getDirection(node.data.target.fields.caption)
         );
       },
-      [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+      [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         return renderEmbeddedEntry(
           { node },
           getDirection(node.data.target.fields.caption)

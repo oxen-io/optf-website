@@ -53,14 +53,14 @@ export const getServerSideProps: GetServerSideProps = async (
   try {
     let query = slug;
     if (slug.indexOf('blog/') >= 0) query = slug.split('blog/')[1];
-    let content: IPage | IPost = await fetchEntryPreview(query);
+    const content: IPage | IPost = await fetchEntryPreview(query);
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);
     const props: Props = { content, slug };
 
     if (isPost(content)) {
       // we want 6 posts excluding the current one if it's found
-      const { entries: posts, total: totalPosts } = await fetchBlogEntries(7);
+      const { entries: posts } = await fetchBlogEntries(7);
       const otherPosts = posts
         .filter((post) => {
           return content.slug !== post.slug;

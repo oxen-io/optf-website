@@ -54,13 +54,12 @@ export default async function handler(
     }
   );
 
-  const { entries: _dynamicPages, total: totalPages } = await fetchPages();
+  const { entries: _dynamicPages } = await fetchPages();
   const dynamicPages = _dynamicPages.map((page) => {
     return `${baseUrl}/${page.slug}`;
   });
 
-  const { entries: _blogPages, total: totalBlogPages } =
-    await fetchBlogEntries();
+  const { entries: _blogPages } = await fetchBlogEntries();
   const blogPages = _blogPages.map((page) => {
     return {
       url: `${baseUrl}/blog/${page.slug}`,

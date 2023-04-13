@@ -65,7 +65,6 @@ export default function ContactUsForm() {
               },
               body: JSON.stringify(values),
             });
-            const result = await response.json();
             switch (response.status) {
               case 201:
                 setButtonText('Sent successfully ✓');
@@ -164,6 +163,7 @@ export default function ContactUsForm() {
             </div>
             <div className="flex flex-col">
               <ReCAPTCHA
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 sitekey={process.env.GOOGLE_RECAPTCHA_FORM_SITE_KEY!}
                 onChange={(value) => {
                   console.log('onchange funciton');

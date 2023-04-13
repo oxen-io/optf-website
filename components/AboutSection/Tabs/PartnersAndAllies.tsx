@@ -14,9 +14,9 @@ export default function PartnersAndAllies() {
   });
 
   const onHoverInfoTexts = (index: number, bool: boolean) => {
-    let stateCopy = { ...infoTexts };
+    const stateCopy = { ...infoTexts };
     Object.keys(stateCopy).forEach(
-      (v: any) => (stateCopy[v as keyof typeof stateCopy] = false)
+      (v) => (stateCopy[v as unknown as keyof typeof stateCopy] = false)
     );
     setInfoTexts({ ...stateCopy, [index]: bool });
   };

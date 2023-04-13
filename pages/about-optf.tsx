@@ -10,7 +10,7 @@ import Donations from '../components/AboutSection/Tabs/Donations';
 import Funding from '../components/AboutSection/Tabs/Funding';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { GetStaticProps } from 'next';
 import { CMS } from '@/constants';
 import { fetchLegals } from '@/services/cms';
 import { ILegals } from '@/types/cms';
@@ -91,9 +91,7 @@ export default function AboutOPTFPage(props: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps = async () => {
   const legals = await fetchLegals();
 
   return {

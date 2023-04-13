@@ -18,6 +18,7 @@ interface Props {
 export default function Post(props: Props): ReactElement {
   const { isSmall, isMedium } = useScreen();
   const { post, otherPosts, allPosts } = props;
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const {
     id,
     title,
@@ -31,14 +32,18 @@ export default function Post(props: Props): ReactElement {
     body,
     publishedDateISO,
   } = post;
+  /* eslint-enable @typescript-eslint/no-unused-vars */
 
   let renderPrevAndNextLinks;
 
+  /* eslint-disable @typescript-eslint/no-non-null-assertion */
+  // eslint-disable-next-line @typescript-eslint/no-extra-non-null-assertion
   for (let i = 0; i < allPosts!?.length; i++) {
     if (allPosts![i].id === id) {
       renderPrevAndNextLinks = [allPosts![i - 1]?.slug, allPosts![i + 1]?.slug];
     }
   }
+  /* eslint-enable @typescript-eslint/no-non-null-assertion */
 
   const renderTags = (() => {
     return tags.map((tag, index) => {

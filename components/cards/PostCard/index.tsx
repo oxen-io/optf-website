@@ -14,6 +14,7 @@ interface Props extends IPost {
 }
 
 export default function PostCard(props: Props): ReactElement {
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const {
     title,
     description,
@@ -28,6 +29,7 @@ export default function PostCard(props: Props): ReactElement {
     classes,
     section = 'blog',
   } = props;
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   const headingClasses = 'cursor-pointer text-2xl font-bold mb-3 px-3';
 
   const classForSection =

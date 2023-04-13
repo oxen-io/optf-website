@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { usePagination, DOTS } from '../../hooks/usePagination';
 
 export interface Props {
-  onPageChange: (page: any) => void;
+  onPageChange: (page: number) => void;
   totalCount: number;
   siblingCount?: number;
   currentPage: number;
@@ -41,7 +41,7 @@ const Pagination = (props: Props) => {
     onPageChange(currentPage - 1);
   };
 
-  let lastPage = paginationRange[paginationRange.length - 1];
+  const lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
       className={classnames(
@@ -79,7 +79,7 @@ const Pagination = (props: Props) => {
               'px-1 text-center flex items-center rounded-lg cursor-pointer',
               pageNumber === currentPage && 'text-gray-800'
             )}
-            onClick={() => onPageChange(pageNumber)}
+            onClick={() => onPageChange(Number(pageNumber))}
           >
             {pageNumber}
           </li>
