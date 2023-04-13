@@ -51,12 +51,13 @@ const Pagination = (props: Props) => {
       {/* Left navigation arrow */}
       <li
         className={classnames(
-          'cursor-pointer px-2 text-center m-1 flex items-center rounded-lg',
+          'cursor-pointer px-2 text-center m-1 flex items-center',
           currentPage === 1 && 'hidden'
         )}
         onClick={onPrevious}
       >
-        « <span className="hidden md:inline-block"> Previous</span>
+        <span className={'md:mr-2'}>«</span>
+        <span className="hidden md:inline-block"> Previous</span>
       </li>
       {paginationRange.map((pageNumber: number | string, index: number) => {
         // If the pageItem is a DOT, render the DOTS unicode character
@@ -87,12 +88,13 @@ const Pagination = (props: Props) => {
       {/*  Right Navigation arrow */}
       <li
         className={classnames(
-          'cursor-pointer px-4 text-center m-2 flex items-center',
+          'cursor-pointer px-2 text-center m-1 flex items-center',
           currentPage === lastPage && 'hidden'
         )}
         onClick={onNext}
       >
-        <span className="hidden md:block">Next</span> »
+        <span className="hidden md:block">Next </span>
+        <span className={'md:ml-2'}>»</span>
       </li>
     </ul>
   );
