@@ -40,10 +40,10 @@ export default function Blog(props: Props): ReactElement {
           subtitleTwo="Read all our latest opinion pieces, current affairs reports, and press releases."
         />
         <PostList section="blog" posts={posts} />
-        <div className="pt-2 pb-6 mt-10 text-gray-500 bg-gray-100">
+        <div className="py-4 mt-10 text-gray-500 bg-gray-100">
           <Container
             classes={classNames(
-              'flex  justify-left  px-6 py-0 md:py-0 md:px-2 lg:px-2'
+              'flex justify-left px-6 py-0 md:py-0 md:px-2 lg:px-2'
             )}
           >
             <p>
