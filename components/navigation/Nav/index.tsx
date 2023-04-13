@@ -37,7 +37,7 @@ export default function Nav(): ReactElement {
           )}
         >
           <Link passHref href="/">
-            <div>
+            <div className={classNames('cursor-pointer')}>
               <Image
                 src="/assets/images/logo-optf.png"
                 alt="optf logo"

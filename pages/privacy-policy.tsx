@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
     {
       title: 'Conclusion​',
       description:
-        'This page summarises the entirety of the privacy policy for the OPTF website. If you have any questions about any of the policies outlined in this document, please send us an email at team@oxen.io',
+        'This page summarises the entirety of the privacy policy for the OPTF website. If you have any questions about any of the policies outlined in this document, please send us an email at team@oxen.io<br/>',
     },
   ];
 
