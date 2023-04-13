@@ -38,7 +38,7 @@ const renderSwitchTab = (tab: number, legals: ILegals[]) => {
   }
 };
 
-export default function GoToOptf(props: Props) {
+export default function AboutOPTFPage(props: Props) {
   const { legals } = props;
   const router = useRouter();
   const [tab, setTab] = useState(0);
