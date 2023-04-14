@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import classNames from 'classnames';
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import isLive from '@/utils/environment';
 
 export interface Values {
   name?: string;
@@ -163,8 +164,11 @@ export default function ContactUsForm() {
             </div>
             <div className="flex flex-col">
               <ReCAPTCHA
-                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                sitekey={process.env.GOOGLE_RECAPTCHA_FORM_SITE_KEY!}
+                sitekey={String(
+                  isLive()
+                    ? process.env.GOOGLE_RECAPTCHA_FORM_SITE_PRODUCTION_KEY
+                    : process.env.GOOGLE_RECAPTCHA_FORM_SITE_DEVELOPMENT_KEY
+                )}
                 onChange={(value) => {
                   console.log('onchange funciton');
                   setFieldValue('recaptcha', value);
