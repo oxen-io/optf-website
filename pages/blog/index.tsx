@@ -41,7 +41,7 @@ export default function Blog(props: Props): ReactElement {
         <div className="py-4 mt-10 text-gray-500 bg-gray-100">
           <Container
             classes={classNames(
-              'flex justify-left px-6 py-0 md:py-0 md:px-2 lg:px-2'
+              'flex justify-center items-center px-6 py-0 md:py-0 md:px-2 lg:px-2'
             )}
           >
             <p>
