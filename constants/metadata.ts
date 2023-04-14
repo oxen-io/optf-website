@@ -152,6 +152,61 @@ const METADATA = {
       ALT: 'OPTF logo',
     },
   },
+  PARTNERS_AND_ALLIES: {
+    TYPE: 'article',
+    DESCRIPTION:
+      "Partners and Allies | Discover the organisations and allies supporting OPTF's mission for a free and open internet.",
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  LEGALS: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Legals | Stay informed and up-to-date on the OPTF’s legal policies as we work to build a safer and more secure digital world.',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  ANNUAL_REPORTS: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Annual Reports | Stay informed and learn about our achievements as we work towards building a safer and more secure digital world.',
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  FUNDING: {
+    TYPE: 'article',
+    DESCRIPTION:
+      "Funding | Apply for funding from from the OPTF to support your project or organisation's mission to promote privacy, free software, and open internet.",
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
+  DONATIONS: {
+    TYPE: 'article',
+    DESCRIPTION:
+      "Donations | Support the OPTF's mission to promote privacy, free software, and open internet by making a donation.",
+    OG_IMAGE: {
+      URL: '/assets/images/logo-optf.png',
+      WIDTH: 260,
+      HEIGHT: 85,
+      ALT: 'OPTF logo',
+    },
+  },
 };
 
 export default METADATA;

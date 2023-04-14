@@ -72,33 +72,7 @@ const config = {
     STAGING_SECRET: process.env.STAGING_SECRET,
   },
   async redirects() {
-    return [
-      {
-        source: '/partners-and-allies',
-        destination: '/about-optf#1',
-        permanent: true,
-      },
-      {
-        source: '/legals',
-        destination: '/about-optf#2',
-        permanent: true,
-      },
-      {
-        source: '/annual-reports',
-        destination: '/about-optf#3',
-        permanent: true,
-      },
-      {
-        source: '/funding-and-support',
-        destination: '/about-optf#4',
-        permanent: true,
-      },
-      {
-        source: '/donations',
-        destination: '/about-optf#5',
-        permanent: true,
-      },
-    ];
+    return [];
   },
   async headers() {
     return [
