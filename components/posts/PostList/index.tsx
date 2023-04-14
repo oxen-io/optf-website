@@ -63,12 +63,12 @@ export default function PostList(props: Props): ReactElement {
         {currentTableData?.map((post) => {
           return (
             <PostCard
+              key={post.id}
               section={section}
               route={generateRoute(post.slug)}
               hoverEffect={hoverEffect}
               compact={compact}
               classes={classNames(cardClasses)}
-              key={post.id}
               {...post}
             />
           );

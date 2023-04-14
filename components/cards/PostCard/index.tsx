@@ -36,8 +36,8 @@ export default function PostCard(props: Props): ReactElement {
     section === 'home'
       ? 'bg-green-150'
       : section === 'blog'
-      ? 'rounded-t-2xl rounded-b-lg bg-gray-100 hover:shadow-posts'
-      : 'rounded-2xl bg-gray-100 hover:shadow-none shadow-none border  relative';
+      ? 'rounded-t-2xl rounded-b-lg bg-gray-100'
+      : 'rounded-2xl bg-gray-100 border relative';
 
   // parent container must have 'flex' class
   return (
@@ -47,7 +47,7 @@ export default function PostCard(props: Props): ReactElement {
           'text-gray-dark leading-none pb-3',
           'lg:text-3xl',
           'rounded-3xl mx-2 transition ease-in-out group',
-          section === 'home' && 'shadow hover:shadow-xl',
+          'shadow hover:shadow-posts',
           classForSection,
           classes
         )}
