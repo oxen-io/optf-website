@@ -112,7 +112,7 @@ const METADATA = {
   PRIVACY_POLICY: {
     TYPE: 'article',
     DESCRIPTION:
-      'Privacy Policy | Learn about OPTFs commitment to protecting your privacy with our Privacy Policy.',
+      "Privacy Policy | Learn about OPTF's commitment to protecting your privacy with our Privacy Policy.",
     OG_IMAGE: {
       URL: '/assets/images/logo-optf.png',
       WIDTH: 260,
