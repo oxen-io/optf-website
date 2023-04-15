@@ -1,4 +1,4 @@
-interface IAboutTab {
+export interface IAboutTab {
   name: string;
   metadata: string;
   route: string;

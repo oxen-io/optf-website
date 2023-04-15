@@ -1,4 +1,4 @@
-export interface IMetadata {
+export interface IPageMetadata {
   DESCRIPTION: string;
   TYPE?: string;
   CANONICAL_URL?: string;
@@ -210,3 +210,5 @@ const METADATA = {
 };
 
 export default METADATA;
+
+export type IMetadata = typeof METADATA;

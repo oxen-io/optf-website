@@ -5,16 +5,18 @@ import { ABOUT, METADATA } from '@/constants';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
+import { IAboutTab } from '@/constants/about';
+import { IMetadata, IPageMetadata } from '@/constants/metadata';
 
 export const getTabProperty = (
   tab: number,
   property: 'name' | 'metadata' | 'route'
 ) => {
   if (tab < 0 || tab >= ABOUT.TABS.length) {
-    return ABOUT.TABS[0][`${property}`];
+    return ABOUT.TABS[0][`${property}` as keyof IAboutTab];
   }
 
-  return ABOUT.TABS[tab][`${property}`];
+  return ABOUT.TABS[tab][`${property}` as keyof IAboutTab];
 };
 
 type Props = {
@@ -25,6 +27,7 @@ type Props = {
 export default function AboutLayout(props: Props) {
   const { tab, children } = props;
   const router = useRouter();
+  const pageMetadata = `${getTabProperty(tab, 'metadata')}` as keyof IMetadata;
 
   return (
     <Layout
@@ -32,7 +35,7 @@ export default function AboutLayout(props: Props) {
         tab,
         'name'
       )} | Privacy is a fundamental right.`}
-      metadata={METADATA[`${getTabProperty(tab, 'metadata')}`]}
+      metadata={METADATA[pageMetadata] as IPageMetadata}
     >
       <Banner
         title="Meet the Oxen Privacy Tech Foundation"
