@@ -25,7 +25,7 @@ function NavDropdown(props: DropdownProps): ReactElement {
   const router = useRouter();
 
   const navItemClasses = classNames(
-    'block w-full px-5 py-2  border-transparent border-b-3',
+    'block w-full px-5 py-2 border-transparent border-b-3',
     'lg:px-2 lg:py-1 lg:mx-auto lg:bg-white lg:last:rounded-b-md'
   );
 
@@ -54,8 +54,8 @@ function NavDropdown(props: DropdownProps): ReactElement {
 }
 
 export const navLinkClasses = classNames(
-  'lg:text-xl w-full px-5 py-2 border-transparent cursor-pointer',
-  'lg:px-3 lg:w-auto lg:mx-2 lg:rounded-xl'
+  'w-full px-5 py-2 border-transparent cursor-pointer',
+  'lg:text-xl lg:px-3 lg:w-auto lg:mx-2 lg:rounded-xl'
 );
 
 const navLinkHoverClasses = classNames(
@@ -65,7 +65,8 @@ const navLinkHoverClasses = classNames(
 
 const isActiveNavLink = (router: NextRouter, url: string) => {
   return (
-    router.asPath === url && 'sm:bg-gray-light sm:text-white lg:text-black'
+    router.asPath === url &&
+    'sm:bg-gray-light sm:text-white md:bg-gray-light md:text-white lg:text-black'
   );
 };
 
@@ -87,13 +88,10 @@ export default function NavItem(props: NavItemProps): ReactElement {
     switch (type) {
       case 0:
         return 'gradient-header-btn1';
-        break;
       case 1:
         return 'gradient-header-btn2';
-        break;
       case 2:
         return 'gradient-header-btn3';
-        break;
       default:
         return 'lg:bg-green-250';
     }
@@ -102,6 +100,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
   useEffect(() => {
     setIsDropdownExpanded(false);
   }, [isExpanded]);
+
   return (
     <>
       {!navItem.items ? (
@@ -118,7 +117,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
             rel={navItem.rel ?? undefined}
             className={classNames(
               !isSVG && navLinkClasses,
-              onBgColor(bgColor),
+              !isSmall && !isMedium && onBgColor(bgColor),
               isActiveNavLink(router, navItem.href),
               hoverEffect && navLinkHoverClasses,
               navItem.mobile === true && 'lg:hidden',
@@ -143,7 +142,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
               'lg:border-transparent lg:border-b-3',
               'lg:transform lg:transition-colors duration-500',
               'lg:group-hover:border-primary',
-              onBgColor(bgColor),
+              !isSmall && !isMedium && onBgColor(bgColor),
               navItem.mobile === false && 'lg:block hidden'
             )}
             onClick={() => {
@@ -173,7 +172,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
               'w-full overflow-hidden lg:hidden',
               'transform transition-all duration-300',
               IsDropdownExpanded
-                ? 'h-20 translate-y-0 -mb-3 mt-2'
+                ? 'h-10 translate-y-0 -mb-3 mt-2'
                 : 'h-0 translate-y-auto lg:translate-y-0'
             )}
             style={{ zIndex: zIndex ? zIndex : undefined }}
