@@ -24,7 +24,7 @@ export default function PartnersAndAllies() {
   return (
     <>
       <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
-        Partners & Allies
+        Partners and Allies
       </h3>
       <p>
         There’s a passionate worldwide community working to defend your privacy.
