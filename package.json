@@ -40,6 +40,8 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.2.2",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@contentful/rich-text-types": "^16.0.3",
     "@tailwindcss/forms": "^0.3.3",
     "@types/base-64": "^1.0.0",
