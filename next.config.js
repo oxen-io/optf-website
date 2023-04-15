@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const withPlugins = require('next-compose-plugins');
 const withSvgr = require('@newhighsco/next-plugin-svgr');
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -9,8 +11,8 @@ const ContentSecurityPolicy = `
       : ''
   }*.ctfassets.net *.youtube.com *.twitter.com;
   child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
-  frame-src 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io *.youtube.com player.vimeo.com *.twitter.com *.google.com;
-  frame-ancestors 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io;
+  frame-src 'self' *.youtube.com player.vimeo.com *.twitter.com *.google.com;
+  frame-ancestors 'self';
   script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com *.google.com *.gstatic.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
