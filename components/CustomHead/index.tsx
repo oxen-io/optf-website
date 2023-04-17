@@ -1,4 +1,4 @@
-import METADATA, { IMetadata } from '@/constants/metadata';
+import METADATA, { IPageMetadata } from '@/constants/metadata';
 
 import Head from 'next/head';
 import { ReactElement } from 'react';
@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 
 interface Props {
   title?: string;
-  metadata?: IMetadata;
+  metadata?: IPageMetadata;
 }
 
 export default function CustomHead(props: Props): ReactElement {

@@ -61,7 +61,7 @@ const NAV_ITEMS: INavList = {
   },
   PartnersAndAllies: {
     name: 'Partners and allies',
-    href: '/about-optf#1',
+    href: '/partners-and-allies',
     alt: 'go to partners and allies',
     target: '_self',
     rel: 'noopener noreferrer',
@@ -79,7 +79,7 @@ const NAV_ITEMS: INavList = {
   },
   Legals: {
     name: 'Legals',
-    href: '/about-optf#2',
+    href: '/legals',
     alt: 'go to legals',
     target: '_self',
     rel: 'noopener noreferrer',
@@ -88,7 +88,7 @@ const NAV_ITEMS: INavList = {
   },
   AnnualReports: {
     name: 'Annual reports',
-    href: '/about-optf#3',
+    href: '/annual-reports',
     alt: 'go to annual reports',
     target: '_self',
     rel: 'noopener noreferrer',
@@ -97,7 +97,7 @@ const NAV_ITEMS: INavList = {
   },
   FundingAndSupport: {
     name: 'Funding and support',
-    href: '/about-optf#4',
+    href: '/funding-and-support',
     alt: 'go to funding and support',
     target: '_self',
     rel: 'noopener noreferrer',
@@ -106,7 +106,7 @@ const NAV_ITEMS: INavList = {
   },
   Donations: {
     name: 'Donations',
-    href: '/about-optf#5',
+    href: '/donations',
     alt: 'go to donations',
     target: '_self',
     rel: 'noopener noreferrer',

@@ -26,8 +26,8 @@ export default function Nav(): ReactElement {
     >
       <div
         className={classNames(
-          'md:container relative flex flex-wrap items-center justify-between w-full px-4 pb-2 mx-auto z-10',
-          'lg:pb-0 lg:h-20 lg:px-10'
+          'relative flex flex-wrap items-center justify-between w-full px-4 pb-2 mx-auto z-10',
+          'lg:container lg:pb-0 lg:h-20 lg:px-10'
         )}
       >
         <div
@@ -37,7 +37,7 @@ export default function Nav(): ReactElement {
           )}
         >
           <Link passHref href="/">
-            <div>
+            <div className={classNames('cursor-pointer')}>
               <Image
                 src="/assets/images/logo-optf.png"
                 alt="optf logo"

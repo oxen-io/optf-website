@@ -45,7 +45,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
     if (isPost(content)) {
       // we want 6 posts excluding the current one if it's found
-      const { entries: posts, total: totalPosts } = await fetchBlogEntries();
+      const { entries: posts } = await fetchBlogEntries();
       const otherPosts = posts
         .filter((post) => {
           return content.slug !== post.slug;
@@ -69,7 +69,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { entries: pages, total: totalPages } = await fetchPages();
+  const { entries: pages } = await fetchPages();
   const pagePaths = pages.map((page) => {
     return {
       params: {
@@ -78,7 +78,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
   });
 
-  const { entries: posts, total: totalPosts } = await fetchBlogEntries();
+  const { entries: posts } = await fetchBlogEntries();
   const postPaths = posts.map((post) => {
     return {
       params: {

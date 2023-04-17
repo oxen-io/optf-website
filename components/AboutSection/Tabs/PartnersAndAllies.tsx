@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Partner from '../../Partner';
-import partnersData from '../../../constants/partners';
+import { PARTNERS } from '@/constants';
 
 export default function PartnersAndAllies() {
   const [infoTexts, setInfoTexts] = useState({
@@ -14,9 +14,9 @@ export default function PartnersAndAllies() {
   });
 
   const onHoverInfoTexts = (index: number, bool: boolean) => {
-    let stateCopy = { ...infoTexts };
+    const stateCopy = { ...infoTexts };
     Object.keys(stateCopy).forEach(
-      (v: any) => (stateCopy[v as keyof typeof stateCopy] = false)
+      (v) => (stateCopy[v as unknown as keyof typeof stateCopy] = false)
     );
     setInfoTexts({ ...stateCopy, [index]: bool });
   };
@@ -24,7 +24,7 @@ export default function PartnersAndAllies() {
   return (
     <>
       <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
-        Partners & allies
+        Partners and Allies
       </h3>
       <p>
         There’s a passionate worldwide community working to defend your privacy.
@@ -43,13 +43,13 @@ export default function PartnersAndAllies() {
       </p>
       <div className="my-20">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
-          {partnersData.map((partner, index) => {
+          {PARTNERS.map((partner, index) => {
             return (
               <Partner
                 key={partner.name}
                 infoTexts={infoTexts}
                 onHover={onHoverInfoTexts}
-                totalPartners={partnersData.length - 1}
+                totalPartners={PARTNERS.length - 1}
                 partner={partner}
                 index={index}
               />

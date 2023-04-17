@@ -22,6 +22,36 @@ const socialLinkClasses = classNames(
 );
 const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
+const renderSocials = (
+  <div
+    className={classNames('flex flex-col w-1/2 mb-4', 'md:w-1/4', 'lg:w-1/3')}
+  >
+    <h3 className={headingClasses}>Socials</h3>
+    <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
+      <div className={classNames('flex')}>
+        <Link href="https://twitter.com/TheOPTF">
+          <a
+            className={socialLinkClasses}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterSVG className={svgClasses} />
+          </a>
+        </Link>
+        <Link href="https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw">
+          <a
+            className={socialLinkClasses}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <YoutubeSVG className={svgClasses} />
+          </a>
+        </Link>
+      </div>
+    </div>
+  </div>
+);
+
 const renderFooter = (
   isSmall: boolean,
   isMedium: boolean,
@@ -29,36 +59,6 @@ const renderFooter = (
   isHuge: boolean,
   isEnormous: boolean
 ) => {
-  const socials = (
-    <div
-      className={classNames('flex flex-col w-1/2 mb-4', 'md:w-1/4', 'lg:w-1/3')}
-    >
-      <h3 className={headingClasses}>Socials</h3>
-      <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
-        <div className={classNames('flex')}>
-          <Link href="https://twitter.com/TheOPTF">
-            <a
-              className={socialLinkClasses}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TwitterSVG className={svgClasses} />
-            </a>
-          </Link>
-          <Link href="https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw">
-            <a
-              className={socialLinkClasses}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <YoutubeSVG className={svgClasses} />
-            </a>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <div
       className={classNames(
@@ -67,7 +67,7 @@ const renderFooter = (
         'lg:pt-2'
       )}
     >
-      {(isLarge || isHuge || isEnormous) && socials}
+      {(isLarge || isHuge || isEnormous) && renderSocials}
       <div
         className={classNames(
           'flex flex-col w-1/2 xl:mb-4',
@@ -129,7 +129,7 @@ const renderFooter = (
           </Link>
         </div>
       </div>
-      {(isSmall || isMedium) && socials}
+      {(isSmall || isMedium) && renderSocials}
     </div>
   );
 };
@@ -148,9 +148,11 @@ export default function Footer(): ReactElement {
         <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
           {newsLetterText.title}
         </h4>
-        <p>{newsLetterText.subtitle}</p>
+        <p className={classNames('leading-none')}>{newsLetterText.subtitle}</p>
         {(isSmall || isMedium) && (
-          <div className="mt-5" id="custom-substack-embed"></div>
+          <div className={classNames('flex justify-center md:justify-start')}>
+            <div className="mt-5" id="custom-substack-embed"></div>
+          </div>
         )}
       </div>
       <div
@@ -160,7 +162,7 @@ export default function Footer(): ReactElement {
       >
         <div
           className={classNames(
-            ' text-white font-helvetica md:px-10 md:py-16 lg:border-r border-dashed',
+            'text-white font-helvetica md:px-10 md:py-16 lg:border-r border-dashed',
             'md:py-12'
           )}
         >

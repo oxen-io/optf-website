@@ -14,6 +14,7 @@ interface Props extends IPost {
 }
 
 export default function PostCard(props: Props): ReactElement {
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const {
     title,
     description,
@@ -28,14 +29,15 @@ export default function PostCard(props: Props): ReactElement {
     classes,
     section = 'blog',
   } = props;
+  /* eslint-enable @typescript-eslint/no-unused-vars */
   const headingClasses = 'cursor-pointer text-2xl font-bold mb-3 px-3';
 
   const classForSection =
     section === 'home'
       ? 'bg-green-150'
       : section === 'blog'
-      ? 'rounded-t-2xl rounded-b-lg bg-gray-100 hover:shadow-posts'
-      : 'rounded-2xl bg-gray-100 hover:shadow-none shadow-none border  relative';
+      ? 'rounded-t-2xl rounded-b-lg bg-gray-100'
+      : 'rounded-2xl bg-gray-100 border relative';
 
   // parent container must have 'flex' class
   return (
@@ -45,7 +47,7 @@ export default function PostCard(props: Props): ReactElement {
           'text-gray-dark leading-none pb-3',
           'lg:text-3xl',
           'rounded-3xl mx-2 transition ease-in-out group',
-          section === 'home' && 'shadow hover:shadow-xl',
+          'shadow hover:shadow-posts',
           classForSection,
           classes
         )}
@@ -53,15 +55,14 @@ export default function PostCard(props: Props): ReactElement {
         {featureImage?.imageUrl && (
           <div
             className={classNames(
-              'relative overflow-hidden w-full mb-4',
+              'relative overflow-hidden w-full mb-4 rounded-t-xl',
               'md:px-16',
-              'lg:px-20 rounded-t-3xl transition ease-in-out',
+              'lg:px-20 transition ease-in-out',
               compact ? 'h-48 md:h-60 lg:h-44' : 'h-60 lg:h-56',
               featured && 'md:w-1/2 md:mr-4 lg:mr-3 lg:w-3/5 lg:h-96',
               (section === 'home' || section === 'post') &&
                 'group-hover:brightness-110',
-              section === 'blog' &&
-                'w-full md:h-[28rem] lg:h-[36rem] xl:h-60  rounded-t-xl rounded-b-xl',
+              section === 'blog' && 'w-full md:h-[28rem] lg:h-[36rem] xl:h-60',
               section === 'post' && 'h-44 md:h-32 lg:h-44'
             )}
           >
@@ -71,7 +72,7 @@ export default function PostCard(props: Props): ReactElement {
               layout="fill"
               priority={featured}
               loading={featured ? 'eager' : 'lazy'}
-              className={classNames('object-cover cursor-pointer ')}
+              className={classNames('object-cover cursor-pointer rounded-t-xl')}
             />
           </div>
         )}

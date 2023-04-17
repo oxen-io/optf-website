@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const withPlugins = require('next-compose-plugins');
 const withSvgr = require('@newhighsco/next-plugin-svgr');
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -9,8 +11,8 @@ const ContentSecurityPolicy = `
       : ''
   }*.ctfassets.net *.youtube.com *.twitter.com;
   child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
-  frame-src 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io *.youtube.com player.vimeo.com *.twitter.com *.google.com;
-  frame-ancestors 'self' https://getsession.org https://lokinet.org https://oxen.io https://staging.getsession.org https://staging.oxen.io;
+  frame-src 'self' *.youtube.com player.vimeo.com *.twitter.com *.google.com;
+  frame-ancestors 'self';
   script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com *.google.com *.gstatic.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
@@ -65,37 +67,14 @@ const config = {
     CONTENTFUL_ENVIRONMENT_ID: process.env.CONTENTFUL_ENVIRONMENT_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     CONTENTFUL_PREVIEW_TOKEN: process.env.CONTENTFUL_PREVIEW_TOKEN,
+    GOOGLE_RECAPTCHA_FORM_SITE_DEVELOPMENT_KEY:
+      process.env.GOOGLE_RECAPTCHA_FORM_SITE_DEVELOPMENT_KEY,
+    GOOGLE_RECAPTCHA_FORM_SITE_PRODUCTION_KEY:
+      process.env.GOOGLE_RECAPTCHA_FORM_SITE_PRODUCTION_KEY,
     STAGING_SECRET: process.env.STAGING_SECRET,
-    GOOGLE_RECAPTCHA_FORM_SITE_KEY: process.env.GOOGLE_RECAPTCHA_FORM_SITE_KEY,
   },
   async redirects() {
-    return [
-      {
-        source: '/partners-and-allies',
-        destination: '/about-optf#1',
-        permanent: true,
-      },
-      {
-        source: '/legals',
-        destination: '/about-optf#2',
-        permanent: true,
-      },
-      {
-        source: '/annual-reports',
-        destination: '/about-optf#3',
-        permanent: true,
-      },
-      {
-        source: '/funding-and-support',
-        destination: '/about-optf#4',
-        permanent: true,
-      },
-      {
-        source: '/donations',
-        destination: '/about-optf#5',
-        permanent: true,
-      },
-    ];
+    return [];
   },
   async headers() {
     return [

@@ -39,7 +39,7 @@ export default function PostList(props: Props): ReactElement {
     gridStyle === 'blog' && 'lg:max-w-screen-lg',
   ];
 
-  let PageSize = section === 'post' ? 3 : section === 'blog' ? 15 : 6;
+  const PageSize = section === 'post' ? 3 : section === 'blog' ? 15 : 6;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -63,12 +63,12 @@ export default function PostList(props: Props): ReactElement {
         {currentTableData?.map((post) => {
           return (
             <PostCard
+              key={post.id}
               section={section}
               route={generateRoute(post.slug)}
               hoverEffect={hoverEffect}
               compact={compact}
               classes={classNames(cardClasses)}
-              key={post.id}
               {...post}
             />
           );
@@ -82,7 +82,7 @@ export default function PostList(props: Props): ReactElement {
             currentPage={currentPage}
             totalCount={posts.length}
             pageSize={PageSize}
-            onPageChange={(page: any) => setCurrentPage(page)}
+            onPageChange={(page: number) => setCurrentPage(page)}
           />
         )}
       </Container>

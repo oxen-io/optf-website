@@ -75,6 +75,16 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+### Committing changes
+
+Before a commit is accepted the staged changes will be formatted using [prettier](https://prettier.io/) and linted using [eslint](https://eslint.org/). The commit will be reverted if files are formatted or lint errors are returned.
+
+#### Commit Message Convention
+
+This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+Commit messages will be checked using [husky](https://typicode.github.io/husky/#/) and [commitlint](https://commitlint.js.org/).
+
 ### Contentful
 
 - Use the `Link Preview` and `Media` content models for embedding content into blog posts.

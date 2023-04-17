@@ -8,7 +8,7 @@ export interface IPartner {
   border: boolean;
 }
 
-const partnersData = [
+const PARTNERS = [
   {
     name: 'Blueprint',
     image: '/assets/images/partners-blueprint.png',
@@ -74,4 +74,4 @@ const partnersData = [
   },
 ];
 
-export default partnersData;
+export default PARTNERS;

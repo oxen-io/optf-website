@@ -21,7 +21,7 @@ export default function Funding() {
       <List
         list={[
           'Contribute directly to our projects by helping us develop privacy technologies, participating in education initiatives, or providing other services',
-          ' Make relevant contributions to projects we rely on, such as Monero, Signal, or other open-source projects',
+          'Make relevant contributions to projects we rely on, such as Monero, Signal, or other open-source projects',
         ]}
       />
       <br />
