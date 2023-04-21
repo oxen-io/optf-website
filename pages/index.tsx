@@ -29,8 +29,8 @@ export default function Home(props: Props) {
         image={
           <Image
             alt="OPTF logo"
-            width={260}
-            height={85}
+            width={240}
+            height={100}
             src="/assets/images/logo-optf.png"
           />
         }
