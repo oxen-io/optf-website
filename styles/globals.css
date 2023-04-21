@@ -343,8 +343,11 @@ body {
 }
 
 @media only screen and (min-width: 769px) {
-  .gradient-header-btn3 {
+  .gradient-header-btn4 {
     background-image: linear-gradient(90deg, #b8c4ff 0%, #bcb0ff 52%);
+  }
+  .gradient-header-btn3 {
+    background-image: linear-gradient(90deg, #bcaeff 0%, #c09eff 52%);
   }
   .gradient-header-btn2 {
     background-image: linear-gradient(90deg, #b0ecff 0%, #b2dcff 52%);

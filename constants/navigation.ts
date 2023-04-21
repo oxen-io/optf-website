@@ -47,7 +47,7 @@ const NAV_ITEMS: INavList = {
     alt: 'go to research',
     target: '_self',
     rel: 'noopener noreferrer',
-    bgColor: 2,
+    bgColor: 3,
     mobile: null,
   },
   Mission: {
@@ -119,7 +119,7 @@ const NAV_ITEMS: INavList = {
     alt: 'go to about',
     target: '_self',
     rel: 'noopener noreferrer',
-    bgColor: 0,
+    bgColor: 4,
     mobile: false,
   },
   Newsletter: {

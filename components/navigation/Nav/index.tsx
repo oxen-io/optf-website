@@ -75,7 +75,7 @@ export default function Nav(): ReactElement {
           <div
             className={classNames(
               'flex flex-col items-start justify-center text-sm z-10',
-              'lg:text-base lg:flex-row lg:items-center lg:justify-end lg:font-bold lg:text-gray',
+              'lg:text-base lg:flex-row lg:items-center lg:justify-end lg:font-bold',
               'transform transition-all duration-300 bg-white lg:bg-transparent',
               isExpanded
                 ? 'h-full translate-y-0'

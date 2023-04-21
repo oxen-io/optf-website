@@ -92,6 +92,10 @@ export default function NavItem(props: NavItemProps): ReactElement {
         return 'gradient-header-btn2';
       case 2:
         return 'gradient-header-btn3';
+      case 3:
+        return 'gradient-header-btn4';
+      case 4:
+        return 'lg:bg-green-550';
       default:
         return 'lg:bg-green-250';
     }
