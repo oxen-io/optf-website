@@ -62,7 +62,7 @@ const renderFooter = (
   return (
     <div
       className={classNames(
-        'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-6 pb-4 xl:px-8 px-4 lg:border-b border-l border-white border-dashed',
+        'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-6 pb-4 xl:px-8 px-4 border-l lg:border-l-0 lg:border-b  border-white border-dashed',
         'md:pb-8',
         'lg:pt-2'
       )}
