@@ -59,8 +59,6 @@ export default function Research() {
             </div>
             <iframe
               allowFullScreen={true}
-              view="fit"
-              toolbar={0}
               className="my-10 w-100 h-100"
               id="iframepdf"
               width={isSmall ? 290 : 600}

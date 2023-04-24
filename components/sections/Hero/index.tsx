@@ -10,7 +10,7 @@ export default function Hero(): ReactElement {
   return (
     <section className="gradient-home-hero shadow-header">
       <Container
-        hasMinHeight={true}
+        hasMinHeight={false}
         heights={{ small: '100%', medium: '100%', large: '80%' }}
         classes={classNames(
           'lg:flex lg:flex-col flex-col lg:justify-start lg:items-between'
@@ -24,28 +24,28 @@ export default function Hero(): ReactElement {
           <HeroSVG height={isSmall ? 302 : 539.9} />
         </div>
         <div className="flex flex-col pb-3 border-b border-dashed lg:flex-row border-b-white lg:pb-7">
-          <div className="my-5 lg:px-10 lg:pl-16 lg:my-0">
+          <div className="my-5 lg:pl-10 lg:px-6 lg:my-0">
             <Image
               alt="oxen icon"
               src="/assets/images/oxen-icon.png"
-              width={380}
-              height={76}
+              width={500}
+              height={100}
             />
           </div>
-          <div className="my-5 lg:px-10 lg:my-0">
+          <div className="my-5 lg:px-6 lg:my-0">
             <Image
               alt="session icon"
               src="/assets/images/session-logo-black.png"
-              width={380}
-              height={76}
+              width={500}
+              height={100}
             />
           </div>
-          <div className="my-5 lg:px-10 lg:pr-16 lg:my-0">
+          <div className="my-5 lg:px-6 lg:pr-16 lg:my-0">
             <Image
               alt="lokinet icon"
               src="/assets/images/lokinet-icon.png"
-              width={380}
-              height={76}
+              width={500}
+              height={100}
             />
           </div>
         </div>

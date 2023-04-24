@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import classNames from 'classnames';
+import Container from '@/components/Container';
 
 export interface Props {
   icon: ReactElement;
@@ -22,33 +23,35 @@ export default function ProjectsHero(props: Props): ReactElement {
     reverse = false,
   } = props;
   return (
-    <section className="container flex flex-col grid-cols-12 mx-auto my-10 lg:grid">
-      <div
-        className={classNames(
-          'bg-gray-50   col-span-4 p-10 order-last  col-start-8',
-          reverse
-            ? 'md:order-last  md:col-start-8'
-            : 'md:order-none md:col-start-2 '
-        )}
-      >
-        {icon}
-        <h4 className="my-5 text-3xl font-semibold"> {title}</h4>
-        <p className="mb-8 text-lg text-gray-lighter">{subtitle} </p>
-        <a
-          href={ctaLink}
-          className="p-3 text-lg font-bold gradient-button-project rounded-2xl hover:text-white"
+    <Container>
+      <section className="flex flex-col grid-cols-12 mx-auto my-10 lg:grid ">
+        <div
+          className={classNames(
+            'bg-gray-50 col-span-5 p-10 order-last  col-start-8',
+            reverse
+              ? 'lg:order-last  lg:col-start-8'
+              : 'lg:order-none lg:col-start-1'
+          )}
         >
-          {ctaText}
-        </a>
-      </div>
-      <div
-        className={classNames(
-          'col-span-6 flex justify-center items-center',
-          reverse && 'col-start-2'
-        )}
-      >
-        {image}
-      </div>
-    </section>
+          {icon}
+          <h4 className="my-5 text-3xl font-semibold"> {title}</h4>
+          <p className="mb-8 text-lg text-gray-lighter">{subtitle} </p>
+          <a
+            href={ctaLink}
+            className="p-3 text-lg font-bold gradient-button-project rounded-2xl hover:text-white"
+          >
+            {ctaText}
+          </a>
+        </div>
+        <div
+          className={classNames(
+            'col-span-7 flex justify-center items-center',
+            reverse && 'col-start-1'
+          )}
+        >
+          {image}
+        </div>
+      </section>
+    </Container>
   );
 }
