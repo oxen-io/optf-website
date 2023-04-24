@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutOPTF() {
-  const logoClass = 'my-5 lg:border-r border-dashed lg:px-10 lg:pr-16 lg:my-10';
+  const logoClass =
+    'my-5 lg:border-r border-dashed lg:px-10 lg:pr-16 lg:my-10 cursor-pointer';
   return (
     <div>
       <div className="px-3 lg:px-0">
@@ -42,30 +44,42 @@ export default function AboutOPTF() {
           our mission. These projects include:
         </p>
         <div className="flex flex-col pb-3 my-5 lg:flex-row lg:pb-7">
-          <div className={classNames(logoClass)}>
-            <Image
-              alt="session icon"
-              src="/assets/images/session-logo-black.png"
-              width={380}
-              height={76}
-            />
-          </div>
-          <div className={classNames(logoClass)}>
-            <Image
-              alt="oxen icon"
-              src="/assets/images/oxen-icon.png"
-              width={380}
-              height={76}
-            />
-          </div>
-          <div className="my-5 lg:px-10 lg:pr-16 lg:my-10">
-            <Image
-              alt="lokinet icon"
-              src="/assets/images/lokinet-icon.png"
-              width={380}
-              height={76}
-            />
-          </div>
+          <Link passHref href="https://getsession.org/">
+            <a target="_blank" rel="noreferrer">
+              <div className={classNames(logoClass)}>
+                <Image
+                  alt="session icon"
+                  src="/assets/images/session-logo-black.png"
+                  width={380}
+                  height={76}
+                />
+              </div>
+            </a>
+          </Link>
+          <Link passHref href="https://oxen.io/">
+            <a target="_blank" rel="noreferrer">
+              <div className={classNames(logoClass)}>
+                <Image
+                  alt="oxen icon"
+                  src="/assets/images/oxen-icon.png"
+                  width={380}
+                  height={76}
+                />
+              </div>
+            </a>
+          </Link>
+          <Link passHref href="https://lokinet.org/">
+            <a target="_blank" rel="noreferrer">
+              <div className="my-5 cursor-pointer lg:px-10 lg:pr-16 lg:my-10">
+                <Image
+                  alt="lokinet icon"
+                  src="/assets/images/lokinet-icon.png"
+                  width={380}
+                  height={76}
+                />
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
       <h1 className="mb-16 text-2xl font-semibold lg:text-4xl">
