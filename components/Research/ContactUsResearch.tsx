@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function ContactUsResearch() {
   return (
-    <section className="flex flex-col items-start mx-5 lg:mx-32">
+    <section className="mx-10 xl:mx-0">
       <h4 className="mb-10 text-4xl font-semibold">
         Participate and share your experiences
       </h4>
-      <div className="flex flex-col items-center p-5 mb-10 bg-white">
+      <div className="flex flex-col items-center p-5 mb-10 bg-white rounded-xl">
         <p className="mx-4 mb-10 font-thin">
           We are very interested in having journalists, activists and public
           interest lawyers contribute to our research. If you are interested,

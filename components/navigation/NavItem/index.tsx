@@ -13,6 +13,7 @@ export interface DropdownProps {
 }
 
 export interface NavItemProps extends DropdownProps {
+  onClick?: () => void;
   isExpanded?: boolean;
   isIcon?: boolean;
   hoverEffect?: boolean;
@@ -72,6 +73,7 @@ const isActiveNavLink = (router: NextRouter, url: string) => {
 
 export default function NavItem(props: NavItemProps): ReactElement {
   const {
+    onClick,
     title,
     navItem,
     isExpanded,
@@ -116,6 +118,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
           }
         >
           <a
+            onClick={onClick ?? onClick}
             aria-label={navItem.alt}
             target={navItem.target}
             rel={navItem.rel ?? undefined}

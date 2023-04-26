@@ -439,3 +439,16 @@ body {
   animation: rotate 22000ms infinite linear;
   background-color: #634290;
 }
+
+/* substack button highlight on newsletter nav click */
+
+.substack-button-highlight {
+  pointer-events: none;
+  height: 46px;
+  width: 100px;
+  background-color: #d7738b;
+  margin-bottom: -47px;
+  margin-left: 14rem;
+  transition: all 2s;
+  opacity: 0;
+}

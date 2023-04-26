@@ -85,6 +85,7 @@ export default function Nav(): ReactElement {
             {Object.entries(NAVIGATION.NAV_ITEMS).map(([key, value], index) => {
               return (
                 <NavItem
+                  onClick={value?.onClick}
                   key={`${key}${index}`}
                   navItem={value}
                   title={value.name}
