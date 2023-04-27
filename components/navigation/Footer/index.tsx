@@ -151,7 +151,12 @@ export default function Footer(): ReactElement {
         <p className={classNames('leading-none')}>{newsLetterText.subtitle}</p>
         {(isSmall || isMedium) && (
           <div className={classNames('flex justify-center md:justify-start')}>
-            <div className="mt-5" id="custom-substack-embed"></div>
+            <div className="flex-col">
+              <div className="mt-5" id="custom-substack-embed"></div>
+              <div className="tooltipContainer">
+                <div className="tooltip"></div>
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -176,7 +181,12 @@ export default function Footer(): ReactElement {
           </div>
           <div className="flex justify-center">
             {!isSmall && !isMedium ? (
-              <div className="mt-10" id="custom-substack-embed"></div>
+              <div>
+                <div className="mt-10" id="custom-substack-embed"></div>
+                <div className="tooltipContainer">
+                  <div className="tooltip"></div>
+                </div>
+              </div>
             ) : (
               <div className="xs:order-last">
                 {(isSmall || isMedium) &&

@@ -1,3 +1,5 @@
+import { handleTooltip } from '@/utils/tooltip';
+
 export interface INavItem {
   name: string;
   href: string;
@@ -132,17 +134,7 @@ const NAV_ITEMS: INavList = {
     bgColor: 1,
     mobile: null,
     onClick: () => {
-      const container = document.getElementById('custom-substack-embed');
-      const buttonHighlight = document.createElement('div');
-      buttonHighlight.classList.add('substack-button-highlight');
-      const timer = (ms: number) => new Promise((res) => setTimeout(res, ms));
-      (async function () {
-        await timer(700);
-        buttonHighlight.style.opacity = '100';
-        await timer(700);
-        buttonHighlight.style.opacity = '0';
-      })();
-      container?.appendChild(buttonHighlight);
+      handleTooltip('.tooltipContainer', '.tooltip', 'Suscribe here');
     },
   },
   Contact: {

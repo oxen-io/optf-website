@@ -440,15 +440,32 @@ body {
   background-color: #634290;
 }
 
-/* substack button highlight on newsletter nav click */
+/* substack form tooltip */
 
-.substack-button-highlight {
-  pointer-events: none;
-  height: 46px;
-  width: 100px;
-  background-color: #d7738b;
-  margin-bottom: -47px;
-  margin-left: 14rem;
-  transition: all 2s;
+.tooltip {
+  text-align: center;
+  font-size: 13px;
+  width: 130px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px 10px;
+  color: #28283e;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.tooltipContainer {
   opacity: 0;
+  transition: all 500ms;
+}
+
+.tooltipContainer::before {
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  content: '';
+  bottom: 100%;
+  left: 50%;
+  margin-left: 87px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
 }
