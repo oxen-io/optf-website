@@ -19,7 +19,7 @@ export default function Home(props: Props) {
   return (
     <Layout
       metadata={METADATA.HOME}
-      title="OPTF | A global privacy tech non-for-profit based in Australia"
+      title="OPTF | A global privacy tech not-for-profit based in Australia"
     >
       <Hero />
       <PostList section="home" posts={posts} />

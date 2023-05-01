@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
   frame-src 'self' *.youtube.com player.vimeo.com *.twitter.com *.google.com;
   frame-ancestors 'self';
-  script-src-elem 'self' https://substackapi.com/widget.js https://static.zdassets.com *.google.com *.gstatic.com;
+  script-src-elem 'self' https://substackapi.com/widget.js https://www.substackapi.com/widget.js https://static.zdassets.com *.google.com *.gstatic.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
   media-src 'self' *.youtube.com;
