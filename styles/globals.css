@@ -443,20 +443,22 @@ body {
 /* substack form tooltip */
 
 .tooltip {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   width: 130px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 5px;
-  padding: 10px 10px;
-  color: #28283e;
+  padding: 14px 12px 12px;
+  color: black;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .tooltipContainer {
   opacity: 0;
-  transition: all 500ms;
+  transition: all 700ms;
 }
 
 .tooltipContainer::before {

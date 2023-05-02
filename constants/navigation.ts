@@ -134,7 +134,7 @@ const NAV_ITEMS: INavList = {
     bgColor: 1,
     mobile: null,
     onClick: () => {
-      handleTooltip('.tooltipContainer', '.tooltip', 'Suscribe here');
+      handleTooltip('.tooltipContainer', '.tooltip', 'Subscribe here');
     },
   },
   Contact: {
