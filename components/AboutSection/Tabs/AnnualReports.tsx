@@ -37,6 +37,20 @@ export default function AnnualReports() {
             </a>
           </Link>
         </li>
+        <li>
+          <Link href="/assets/pdfs/Annual_Report_2020.pdf">
+            <a className="cursor-pointer text-violet-250 hover:text-blue-400">
+              FY 19/20 Annual Report
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/assets/pdfs/Annual_Report_2021.pdf">
+            <a className="cursor-pointer text-violet-250 hover:text-blue-400">
+              FY 20/21 Annual Report
+            </a>
+          </Link>
+        </li>
       </ul>
     </>
   );
