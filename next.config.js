@@ -9,7 +9,7 @@ const ContentSecurityPolicy = `
     process.env.NODE_ENV == 'development'
       ? "'unsafe-eval' 'unsafe-inline' "
       : ''
-  }*.ctfassets.net *.youtube.com *.twitter.com;
+  }*.ctfassets.net *.youtube.com *.twitter.com https://substackapi.com/widget.js *.google.com *.gstatic.com;
   child-src 'self' *.ctfassets.net *.oxen.zendesk.com *.youtube.com player.vimeo.com *.twitter.com *.google.com;
   frame-src 'self' *.youtube.com player.vimeo.com *.twitter.com *.google.com;
   frame-ancestors 'self';
