@@ -73,9 +73,6 @@ const config = {
       process.env.GOOGLE_RECAPTCHA_FORM_SITE_PRODUCTION_KEY,
     STAGING_SECRET: process.env.STAGING_SECRET,
   },
-  async redirects() {
-    return [];
-  },
   async headers() {
     return [
       {
@@ -88,7 +85,16 @@ const config = {
     domains: ['downloads.ctfassets.net', 'images.ctfassets.net'],
   },
   serverRuntimeConfig: {
-    redirects: [],
+    redirects: [
+      {
+        source: '/transparency',
+        destination: '/transparency-report',
+        permanent: true,
+      },
+    ],
+  },
+  async redirects() {
+    return this.serverRuntimeConfig.redirects;
   },
   async rewrites() {
     return [

@@ -84,10 +84,6 @@ const METADATA = {
     DESCRIPTION:
       "Privacy Policy | Learn about OPTF's commitment to protecting your privacy with our Privacy Policy.",
   },
-  TRANSPARENCY: {
-    TYPE: 'article',
-    DESCRIPTION: 'Transparency Report | OPTF',
-  },
   FEEDBACK: {
     TYPE: 'article',
     DESCRIPTION:

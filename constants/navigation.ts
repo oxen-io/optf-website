@@ -71,15 +71,6 @@ const NAV_ITEMS: INavList = {
     bgColor: 0,
     mobile: true,
   },
-  TransparencyReport: {
-    name: 'Transparency report',
-    href: '/transparency',
-    alt: 'go to transparency report',
-    target: '_self',
-    rel: 'noopener noreferrer',
-    bgColor: 0,
-    mobile: true,
-  },
   Legals: {
     name: 'Legals',
     href: '/legals',
@@ -124,6 +115,15 @@ const NAV_ITEMS: INavList = {
     rel: 'noopener noreferrer',
     bgColor: 4,
     mobile: false,
+  },
+  TransparencyReport: {
+    name: 'Transparency Report',
+    href: '/transparency-report',
+    alt: 'go to transparency report',
+    target: '_self',
+    rel: 'noopener noreferrer',
+    bgColor: 0,
+    mobile: true,
   },
   Newsletter: {
     name: 'Newsletter',
