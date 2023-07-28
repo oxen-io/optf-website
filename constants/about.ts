@@ -19,6 +19,11 @@ const TABS: Array<IAboutTab> = [
   },
   { name: 'Funding', metadata: 'FUNDING', route: '/funding-and-support' },
   { name: 'Donations', metadata: 'DONATIONS', route: '/donations' },
+  {
+    name: 'Transparency Report',
+    metadata: 'TRANSPARENCY_REPORT',
+    route: '/transparency-report',
+  },
 ];
 
 const ABOUT = {
