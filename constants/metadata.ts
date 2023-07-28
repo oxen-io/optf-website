@@ -123,6 +123,11 @@ const METADATA = {
     DESCRIPTION:
       "Donations | Support the OPTF's mission to promote privacy, free software, and open internet by making a donation.",
   },
+  TRANSPARENCY_REPORT: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Transparency Report | Stay informed and learn about our achievements as we work towards building a safer and more secure digital world.',
+  },
 };
 
 export default METADATA;
