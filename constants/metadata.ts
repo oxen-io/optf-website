@@ -126,7 +126,7 @@ const METADATA = {
   TRANSPARENCY_REPORT: {
     TYPE: 'article',
     DESCRIPTION:
-      'Transparency Report | Stay informed and learn about our achievements as we work towards building a safer and more secure digital world.',
+      'Transparency Report | Dated documentation recording outreach from a law enforcement agency to Session and an outline of The OPTF’s responses.',
   },
 };
 
