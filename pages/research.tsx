@@ -64,6 +64,7 @@ export default function Research() {
               width={isSmall ? 290 : 600}
               height={isSmall ? 500 : 780}
               src="/assets/pdfs/Ground_Safe_2021.pdf#toolbar=0&navpanes=0&view=FitH"
+              style={{ width: isSmall ? '95vw' : undefined }}
             ></iframe>
           </section>
           <ContactUsResearch />

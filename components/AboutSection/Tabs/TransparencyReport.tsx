@@ -32,6 +32,7 @@ export default function TransparencyReport() {
         width={isSmall ? 290 : 600}
         height={isSmall ? 500 : 780}
         src="/assets/pdfs/OPTF Transparency Report April 2023 to June 2023.pdf#toolbar=0&navpanes=0&view=FitH"
+        style={{ width: isSmall ? '95vw' : undefined }}
       ></iframe>
       <br />
       <h4 className="mb-5 text-xl font-semibold lg:text-3xl">

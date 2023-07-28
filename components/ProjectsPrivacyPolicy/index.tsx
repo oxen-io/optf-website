@@ -41,6 +41,7 @@ export default function ProjectsPrivacyPolicy(props: Props) {
               width={isSmall ? 290 : 600}
               height={isSmall ? 500 : 780}
               src={src}
+              style={{ width: isSmall ? '95vw' : undefined }}
             ></iframe>
           ) : (
             <Container
