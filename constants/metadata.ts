@@ -35,9 +35,9 @@ const METADATA = {
   OG_TYPE: 'website',
   OG_IMAGE: {
     URL: '/site-banner.png',
-    WIDTH: 260,
-    HEIGHT: 85,
-    ALT: 'OPTF logo',
+    WIDTH: 1200,
+    HEIGHT: 630,
+    ALT: 'OPTF logo on a white background',
   },
   LOCALE: 'en_US',
   FAVICON: {
