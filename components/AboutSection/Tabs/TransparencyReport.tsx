@@ -42,7 +42,7 @@ export default function TransparencyReport() {
         <li>
           <Link href="/assets/pdfs/OPTF_Transparency_Report_Q3_2023.pdf">
             <a className="cursor-pointer text-violet-250 hover:text-blue-400">
-              July 1 2023 - September 30 2023
+              July 1 2023 — September 30 2023
             </a>
           </Link>
         </li>
