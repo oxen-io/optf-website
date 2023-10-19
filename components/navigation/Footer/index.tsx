@@ -11,7 +11,7 @@ const headingClasses = classNames(
   'text-white uppercase text-xl font-bold mb-2'
 );
 const linkClasses = classNames(
-  'text-sm xl:text-base  mr-2',
+  'py-1.5 md:text-lg mr-2',
   'lg:py-0 lg:my-0',
   'transition-colors duration-300',
   'text-white'
@@ -23,9 +23,7 @@ const socialLinkClasses = classNames(
 const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
 const renderSocials = (
-  <div
-    className={classNames('flex flex-col w-1/2 mb-4', 'md:w-1/4', 'lg:w-1/3')}
-  >
+  <div className={classNames('flex flex-col w-full mb-4', 'lg:w-1/3')}>
     <h3 className={headingClasses}>Socials</h3>
     <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
       <div className={classNames('flex')}>
@@ -62,19 +60,11 @@ const renderFooter = (
   return (
     <div
       className={classNames(
-        'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-6 pb-4 xl:px-8 px-4 border-l lg:border-l-0 lg:border-b  border-white border-dashed',
-        'md:pb-8',
-        'lg:pt-2'
+        'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-2 pb-4 xl:px-8 px-4  border-white border-dashed lg:border-b'
       )}
     >
       {(isLarge || isHuge || isEnormous) && renderSocials}
-      <div
-        className={classNames(
-          'flex flex-col w-1/2 xl:mb-4',
-          'md:w-1/4',
-          'lg:w-1/3'
-        )}
-      >
+      <div className={classNames('flex flex-col w-full xl:mb-4', 'lg:w-1/3')}>
         <Link href="https://getsession.org/">
           <a className={linkClasses} target="_blank" rel="noopener noreferrer">
             Session
@@ -91,16 +81,8 @@ const renderFooter = (
           </a>
         </Link>
       </div>
-      <div
-        className={classNames('flex w-full', 'md:w-1/2', 'lg:block lg:w-1/3')}
-      >
-        <div
-          className={classNames(
-            'flex flex-col w-1/2 mb-4',
-            'md:w-1/4',
-            'lg:w-2/3'
-          )}
-        >
+      <div className={classNames('flex w-full', 'lg:block lg:w-1/3')}>
+        <div className={classNames('flex flex-col w-full mb-4', 'lg:w-2/3')}>
           <Link href="/contact-us">
             <a className={linkClasses} rel="noopener noreferrer">
               Contact us
@@ -162,13 +144,12 @@ export default function Footer(): ReactElement {
       </div>
       <div
         className={classNames(
-          'lg:flex lg:justify-end lg:max-w-screen-xl lg:mx-auto py-7'
+          'lg:flex lg:justify-end lg:max-w-screen-xl lg:mx-auto py-6 md:py-0 lg:py-7'
         )}
       >
         <div
           className={classNames(
-            'text-white font-helvetica md:px-10 md:py-16 lg:border-r border-dashed',
-            'md:py-12'
+            'text-white font-helvetica md:px-10 md:pt-8 lg:border-r border-dashed'
           )}
         >
           <div className="hidden xl:block">
@@ -179,7 +160,7 @@ export default function Footer(): ReactElement {
               {newsLetterText.subtitle}
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             {!isSmall && !isMedium ? (
               <div>
                 <div className="mt-10" id="custom-substack-embed"></div>
@@ -193,18 +174,6 @@ export default function Footer(): ReactElement {
                   renderFooter(isSmall, isMedium, isLarge, isHuge, isEnormous)}
               </div>
             )}
-            <Link href="https://www.acnc.gov.au/charity/charities/26214f82-a2cd-e811-a962-000d3ad24182/profile">
-              <a className="flex items-center justify-center mx-8 cursor-pointer xl:ml-10 xl:mr-0">
-                <Image
-                  alt="acnc"
-                  width={180}
-                  height={180}
-                  src={
-                    '/assets/images/ACNC-Registered-Charity-Logo_reverse.png'
-                  }
-                />
-              </a>
-            </Link>
           </div>
         </div>
 
