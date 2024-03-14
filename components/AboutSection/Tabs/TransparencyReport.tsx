@@ -31,7 +31,7 @@ export default function TransparencyReport() {
         id="iframepdf"
         width={isSmall ? 290 : 600}
         height={isSmall ? 500 : 780}
-        src="/assets/pdfs/OPTF_Transparency_Report_Q3_2023.pdf#toolbar=0&navpanes=0&view=FitH"
+        src="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q4_2023.pdf#toolbar=0&navpanes=0&view=FitH"
         style={{ width: isSmall ? '95vw' : undefined }}
       ></iframe>
       <br />
@@ -40,14 +40,21 @@ export default function TransparencyReport() {
       </h4>
       <ul className="pb-5 ml-10 list-disc">
         <li>
-          <Link href="/assets/pdfs/OPTF_Transparency_Report_Q3_2023.pdf">
+          <Link href="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q4_2023.pdf">
+            <a className="cursor-pointer text-violet-250 hover:text-blue-400">
+              October 1 — December 31 2023
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q3_2023.pdf">
             <a className="cursor-pointer text-violet-250 hover:text-blue-400">
               July 1 2023 — September 30 2023
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/assets/pdfs/OPTF_Transparency_Report_Q2_2023.pdf">
+          <Link href="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q2_2023.pdf">
             <a className="cursor-pointer text-violet-250 hover:text-blue-400">
               April 1 2023 — June 30 2023
             </a>
