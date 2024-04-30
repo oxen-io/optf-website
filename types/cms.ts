@@ -59,12 +59,19 @@ export interface IFetchBlogEntriesReturn extends IFetchEntriesReturn {
   entries: Array<IPost>;
 }
 
-export interface IPage {
+export type IPageMetadata = {
+  metaDescription: string;
+  metaType: 'website' | 'article';
+  metaPublishedTime?: string;
+};
+
+export type IPage = {
   title: string;
   slug: string;
   headline: string | null;
   body: Document;
-}
+  useExactTitle?: boolean;
+} & IPageMetadata;
 
 export function isPage(object: unknown): object is IPage {
   return Object.prototype.hasOwnProperty.call(object, 'headline');
@@ -73,3 +80,10 @@ export function isPage(object: unknown): object is IPage {
 export interface IFetchPagesReturn extends IFetchEntriesReturn {
   entries: Array<IPage>;
 }
+
+export type Settings = {
+  aboutPageTabs: Array<{
+    title: string;
+    slug: string;
+  }>;
+};

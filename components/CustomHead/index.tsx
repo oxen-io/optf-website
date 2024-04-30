@@ -1,14 +1,23 @@
-import METADATA, { IPageMetadata } from '@/constants/metadata';
+import METADATA, { CustomMetadata } from '@/constants/metadata';
 
 import Head from 'next/head';
 import { ReactElement } from 'react';
 import { isLocal } from '@/utils/links';
 import { useRouter } from 'next/router';
+import { IPageMetadata } from '@/types/cms';
 
 interface Props {
   title?: string;
-  metadata?: IPageMetadata;
+  metadata?: CustomMetadata;
 }
+
+export const parseMetadata = (pageMetadata: IPageMetadata): CustomMetadata => {
+  return {
+    DESCRIPTION: pageMetadata.metaDescription,
+    TYPE: pageMetadata.metaType,
+    PUBLISHED_TIME: pageMetadata.metaPublishedTime,
+  };
+};
 
 export default function CustomHead(props: Props): ReactElement {
   const router = useRouter();

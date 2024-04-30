@@ -15,6 +15,7 @@ import {
   IPage,
   IPost,
   ITagList,
+  Settings,
 } from '@/types/cms';
 import { format, parseISO } from 'date-fns';
 
@@ -27,6 +28,22 @@ const client: ContentfulClientApi = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
   host: 'cdn.contentful.com',
 });
+
+export async function fetchSettings(): Promise<Settings> {
+  const _entries = await client.getEntries<{
+    aboutPageList: Array<{ fields: { title: string; slug: string } }>;
+  }>({
+    content_type: 'settings',
+    limit: 1,
+  });
+  const { aboutPageList } = _entries.items[0].fields;
+  const aboutPageTabs = aboutPageList.map(({ fields }) => {
+    return { title: fields.title, slug: fields.slug };
+  });
+  return {
+    aboutPageTabs,
+  };
+}
 
 export async function fetchTagList(): Promise<ITagList> {
   const _tags = await client.getTags();
@@ -104,7 +121,7 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
   const taglist = await fetchTagList();
 
   if (_entries.length > 0) {
-    let entry = _entries[0];
+    const entry = _entries[0];
     if (entry.sys.contentType.sys.id === 'post') {
       return convertPost(entry, taglist);
     }
@@ -130,7 +147,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
   const taglist = await fetchTagList();
 
   if (_entries.length > 0) {
-    let entry = _entries[0];
+    const entry = _entries[0];
     if (entry.sys.contentType.sys.id === 'post') {
       return convertPost(entry, taglist);
     }
@@ -199,10 +216,11 @@ async function generateEntries(
   entries: EntryCollection<unknown>,
   entryType: 'post' | 'page'
 ): Promise<IFetchEntriesReturn> {
-  let _entries: any = [];
+  let _entries: Array<IPost | IPage> = [];
   if (entries && entries.items && entries.items.length > 0) {
     switch (entryType) {
       case 'post':
+        // eslint-disable-next-line no-case-declarations -- TODO: refactor
         const taglist = await fetchTagList();
         _entries = entries.items.map((entry) => convertPost(entry, taglist));
         break;
@@ -293,5 +311,8 @@ function convertPage(rawData: any): IPage {
     slug: rawPage.slug,
     headline: rawPage.headline ?? null,
     body: rawPage.body,
+    metaDescription: rawPage.metaDescription ?? '',
+    metaType: rawPage.metaType ?? 'website',
+    metaPublishedTime: rawPage.metaPublishedTime ?? '',
   };
 }

@@ -2,13 +2,13 @@ import { Footer, Nav } from '@/components/navigation';
 import { ReactElement, ReactNode, useEffect, useState } from 'react';
 
 import CustomHead from '@/components/CustomHead';
-import { IPageMetadata } from '@/constants/metadata';
+import { CustomMetadata } from '@/constants/metadata';
 import LockedPage from '@/components/LockedPage';
 import { useRouter } from 'next/router';
 
 interface Props {
   title?: string;
-  metadata?: IPageMetadata;
+  metadata?: CustomMetadata;
   children: ReactNode;
 }
 
