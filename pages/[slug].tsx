@@ -57,7 +57,6 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     content.body = await generateLinkMeta(content.body);
     const { aboutPageTabs } = await fetchSettings();
 
-    console.log(aboutPageTabs);
     const props: Props = { content, aboutPageTabs };
 
     if (isPost(content)) {

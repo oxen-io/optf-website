@@ -170,7 +170,6 @@ export default function ContactUsForm() {
                     : process.env.GOOGLE_RECAPTCHA_FORM_SITE_DEVELOPMENT_KEY
                 )}
                 onChange={(value) => {
-                  console.log('onchange funciton');
                   setFieldValue('recaptcha', value);
                 }}
               />
