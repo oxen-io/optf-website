@@ -1,9 +1,11 @@
 import { GetStaticPaths, GetStaticPropsContext } from 'next';
-import { IPage, IPost, isPost } from '@/types/cms';
+import { ILegals, IPage, IPost, Settings, isPost } from '@/types/cms';
 import {
   fetchBlogEntries,
   fetchEntryBySlug,
+  fetchLegals,
   fetchPages,
+  fetchSettings,
   generateLinkMeta,
 } from '@/services/cms';
 
@@ -11,15 +13,25 @@ import BlogPost from '@/components/BlogPost';
 import { CMS } from '@/constants';
 import { ReactElement } from 'react';
 import RichPage from '@/components/RichPage';
+import AboutLayout from '@/components/AboutSection/Layout';
+import React from 'react';
 
 interface Props {
   content: IPage | IPost;
+  aboutPageTabs: Array<AboutPageTab>;
   otherPosts?: IPost[];
   allPosts?: IPost[];
+  items?: Array<ILegals>;
 }
 
+export type AboutPageTab = {
+  title: string;
+  slug: string;
+};
+
 export default function Page(props: Props): ReactElement {
-  const { content } = props;
+  const { content, aboutPageTabs } = props;
+
   if (isPost(content)) {
     return (
       <BlogPost
@@ -28,20 +40,25 @@ export default function Page(props: Props): ReactElement {
         otherPosts={props.otherPosts}
       />
     );
-  } else {
-    return <RichPage page={content} />;
+  } else if (aboutPageTabs.find((tab) => tab.slug === content.slug)) {
+    return (
+      <AboutLayout tabs={aboutPageTabs} page={content} items={props.items} />
+    );
   }
+  return <RichPage page={content} />;
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = String(context.params?.slug);
-
   try {
     const content: IPage | IPost = await fetchEntryBySlug(slug);
 
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);
-    const props: Props = { content };
+    const { aboutPageTabs } = await fetchSettings();
+
+    console.log(aboutPageTabs);
+    const props: Props = { content, aboutPageTabs };
 
     if (isPost(content)) {
       // we want 6 posts excluding the current one if it's found
@@ -53,6 +70,8 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         .slice(0, 6);
       props.otherPosts = otherPosts;
       props.allPosts = posts;
+    } else if (slug === 'legals') {
+      props.items = await fetchLegals();
     }
 
     return {

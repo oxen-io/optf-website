@@ -17,40 +17,6 @@ export default function Donations() {
 
   return (
     <div className="relative mb-14">
-      <p>
-        Our work benefits hundreds of thousands of people around the world. Your
-        donation will help fund research projects, education initiatives, and
-        the continued development our open-source and secure software (Session,
-        Lokinet).
-      </p>
-      <br />
-      <p>
-        We offer multiple donation methods, so please be sure to research each
-        option and whichever one best suits you.
-      </p>
-      <br />
-      <p>
-        <i>
-          Note that although we are a registered charity, donations to the OPTF
-          are not tax deductible.
-        </i>
-      </p>
-      <br />
-      <p>Donate using your local currency: </p>
-      <br />
-      <ul className="pb-5 ml-10 list-disc">
-        <li>
-          <b>Donate on Donorbox.org: </b>
-          <Link href="https://donorbox.org/optf-donation">
-            <a className="cursor-pointer text-violet-250 hover:text-blue-400">
-              https://donorbox.org/optf-donation
-            </a>
-          </Link>
-        </li>
-        <br />
-      </ul>
-      <p>Donate using the following cryptocurrency wallet addresses:</p>
-      <br />
       <ul className="pb-5 ml-10 break-words list-disc">
         <li>
           <b className="whitespace-nowrap"> Oxen Address:</b>

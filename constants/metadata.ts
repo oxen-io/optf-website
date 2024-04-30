@@ -1,4 +1,4 @@
-export interface IPageMetadata {
+export interface CustomMetadata {
   DESCRIPTION: string;
   TYPE?: string;
   CANONICAL_URL?: string;
@@ -88,41 +88,6 @@ const METADATA = {
     TYPE: 'article',
     DESCRIPTION:
       'Feedback | Have feedback or suggestions on how we can improve our mission and services? Share your thoughts with us! ',
-  },
-  ABOUT: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'About the OPTF | Learn about our mission, meet our team, and explore technology projects to build a safer and more secure digital world.',
-  },
-  PARTNERS_AND_ALLIES: {
-    TYPE: 'article',
-    DESCRIPTION:
-      "Partners and Allies | Discover the organisations and allies supporting OPTF's mission for a free and open internet.",
-  },
-  LEGALS: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'Legals | Stay informed and up-to-date on the OPTF’s legal policies as we work to build a safer and more secure digital world.',
-  },
-  ANNUAL_REPORTS: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'Annual Reports | Stay informed and learn about our achievements as we work towards building a safer and more secure digital world.',
-  },
-  FUNDING: {
-    TYPE: 'article',
-    DESCRIPTION:
-      "Funding | Apply for funding from from the OPTF to support your project or organisation's mission to promote privacy, free software, and open internet.",
-  },
-  DONATIONS: {
-    TYPE: 'article',
-    DESCRIPTION:
-      "Donations | Support the OPTF's mission to promote privacy, free software, and open internet by making a donation.",
-  },
-  TRANSPARENCY_REPORT: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'Transparency Report | Dated documentation recording outreach from a law enforcement agency to Session and an outline of The OPTF’s responses.',
   },
 };
 

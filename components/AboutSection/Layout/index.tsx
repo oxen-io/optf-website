@@ -1,67 +1,58 @@
 import Banner from '@/components/Banner';
 import Container from '@/components/Container';
-import { Layout } from '@/components/ui';
-import { ABOUT, METADATA } from '@/constants';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import { ReactNode } from 'react';
-import { IAboutTab } from '@/constants/about';
-import { IMetadata, IPageMetadata } from '@/constants/metadata';
-
-export const getTabProperty = (
-  tab: number,
-  property: 'name' | 'metadata' | 'route'
-) => {
-  if (tab < 0 || tab >= ABOUT.TABS.length) {
-    return ABOUT.TABS[0][`${property}` as keyof IAboutTab];
-  }
-
-  return ABOUT.TABS[tab][`${property}` as keyof IAboutTab];
-};
+import { AboutPageTab } from '@/pages/[slug]';
+import { ILegals, IPage } from '@/types/cms';
+import RichBody from '@/components/RichBody';
+import { Layout } from '@/components/ui';
+import { parseMetadata } from '@/components/CustomHead';
+import SpecialTabContent from '../Tabs/SpecialTabContent';
 
 type Props = {
-  tab: number;
-  children: ReactNode;
+  page: IPage;
+  tabs: Array<AboutPageTab>;
+  items?: Array<ILegals>;
 };
 
 export default function AboutLayout(props: Props) {
-  const { tab, children } = props;
+  const { page, tabs, items } = props;
+  const pageTitle = page.useExactTitle
+    ? page.title
+    : `OPTF | ${page.title} | Privacy is a fundamental right.`;
   const router = useRouter();
-  const pageMetadata = `${getTabProperty(tab, 'metadata')}` as keyof IMetadata;
-
   return (
-    <Layout
-      title={`OPTF | ${getTabProperty(
-        tab,
-        'name'
-      )} | Privacy is a fundamental right.`}
-      metadata={METADATA[pageMetadata] as IPageMetadata}
-    >
+    <Layout title={pageTitle} metadata={parseMetadata(page)}>
       <Banner
         title="Meet the Oxen Privacy Tech Foundation"
         subtitle="We’re a passionate team of advocates, creatives, and engineers building a world where the internet is open, software is free and accessible, and your privacy is protected."
       />
       <div className="sticky top-0 z-20 pt-5 font-semibold bg-white border-b-2 border-dashed lg:flex-row">
-        <Container classes="container flex flex-wrap items-center justify-start lg:text-lg  bg-white">
-          {ABOUT.TABS.map((item, index) => {
+        <Container classes="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:text-lg bg-white">
+          {tabs.map(({ title, slug }, index) => {
             return (
               <h3
-                key={item.name + index}
+                key={title + index}
                 className={classNames(
-                  'mr-7  pb-2 cursor-pointer lg:my-0 lg:hover:border-b-3 lg:hover:border-b-violet-250 lg:hover:pt-0.5',
-                  tab === index && 'border-b-3 border-b-violet-250 pt-0.5'
+                  'mr-7 pb-2 cursor-pointer lg:my-0 lg:border-b-3  lg:hover:border-b-violet-250 lg:pt-0.5',
+                  slug === page.slug
+                    ? 'border-b-3 border-b-violet-250'
+                    : 'border-b-[rgb(0,0,0,0)]'
                 )}
                 onClick={() => {
-                  router.push(getTabProperty(index, 'route'));
+                  router.push(slug);
                 }}
               >
-                {item.name}
+                {title}
               </h3>
             );
           })}
         </Container>
       </div>
-      <Container classes="my-8 p-3">{children}</Container>
+      <Container classes="my-8 p-3">
+        <RichBody body={page?.body} headingClasses={'mb-5 font-semibold'} />
+        <SpecialTabContent slug={page.slug} items={items} />
+      </Container>
     </Layout>
   );
 }
