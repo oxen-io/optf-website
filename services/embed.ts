@@ -1,7 +1,7 @@
 import { Element } from '@/types/himalaya';
 import sanitize from '@/utils/sanitize';
 
-export interface IEmbed {
+export interface Embed {
   title: string;
   url: string;
   description?: string;
@@ -10,11 +10,11 @@ export interface IEmbed {
   isExternalVideo?: boolean;
 }
 
-function extractMetadata(html: string): IEmbed {
+function extractMetadata(html: string): Embed {
   const himalaya = require('himalaya');
   html = html.trim();
   const nodes = himalaya.parse(html);
-  const data: IEmbed = { title: '', url: '' };
+  const data: Embed = { title: '', url: '' };
 
   nodes.forEach((node: Element) => {
     if (node.type === 'element' && node.tagName === 'html') {
@@ -64,7 +64,7 @@ function extractMetadata(html: string): IEmbed {
   return data;
 }
 
-async function fetchMetadata(targetUrl: string): Promise<IEmbed> {
+async function fetchMetadata(targetUrl: string): Promise<Embed> {
   const response = await fetch(targetUrl);
   let html = await response.text();
   const data = extractMetadata(html);
@@ -72,7 +72,7 @@ async function fetchMetadata(targetUrl: string): Promise<IEmbed> {
 }
 
 // https://noembed.com/#supported-sites
-export interface INoembed extends IEmbed {
+export interface Noembed extends Embed {
   site_name: string;
   html: string;
   // below are not guaranteed to return
@@ -86,7 +86,7 @@ export interface INoembed extends IEmbed {
   // version?: string;
 }
 
-export function isNoembed(object: unknown): object is INoembed {
+export function isNoembed(object: unknown): object is Noembed {
   return Object.prototype.hasOwnProperty.call(object, 'html');
 }
 
@@ -94,7 +94,7 @@ export function isNoembed(object: unknown): object is INoembed {
 // fallback is fetch and render metadata on server at build time
 export async function fetchContent(
   targetUrl: string
-): Promise<IEmbed | INoembed> {
+): Promise<Embed | Noembed> {
   const fetchUrl = `https://www.noembed.com/embed?url=${encodeURIComponent(
     targetUrl
   )}`;
@@ -119,8 +119,8 @@ export async function fetchContent(
   return content;
 }
 
-function convertToNoembed(rawData: any): INoembed {
-  const noembed: INoembed = {
+function convertToNoembed(rawData: any): Noembed {
+  const noembed: Noembed = {
     title: sanitize(rawData.title),
     url: sanitize(rawData.url),
     site_name: sanitize(rawData.provider_name),

@@ -1,13 +1,13 @@
 import { mkdirSync, writeFileSync } from 'fs';
 
 import { Feed } from 'feed';
-import { IPost } from '../types/cms';
+import { Post } from '../types/cms';
 import METADATA from '@/constants/metadata';
 import rimraf from 'rimraf';
 
 const baseUrl = METADATA.HOST_URL;
 
-export default function generateRSSFeed(posts: IPost[]) {
+export default function generateRSSFeed(posts: Post[]) {
   const date = new Date();
   const feed = new Feed({
     title: 'OPTF Blog',

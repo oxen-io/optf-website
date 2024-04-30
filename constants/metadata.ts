@@ -93,4 +93,4 @@ const METADATA = {
 
 export default METADATA;
 
-export type IMetadata = typeof METADATA;
+export type MetadataType = typeof METADATA;

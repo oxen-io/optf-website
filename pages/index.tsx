@@ -2,7 +2,7 @@ import { Hero } from '@/components/sections';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import { CMS } from '@/constants';
-import { IPost } from '@/types/cms';
+import { Post } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
 import { PostList } from '@/components/posts';
@@ -10,7 +10,7 @@ import Banner from '@/components/Banner';
 import { METADATA } from '@/constants';
 
 interface Props {
-  posts: IPost[];
+  posts: Post[];
 }
 
 export default function Home(props: Props) {

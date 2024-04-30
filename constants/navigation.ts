@@ -1,22 +1,22 @@
 import { handleTooltip } from '@/utils/tooltip';
 
-export interface INavItem {
+export interface NavItem {
   name: string;
   href: string;
   alt: string;
   target: '_self' | '_blank';
   rel?: string;
-  items?: INavList;
+  items?: NavList;
   bgColor: number;
   mobile?: boolean | null;
   onClick?: () => void;
 }
 
-interface INavList {
-  [key: string]: INavItem; // key is what user sees
+interface NavList {
+  [key: string]: NavItem; // key is what user sees
 }
 
-const NAV_ITEMS: INavList = {
+const NAV_ITEMS: NavList = {
   Projects: {
     name: 'Projects',
     href: '/projects',

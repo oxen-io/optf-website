@@ -1,15 +1,15 @@
-import { ILegals } from '@/types/cms';
+import { Legals } from '@/types/cms';
 import ProjectsPrivacyPolicy from '../../ProjectsPrivacyPolicy';
 
 export interface Props {
-  items: ILegals[];
+  items: Legals[];
 }
 
 export default function Legals(props: Props) {
   const { items } = props;
   return (
     <>
-      {items.map((item: ILegals) => {
+      {items.map((item: Legals) => {
         return (
           <ProjectsPrivacyPolicy
             key={item.title}

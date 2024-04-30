@@ -4,14 +4,15 @@ import Head from 'next/head';
 import { ReactElement } from 'react';
 import { isLocal } from '@/utils/links';
 import { useRouter } from 'next/router';
-import { IPageMetadata } from '@/types/cms';
+import { PageMetadata } from '@/types/cms';
 
 interface Props {
   title?: string;
+  useExactTitle?: boolean;
   metadata?: CustomMetadata;
 }
 
-export const parseMetadata = (pageMetadata: IPageMetadata): CustomMetadata => {
+export const parseMetadata = (pageMetadata: PageMetadata): CustomMetadata => {
   return {
     DESCRIPTION: pageMetadata.metaDescription,
     TYPE: pageMetadata.metaType,

@@ -1,4 +1,4 @@
-import { ILegals } from '@/types/cms';
+import { Legals } from '@/types/cms';
 import AboutOPTF from './AboutOPTF';
 import AnnualReports from './AnnualReports';
 import Donations from './Donations';
@@ -11,7 +11,7 @@ export default function SpecialTabContent({
   items,
 }: {
   slug: string;
-  items?: Array<ILegals>;
+  items?: Array<Legals>;
 }) {
   switch (slug) {
     case 'about-optf':

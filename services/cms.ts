@@ -6,15 +6,15 @@ import {
   createClient,
 } from 'contentful';
 import {
-  IAuthor,
-  IFetchBlogEntriesReturn,
-  IFetchEntriesReturn,
-  IFetchPagesReturn,
-  IFigureImage,
-  ILegals,
-  IPage,
-  IPost,
-  ITagList,
+  Author,
+  FetchBlogEntriesReturn,
+  FetchEntriesReturn,
+  FetchPagesReturn,
+  FigureImage,
+  Legals,
+  Page,
+  Post,
+  TagList,
   Settings,
 } from '@/types/cms';
 import { format, parseISO } from 'date-fns';
@@ -45,9 +45,9 @@ export async function fetchSettings(): Promise<Settings> {
   };
 }
 
-export async function fetchTagList(): Promise<ITagList> {
+export async function fetchTagList(): Promise<TagList> {
   const _tags = await client.getTags();
-  const tags: ITagList = {};
+  const tags: TagList = {};
   _tags.items.forEach((tag) => {
     tags[tag.sys.id] = tag.name;
   });
@@ -56,7 +56,7 @@ export async function fetchTagList(): Promise<ITagList> {
 
 export async function fetchBlogEntries(
   quantity = 100
-): Promise<IFetchBlogEntriesReturn> {
+): Promise<FetchBlogEntriesReturn> {
   const _entries = await client.getEntries({
     content_type: 'post', // only fetch blog post entry
     order: '-fields.date',
@@ -65,7 +65,7 @@ export async function fetchBlogEntries(
 
   const results = await generateEntries(_entries, 'post');
   return {
-    entries: results.entries as Array<IPost>,
+    entries: results.entries as Array<Post>,
     total: results.total,
   };
 }
@@ -73,7 +73,7 @@ export async function fetchBlogEntries(
 export async function fetchBlogEntriesByTag(
   tag: string,
   quantity = 100
-): Promise<IFetchBlogEntriesReturn> {
+): Promise<FetchBlogEntriesReturn> {
   const taglist = await fetchTagList();
 
   const id = Object.entries(taglist).filter(([_, value]) => {
@@ -91,7 +91,7 @@ export async function fetchBlogEntriesByTag(
   if (_entries.items.length > 0) {
     const results = await generateEntries(_entries, 'post');
     return {
-      entries: results.entries as Array<IPost>,
+      entries: results.entries as Array<Post>,
       total: results.total,
     };
   }
@@ -99,7 +99,7 @@ export async function fetchBlogEntriesByTag(
   return Promise.reject(new Error(`Failed to fetch entries for ${tag}`));
 }
 
-export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
+export async function fetchEntryPreview(slug: string): Promise<Page | Post> {
   const _client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
     accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
@@ -133,7 +133,7 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
   return Promise.reject(new Error(`Failed to fetch preview for ${slug}`));
 }
 
-export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
+export async function fetchEntryBySlug(slug: string): Promise<Page | Post> {
   const _pages = await client.getEntries({
     content_type: 'page',
     'fields.slug': slug,
@@ -159,7 +159,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
   return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
 }
 
-function convertPost(rawData: any, taglist: ITagList): IPost {
+function convertPost(rawData: any, taglist: TagList): Post {
   const rawPost = rawData.fields;
   const rawFeatureImage = rawPost?.featureImage
     ? rawPost?.featureImage.fields
@@ -182,7 +182,7 @@ function convertPost(rawData: any, taglist: ITagList): IPost {
   };
 }
 
-function convertImage(rawImage: any): IFigureImage {
+function convertImage(rawImage: any): FigureImage {
   return {
     imageUrl: rawImage?.file.url.replace('//', 'https://') ?? null, // may need to put null check as well here
     description: rawImage?.description ?? null,
@@ -192,7 +192,7 @@ function convertImage(rawImage: any): IFigureImage {
   };
 }
 
-function convertAuthor(rawAuthor: any): IAuthor {
+function convertAuthor(rawAuthor: any): Author {
   return {
     name: rawAuthor?.name ?? null,
     avatar: convertImage(rawAuthor.avatar.fields),
@@ -205,7 +205,7 @@ function convertAuthor(rawAuthor: any): IAuthor {
   };
 }
 
-function convertTags(rawTags: any, taglist: ITagList): string[] {
+function convertTags(rawTags: any, taglist: TagList): string[] {
   const tags = rawTags.map((tag: Tag) => {
     return taglist[tag.sys.id];
   });
@@ -215,8 +215,8 @@ function convertTags(rawTags: any, taglist: ITagList): string[] {
 async function generateEntries(
   entries: EntryCollection<unknown>,
   entryType: 'post' | 'page'
-): Promise<IFetchEntriesReturn> {
-  let _entries: Array<IPost | IPage> = [];
+): Promise<FetchEntriesReturn> {
+  let _entries: Array<Post | Page> = [];
   if (entries && entries.items && entries.items.length > 0) {
     switch (entryType) {
       case 'post':
@@ -261,7 +261,7 @@ export async function fetchLegals(quantity = 100) {
     limit: quantity,
   });
 
-  const items: ILegals[] = [];
+  const items: Legals[] = [];
   _entries.items.forEach((item: any) => {
     items.push(item.fields);
   });
@@ -290,7 +290,7 @@ export async function generateLinkMeta(doc: Document): Promise<Document> {
   return doc;
 }
 
-export async function fetchPages(quantity = 100): Promise<IFetchPagesReturn> {
+export async function fetchPages(quantity = 100): Promise<FetchPagesReturn> {
   const _entries = await client.getEntries({
     content_type: 'page',
     limit: quantity,
@@ -298,12 +298,12 @@ export async function fetchPages(quantity = 100): Promise<IFetchPagesReturn> {
 
   const results = await generateEntries(_entries, 'page');
   return {
-    entries: results.entries as Array<IPage>,
+    entries: results.entries as Array<Page>,
     total: results.total,
   };
 }
 
-function convertPage(rawData: any): IPage {
+function convertPage(rawData: any): Page {
   const rawPage = rawData.fields;
 
   return {

@@ -1,4 +1,4 @@
-export interface IPartner {
+export interface Partner {
   name: string;
   image: string;
   width: number;

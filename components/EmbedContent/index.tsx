@@ -1,4 +1,4 @@
-import { IEmbed, INoembed, isNoembed } from '@/services/embed';
+import { Embed, Noembed, isNoembed } from '@/services/embed';
 import { ReactElement, useEffect, useRef, useState } from 'react';
 
 import { Button } from '../ui';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 import classNames from 'classnames';
 
 interface Props {
-  content: IEmbed | INoembed; // is sanitized in embed service
+  content: Embed | Noembed; // is sanitized in embed service
   classes?: string;
   textDirection: string;
 }

@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticPropsContext } from 'next';
-import { ILegals, IPage, IPost, Settings, isPost } from '@/types/cms';
+import { Legals, Page, Post, Settings, isPost } from '@/types/cms';
 import {
   fetchBlogEntries,
   fetchEntryBySlug,
@@ -17,11 +17,11 @@ import AboutLayout from '@/components/AboutSection/Layout';
 import React from 'react';
 
 interface Props {
-  content: IPage | IPost;
+  content: Page | Post;
   aboutPageTabs: Array<AboutPageTab>;
-  otherPosts?: IPost[];
-  allPosts?: IPost[];
-  items?: Array<ILegals>;
+  otherPosts?: Post[];
+  allPosts?: Post[];
+  items?: Array<Legals>;
 }
 
 export type AboutPageTab = {
@@ -51,7 +51,7 @@ export default function Page(props: Props): ReactElement {
 export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = String(context.params?.slug);
   try {
-    const content: IPage | IPost = await fetchEntryBySlug(slug);
+    const content: Page | Post = await fetchEntryBySlug(slug);
 
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);

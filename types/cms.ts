@@ -1,6 +1,6 @@
 import { Document } from '@contentful/rich-text-types';
 
-export type IFigureImage = {
+export type FigureImage = {
   title: string | null;
   description: string | null;
   imageUrl: string;
@@ -8,9 +8,9 @@ export type IFigureImage = {
   height: string | number;
 };
 
-export type IAuthor = {
+export type Author = {
   name: string;
-  avatar?: IFigureImage;
+  avatar?: FigureImage;
   shortBio: string;
   email: string;
   // Eg. Marketing Researcher
@@ -20,65 +20,65 @@ export type IAuthor = {
   github: string | null;
 };
 
-export interface IPost {
+export interface Post {
   id: string;
   title: string;
   subtitle: string;
   description: string;
   body: Document;
-  author?: IAuthor;
+  author?: Author;
   publishedDate: string;
   publishedDateISO: string;
-  featureImage?: IFigureImage;
+  featureImage?: FigureImage;
   fullHeader?: boolean;
   tags: Array<string>;
   slug: string;
 }
 
-export interface ILegals {
+export interface Legals {
   order: number;
   title: string;
   description?: Document;
   source?: string;
 }
 
-export function isPost(object: unknown): object is IPost {
+export function isPost(object: unknown): object is Post {
   return Object.prototype.hasOwnProperty.call(object, 'publishedDate');
 }
 
-export interface IFetchEntriesReturn {
+export interface FetchEntriesReturn {
   entries: Array<any>;
   total: number;
 }
 
-export type ITagList = {
+export type TagList = {
   [key: string]: string;
 };
 
-export interface IFetchBlogEntriesReturn extends IFetchEntriesReturn {
-  entries: Array<IPost>;
+export interface FetchBlogEntriesReturn extends FetchEntriesReturn {
+  entries: Array<Post>;
 }
 
-export type IPageMetadata = {
+export type PageMetadata = {
   metaDescription: string;
   metaType: 'website' | 'article';
   metaPublishedTime?: string;
 };
 
-export type IPage = {
+export type Page = {
   title: string;
   slug: string;
   headline: string | null;
   body: Document;
   useExactTitle?: boolean;
-} & IPageMetadata;
+} & PageMetadata;
 
-export function isPage(object: unknown): object is IPage {
+export function isPage(object: unknown): object is Page {
   return Object.prototype.hasOwnProperty.call(object, 'headline');
 }
 
-export interface IFetchPagesReturn extends IFetchEntriesReturn {
-  entries: Array<IPage>;
+export interface FetchPagesReturn extends FetchEntriesReturn {
+  entries: Array<Page>;
 }
 
 export type Settings = {
