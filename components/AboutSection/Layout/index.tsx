@@ -17,12 +17,9 @@ type Props = {
 
 export default function AboutLayout(props: Props) {
   const { page, tabs, items } = props;
-  const pageTitle = page.useExactTitle
-    ? page.title
-    : `OPTF | ${page.title} | Privacy is a fundamental right.`;
   const router = useRouter();
   return (
-    <Layout title={pageTitle} metadata={parseMetadata(page)}>
+    <Layout title={page.title} metadata={parseMetadata(page)}>
       <Banner
         title="Meet the Oxen Privacy Tech Foundation"
         subtitle="We’re a passionate team of advocates, creatives, and engineers building a world where the internet is open, software is free and accessible, and your privacy is protected."

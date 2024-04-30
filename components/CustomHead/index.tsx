@@ -21,8 +21,13 @@ export const parseMetadata = (pageMetadata: IPageMetadata): CustomMetadata => {
 
 export default function CustomHead(props: Props): ReactElement {
   const router = useRouter();
-  const { title, metadata } = props;
-  const pageTitle = title && title.length > 0 ? `${title}` : METADATA.TITLE;
+  const { title, useExactTitle, metadata } = props;
+  const pageTitle =
+    title && title.length > 0
+      ? useExactTitle
+        ? title
+        : `OPTF | ${title} | Privacy is a fundamental right.`
+      : METADATA.TITLE;
   const pageUrl = `${METADATA.HOST_URL}${router.asPath}`;
   const canonicalUrl = metadata?.CANONICAL_URL ?? pageUrl;
   const imageALT = metadata?.OG_IMAGE?.ALT ?? METADATA.OG_IMAGE.ALT;
