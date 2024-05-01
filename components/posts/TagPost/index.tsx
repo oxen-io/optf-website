@@ -2,13 +2,13 @@ import { ReactElement } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import classNames from 'classnames';
-import { Post } from '@/types/cms';
+import { CMSPost } from '@/types/cms';
 import RichBody from '@/components/RichBody';
 import { useScreen } from '@/contexts/screen';
 import Container from '@/components/Container';
 
 interface Props {
-  post: Post;
+  post: CMSPost;
 }
 
 export default function TagPost(props: Props): ReactElement {

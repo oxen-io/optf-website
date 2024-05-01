@@ -1,6 +1,6 @@
 import { Document } from '@contentful/rich-text-types';
 
-export type FigureImage = {
+export type CMSFigureImage = {
   title: string | null;
   description: string | null;
   imageUrl: string;
@@ -8,9 +8,9 @@ export type FigureImage = {
   height: string | number;
 };
 
-export type Author = {
+export type CMSAuthor = {
   name: string;
-  avatar?: FigureImage;
+  avatar?: CMSFigureImage;
   shortBio: string;
   email: string;
   // Eg. Marketing Researcher
@@ -20,29 +20,29 @@ export type Author = {
   github: string | null;
 };
 
-export interface Post {
+export interface CMSPost {
   id: string;
   title: string;
   subtitle: string;
   description: string;
   body: Document;
-  author?: Author;
+  author?: CMSAuthor;
   publishedDate: string;
   publishedDateISO: string;
-  featureImage?: FigureImage;
+  featureImage?: CMSFigureImage;
   fullHeader?: boolean;
   tags: Array<string>;
   slug: string;
 }
 
-export interface Legals {
+export interface CMSLegals {
   order: number;
   title: string;
   description?: Document;
   source?: string;
 }
 
-export function isPost(object: unknown): object is Post {
+export function isPost(object: unknown): object is CMSPost {
   return Object.prototype.hasOwnProperty.call(object, 'publishedDate');
 }
 
@@ -51,37 +51,37 @@ export interface FetchEntriesReturn {
   total: number;
 }
 
-export type TagList = {
+export type CMSTagList = {
   [key: string]: string;
 };
 
 export interface FetchBlogEntriesReturn extends FetchEntriesReturn {
-  entries: Array<Post>;
+  entries: Array<CMSPost>;
 }
 
-export type PageMetadata = {
+export type CMSPageMetadata = {
   metaDescription: string;
   metaType: 'website' | 'article';
   metaPublishedTime?: string;
 };
 
-export type Page = {
+export type CMSPage = {
   title: string;
   slug: string;
   headline: string | null;
   body: Document;
   useExactTitle?: boolean;
-} & PageMetadata;
+} & CMSPageMetadata;
 
-export function isPage(object: unknown): object is Page {
+export function isPage(object: unknown): object is CMSPage {
   return Object.prototype.hasOwnProperty.call(object, 'headline');
 }
 
 export interface FetchPagesReturn extends FetchEntriesReturn {
-  entries: Array<Page>;
+  entries: Array<CMSPage>;
 }
 
-export type Settings = {
+export type CMSSettings = {
   aboutPageTabs: Array<{
     title: string;
     slug: string;

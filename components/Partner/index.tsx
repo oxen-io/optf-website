@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Partner } from '../../constants/partners';
+import { PartnerDetails } from '../../constants/partners';
 
 export interface Props {
-  partner: Partner;
+  partner: PartnerDetails;
   index: number;
   totalPartners: number;
   onHover: (index: number, boolean: boolean) => void;

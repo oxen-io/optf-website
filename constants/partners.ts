@@ -1,4 +1,4 @@
-export interface Partner {
+export interface PartnerDetails {
   name: string;
   image: string;
   width: number;

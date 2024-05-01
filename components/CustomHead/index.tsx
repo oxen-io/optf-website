@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { ReactElement } from 'react';
 import { isLocal } from '@/utils/links';
 import { useRouter } from 'next/router';
-import { PageMetadata } from '@/types/cms';
+import { CMSPageMetadata } from '@/types/cms';
 
 interface Props {
   title?: string;
@@ -12,7 +12,9 @@ interface Props {
   metadata?: CustomMetadata;
 }
 
-export const parseMetadata = (pageMetadata: PageMetadata): CustomMetadata => {
+export const parseMetadata = (
+  pageMetadata: CMSPageMetadata
+): CustomMetadata => {
   return {
     DESCRIPTION: pageMetadata.metaDescription,
     TYPE: pageMetadata.metaType,

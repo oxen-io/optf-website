@@ -3,16 +3,16 @@ import Container from '@/components/Container';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
 import { AboutPageTab } from '@/pages/[slug]';
-import { Legals, Page } from '@/types/cms';
+import { CMSLegals, CMSPage } from '@/types/cms';
 import RichBody from '@/components/RichBody';
 import { Layout } from '@/components/ui';
 import { parseMetadata } from '@/components/CustomHead';
 import SpecialTabContent from '../Tabs/SpecialTabContent';
 
 type Props = {
-  page: Page;
+  page: CMSPage;
   tabs: Array<AboutPageTab>;
-  items?: Array<Legals>;
+  items?: Array<CMSLegals>;
 };
 
 export default function AboutLayout(props: Props) {

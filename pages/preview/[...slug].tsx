@@ -7,14 +7,14 @@ import {
   fetchBlogEntries,
   generateLinkMeta,
 } from '../../services/cms';
-import { Post, Page, isPost } from '../../types/cms';
+import { CMSPost, CMSPage, isPost } from '../../types/cms';
 
 import BlogPost from '../../components/BlogPost';
 import RichPage from '../../components/RichPage';
 
 export interface Props {
-  content: Page | Post;
-  otherPosts?: Post[];
+  content: CMSPage | CMSPost;
+  otherPosts?: CMSPost[];
   slug: string;
 }
 
@@ -53,7 +53,7 @@ export const getServerSideProps: GetServerSideProps = async (
   try {
     let query = slug;
     if (slug.indexOf('blog/') >= 0) query = slug.split('blog/')[1];
-    const content: Page | Post = await fetchEntryPreview(query);
+    const content: CMSPage | CMSPost = await fetchEntryPreview(query);
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);
     const props: Props = { content, slug };

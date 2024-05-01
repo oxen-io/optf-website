@@ -6,16 +6,16 @@ import {
   createClient,
 } from 'contentful';
 import {
-  Author,
+  CMSAuthor,
   FetchBlogEntriesReturn,
   FetchEntriesReturn,
   FetchPagesReturn,
-  FigureImage,
-  Legals,
-  Page,
-  Post,
-  TagList,
-  Settings,
+  CMSFigureImage,
+  CMSLegals,
+  CMSPage,
+  CMSPost,
+  CMSTagList,
+  CMSSettings,
 } from '@/types/cms';
 import { format, parseISO } from 'date-fns';
 
@@ -29,7 +29,7 @@ const client: ContentfulClientApi = createClient({
   host: 'cdn.contentful.com',
 });
 
-export async function fetchSettings(): Promise<Settings> {
+export async function fetchSettings(): Promise<CMSSettings> {
   const _entries = await client.getEntries<{
     aboutPageList: Array<{ fields: { title: string; slug: string } }>;
   }>({
@@ -45,9 +45,9 @@ export async function fetchSettings(): Promise<Settings> {
   };
 }
 
-export async function fetchTagList(): Promise<TagList> {
+export async function fetchTagList(): Promise<CMSTagList> {
   const _tags = await client.getTags();
-  const tags: TagList = {};
+  const tags: CMSTagList = {};
   _tags.items.forEach((tag) => {
     tags[tag.sys.id] = tag.name;
   });
@@ -65,7 +65,7 @@ export async function fetchBlogEntries(
 
   const results = await generateEntries(_entries, 'post');
   return {
-    entries: results.entries as Array<Post>,
+    entries: results.entries as Array<CMSPost>,
     total: results.total,
   };
 }
@@ -91,7 +91,7 @@ export async function fetchBlogEntriesByTag(
   if (_entries.items.length > 0) {
     const results = await generateEntries(_entries, 'post');
     return {
-      entries: results.entries as Array<Post>,
+      entries: results.entries as Array<CMSPost>,
       total: results.total,
     };
   }
@@ -99,7 +99,9 @@ export async function fetchBlogEntriesByTag(
   return Promise.reject(new Error(`Failed to fetch entries for ${tag}`));
 }
 
-export async function fetchEntryPreview(slug: string): Promise<Page | Post> {
+export async function fetchEntryPreview(
+  slug: string
+): Promise<CMSPage | CMSPost> {
   const _client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
     accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
@@ -133,7 +135,9 @@ export async function fetchEntryPreview(slug: string): Promise<Page | Post> {
   return Promise.reject(new Error(`Failed to fetch preview for ${slug}`));
 }
 
-export async function fetchEntryBySlug(slug: string): Promise<Page | Post> {
+export async function fetchEntryBySlug(
+  slug: string
+): Promise<CMSPage | CMSPost> {
   const _pages = await client.getEntries({
     content_type: 'page',
     'fields.slug': slug,
@@ -159,7 +163,7 @@ export async function fetchEntryBySlug(slug: string): Promise<Page | Post> {
   return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
 }
 
-function convertPost(rawData: any, taglist: TagList): Post {
+function convertPost(rawData: any, taglist: CMSTagList): CMSPost {
   const rawPost = rawData.fields;
   const rawFeatureImage = rawPost?.featureImage
     ? rawPost?.featureImage.fields
@@ -182,7 +186,7 @@ function convertPost(rawData: any, taglist: TagList): Post {
   };
 }
 
-function convertImage(rawImage: any): FigureImage {
+function convertImage(rawImage: any): CMSFigureImage {
   return {
     imageUrl: rawImage?.file.url.replace('//', 'https://') ?? null, // may need to put null check as well here
     description: rawImage?.description ?? null,
@@ -192,7 +196,7 @@ function convertImage(rawImage: any): FigureImage {
   };
 }
 
-function convertAuthor(rawAuthor: any): Author {
+function convertAuthor(rawAuthor: any): CMSAuthor {
   return {
     name: rawAuthor?.name ?? null,
     avatar: convertImage(rawAuthor.avatar.fields),
@@ -205,7 +209,7 @@ function convertAuthor(rawAuthor: any): Author {
   };
 }
 
-function convertTags(rawTags: any, taglist: TagList): string[] {
+function convertTags(rawTags: any, taglist: CMSTagList): string[] {
   const tags = rawTags.map((tag: Tag) => {
     return taglist[tag.sys.id];
   });
@@ -216,7 +220,7 @@ async function generateEntries(
   entries: EntryCollection<unknown>,
   entryType: 'post' | 'page'
 ): Promise<FetchEntriesReturn> {
-  let _entries: Array<Post | Page> = [];
+  let _entries: Array<CMSPost | CMSPage> = [];
   if (entries && entries.items && entries.items.length > 0) {
     switch (entryType) {
       case 'post':
@@ -261,7 +265,7 @@ export async function fetchLegals(quantity = 100) {
     limit: quantity,
   });
 
-  const items: Legals[] = [];
+  const items: CMSLegals[] = [];
   _entries.items.forEach((item: any) => {
     items.push(item.fields);
   });
@@ -298,12 +302,12 @@ export async function fetchPages(quantity = 100): Promise<FetchPagesReturn> {
 
   const results = await generateEntries(_entries, 'page');
   return {
-    entries: results.entries as Array<Page>,
+    entries: results.entries as Array<CMSPage>,
     total: results.total,
   };
 }
 
-function convertPage(rawData: any): Page {
+function convertPage(rawData: any): CMSPage {
   const rawPage = rawData.fields;
 
   return {

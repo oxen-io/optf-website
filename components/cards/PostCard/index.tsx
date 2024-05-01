@@ -1,10 +1,10 @@
-import { Post } from '@/types/cms';
+import { CMSPost } from '@/types/cms';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 
-interface Props extends Post {
+interface Props extends CMSPost {
   route: string;
   featured?: boolean;
   hoverEffect?: boolean;

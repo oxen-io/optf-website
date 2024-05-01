@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { GetStaticProps } from 'next';
 import Banner from '@/components/Banner';
 import { CMS } from '@/constants';
-import { Post } from '@/types/cms';
+import { CMSPost } from '@/types/cms';
 import { fetchBlogEntries } from '@/services/cms';
 import METADATA from '@/constants/metadata';
 import Link from 'next/link';
@@ -12,7 +12,7 @@ import Container from '@/components/Container';
 import classNames from 'classnames';
 
 interface Props {
-  posts: Post[];
+  posts: CMSPost[];
 }
 
 export const getStaticProps: GetStaticProps = async () => {

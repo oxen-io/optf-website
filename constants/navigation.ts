@@ -1,6 +1,6 @@
 import { handleTooltip } from '@/utils/tooltip';
 
-export interface NavItem {
+export interface NavigationItem {
   name: string;
   href: string;
   alt: string;
@@ -13,7 +13,7 @@ export interface NavItem {
 }
 
 interface NavList {
-  [key: string]: NavItem; // key is what user sees
+  [key: string]: NavigationItem; // key is what user sees
 }
 
 const NAV_ITEMS: NavList = {

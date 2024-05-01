@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode, useEffect, useState } from 'react';
-import { NavItem } from '@/constants/navigation';
+import { NavigationItem } from '@/constants/navigation';
 import Link from 'next/link';
 import { ReactComponent as ArrowSVG } from '@/assets/svgs/down-arrow.svg';
 import classNames from 'classnames';
@@ -8,7 +8,7 @@ import { useScreen } from '@/contexts/screen';
 
 export interface DropdownProps {
   title: string | ReactNode; // social icons can be nav items
-  navItem: NavItem;
+  navItem: NavigationItem;
   classes?: string;
 }
 

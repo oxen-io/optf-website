@@ -1,14 +1,14 @@
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 
-import { Page } from '@/types/cms';
+import { CMSPage } from '@/types/cms';
 import Container from '@/components/Container';
 import { Layout } from '@/components/ui';
 import RichBody from '@/components/RichBody';
 import { parseMetadata } from '../CustomHead';
 
 interface Props {
-  page: Page;
+  page: CMSPage;
 }
 
 export default function RichPage(props: Props): ReactElement {
