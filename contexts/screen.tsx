@@ -1,7 +1,7 @@
 import { useScreenSize } from '@/hooks/screen';
 import { ReactElement, ReactNode, createContext, useContext } from 'react';
 
-interface IScreen {
+interface Screen {
   width: number;
   isSmall: boolean;
   isMedium: boolean;
@@ -10,7 +10,7 @@ interface IScreen {
   isEnormous: boolean;
 }
 
-const ScreenContext = createContext<IScreen>({
+const ScreenContext = createContext<Screen>({
   width: 0,
   isSmall: true,
   isMedium: false,
@@ -29,7 +29,7 @@ interface Props {
 export function ScreenProvider(props: Props): ReactElement {
   const { children } = props;
 
-  const value: IScreen = useScreenSize();
+  const value: Screen = useScreenSize();
 
   return (
     <ScreenContext.Provider value={value}>{children}</ScreenContext.Provider>

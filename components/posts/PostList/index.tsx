@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import classNames from 'classnames';
-import { IPost } from '@/types/cms';
+import { CMSPost } from '@/types/cms';
 import { generateRoute } from '@/services/cms';
 import Container from '@/components/Container';
 import { PostCard } from '@/components/cards';
@@ -8,7 +8,7 @@ import { useState, useMemo } from 'react';
 import Pagination from '../../Pagination/Pagination';
 
 interface Props {
-  posts: IPost[];
+  posts: CMSPost[];
   gridStyle?: 'blog' | 'normal';
   showHeading?: boolean;
   hoverEffect?: boolean;

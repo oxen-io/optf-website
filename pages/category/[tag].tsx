@@ -1,6 +1,6 @@
 import { CMS, METADATA } from '@/constants';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
-import { IPost, ITagList } from '@/types/cms';
+import { CMSPost, CMSTagList } from '@/types/cms';
 import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
 import Pagination from '@/components/Pagination/Pagination';
 import Container from '@/components/Container';
@@ -12,7 +12,7 @@ import { useState, useMemo } from 'react';
 
 interface Props {
   tagLink: string;
-  posts: IPost[];
+  posts: CMSPost[];
 }
 
 export default function Tag(props: Props): ReactElement {
@@ -99,7 +99,7 @@ export const getStaticProps: GetStaticProps = async (
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const tags: ITagList = await fetchTagList();
+  const tags: CMSTagList = await fetchTagList();
   const paths = Object.values(tags).map((tag) => {
     const tagLink = tag.toLowerCase().replace(/\s/g, '-');
     return {

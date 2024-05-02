@@ -6,24 +6,6 @@ export default function TransparencyReport() {
 
   return (
     <>
-      <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
-        Transparency Report
-      </h3>
-      <p>
-        The OPTF transparency report records all information request from law
-        enforcement agencies towards Session. This document is updated
-        quarterly. Additional user info/privacy information can be found{' '}
-        <a
-          className="font-semibold transition ease-in-out text-violet-250 hover:text-blue-500"
-          href="https://getsession.org/faq"
-          target="_blank"
-          rel="noreferrer"
-        >
-          here
-        </a>
-        .
-      </p>
-      <br />
       <h4 className="mb-5 text-xl font-semibold lg:text-3xl">Current Report</h4>
       <iframe
         allowFullScreen={true}

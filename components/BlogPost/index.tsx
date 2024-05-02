@@ -1,13 +1,13 @@
-import { IPost } from '@/types/cms';
+import { CMSPost } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import METADATA from '@/constants/metadata';
 import { Post } from '@/components/posts';
 import { ReactElement } from 'react';
 
 interface Props {
-  post: IPost;
-  otherPosts?: IPost[];
-  allPosts?: IPost[];
+  post: CMSPost;
+  otherPosts?: CMSPost[];
+  allPosts?: CMSPost[];
 }
 
 export default function BlogPost(props: Props): ReactElement {

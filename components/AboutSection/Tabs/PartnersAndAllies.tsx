@@ -23,24 +23,6 @@ export default function PartnersAndAllies() {
 
   return (
     <>
-      <h3 className="mb-5 text-2xl font-semibold lg:text-4xl">
-        Partners and Allies
-      </h3>
-      <p>
-        There’s a passionate worldwide community working to defend your privacy.
-      </p>
-      <br />
-      <p>
-        We’re joining arms with organisations from around the world who are
-        making a stand for digital privacy and security. We can solve the
-        privacy crisis by developing new technology, sharing knowledge and
-        resources, and empowering people to own their right to privacy.{' '}
-      </p>
-      <br />
-      <p>
-        These are some of the groups we’re working with to make the world a more
-        private, more secure place.
-      </p>
       <div className="my-20">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
           {PARTNERS.map((partner, index) => {

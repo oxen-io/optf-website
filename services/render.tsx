@@ -139,12 +139,12 @@ function EmbeddedMedia(
   }
 }
 
-interface IEmbedEntry {
+interface EmbedEntry {
   node: Block | Inline;
   isInline?: boolean;
 }
 
-export function renderEmbeddedEntry(props: IEmbedEntry, textDirection: string) {
+export function renderEmbeddedEntry(props: EmbedEntry, textDirection: string) {
   const { node, isInline = false } = props;
   const target = node.data.target;
   const asset = target.fields;

@@ -8,41 +8,6 @@ export default function AboutOPTF() {
   return (
     <div>
       <div className="px-3 lg:px-0">
-        <h1 className="mb-5 text-2xl font-semibold lg:text-4xl">
-          You have a right to privacy.
-        </h1>
-        <p>
-          Privacy is a human right. Everyone knows what privacy feels like — it
-          feels comfortable, safe, and secure. When we are in private, we have
-          the freedom to share ideas and be ourselves. In the physical world, we
-          all take steps to protect our privacy every day. But privacy has
-          fallen by the wayside in the digital world. If we want the internet to
-          be a free, fair, and equal place for everyone, we must design, create,
-          and share technology which preserves people’s privacy and enables them
-          to experience the internet in a safe and secure way.
-        </p>
-        <br />
-        <p>
-          OPTF’s mission is to equip every digital citizen with technology which
-          upholds their right to privacy. Whether you’re buying a coffee,
-          messaging a friend, or simply browsing the internet, your privacy
-          should always be protected. It shouldn’t have any strings attached —
-          it should be provided by default, and it should be free.
-        </p>
-        <br />
-        <p>
-          One of the OPTF’s main development achievements is the private
-          messenger, Session. Session is a free and open-source application
-          which allows people to have completely private, secure, and anonymous
-          conversations online. Session is a tool for protecting free speech
-          including for journalists, activists, and other people working in
-          civil society.
-        </p>
-        <br />
-        <p>
-          We are actively implementing technology projects that help us achieve
-          our mission. These projects include:
-        </p>
         <div className="flex flex-col pb-3 my-5 lg:flex-row lg:pb-7">
           <Link passHref href="https://getsession.org/">
             <a target="_blank" rel="noreferrer">

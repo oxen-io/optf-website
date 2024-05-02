@@ -1,0 +1,5 @@
+export const WALLETS = {
+  Oxen: 'LB724uBKKwRaAXSaWSt6Uo9r82S6CqQXqELyiMyDdDHw2jiCBvyViTzRUNyNDDTpAxQu3PpbpPLdbes5FHX45XskHsVNgFE',
+  Bitcoin: '37VhHEzXHDDfM37DmuhU8iyzu1nxZ8Spht',
+  Ethereum: '0x663930c996DeC843885B32ae5B5489B10f6F472e',
+};

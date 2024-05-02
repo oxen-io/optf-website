@@ -2,7 +2,7 @@ import { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 
-export interface IContainerSizes {
+export interface ContainerSizes {
   small: string;
   medium: string;
   large: string;
@@ -13,7 +13,7 @@ export interface IContainerSizes {
 interface Props {
   id?: string;
   hasMinHeight?: boolean;
-  heights?: IContainerSizes;
+  heights?: ContainerSizes;
   fullWidth?: boolean;
   classes?: string;
   children: ReactNode;
@@ -28,7 +28,7 @@ export default function Container(props: Props): ReactElement {
     classes,
     children,
   } = props;
-  const minHeights: IContainerSizes = {
+  const minHeights: ContainerSizes = {
     small: '568px',
     medium: '1024px',
     large: '768px',
@@ -36,7 +36,7 @@ export default function Container(props: Props): ReactElement {
     enormous: '968px',
   };
   const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
-  const getHeight = (sizes: IContainerSizes): string => {
+  const getHeight = (sizes: ContainerSizes): string => {
     if (isSmall) return sizes?.small;
     if (isMedium) return sizes?.medium;
     if (isLarge) return sizes?.large;

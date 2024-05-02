@@ -6,15 +6,16 @@ import {
   createClient,
 } from 'contentful';
 import {
-  IAuthor,
-  IFetchBlogEntriesReturn,
-  IFetchEntriesReturn,
-  IFetchPagesReturn,
-  IFigureImage,
-  ILegals,
-  IPage,
-  IPost,
-  ITagList,
+  CMSAuthor,
+  FetchBlogEntriesReturn,
+  FetchEntriesReturn,
+  FetchPagesReturn,
+  CMSFigureImage,
+  CMSLegals,
+  CMSPage,
+  CMSPost,
+  CMSTagList,
+  CMSSettings,
 } from '@/types/cms';
 import { format, parseISO } from 'date-fns';
 
@@ -28,9 +29,25 @@ const client: ContentfulClientApi = createClient({
   host: 'cdn.contentful.com',
 });
 
-export async function fetchTagList(): Promise<ITagList> {
+export async function fetchSettings(): Promise<CMSSettings> {
+  const _entries = await client.getEntries<{
+    aboutPageList: Array<{ fields: { title: string; slug: string } }>;
+  }>({
+    content_type: 'settings',
+    limit: 1,
+  });
+  const { aboutPageList } = _entries.items[0].fields;
+  const aboutPageTabs = aboutPageList.map(({ fields }) => {
+    return { title: fields.title, slug: fields.slug };
+  });
+  return {
+    aboutPageTabs,
+  };
+}
+
+export async function fetchTagList(): Promise<CMSTagList> {
   const _tags = await client.getTags();
-  const tags: ITagList = {};
+  const tags: CMSTagList = {};
   _tags.items.forEach((tag) => {
     tags[tag.sys.id] = tag.name;
   });
@@ -39,7 +56,7 @@ export async function fetchTagList(): Promise<ITagList> {
 
 export async function fetchBlogEntries(
   quantity = 100
-): Promise<IFetchBlogEntriesReturn> {
+): Promise<FetchBlogEntriesReturn> {
   const _entries = await client.getEntries({
     content_type: 'post', // only fetch blog post entry
     order: '-fields.date',
@@ -48,7 +65,7 @@ export async function fetchBlogEntries(
 
   const results = await generateEntries(_entries, 'post');
   return {
-    entries: results.entries as Array<IPost>,
+    entries: results.entries as Array<CMSPost>,
     total: results.total,
   };
 }
@@ -56,7 +73,7 @@ export async function fetchBlogEntries(
 export async function fetchBlogEntriesByTag(
   tag: string,
   quantity = 100
-): Promise<IFetchBlogEntriesReturn> {
+): Promise<FetchBlogEntriesReturn> {
   const taglist = await fetchTagList();
 
   const id = Object.entries(taglist).filter(([_, value]) => {
@@ -74,7 +91,7 @@ export async function fetchBlogEntriesByTag(
   if (_entries.items.length > 0) {
     const results = await generateEntries(_entries, 'post');
     return {
-      entries: results.entries as Array<IPost>,
+      entries: results.entries as Array<CMSPost>,
       total: results.total,
     };
   }
@@ -82,7 +99,9 @@ export async function fetchBlogEntriesByTag(
   return Promise.reject(new Error(`Failed to fetch entries for ${tag}`));
 }
 
-export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
+export async function fetchEntryPreview(
+  slug: string
+): Promise<CMSPage | CMSPost> {
   const _client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
     accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
@@ -104,7 +123,7 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
   const taglist = await fetchTagList();
 
   if (_entries.length > 0) {
-    let entry = _entries[0];
+    const entry = _entries[0];
     if (entry.sys.contentType.sys.id === 'post') {
       return convertPost(entry, taglist);
     }
@@ -116,7 +135,9 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
   return Promise.reject(new Error(`Failed to fetch preview for ${slug}`));
 }
 
-export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
+export async function fetchEntryBySlug(
+  slug: string
+): Promise<CMSPage | CMSPost> {
   const _pages = await client.getEntries({
     content_type: 'page',
     'fields.slug': slug,
@@ -130,7 +151,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
   const taglist = await fetchTagList();
 
   if (_entries.length > 0) {
-    let entry = _entries[0];
+    const entry = _entries[0];
     if (entry.sys.contentType.sys.id === 'post') {
       return convertPost(entry, taglist);
     }
@@ -142,7 +163,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
   return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
 }
 
-function convertPost(rawData: any, taglist: ITagList): IPost {
+function convertPost(rawData: any, taglist: CMSTagList): CMSPost {
   const rawPost = rawData.fields;
   const rawFeatureImage = rawPost?.featureImage
     ? rawPost?.featureImage.fields
@@ -165,7 +186,7 @@ function convertPost(rawData: any, taglist: ITagList): IPost {
   };
 }
 
-function convertImage(rawImage: any): IFigureImage {
+function convertImage(rawImage: any): CMSFigureImage {
   return {
     imageUrl: rawImage?.file.url.replace('//', 'https://') ?? null, // may need to put null check as well here
     description: rawImage?.description ?? null,
@@ -175,7 +196,7 @@ function convertImage(rawImage: any): IFigureImage {
   };
 }
 
-function convertAuthor(rawAuthor: any): IAuthor {
+function convertAuthor(rawAuthor: any): CMSAuthor {
   return {
     name: rawAuthor?.name ?? null,
     avatar: convertImage(rawAuthor.avatar.fields),
@@ -188,7 +209,7 @@ function convertAuthor(rawAuthor: any): IAuthor {
   };
 }
 
-function convertTags(rawTags: any, taglist: ITagList): string[] {
+function convertTags(rawTags: any, taglist: CMSTagList): string[] {
   const tags = rawTags.map((tag: Tag) => {
     return taglist[tag.sys.id];
   });
@@ -198,11 +219,12 @@ function convertTags(rawTags: any, taglist: ITagList): string[] {
 async function generateEntries(
   entries: EntryCollection<unknown>,
   entryType: 'post' | 'page'
-): Promise<IFetchEntriesReturn> {
-  let _entries: any = [];
+): Promise<FetchEntriesReturn> {
+  let _entries: Array<CMSPost | CMSPage> = [];
   if (entries && entries.items && entries.items.length > 0) {
     switch (entryType) {
       case 'post':
+        // eslint-disable-next-line no-case-declarations -- TODO: refactor
         const taglist = await fetchTagList();
         _entries = entries.items.map((entry) => convertPost(entry, taglist));
         break;
@@ -243,7 +265,7 @@ export async function fetchLegals(quantity = 100) {
     limit: quantity,
   });
 
-  const items: ILegals[] = [];
+  const items: CMSLegals[] = [];
   _entries.items.forEach((item: any) => {
     items.push(item.fields);
   });
@@ -272,7 +294,7 @@ export async function generateLinkMeta(doc: Document): Promise<Document> {
   return doc;
 }
 
-export async function fetchPages(quantity = 100): Promise<IFetchPagesReturn> {
+export async function fetchPages(quantity = 100): Promise<FetchPagesReturn> {
   const _entries = await client.getEntries({
     content_type: 'page',
     limit: quantity,
@@ -280,12 +302,12 @@ export async function fetchPages(quantity = 100): Promise<IFetchPagesReturn> {
 
   const results = await generateEntries(_entries, 'page');
   return {
-    entries: results.entries as Array<IPage>,
+    entries: results.entries as Array<CMSPage>,
     total: results.total,
   };
 }
 
-function convertPage(rawData: any): IPage {
+function convertPage(rawData: any): CMSPage {
   const rawPage = rawData.fields;
 
   return {
@@ -293,5 +315,8 @@ function convertPage(rawData: any): IPage {
     slug: rawPage.slug,
     headline: rawPage.headline ?? null,
     body: rawPage.body,
+    metaDescription: rawPage.metaDescription ?? '',
+    metaType: rawPage.metaType ?? 'website',
+    metaPublishedTime: rawPage.metaPublishedTime ?? '',
   };
 }

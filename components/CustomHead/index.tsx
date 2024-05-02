@@ -1,19 +1,36 @@
-import METADATA, { IPageMetadata } from '@/constants/metadata';
+import METADATA, { CustomMetadata } from '@/constants/metadata';
 
 import Head from 'next/head';
 import { ReactElement } from 'react';
 import { isLocal } from '@/utils/links';
 import { useRouter } from 'next/router';
+import { CMSPageMetadata } from '@/types/cms';
 
 interface Props {
   title?: string;
-  metadata?: IPageMetadata;
+  useExactTitle?: boolean;
+  metadata?: CustomMetadata;
 }
+
+export const parseMetadata = (
+  pageMetadata: CMSPageMetadata
+): CustomMetadata => {
+  return {
+    DESCRIPTION: pageMetadata.metaDescription,
+    TYPE: pageMetadata.metaType,
+    PUBLISHED_TIME: pageMetadata.metaPublishedTime,
+  };
+};
 
 export default function CustomHead(props: Props): ReactElement {
   const router = useRouter();
-  const { title, metadata } = props;
-  const pageTitle = title && title.length > 0 ? `${title}` : METADATA.TITLE;
+  const { title, useExactTitle, metadata } = props;
+  const pageTitle =
+    title && title.length > 0
+      ? useExactTitle
+        ? title
+        : `OPTF | ${title} | Privacy is a fundamental right.`
+      : METADATA.TITLE;
   const pageUrl = `${METADATA.HOST_URL}${router.asPath}`;
   const canonicalUrl = metadata?.CANONICAL_URL ?? pageUrl;
   const imageALT = metadata?.OG_IMAGE?.ALT ?? METADATA.OG_IMAGE.ALT;

@@ -3,16 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import classNames from 'classnames';
 
-import { IPost } from '@/types/cms';
+import { CMSPost } from '@/types/cms';
 import { PostList } from '@/components/posts';
 import RichBody from '@/components/RichBody';
 import { useScreen } from '@/contexts/screen';
 import Container from '@/components/Container';
 
 interface Props {
-  post: IPost;
-  otherPosts?: IPost[];
-  allPosts?: IPost[];
+  post: CMSPost;
+  otherPosts?: CMSPost[];
+  allPosts?: CMSPost[];
 }
 
 export default function Post(props: Props): ReactElement {
