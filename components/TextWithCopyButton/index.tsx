@@ -3,13 +3,13 @@ import { forwardRef } from 'react';
 export interface TextWithCopyButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   copyText: string;
-  setModalOpen: (value: boolean) => void;
+  setToastOpen: (value: boolean) => void;
 }
 
 const TextWithCopyButton = forwardRef<
   HTMLButtonElement,
   TextWithCopyButtonProps
->(({ copyText, setModalOpen, ...props }, ref) => {
+>(({ copyText, setToastOpen: setModalOpen, ...props }, ref) => {
   const copyToClipboard = () => {
     setModalOpen(true);
     navigator.clipboard.writeText(copyText);
