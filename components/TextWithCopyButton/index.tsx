@@ -9,12 +9,12 @@ export interface TextWithCopyButtonProps
 const TextWithCopyButton = forwardRef<
   HTMLButtonElement,
   TextWithCopyButtonProps
->(({ copyText, setToastOpen: setModalOpen, ...props }, ref) => {
+>(({ copyText, setToastOpen, ...props }, ref) => {
   const copyToClipboard = () => {
-    setModalOpen(true);
+    setToastOpen(true);
     navigator.clipboard.writeText(copyText);
     setTimeout(() => {
-      setModalOpen(false);
+      setToastOpen(false);
     }, 2000);
   };
   return (
