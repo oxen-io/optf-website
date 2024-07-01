@@ -13,7 +13,7 @@ export default function TransparencyReport() {
         id="iframepdf"
         width={isSmall ? 290 : 600}
         height={isSmall ? 500 : 780}
-        src="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q1_2024.pdf#toolbar=0&navpanes=0&view=FitH"
+        src="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q2_2024.pdf#toolbar=0&navpanes=0&view=FitH"
         style={{ width: isSmall ? '95vw' : undefined }}
       ></iframe>
       <br />
@@ -21,6 +21,13 @@ export default function TransparencyReport() {
         Previous Reports:
       </h4>
       <ul className="pb-5 ml-10 list-disc">
+        <li>
+          <Link href="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q2_2024.pdf">
+            <a className="cursor-pointer text-violet-250 hover:text-blue-400">
+              April 1 2024 — June 30 2024
+            </a>
+          </Link>
+        </li>
         <li>
           <Link href="/assets/pdfs/transparency-reports/OPTF_Transparency_Report_Q1_2024.pdf">
             <a className="cursor-pointer text-violet-250 hover:text-blue-400">
