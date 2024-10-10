@@ -1,4 +1,3 @@
-import { ReactComponent as YoutubeSVG } from '@/assets/svgs/yt.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
@@ -36,15 +35,6 @@ const renderSocials = (
             <TwitterSVG className={svgClasses} />
           </a>
         </Link>
-        <Link href="https://www.youtube.com/channel/UCN7LL0dEffQ7FSjbY5wwlnw">
-          <a
-            className={socialLinkClasses}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <YoutubeSVG className={svgClasses} />
-          </a>
-        </Link>
       </div>
     </div>
   </div>
@@ -64,23 +54,6 @@ const renderFooter = (
       )}
     >
       {(isLarge || isHuge || isEnormous) && renderSocials}
-      <div className={classNames('flex flex-col w-full xl:mb-4', 'lg:w-1/3')}>
-        <Link href="https://getsession.org/">
-          <a className={linkClasses} target="_blank" rel="noopener noreferrer">
-            Session
-          </a>
-        </Link>
-        <Link href="https://oxen.io/">
-          <a className={linkClasses} target="_blank" rel="noopener noreferrer">
-            Oxen
-          </a>
-        </Link>
-        <Link href="https://lokinet.org/">
-          <a className={linkClasses} target="_blank" rel="noopener noreferrer">
-            Lokinet
-          </a>
-        </Link>
-      </div>
       <div className={classNames('flex w-full', 'lg:block lg:w-1/3')}>
         <div className={classNames('flex flex-col w-full mb-4', 'lg:w-2/3')}>
           <Link href="/contact-us">
