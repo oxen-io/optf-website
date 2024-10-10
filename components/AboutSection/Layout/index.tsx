@@ -27,7 +27,7 @@ export default function AboutLayout(props: Props) {
         <Container classes="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:text-lg bg-white">
           {tabs.map(({ title, slug }, index) => {
             return (
-              <Link key={title + index} href={slug} passHref prefetch>
+              <Link key={title + index} href={slug} passHref>
                 <h3
                   className={classNames(
                     'mr-7 pb-2 cursor-pointer lg:my-0 lg:border-b-3 lg:hover:border-b-violet-250 lg:pt-0.5',
