@@ -23,10 +23,6 @@ export default function ContactUsForm() {
       <h1 className="mt-16 text-4xl font-semibold">
         Help us build the tools you need
       </h1>
-      <h4 className="my-10">
-        Found a bug? Got a great idea? Want to give us some feedback? Drop us a
-        line.
-      </h4>
       <Formik
         initialValues={{
           name: '',

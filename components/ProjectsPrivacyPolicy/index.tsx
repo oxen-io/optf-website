@@ -17,7 +17,7 @@ export default function ProjectsPrivacyPolicy(props: Props) {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="py-5 border-b border-gray-200">
+    <div className="py-5 lg:pb-10">
       <h3
         onClick={() => setShow(!show)}
         className={classNames(

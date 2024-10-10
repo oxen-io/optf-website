@@ -17,15 +17,6 @@ interface NavList {
 }
 
 const NAV_ITEMS: NavList = {
-  Projects: {
-    name: 'Projects',
-    href: '/projects',
-    alt: 'go to projects',
-    target: '_self',
-    rel: 'noopener noreferrer',
-    bgColor: 0,
-    mobile: null,
-  },
   Articles: {
     name: 'Articles',
     href: '/blog',
