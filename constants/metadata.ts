@@ -64,11 +64,6 @@ const METADATA = {
     DESCRIPTION:
       'Blog | Latest news, articles, and updates on privacy, free software, and open internet. Join the conversation on building a safer digital world.',
   },
-  PROJECTS: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'OPTF | We believe that digital technologies must give people privacy by default.',
-  },
   RESEARCH: {
     TYPE: 'article',
     DESCRIPTION:

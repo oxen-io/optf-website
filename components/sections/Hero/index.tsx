@@ -1,6 +1,5 @@
 import Container from '@/components/Container';
 import { ReactComponent as HeroSVG } from '@/assets/svgs/svg-hero-optf.svg';
-import Image from 'next/image';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
@@ -23,35 +22,9 @@ export default function Hero(): ReactElement {
 
           <HeroSVG height={isSmall ? 302 : 539.9} />
         </div>
-        <div className="flex flex-col pb-3 border-b border-dashed lg:flex-row border-b-white lg:pb-7">
-          <div className="my-5 lg:pl-10 lg:px-6 lg:my-0">
-            <Image
-              alt="oxen icon"
-              src="/assets/images/oxen-icon.png"
-              width={500}
-              height={100}
-            />
-          </div>
-          <div className="my-5 lg:px-6 lg:my-0">
-            <Image
-              alt="session icon"
-              src="/assets/images/session-logo-black.png"
-              width={500}
-              height={100}
-            />
-          </div>
-          <div className="my-5 lg:px-6 lg:pr-16 lg:my-0">
-            <Image
-              alt="lokinet icon"
-              src="/assets/images/lokinet-icon.png"
-              width={500}
-              height={100}
-            />
-          </div>
-        </div>
-        <h4 className="text-xl font-semibold text-center text-white font-sem lg:my-7 mt-7 lg:text-2xl">
-          We build tools that protect your privacy and security in the digital
-          world.
+        <h4 className="text-2xl font-semibold text-center text-white font-sem lg:mb-9 mb-4 mt-7 lg:text-3xl">
+          We promote tools that protect your privacy and security in the digital
+          world
         </h4>
       </Container>
     </section>
