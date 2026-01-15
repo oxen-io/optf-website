@@ -1,5 +1,6 @@
 const { fetchBlogEntries, fetchPages } = require('../services/cms');
 const { METADATA } = require('../constants');
+const generateRSSFeed = require('../utils/rss').default;
 const { readdirSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
 
@@ -95,9 +96,14 @@ async function generateSitemap() {
   const sitemapPath = resolve('public', 'sitemap.xml');
   writeFileSync(sitemapPath, sitemap);
   console.log(`✅ Sitemap generated at ${sitemapPath}`);
+
+  // Generate RSS feeds
+  console.log('🔄 Generating RSS feeds...');
+  generateRSSFeed(_blogPages);
+  console.log('✅ RSS feeds generated');
 }
 
 generateSitemap().catch((error) => {
-  console.error('Error generating sitemap:', error);
+  console.error('Error generating sitemap and RSS feeds:', error);
   process.exit(1);
 });
