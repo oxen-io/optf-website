@@ -21,7 +21,6 @@ const EXCLUDED_PAGES = [
   'sitemap.xml.tsx',
   'api', // API routes
   'tag',
-  'preview', // Removed but keeping for safety
   'category', // Dynamic category routes handled separately
 ];
 
@@ -44,18 +43,19 @@ async function generateSitemap() {
       if (pagePath.includes('index')) {
         pagePath = '';
       } else {
-        pagePath = pagePath.split('.tsx')[0];
+        // Remove extension (.tsx, .ts, .jsx, .js)
+        pagePath = pagePath.replace(/\.(tsx?|jsx?)$/, '');
       }
       return `${baseUrl}/${pagePath}`;
     });
 
-  // Get redirect source URLs
+  // Get redirect source URLs (exclude dynamic routes like ':slug')
   const redirectPages = REDIRECTS.map((redirect: Redirection) => {
+    // Skip redirects with dynamic parameters as they don't map to static URLs
     if (redirect.source.includes(':slug')) {
       return '';
-    } else {
-      return `${baseUrl}${redirect.source}`;
     }
+    return `${baseUrl}${redirect.source}`;
   }).filter((url) => url !== '');
 
   // Get dynamic pages from Contentful
