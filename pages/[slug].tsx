@@ -52,7 +52,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   try {
     const content: CMSPage | CMSPost = await fetchEntryBySlug(slug);
 
-    // embedded links in content body need metadata for preview
+    // embedded links in content body need metadata
     content.body = await generateLinkMeta(content.body);
     const { aboutPageTabs } = await fetchSettings();
 
