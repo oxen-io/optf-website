@@ -1,8 +1,14 @@
-const { fetchBlogEntries, fetchPages } = require('../services/cms');
-const { METADATA } = require('../constants');
-const generateRSSFeed = require('../utils/rss').default;
-const { readdirSync, writeFileSync } = require('fs');
-const { resolve } = require('path');
+import { fetchBlogEntries, fetchPages } from '../services/cms';
+import { METADATA } from '../constants';
+import generateRSSFeed from '../utils/rss';
+import { readdirSync, writeFileSync } from 'fs';
+import { resolve } from 'path';
+
+interface Redirection {
+  source: string;
+  destination: string;
+  permanent: boolean;
+}
 
 async function generateSitemap() {
   const baseUrl = METADATA.HOST_URL;
@@ -33,7 +39,7 @@ async function generateSitemap() {
     });
 
   // Note: redirects are hardcoded since we can't import next.config.js easily
-  const redirects = [
+  const redirects: Redirection[] = [
     {
       source: '/transparency',
       destination: '/transparency-report',
@@ -42,7 +48,7 @@ async function generateSitemap() {
   ];
 
   const redirectPages = redirects
-    .map((redirect) => {
+    .map((redirect: Redirection) => {
       if (redirect.source.includes(':slug')) {
         return '';
       } else {

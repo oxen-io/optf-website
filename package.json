@@ -8,7 +8,7 @@
     "build:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production yarn generate:sitemap && next build",
     "start": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next start --hostname 127.0.0.1",
     "start:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next start --hostname 127.0.0.1",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:sitemap": "ts-node --project tsconfig.json --transpile-only scripts/generate-sitemap.ts",
     "prepare": "husky install",
     "format": "prettier --ignore-unknown --write .",
     "lint": "next lint"
