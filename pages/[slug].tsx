@@ -10,7 +10,6 @@ import {
 } from '@/services/cms';
 
 import BlogPost from '@/components/BlogPost';
-import { CMS } from '@/constants';
 import { ReactElement } from 'react';
 import RichPage from '@/components/RichPage';
 import AboutLayout from '@/components/AboutSection/Layout';
@@ -75,13 +74,11 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
     return {
       props,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
   } catch (err) {
     console.error(err);
     return {
       notFound: true,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
   }
 }
@@ -107,6 +104,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: [...pagePaths, ...postPaths],
-    fallback: 'blocking',
+    fallback: false,
   };
 };

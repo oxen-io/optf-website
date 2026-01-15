@@ -1,7 +1,6 @@
 import { Hero } from '@/components/sections';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import { CMS } from '@/constants';
 import { CMSPost } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
@@ -44,6 +43,5 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { posts },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };

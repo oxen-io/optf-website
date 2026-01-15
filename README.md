@@ -150,9 +150,7 @@ yarn run build && yarn run start
 
 **Make sure to do this locally and check for errors before pushing any code changes to your hosted repository**
 
-Any changes made on Contentful will be reflected on the production server **hourly**.
-
-If you want to see your Contentful changes faster while using a production server you can use the Staging Environement.
+The site is fully static and requires a complete rebuild to reflect any changes made on Contentful. Content will not be updated automatically at runtime.
 
 ### Staging Environment
 
@@ -168,7 +166,7 @@ To unlock the staging environment go to [http://localhost:3000/login?secret=YOUR
 
 System environment variables and page metadata will also be updated to show it's a staging website.
 
-Any changes made on Contentful will be reflected on the staging server **every 30 seconds**.
+The staging build is also fully static and requires a complete rebuild to reflect any changes made on Contentful.
 
 ## License
 

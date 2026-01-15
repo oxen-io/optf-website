@@ -1,24 +1,10 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { fetchBlogEntries, fetchPages } from '@/services/cms';
-import { METADATA } from '@/constants';
-import getConfig from 'next/config';
-import { readdirSync } from 'fs';
+const { fetchBlogEntries, fetchPages } = require('../services/cms');
+const { METADATA } = require('../constants');
+const { readdirSync, writeFileSync } = require('fs');
+const { resolve } = require('path');
 
-export interface Redirection {
-  source: string;
-  destination: string;
-  permanent: boolean;
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const baseUrl = {
-    development: 'http://localhost:3000',
-    test: 'http://localhost:3000',
-    production: METADATA.HOST_URL,
-  }[process.env.NODE_ENV];
+async function generateSitemap() {
+  const baseUrl = METADATA.HOST_URL;
 
   const staticPages = readdirSync('pages')
     .filter((page) => {
@@ -33,6 +19,7 @@ export default async function handler(
         'api',
         'tag',
         'preview',
+        'category',
       ].includes(page);
     })
     .map((pagePath) => {
@@ -44,15 +31,24 @@ export default async function handler(
       return `${baseUrl}/${pagePath}`;
     });
 
-  const redirectPages = getConfig().serverRuntimeConfig.redirects.map(
-    (redirect: Redirection) => {
+  // Note: redirects are hardcoded since we can't import next.config.js easily
+  const redirects = [
+    {
+      source: '/transparency',
+      destination: '/transparency-report',
+      permanent: true,
+    },
+  ];
+
+  const redirectPages = redirects
+    .map((redirect) => {
       if (redirect.source.includes(':slug')) {
         return '';
       } else {
         return `${baseUrl}${redirect.source}`;
       }
-    }
-  );
+    })
+    .filter((url) => url !== '');
 
   const { entries: _dynamicPages } = await fetchPages();
   const dynamicPages = _dynamicPages.map((page) => {
@@ -96,8 +92,12 @@ export default async function handler(
     </urlset>
   `;
 
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/xml');
-  res.write(sitemap);
-  res.end();
+  const sitemapPath = resolve('public', 'sitemap.xml');
+  writeFileSync(sitemapPath, sitemap);
+  console.log(`✅ Sitemap generated at ${sitemapPath}`);
 }
+
+generateSitemap().catch((error) => {
+  console.error('Error generating sitemap:', error);
+  process.exit(1);
+});
