@@ -99,6 +99,10 @@ const config = {
   async rewrites() {
     return [
       {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      {
         source: '/blog/:slug',
         destination: '/:slug',
       },

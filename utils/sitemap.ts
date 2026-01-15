@@ -1,7 +1,7 @@
 import { fetchBlogEntries, fetchPages } from '../services/cms';
 import { METADATA } from '../constants';
-import generateRSSFeed from '../utils/rss';
-import { readdirSync, writeFileSync } from 'fs';
+import generateRSSFeed from './rss';
+import { readdirSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve } from 'path';
 
 interface Redirection {
@@ -33,7 +33,7 @@ const REDIRECTS: Redirection[] = [
   },
 ];
 
-async function generateSitemap() {
+export default async function generateSitemap() {
   const baseUrl = METADATA.HOST_URL;
 
   // Get static pages from pages directory
@@ -98,6 +98,9 @@ async function generateSitemap() {
 </urlset>
 `;
 
+  // Ensure the directory exists
+  mkdirSync(resolve('public'), { recursive: true });
+  
   const sitemapPath = resolve('public', 'sitemap.xml');
   writeFileSync(sitemapPath, sitemap);
   console.log(`✅ Sitemap generated at ${sitemapPath}`);
@@ -107,8 +110,3 @@ async function generateSitemap() {
   generateRSSFeed(_blogPages);
   console.log('✅ RSS feeds generated');
 }
-
-generateSitemap().catch((error) => {
-  console.error('Error generating sitemap and RSS feeds:', error);
-  process.exit(1);
-});
