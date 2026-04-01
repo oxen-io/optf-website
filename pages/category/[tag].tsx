@@ -1,4 +1,4 @@
-import { CMS, METADATA } from '@/constants';
+import { METADATA } from '@/constants';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { CMSPost, CMSTagList } from '@/types/cms';
 import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
@@ -87,13 +87,11 @@ export const getStaticProps: GetStaticProps = async (
 
     return {
       props: { posts, tagLink },
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
   } catch (err) {
     console.error(err);
     return {
       notFound: true,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
   }
 };
@@ -111,6 +109,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   };
 };

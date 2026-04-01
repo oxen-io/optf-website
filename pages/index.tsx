@@ -1,13 +1,13 @@
 import { Hero } from '@/components/sections';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import { CMS } from '@/constants';
 import { CMSPost } from '@/types/cms';
 import { Layout } from '@/components/ui';
 import { fetchBlogEntries } from '@/services/cms';
 import { PostList } from '@/components/posts';
 import Banner from '@/components/Banner';
 import { METADATA } from '@/constants';
+import generateSitemap from '@/utils/sitemap';
 
 interface Props {
   posts: CMSPost[];
@@ -42,8 +42,12 @@ export default function Home(props: Props) {
 export const getStaticProps: GetStaticProps = async () => {
   const { entries: posts } = await fetchBlogEntries();
 
+  // Generate sitemap and RSS feeds at build time
+  if (process.env.NODE_ENV === 'production') {
+    await generateSitemap();
+  }
+
   return {
     props: { posts },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };

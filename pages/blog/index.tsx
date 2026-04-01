@@ -1,7 +1,6 @@
 import { ReactElement } from 'react';
 import { GetStaticProps } from 'next';
 import Banner from '@/components/Banner';
-import { CMS } from '@/constants';
 import { CMSPost } from '@/types/cms';
 import { fetchBlogEntries } from '@/services/cms';
 import METADATA from '@/constants/metadata';
@@ -20,7 +19,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { posts },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };
 

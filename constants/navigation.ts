@@ -116,18 +116,6 @@ const NAV_ITEMS: NavList = {
     bgColor: 0,
     mobile: true,
   },
-  Newsletter: {
-    name: 'Newsletter',
-    href: '#email-sign-up',
-    alt: 'go to signup',
-    target: '_self',
-    rel: 'noopener noreferrer',
-    bgColor: 1,
-    mobile: null,
-    onClick: () => {
-      handleTooltip('.tooltipContainer', '.tooltip', 'Subscribe here');
-    },
-  },
   Contact: {
     name: 'Contact',
     href: '/contact-us',

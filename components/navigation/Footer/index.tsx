@@ -22,9 +22,9 @@ const socialLinkClasses = classNames(
 const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0');
 
 const renderSocials = (
-  <div className={classNames('flex flex-col w-full mb-4', 'lg:w-1/3')}>
+  <div className={classNames('flex flex-col w-full mb-4')}>
     <h3 className={headingClasses}>Socials</h3>
-    <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
+    <div className={classNames('w-full mb-4')}>
       <div className={classNames('flex')}>
         <Link href="https://twitter.com/TheOPTF">
           <a
@@ -48,14 +48,10 @@ const renderFooter = (
   isEnormous: boolean
 ) => {
   return (
-    <div
-      className={classNames(
-        'flex flex-col lg:flex-wrap md:flex-col lg:flex-row pt-2 pb-4 xl:px-8 px-4  border-white border-dashed lg:border-b'
-      )}
-    >
-      {(isLarge || isHuge || isEnormous) && renderSocials}
-      <div className={classNames('flex w-full', 'lg:block lg:w-1/3')}>
-        <div className={classNames('flex flex-col w-full mb-4', 'lg:w-2/3')}>
+    <div className={classNames('flex flex-row w-full pt-2 pb-4 xl:px-8 px-4')}>
+      {(isSmall || isMedium) && renderSocials}
+      <div className={classNames('flex w-full', 'lg:block ')}>
+        <div className={classNames('flex flex-col w-full mb-4')}>
           <Link href="/contact-us">
             <a className={linkClasses} rel="noopener noreferrer">
               Contact us
@@ -84,76 +80,22 @@ const renderFooter = (
           </Link>
         </div>
       </div>
-      {(isSmall || isMedium) && renderSocials}
+      {(isLarge || isHuge || isEnormous) && renderSocials}
     </div>
   );
 };
 
 export default function Footer(): ReactElement {
   const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
-  const newsLetterText = {
-    title: 'Join the movement and help defend privacy in the digital world.',
-    subtitle: 'Sign up to the mailing list and start taking action!',
-  };
-  useSubstack();
 
   return (
     <div id="email-sign-up" className={classNames('gradient-footer-gray')}>
-      <div className="block p-5 text-white lg:hidden bg-green-350">
-        <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
-          {newsLetterText.title}
-        </h4>
-        <p className={classNames('leading-none')}>{newsLetterText.subtitle}</p>
-        {(isSmall || isMedium) && (
-          <div className={classNames('flex justify-center md:justify-start')}>
-            <div className="flex-col">
-              <div className="mt-5" id="custom-substack-embed"></div>
-              <div className="tooltipContainer">
-                <div className="tooltip"></div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
       <div
         className={classNames(
-          'lg:flex lg:justify-end lg:max-w-screen-xl lg:mx-auto py-6 md:py-0 lg:py-7'
+          'lg:flex lg:max-w-screen-xl lg:mx-auto py-6 md:py-0 lg:py-7 justify-center'
         )}
       >
-        <div
-          className={classNames(
-            'text-white font-helvetica md:px-10 md:pt-8 lg:border-r border-dashed'
-          )}
-        >
-          <div className="hidden xl:block">
-            <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
-              {newsLetterText.title}
-            </h4>
-            <p className={classNames('leading-none')}>
-              {newsLetterText.subtitle}
-            </p>
-          </div>
-          <div className="flex justify-start">
-            {!isSmall && !isMedium ? (
-              <div>
-                <div className="mt-10" id="custom-substack-embed"></div>
-                <div className="tooltipContainer">
-                  <div className="tooltip"></div>
-                </div>
-              </div>
-            ) : (
-              <div className="xs:order-last">
-                {(isSmall || isMedium) &&
-                  renderFooter(isSmall, isMedium, isLarge, isHuge, isEnormous)}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <footer className={classNames('text-white', 'lg:w-1/2 lg:mt-2')}>
-          {!isSmall &&
-            !isMedium &&
-            renderFooter(isSmall, isMedium, isLarge, isHuge, isEnormous)}
+        <footer className={classNames('text-white', 'lg:mt-2 flex flex-row')}>
           <div
             className={classNames(
               'py-6 px-8',
@@ -177,6 +119,9 @@ export default function Footer(): ReactElement {
               world.
             </p>
           </div>
+          {!isSmall &&
+            !isMedium &&
+            renderFooter(isSmall, isMedium, isLarge, isHuge, isEnormous)}
         </footer>
       </div>
     </div>
