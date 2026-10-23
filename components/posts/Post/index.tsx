@@ -84,6 +84,7 @@ export default function Post(props: Props): ReactElement {
           >
             {fullHeader ? (
               <Image
+                unoptimized
                 src={`${featureImage?.imageUrl}${
                   isSmall ? '?w=300' : isMedium ? '?w=600' : ''
                 }`}
@@ -95,6 +96,7 @@ export default function Post(props: Props): ReactElement {
               />
             ) : (
               <Image
+                unoptimized
                 src={`${featureImage?.imageUrl}${
                   isSmall ? '?w=300' : isMedium ? '?w=600' : ''
                 }`}

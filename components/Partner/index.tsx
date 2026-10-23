@@ -40,6 +40,7 @@ export default function Partner(props: Props) {
             </div>
           )}
           <Image
+            unoptimized
             alt={partner.name + ' logo'}
             width={partner.width}
             height={partner.height}

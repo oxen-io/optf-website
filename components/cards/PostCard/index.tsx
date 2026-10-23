@@ -67,6 +67,7 @@ export default function PostCard(props: Props): ReactElement {
             )}
           >
             <Image
+              unoptimized
               src={`${featureImage?.imageUrl}${featured ? '?w=700' : '?w=400'}`}
               alt={featureImage?.description ?? title}
               layout="fill"

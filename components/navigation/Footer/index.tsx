@@ -104,6 +104,7 @@ export default function Footer(): ReactElement {
             )}
           >
             <Image
+              unoptimized
               src="/assets/images/logo-optf.png"
               alt="session logo"
               width={isSmall ? 180 : 90}

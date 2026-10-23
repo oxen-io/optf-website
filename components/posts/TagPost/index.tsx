@@ -53,6 +53,7 @@ export default function TagPost(props: Props): ReactElement {
             <Link replace={true} href={`/blog/${slug}`}>
               <a>
                 <Image
+                  unoptimized
                   src={`${featureImage?.imageUrl}${
                     isSmall ? '?w=300' : isMedium ? '?w=600' : ''
                   }`}

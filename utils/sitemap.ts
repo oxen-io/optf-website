@@ -19,12 +19,11 @@ const EXCLUDED_PAGES = [
   '404.tsx',
   '[slug].tsx', // Dynamic route handled separately
   'sitemap.xml.tsx',
-  'api', // API routes
   'tag',
   'category', // Dynamic category routes handled separately
 ];
 
-// Redirects from next.config.js - should be kept in sync
+// Must match the redirects the web server applies (see README)
 const REDIRECTS: Redirection[] = [
   {
     source: '/transparency',
@@ -100,7 +99,7 @@ export default async function generateSitemap() {
 
   // Ensure the directory exists
   mkdirSync(resolve('public'), { recursive: true });
-  
+
   const sitemapPath = resolve('public', 'sitemap.xml');
   writeFileSync(sitemapPath, sitemap);
   console.log(`✅ Sitemap generated at ${sitemapPath}`);
