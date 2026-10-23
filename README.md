@@ -148,7 +148,7 @@ This runs `next build` then `next export`, which writes a fully static site to `
 
 - serve clean URLs: `/blog` from `blog.html`, `/` from `index.html`, and redirect `/path/` to `/path`
 - serve blog posts at `/blog/:slug` from `:slug.html` (`/:slug` also works)
-- redirect `/transparency` to `/transparency-report` (301)
+- redirect (308) `/transparency` to `/transparency-report`, and the removed `/contact-us` and `/feedback-and-ideas` pages to `/blog/the-optf-and-session`
 - serve `404.html` for unknown paths
 - send the security headers, including the Content Security Policy
 

@@ -2,6 +2,7 @@ import { Footer, Nav } from '@/components/navigation';
 import { ReactElement, ReactNode } from 'react';
 
 import CustomHead from '@/components/CustomHead';
+import StewardshipNotice from '@/components/StewardshipNotice';
 import { CustomMetadata } from '@/constants/metadata';
 
 interface Props {
@@ -18,6 +19,7 @@ export default function Layout({
   return (
     <>
       <CustomHead title={title} metadata={metadata} />
+      <StewardshipNotice />
       <Nav />
       <main>{children}</main>
       <Footer />

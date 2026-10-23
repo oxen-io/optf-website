@@ -2,7 +2,6 @@ import { Layout } from '@/components/ui';
 import Report from '../components/Report';
 import Link from 'next/link';
 import { useScreen } from '@/contexts/screen';
-import { ContactUsResearch } from '@/components/Research';
 import { METADATA } from '@/constants';
 
 export default function Research() {
@@ -67,7 +66,6 @@ export default function Research() {
               style={{ width: isSmall ? '95vw' : undefined }}
             ></iframe>
           </section>
-          <ContactUsResearch />
         </div>
       </Layout>
     </div>
