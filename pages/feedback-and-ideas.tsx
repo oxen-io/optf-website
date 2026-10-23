@@ -1,7 +1,7 @@
 import { Layout } from '@/components/ui';
 import Banner from '@/components/Banner';
-import ContactUsForm from '../components/ContactUsForm';
 import Container from '../components/Container';
+import SessionFoundationContact from '@/components/SessionFoundationContact';
 import { METADATA } from '@/constants';
 
 export default function Feedback() {
@@ -10,9 +10,9 @@ export default function Feedback() {
       <Container>
         <Banner
           title="Get involved!​​"
-          subtitle="Your feedback and support helps us fulfill our mission.​​"
+          subtitle="The OPTF is now part of the Session Technology Foundation."
         />
-        <ContactUsForm />
+        <SessionFoundationContact />
       </Container>
     </Layout>
   );
