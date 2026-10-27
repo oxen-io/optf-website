@@ -69,20 +69,10 @@ const METADATA = {
     DESCRIPTION:
       'Research | Learn about our efforts to promote privacy, free software, and open internet through innovative research.',
   },
-  CONTACT: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'Contact Us | Connect with us to learn more about our mission and services. Share your thoughts, feedback, or inquiries.',
-  },
   PRIVACY_POLICY: {
     TYPE: 'article',
     DESCRIPTION:
       "Privacy Policy | Learn about OPTF's commitment to protecting your privacy with our Privacy Policy.",
-  },
-  FEEDBACK: {
-    TYPE: 'article',
-    DESCRIPTION:
-      'Feedback | Have feedback or suggestions on how we can improve our mission and services? Share your thoughts with us! ',
   },
 };
 

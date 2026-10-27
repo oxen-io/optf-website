@@ -99,42 +99,6 @@ export async function fetchBlogEntriesByTag(
   return Promise.reject(new Error(`Failed to fetch entries for ${tag}`));
 }
 
-export async function fetchEntryPreview(
-  slug: string
-): Promise<CMSPage | CMSPost> {
-  const _client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID!,
-    accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
-    host: 'preview.contentful.com',
-  });
-
-  const _pages = await _client.getEntries({
-    content_type: 'page',
-    'fields.slug': slug,
-    'fields.preview': true,
-  });
-  const _posts = await _client.getEntries({
-    content_type: 'post',
-    'fields.slug': slug,
-    'fields.preview': true,
-  });
-
-  const _entries = [..._pages.items, ..._posts.items];
-  const taglist = await fetchTagList();
-
-  if (_entries.length > 0) {
-    const entry = _entries[0];
-    if (entry.sys.contentType.sys.id === 'post') {
-      return convertPost(entry, taglist);
-    }
-    if (entry.sys.contentType.sys.id === 'page') {
-      return convertPage(entry);
-    }
-  }
-
-  return Promise.reject(new Error(`Failed to fetch preview for ${slug}`));
-}
-
 export async function fetchEntryBySlug(
   slug: string
 ): Promise<CMSPage | CMSPost> {

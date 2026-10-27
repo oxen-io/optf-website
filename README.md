@@ -7,7 +7,7 @@ This project is built with [Contentful](https://www.contentful.com), [Next.js](h
 
 ### System Requirements
 
-- [Node.js 16.13.0](https://nodejs.org/) or later
+- [Node.js 22.23.4](https://nodejs.org/) or later
 
 ### Setup
 
@@ -18,8 +18,8 @@ Follow nvm setup instructions [here](https://github.com/nvm-sh/nvm/blob/master/R
 2. Install Node.js locally
 
 ```
-nvm install 16.13.0
-nvm use 16.13.0
+nvm install 22.23.4
+nvm use 22.23.4
 ```
 
 3. Install `yarn`
@@ -53,8 +53,6 @@ yarn install --frozen-lockfile
 
 6. Setup your environment file. See our [.env.example](.env.example) as a guide. Make sure to call the file `.env.local`.
 
-   When setting up the google recaptcha variable in the environment file , used for the /contact-us form, you can use the google recaptcha testing site key that is in [.env.example](.env.example). To see more about google recaptcha click [here](https://developers.google.com/recaptcha/docs/faq?hl=es-419).
-
 ## Developing
 
 - For accessbility testing we use the [axe-react](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md) plugin.
@@ -72,8 +70,6 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the OPTF homepage.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ### Committing changes
 
@@ -94,7 +90,7 @@ Commit messages will be checked using [husky](https://typicode.github.io/husky/#
 
 ### Next.js
 
-- Try to use the [next/image](https://nextjs.org/docs/api-reference/next/image) component in place of `img` tags where possible.
+- Try to use the [next/image](https://nextjs.org/docs/api-reference/next/image) component in place of `img` tags where possible. It must have the `unoptimized` prop: `next export` has no image optimizer.
 - If you want to make a link to a location on the website use the [next/link](https://nextjs.org/docs/api-reference/next/link) component with a relative path. i.e. `https://optf.ngo/blog -> /blog`
 
 ### TailwindCSS
@@ -142,31 +138,21 @@ We can't use template literals with classes if we want to purge (shrink) the CSS
 
 ## Deploying to Production
 
-You can run the project in a production environment by running:
-
 ```
-yarn run build && yarn run start
+yarn build
 ```
 
-**Make sure to do this locally and check for errors before pushing any code changes to your hosted repository**
+This runs `next build` then `next export`, which writes a fully static site to `out/`. Serve that directory with any web server; no Node.js process runs in production. Content changes on Contentful need a rebuild.
 
-The site is fully static and requires a complete rebuild to reflect any changes made on Contentful. Content will not be updated automatically at runtime.
+`next export` does not apply headers, redirects or rewrites, so the web server must:
 
-### Staging Environment
+- serve clean URLs: `/blog` from `blog.html`, `/` from `index.html`, and redirect `/path/` to `/path`
+- serve blog posts at `/blog/:slug` from `:slug.html` (`/:slug` also works)
+- redirect (308) `/transparency` to `/transparency-report`, and the removed `/contact-us` and `/feedback-and-ideas` pages to `/blog/the-optf-and-session`
+- serve `404.html` for unknown paths
+- send the security headers, including the Content Security Policy
 
-You can test the project in a staging environment by running:
-
-```
-yarn run build:staging && yarn run start:staging
-```
-
-Staging environments are password protected using the password you assign to `STAGING_SECRET` in `.env.local`.
-
-To unlock the staging environment go to [http://localhost:3000/login?secret=YOUR_PASSWORD_HERE](http://localhost:3000/login?secret=YOUR_PASSWORD_HERE)
-
-System environment variables and page metadata will also be updated to show it's a staging website.
-
-The staging build is also fully static and requires a complete rebuild to reflect any changes made on Contentful.
+`yarn build:staging` builds the same export with staging metadata (`https://staging.optf.ngo`). It has no access control of its own; protect it at the web server if needed.
 
 ## License
 

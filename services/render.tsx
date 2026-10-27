@@ -105,6 +105,7 @@ function EmbeddedMedia(
         <span className={classNames(figureClasses)} style={figureStyles}>
           <figure dir={textDirection}>
             <Image
+              unoptimized
               src={`${url}${isSmall ? '?w=300' : isMedium ? '?w=600' : ''}`}
               alt={node.title}
               width={imageWidth}

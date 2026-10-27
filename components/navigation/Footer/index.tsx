@@ -52,19 +52,6 @@ const renderFooter = (
       {(isSmall || isMedium) && renderSocials}
       <div className={classNames('flex w-full', 'lg:block ')}>
         <div className={classNames('flex flex-col w-full mb-4')}>
-          <Link href="/contact-us">
-            <a className={linkClasses} rel="noopener noreferrer">
-              Contact us
-            </a>
-          </Link>
-          <Link href="/feedback-and-ideas">
-            <a
-              className={classNames(linkClasses, 'sm:hidden xl:block ')}
-              rel="noopener noreferrer"
-            >
-              Get involved
-            </a>
-          </Link>
           <Link href="/donations">
             <a
               className={classNames(linkClasses, 'sm:hidden xl:block')}
@@ -104,6 +91,7 @@ export default function Footer(): ReactElement {
             )}
           >
             <Image
+              unoptimized
               src="/assets/images/logo-optf.png"
               alt="session logo"
               width={isSmall ? 180 : 90}

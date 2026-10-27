@@ -4,10 +4,8 @@
   "license": "GPL-3.0-only",
   "scripts": {
     "dev": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=development NODE_OPTIONS='--inspect' next dev",
-    "build": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next build",
-    "build:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next build",
-    "start": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next start --hostname 127.0.0.1",
-    "start:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next start --hostname 127.0.0.1",
+    "build": "NODE_OPTIONS=\"$NODE_OPTIONS $(node -p \"process.allowedNodeEnvironmentFlags.has('--openssl-legacy-provider') ? '--openssl-legacy-provider' : ''\")\" NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next build && next export",
+    "build:staging": "NODE_OPTIONS=\"$NODE_OPTIONS $(node -p \"process.allowedNodeEnvironmentFlags.has('--openssl-legacy-provider') ? '--openssl-legacy-provider' : ''\")\" NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next build && next export",
     "prepare": "husky install",
     "format": "prettier --ignore-unknown --write .",
     "lint": "next lint"

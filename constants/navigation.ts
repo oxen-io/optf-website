@@ -116,15 +116,6 @@ const NAV_ITEMS: NavList = {
     bgColor: 0,
     mobile: true,
   },
-  Contact: {
-    name: 'Contact',
-    href: '/contact-us',
-    alt: 'go to contact',
-    target: '_self',
-    rel: 'noopener noreferrer',
-    bgColor: 2,
-    mobile: null,
-  },
 };
 
 const NAVIGATION = {

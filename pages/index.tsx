@@ -28,6 +28,7 @@ export default function Home(props: Props) {
         subtitleTwo="We’re putting the power back in your hands — we support the development of free and open-source software that keeps you secure online"
         image={
           <Image
+            unoptimized
             alt="OPTF logo"
             width={240}
             height={100}
